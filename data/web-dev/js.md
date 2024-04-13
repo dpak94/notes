@@ -7,6 +7,8 @@ permalink: /javascript/
 - [JavaScript Notes](#javascript-notes)
   - [Variables in JS](#variables-in-js)
     - [Declaring constants in JavaScript](#declaring-constants-in-javascript)
+  - [Functions](#Functions)
+  - [Object Oriented Programming](#Object-Oriented-Programming)
 
 JavaScript is a language used along with HTML and CSS to communicate with the user.
 
@@ -266,6 +268,8 @@ switch (day) {
 
 - Prefer to turn on Strict Mode while coding.
 
+---------------------------------------
+
 ## Functions
 
 ```js
@@ -508,7 +512,7 @@ while (rep <= 10) {
 
 ## Object Oriented Programming
 
-Features of OOP:
+**Features of OOP:**
 
 1. Encapsulation
 2. Abstraction
