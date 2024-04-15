@@ -13,5 +13,5 @@ This is the programming notes static site.
 | [HTML](./html/)            | [Conda Commands](./conda/)   | [Jekyll Notes](./jekyll/)  | [Deep Learning](./deep-learning/)      |
 | [CSS](./css/)              | [Git Commands](./git/)       | [Mongo DB](./mongodb/)     | [Machine Learning](./machine-learning) |
 | [JavaScript](./javascript) | [Jupyter](./jupyter/)        | [MySQL](./mysql/)          | [NumPy](./numpy/)                      |
-|                            | [Environment Setup](./envs/) | [PySpark](./pyspark)       | [Python](./python/)                    |
+| [Clean Code](./clean-code) | [Environment Setup](./envs/) | [PySpark](./pyspark)       | [Python](./python/)                    |
 |                            | [Unix Commands](./unix/)     | [SQL Python](./sql-python) |                                        |
