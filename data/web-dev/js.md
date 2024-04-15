@@ -7,8 +7,9 @@ permalink: /javascript/
 - [JavaScript Notes](#javascript-notes)
   - [Variables in JS](#variables-in-js)
     - [Declaring constants in JavaScript](#declaring-constants-in-javascript)
-  - [Functions](#Functions)
+  - [Functions](#functions)
   - [Object Oriented Programming](#Object-Oriented-Programming)
+  - [Objects](#objects)
 
 JavaScript is a language used along with HTML and CSS to communicate with the user.
 
@@ -268,9 +269,9 @@ switch (day) {
 
 - Prefer to turn on Strict Mode while coding.
 
----------------------------------------
+---
 
-## Functions
+## Functions <a name="functions"></a>
 
 ```js
 // Functions
@@ -347,21 +348,50 @@ console.log(FruitProcessor(3, 3));
 
 ## Arrays
 
-- [Array MDN Docs Reference]([Array - JavaScript | MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)
+- [Array MDN Docs Reference](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)
+
+- Declared using *const* keyword. Once declared, the array cannot be reassigned.
+
+- Arrays declared with *var* can be initialized at any time.
+``` js
+cars = ["Saab", "Volvo", "BMW"];
+var cars;
+```
+
+- An array declared with *const* has **Block Scope**
+
+``` js
+const cars = ["Saab", "Volvo", "BMW"];
+// Here cars[0] is "Saab"
+{
+  const cars = ["Toyota", "Volvo", "BMW"];
+  // Here cars[0] is "Toyota"
+}
+// Here cars[0] is "Saab"
+```
+
 
 ```js
-// Arrays
+// Array Declaration
+
 const friends = ["Mike", "Ike", "Jake", "Pike", "Kyle"];
 console.log(friends[1]); // Ike
 const years = new Array(1991, 1992, 1993, 1997);
+
+//Access elements in array. Index starts from 0 (like Python)
 console.log(years[2]); // 1993
-console.log(friends[friends.length - 1]); // Access last element - Kyle
-// Index starts from 0 (same as Python)
-friends[2] = "Jim"; // Replacing an element in array
+console.log(friends[friends.length - 1]); // Access last element via length
+console.log(friends.reverse()[0]) // The array is reversed and the last element becomes first element and is accessed.
+
+// Replacing an element in array
+friends[2] = "Jim"; 
 console.log(friends[2]); // Jim
-const nome = "Tyler";
+
 // Adding a variable as an array member
+const nome = "Tyler";
 friends[5] = nome;
+
+// Finding the length of the array
 console.log(friends); // (6) ['Mike', 'Ike', 'Jim', 'Pike', 'Kyle', 'Tyler']
 console.log(friends.length); // Length of the array - 6
 ```
@@ -372,27 +402,109 @@ console.log(friends.length); // Length of the array - 6
 // Array Methods
 const friends = ["Michael", "John", "Charles", "William", "George"];
 
-friends.push("Jake"); // Adds elements to the end of the array
+// Adds element to the end of the array
+friends.push("Jake"); 
 console.log(friends); // (6) ['Michael', 'John', 'Charles', 'William', 'George', 'Jake']
 
-friends.unshift("Richard"); // Adds elements at the beginning of the array
-console.log(friends); // (7) ['Richard', 'Michael', 'John', 'Charles', 'William', 'George', 'Jake']
 
-friends.pop(); // Removes the last element
+// Adds elements at the beginning of the array
+friends.unshift("Richard"); 
+console.log(friends); // (7) ['Richard', 'Michael', 'John', 'Charles', 'William', 'George', 'Jake'];
+
+
+// Removes the last element
+friends.pop(); 
 console.log(friends); // ['Richard', 'Michael', 'John', 'Charles', 'William', 'George']
 
-friends.shift(); // Removes the first element
+
+// Removes the first element
+friends.shift(); 
 console.log(friends); //(5) ['Michael', 'John', 'Charles', 'William', 'George']
 
-console.log(friends.indexOf("Charles")); // Gives the index of element => 2
-console.log(friends.indexOf("William")); // Gives the index of element => 3
+
+// Gives the index of element => 2
+console.log(friends.indexOf("Charles"));
+
+
+// Gives the index of element => 3
+console.log(friends.indexOf("William")); 
+
+
 // ES6 Method to confirm the existence of element
 console.log(friends.includes("William")); // Modern method
+
+
+// Convert array elements into comma separated string array valuse
+console.log(friends.toString());
+// => Michael,John,Charles,William,George
+
+
+// Using at(), access the elements in an array. Supported since March 2022
+console.log(friends.at(2)) // => 'Charles'
+
+
+// Join all array elements into a string using join() method
+console.log(friends.join(" - ")); // => Michael - John - Charles - William - George
+
+
+// Concatenate arrays. Can also concatenate a string to an array.
+const twoArray = friends .concat(fruits)
+console.log(twoArray); 
+// => ['Michael', 'John', 'Charles', 'William', 'George', 'Banana', 'Orange', 'Apple', 'Mango']
+
+
+// Copy an element to another index in the array using copyWithin()
+const friends = ["Michael", "John", "Charles", "William", "George"];
+console.log(friends.copyWithin(0, -1)) // Copy to index 0, the leemnt at index -1
+// => ['George', 'John', 'Charles', 'William', 'George']
+
+
+/* flat() - flattens the array by  creating a new array with sub-array 
+elements to a specified depth */
+const myArray = [[1, 2], [3, 4], [5, 6], [7, 8]];
+const newArray = myArray.flat();
+console.log(newArray);
+// =>  [1, 2, 3, 4, 5, 6]
+
+
+// splice() - add new items to an array
+const fruits = ["Banana", "Orange", "Apple", "Mango"];
+fruits.splice(2, 0, "Lemon", "Kiwi") 
+// 2- new place where element is to be added, 
+// 0 - how many elements to be removed, 
+// "Lemon", "Kiwi" -  new elements to be added
+console.log(fruits);
+// => ['Banana', 'Orange', 'Lemon', 'Kiwi', 'Apple', 'Mango']
+
+
+/* toSpliced() - ES2023 Addition as a safe way to splice an array without altering the original array. This method creates a new array that is spliced while keeping the original unchanged.*/
+const months = ["Jan", "Feb", "Mar", "Apr"];
+const spliced = months.toSpliced(0, 1);
+// => ['Feb', 'Mar', 'Apr']
+
+
+// slice() - slice out a part of an array into a new array
+const fruits = ["Banana", "Orange", "Lemon", "Apple", "Mango"];
+const citrus = fruits.slice(1); // Slicing from index 1. 
+// slice takes two args : start point and end point. If end point not given, rest of the array is sliced out.
+console.log(citrus);
+// => ['Orange', 'Lemon', 'Apple', 'Mango']
+
+
+
+
+
+
+
+
+
+
+
 ```
 
 ## Objects
 
-- SImilar to dictionaries in Python
+- Similar to dictionaries in Python
 
 ```js
 // Objects (Dictionaries)
@@ -508,7 +620,7 @@ while (rep <= 10) {
 }
 ```
 
---------------
+---
 
 ## Object Oriented Programming
 
@@ -534,11 +646,11 @@ while (rep <= 10) {
    - Easiest & most straight-forward way to create objects
    - Not commmonly used.
 
---------
+---
 
 ### Constructor Functions
 
-``` js
+```js
 console.log(`${fatherName} is your father`);
 let x = 6;
 var y = 9;
@@ -547,41 +659,37 @@ console.log(x, y);
 
 **Note** - Never create Functions inside constructor functions.
 
-``` js
+```js
 // Constructor Function
 const Person = function (firstName, birthYear) {
   this.firstName = firstName;
-  this.birthYear = birthYear;  
+  this.birthYear = birthYear;
   this.calcAge = 2024 - this.birthYear;
 };
 
-console.log(new Person('Jonas', 1994));
+console.log(new Person("Jonas", 1994));
 // 1. New empty object is created
 // 2. Function is called, this = empty object
 // 3. The empty object is linked to a prototype
 // 4. Function  automatically returns empty object
 
-const matilda = new Person('matilda', 2017);
-const jack = new Person('Jack', 1975);
+const matilda = new Person("matilda", 2017);
+const jack = new Person("Jack", 1975);
 console.log(matilda, jack);
 
 console.log(jack instanceof Person); // Checking if an object is an isntance of the constructor function
 ```
 
-``` txt
+```txt
 // Output
 Person {firstName: 'Jonas', birthYear: 1994, calcAge: 30}
-Person {firstName: 'matilda', birthYear: 2017, calcAge: 7} 
+Person {firstName: 'matilda', birthYear: 2017, calcAge: 7}
 Person {firstName: 'Jack', birthYear: 1975, calcAge: 49}
 true
 ```
 
-
 ### Prototypes
 
-``` js
-
-
+```js
 
 ```
-
