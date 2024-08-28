@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="HTML#HTML - Hyper Text Markup Language
+Tags and Elements
+&lt;p&gt;some text content&lt;/p&gt; &lt;!-- Tag --&gt; #Reserved Characters, Quotes &amp; Other Escape Characters
+Character Escape Syntax &lt; &amp;lt &gt; &amp;gt &amp; &amp;amp &#39; &amp;rsquo; &quot; &amp;ldquo; &quot; &amp;rdquo; ‘ &amp;lsquo; More characters here
+Void Elements - Some elements do not have a closing tag. These elements have only opening tag.Eg : &lt;br&gt;, &lt;img&gt; etc. Some elements just have a forward slash at the end like : &lt;br /&gt; or &lt;img /&gt;.">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
+<meta name="color-scheme" content="light dark"><meta property="og:url" content="https://example.org/docs/web-dev/html/">
+  <meta property="og:site_name" content="My New Hugo Site">
+  <meta property="og:title" content="HTML">
+  <meta property="og:description" content="HTML#HTML - Hyper Text Markup Language
+Tags and Elements
+&lt;p&gt;some text content&lt;/p&gt; &lt;!-- Tag --&gt; #Reserved Characters, Quotes &amp; Other Escape Characters
+Character Escape Syntax &lt; &amp;lt &gt; &amp;gt &amp; &amp;amp &#39; &amp;rsquo; &#34; &amp;ldquo; &#34; &amp;rdquo; ‘ &amp;lsquo; More characters here
+Void Elements - Some elements do not have a closing tag. These elements have only opening tag.Eg : &lt;br&gt;, &lt;img&gt; etc. Some elements just have a forward slash at the end like : &lt;br /&gt; or &lt;img /&gt;.">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="docs">
+<title>HTML | My New Hugo Site</title>
+<link rel="manifest" href="/manifest.json">
+<link rel="icon" href="/favicon.png" >
+<link rel="canonical" href="https://example.org/docs/web-dev/html/">
+<link rel="stylesheet" href="/book.min.309b7ed028807cdb68d8d61e26d609f48369c098dbf5e4d8c0dcf4cdf49feafc.css" integrity="sha256-MJt&#43;0CiAfNto2NYeJtYJ9INpwJjb9eTYwNz0zfSf6vw=" crossorigin="anonymous">
+  <script defer src="/fuse.min.js"></script>
+  <script defer src="/en.search.min.3ffc475d28c2c37408205e68dcdf235a9b1b3863f3d737e18d972d457d081021.js" integrity="sha256-P/xHXSjCw3QIIF5o3N8jWpsbOGPz1zfhjZctRX0IECE=" crossorigin="anonymous"></script>
+
+  
+
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+  
+</head>
+<body dir="ltr">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      <div class="book-menu-content">
+        
+  <nav>
+<h2 class="book-brand">
+  <a class="flex align-center" href="/"><span>My New Hugo Site</span>
+  </a>
+</h2>
+
+
+<div class="book-search hidden">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+<script>document.querySelector(".book-search").classList.remove("hidden")</script>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/general/unix-commands/" class="">UNIX Commands</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/web-dev/clean-code/" class="">Clean Code for JS</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/general/conda/" class="">Conda</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/web-dev/css/" class="">CSS</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/git/" class="">Git</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/web-dev/html/" class="active">HTML</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/web-dev/js/" class="">JavaScript</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/jekyll/" class="">Jekyll</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/misc/mongodb/" class="">Mongo DB</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/mysql/" class="">MySQL</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/web-dev/node/" class="">NodeJS</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/ds/python/" class="">Python</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/general/virtualenv/" class="">PythonEnv</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/web-dev/react/" class="">React</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/sql-python/" class="">SQL Python</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+ 
+      </div>
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>HTML</strong>
+
+  <label for="toc-control">
+    
+    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#a"><!-- raw HTML omitted --></a></li>
+    <li><a href="#lists">Lists</a>
+      <ul>
+        <li><a href="#start-attribute"><code>&lt;start&gt;</code> Attribute</a></li>
+        <li><a href="#reversed-attribute"><code>&lt;reversed&gt;</code> Attribute</a></li>
+        <li><a href="#value-attribute"><code>&lt;value&gt;</code> Attribute</a></li>
+      </ul>
+    </li>
+    <li><a href="#links-and-images">Links and Images</a>
+      <ul>
+        <li><a href="#opening-links-in-a-new-tab">Opening Links in a New Tab</a></li>
+        <li><a href="#absolute-and-relative-links">Absolute and Relative Links</a></li>
+        <li><a href="#images">Images</a></li>
+      </ul>
+    </li>
+    <li><a href="#7-golden-rules-for-git-commit">7 Golden Rules for Git Commit</a></li>
+  </ul>
+</nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown book-article"><h1 id="html">
+  HTML
+  <a class="anchor" href="#html">#</a>
+</h1>
+<p><strong>HTML</strong> - Hyper Text Markup Language</p>
+<p><strong>Tags and Elements</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#f92672">p</span>&gt;some text content&lt;/<span style="color:#f92672">p</span>&gt;
+</span></span><span style="display:flex;"><span><span style="color:#75715e">&lt;!-- Tag --&gt;</span>
+</span></span></code></pre></div><h2 id="a">
+  <!-- raw HTML omitted -->
+  <a class="anchor" href="#a">#</a>
+</h2>
+<p><strong>Reserved Characters, Quotes &amp; Other Escape Characters</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Character</th>
+<th style="text-align:center">Escape Syntax</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><code>&lt;</code></td>
+<td style="text-align:center"><code>&amp;lt</code></td>
+</tr>
+<tr>
+<td style="text-align:center"><code>&gt;</code></td>
+<td style="text-align:center"><code>&amp;gt</code></td>
+</tr>
+<tr>
+<td style="text-align:center"><code>&amp;</code></td>
+<td style="text-align:center"><code>&amp;amp</code></td>
+</tr>
+<tr>
+<td style="text-align:center"><code>'</code></td>
+<td style="text-align:center"><code>&amp;rsquo;</code></td>
+</tr>
+<tr>
+<td style="text-align:center"><code>&quot;</code></td>
+<td style="text-align:center"><code>&amp;ldquo;</code></td>
+</tr>
+<tr>
+<td style="text-align:center"><code>&quot;</code></td>
+<td style="text-align:center"><code>&amp;rdquo;</code></td>
+</tr>
+<tr>
+<td style="text-align:center"><code>‘</code></td>
+<td style="text-align:center"><code>&amp;lsquo;</code></td>
+</tr>
+</tbody>
+</table>
+<p>More characters <a href="https://html.spec.whatwg.org/multipage/named-characters.html">here</a></p>
+<hr>
+<p><strong>Void Elements</strong> - Some elements do not have a closing tag. These elements have only opening tag.<strong>Eg :</strong> <code>&lt;br&gt;</code>, <code>&lt;img&gt;</code> etc. Some elements just have a forward slash at the end like : <code>&lt;br /&gt;</code> or <code>&lt;img /&gt;</code>. The latest version of HTML specification specifically discourages their use and considers them invalid.</p>
+<p><strong>DOCTYPE</strong> - Every HTML page starts with a doc type declaration. DOCTYPE&rsquo;s purpose is to tell the browser what version of HTML it should use to render the document. The latest version is HTML5, and the doctype for that version is simply <code>&lt;!DOCTYPE html&gt;</code></p>
+<p>The doctypes for older versions of HTML were a bit more complicated. For example, this is the doctype declaration for HTML4:
+<code>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.01 Transitional//EN&quot; &quot;http://www.w3.org/TR/html4/loose.dtd&quot;&gt;</code></p>
+<p><strong>HTML Element</strong> - We need to provide an <code>&lt;html&gt;</code> element. This is the root of the document, meaning every other document descends from it.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span><span style="color:#75715e">&lt;!DOCTYPE html&gt;</span>
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">html</span> <span style="color:#a6e22e">lang</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;en&#34;</span>&gt;&lt;/<span style="color:#f92672">html</span>&gt;
+</span></span></code></pre></div><p><strong>Head Element</strong> - The <code>&lt;head&gt;</code> element is where we put important meta-info about our webpages, and stuff required for our webpages to render correctly in the browser. Inside the <code>&lt;head&gt;</code>, we should not use any element that displays content on the webpage.</p>
+<p><strong>Meta Element</strong> - We should have the <code>&lt;meta&gt;</code> tag with the charset encoding of the webpage in the <code>&lt;head&gt;</code> element : <code>&lt;meta charset='utf-8</code></p>
+<p><strong>Title</strong> - The <code>&lt;title&gt;</code> element is used to give webpages a human-readable title which is displayed in our webpage&rsquo;s browser tab.</p>
+<p><strong>Body Element</strong> - The final element to complete the HTML boilerplate is the <code>&lt;body&gt;</code> element.This is where all the content that will be displayed to users will go - the text, images, lists, links and so on.</p>
+<hr>
+<p><strong>Viewing the HTML files in the browser - New Way</strong></p>
+<ol>
+<li>Ubuntu - Open terminal in the html file location, type <code>google-chrome index.html</code></li>
+<li>MacOS - In the directory, type <code>open./index.html</code></li>
+</ol>
+<p><strong>Commenting in HTML</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span><span style="color:#75715e">&lt;!-- I am a HTML comment --&gt;</span>
+</span></span></code></pre></div><hr>
+<h2 id="lists">
+  Lists
+  <a class="anchor" href="#lists">#</a>
+</h2>
+<h3 id="start-attribute">
+  <code>&lt;start&gt;</code> Attribute
+  <a class="anchor" href="#start-attribute">#</a>
+</h3>
+<p>The <code>&lt;start&gt;</code> attribute defines the number from which an ordered list should start. By default, ordered lists start at 1.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#f92672">ol</span> <span style="color:#a6e22e">start</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;30&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>  &lt;<span style="color:#f92672">li</span>&gt;Head north on N Halsted St&lt;/<span style="color:#f92672">li</span>&gt;
+</span></span><span style="display:flex;"><span>  &lt;<span style="color:#f92672">li</span>&gt;Turn right on W Diversey Pkwy&lt;/<span style="color:#f92672">li</span>&gt;
+</span></span><span style="display:flex;"><span>  &lt;<span style="color:#f92672">li</span>&gt;Turn left on N Orchard St&lt;/<span style="color:#f92672">li</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">ol</span>&gt;
+</span></span></code></pre></div><h3 id="reversed-attribute">
+  <code>&lt;reversed&gt;</code> Attribute
+  <a class="anchor" href="#reversed-attribute">#</a>
+</h3>
+<p>The <code>&lt;reversed&gt;</code> attribute is a Boolean attribute when used on the <!-- raw HTML omitted --> element, allows a list to appear in reverse order. An ordered list of five items numbered 1 to 5 may be reversed and ordered from 5 to 1.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#f92672">ol</span> <span style="color:#a6e22e">reversed</span>&gt;
+</span></span><span style="display:flex;"><span>  &lt;<span style="color:#f92672">li</span>&gt;Head north on N Halsted St&lt;/<span style="color:#f92672">li</span>&gt;
+</span></span><span style="display:flex;"><span>  &lt;<span style="color:#f92672">li</span>&gt;Turn right on W Diversey Pkwy&lt;/<span style="color:#f92672">li</span>&gt;
+</span></span><span style="display:flex;"><span>  &lt;<span style="color:#f92672">li</span>&gt;Turn left on N Orchard St&lt;/<span style="color:#f92672">li</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">ol</span>&gt;
+</span></span></code></pre></div><h3 id="value-attribute">
+  <code>&lt;value&gt;</code> Attribute
+  <a class="anchor" href="#value-attribute">#</a>
+</h3>
+<p>Used on an individual <code>&lt;li&gt;</code> list element within an ordered list to change its value eithin the list. The number of any list item appearing below a list item with a <code>&lt;value&gt;</code> attribute will be recalculated accordingly.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#f92672">ol</span>&gt;
+</span></span><span style="display:flex;"><span>  &lt;<span style="color:#f92672">li</span>&gt;Head north on N Halsted St&lt;/<span style="color:#f92672">li</span>&gt;
+</span></span><span style="display:flex;"><span>  &lt;<span style="color:#f92672">li</span> <span style="color:#a6e22e">value</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;9&#34;</span>&gt;Turn right on W Diversey Pkwy&lt;/<span style="color:#f92672">li</span>&gt;
+</span></span><span style="display:flex;"><span>  &lt;<span style="color:#f92672">li</span>&gt;Turn left on N Orchard St&lt;/<span style="color:#f92672">li</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">ol</span>&gt;
+</span></span><span style="display:flex;"><span><span style="color:#75715e">&lt;!-- The list number changes to 9 and starts incrementing from there --&gt;</span>
+</span></span><span style="display:flex;"><span>&gt;
+</span></span></code></pre></div><ul>
+<li>More kinds of lists and list attributes can be found @ <a href="https://learn.shayhowe.com/html-css/creating-lists/">Shay Howe&rsquo;s Blog</a></li>
+</ul>
+<hr>
+<h2 id="links-and-images">
+  Links and Images
+  <a class="anchor" href="#links-and-images">#</a>
+</h2>
+<h3 id="opening-links-in-a-new-tab">
+  Opening Links in a New Tab
+  <a class="anchor" href="#opening-links-in-a-new-tab">#</a>
+</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#f92672">a</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;https://www.theodinproject.com/about&#34;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">target</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;_blank&#34;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">rel</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;noopener noreferrer&#34;</span>
+</span></span><span style="display:flex;"><span>  &gt;click me&lt;/<span style="color:#f92672">a</span>
+</span></span><span style="display:flex;"><span>&gt;
+</span></span></code></pre></div><ul>
+<li><em>target</em> attribute specifies where the link source will be opened.</li>
+<li>By default it will take on the <em>_self</em> value which opens the link in the current tab. To open the link in a new tab or window set it to <em>_blank</em></li>
+<li><em>rel</em> attribute is used to describe the relation between the current page and the linked document.</li>
+<li><em>noopener</em> value prevents the opened link from gaining access to the webpage from which it was opened.</li>
+<li><em>noreferrer</em> value prevents the opened link from knowing which webpage or resource has a link to it. It also includes the <em>noopener</em> behaviour and thus can be used by itself as well.</li>
+</ul>
+<blockquote>
+<p>The prevention of access that is caused by <em>noopener</em> prevents <strong>phishing</strong> attacks where the opened link may change the original webpage to a different one to trick users. This is referred to as <strong>tabnabbing</strong>. Adding the <em>noreferrer</em> value can be done if you wish to not let the opened link know that your webpage links to it.</p>
+</blockquote>
+<h3 id="absolute-and-relative-links">
+  Absolute and Relative Links
+  <a class="anchor" href="#absolute-and-relative-links">#</a>
+</h3>
+<ul>
+<li>When including relative links, prepone the link with <code>./</code> to avoid unexpected issues if both the pages/content are in the same directory</li>
+</ul>
+<h3 id="images">
+  Images
+  <a class="anchor" href="#images">#</a>
+</h3>
+<ul>
+<li>Image width and height can be adjusted within the <code>img</code> tag itself</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#f92672">img</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;https://www.theodinproject.com/mstile-310x310.png&#34;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">alt</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;The Odin Project Logo&#34;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">height</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;310&#34;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">width</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;310&#34;</span>
+</span></span><span style="display:flex;"><span>/&gt;
+</span></span></code></pre></div><ul>
+<li>
+<p>Image Formats that can be used in HTML :</p>
+<ul>
+<li>JPG | GIF | PNG | SVG</li>
+</ul>
+</li>
+</ul>
+<h2 id="7-golden-rules-for-git-commit">
+  7 Golden Rules for Git Commit
+  <a class="anchor" href="#7-golden-rules-for-git-commit">#</a>
+</h2>
+<ol>
+<li>
+<p>Separate the subject from body with a blank line</p>
+</li>
+<li>
+<p>Limit the subject line to 50 characters</p>
+</li>
+<li>
+<p>Capitalize the subject line</p>
+</li>
+<li>
+<p>Do not end the subject line with a period</p>
+</li>
+<li>
+<p>Use the imperative mood in the subject line</p>
+</li>
+<li>
+<p>Wrap the body at 72 characters</p>
+</li>
+<li>
+<p>Use the body to explain <em>what</em> and <em>why</em> vs <em>how</em></p>
+</li>
+</ol>
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+
+
+
+
+</div>
+
+
+
+  <script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){if(window.getSelection().toString())return;e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script>
+
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside class="book-toc">
+      <div class="book-toc-content">
+        
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#a"><!-- raw HTML omitted --></a></li>
+    <li><a href="#lists">Lists</a>
+      <ul>
+        <li><a href="#start-attribute"><code>&lt;start&gt;</code> Attribute</a></li>
+        <li><a href="#reversed-attribute"><code>&lt;reversed&gt;</code> Attribute</a></li>
+        <li><a href="#value-attribute"><code>&lt;value&gt;</code> Attribute</a></li>
+      </ul>
+    </li>
+    <li><a href="#links-and-images">Links and Images</a>
+      <ul>
+        <li><a href="#opening-links-in-a-new-tab">Opening Links in a New Tab</a></li>
+        <li><a href="#absolute-and-relative-links">Absolute and Relative Links</a></li>
+        <li><a href="#images">Images</a></li>
+      </ul>
+    </li>
+    <li><a href="#7-golden-rules-for-git-commit">7 Golden Rules for Git Commit</a></li>
+  </ul>
+</nav>
+
+
+ 
+      </div>
+    </aside>
+    
+  </main>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

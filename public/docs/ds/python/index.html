@@ -1,0 +1,2335 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Python Notes#Programming Tips#Use &rsquo;&rsquo;&rsquo; &lsquo;&rsquo;&rsquo;, &rsquo;&rsquo; &rsquo;&rsquo; or &rsquo; &rsquo; to write comments in the script.
+Multiple Assignment in Python : Example : a, b, c, good = 5, True, &lsquo;Stranger&rsquo;
+The following keywords are reserved in Python :
+and assert break class continue def del elif in is lambda not or else except exec finally for from global if import while with pass print raise return try yield">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
+<meta name="color-scheme" content="light dark"><meta property="og:url" content="https://example.org/docs/ds/python/">
+  <meta property="og:site_name" content="My New Hugo Site">
+  <meta property="og:title" content="Python">
+  <meta property="og:description" content="Python Notes#Programming Tips#Use ’’’ ‘’’, ’’ ’’ or ’ ’ to write comments in the script.
+Multiple Assignment in Python : Example : a, b, c, good = 5, True, ‘Stranger’
+The following keywords are reserved in Python :
+and assert break class continue def del elif in is lambda not or else except exec finally for from global if import while with pass print raise return try yield">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="docs">
+<title>Python | My New Hugo Site</title>
+<link rel="manifest" href="/manifest.json">
+<link rel="icon" href="/favicon.png" >
+<link rel="canonical" href="https://example.org/docs/ds/python/">
+<link rel="stylesheet" href="/book.min.309b7ed028807cdb68d8d61e26d609f48369c098dbf5e4d8c0dcf4cdf49feafc.css" integrity="sha256-MJt&#43;0CiAfNto2NYeJtYJ9INpwJjb9eTYwNz0zfSf6vw=" crossorigin="anonymous">
+  <script defer src="/fuse.min.js"></script>
+  <script defer src="/en.search.min.3ffc475d28c2c37408205e68dcdf235a9b1b3863f3d737e18d972d457d081021.js" integrity="sha256-P/xHXSjCw3QIIF5o3N8jWpsbOGPz1zfhjZctRX0IECE=" crossorigin="anonymous"></script>
+
+  
+
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+  
+</head>
+<body dir="ltr">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      <div class="book-menu-content">
+        
+  <nav>
+<h2 class="book-brand">
+  <a class="flex align-center" href="/"><span>My New Hugo Site</span>
+  </a>
+</h2>
+
+
+<div class="book-search hidden">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+<script>document.querySelector(".book-search").classList.remove("hidden")</script>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/general/unix-commands/" class="">UNIX Commands</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/web-dev/clean-code/" class="">Clean Code for JS</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/general/conda/" class="">Conda</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/web-dev/css/" class="">CSS</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/git/" class="">Git</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/web-dev/html/" class="">HTML</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/web-dev/js/" class="">JavaScript</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/jekyll/" class="">Jekyll</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/misc/mongodb/" class="">Mongo DB</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/mysql/" class="">MySQL</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/web-dev/node/" class="">NodeJS</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/ds/python/" class="active">Python</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/general/virtualenv/" class="">PythonEnv</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/web-dev/react/" class="">React</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/sql-python/" class="">SQL Python</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+ 
+      </div>
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>Python</strong>
+
+  <label for="toc-control">
+    
+    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#programming-tips">Programming Tips</a></li>
+    <li><a href="#operators-in-python">Operators in Python</a>
+      <ul>
+        <li><a href="#shift-operators">Shift Operators</a></li>
+        <li><a href="#bitwise-operators">Bitwise Operators</a></li>
+        <li><a href="#logical-operator">Logical Operator</a></li>
+      </ul>
+    </li>
+    <li><a href="#type-conversion-functions">Type Conversion Functions</a></li>
+    <li><a href="#map-filter--reduce-functions">Map(), Filter() &amp; Reduce() Functions</a>
+      <ul>
+        <li><a href="#map-function">map() Function</a></li>
+        <li><a href="#filter-function">filter() Function</a></li>
+        <li><a href="#reduce-functions">reduce() Functions</a></li>
+      </ul>
+    </li>
+    <li><a href="#random-module">Random Module</a></li>
+    <li><a href="#iteration-functions">Iteration Functions</a>
+      <ul>
+        <li><a href="#enumerate-function">enumerate function</a></li>
+        <li><a href="#range-function">range function</a></li>
+        <li><a href="#iter-function">iter function</a></li>
+        <li><a href="#zip-function">zip function</a></li>
+      </ul>
+    </li>
+    <li><a href="#trivial-functions">Trivial Functions</a>
+      <ul>
+        <li><a href="#update-function">update function</a></li>
+        <li><a href="#ord--chr-functions">ord &amp; chr Functions</a></li>
+        <li><a href="#dir-functions">dir Functions</a></li>
+        <li><a href="#match-case-functions">match case Functions</a></li>
+        <li><a href="#hash-function">hash() Function</a></li>
+        <li><a href="#sysargv">SYS.ARGV()</a></li>
+      </ul>
+    </li>
+    <li><a href="#object-oriented-programming">Object Oriented Programming</a>
+      <ul>
+        <li><a href="#creating-a-class">Creating a Class</a></li>
+        <li><a href="#__init__-method">__init__ method</a></li>
+        <li><a href="#constructor">Constructor</a></li>
+        <li><a href="#types-of-variables-in-python---instance-variable--static-variable">Types of variables in Python - Instance variable &amp; Static Variable</a></li>
+        <li><a href="#methods-in-python">Methods in Python</a></li>
+      </ul>
+    </li>
+    <li><a href="#tuples">Tuples</a></li>
+    <li><a href="#lists">Lists</a>
+      <ul>
+        <li><a href="#list-comprehension">List Comprehension</a></li>
+      </ul>
+    </li>
+    <li><a href="#file-access-modes">File Access Modes</a></li>
+    <li><a href="#strings">Strings</a>
+      <ul>
+        <li><a href="#string-functions">String Functions</a></li>
+        <li><a href="#string-notes">String Notes</a></li>
+      </ul>
+    </li>
+    <li><a href="#dictionaries">Dictionaries</a></li>
+    <li><a href="#running-python-files">Running Python Files</a></li>
+    <li><a href="#functions">Functions</a>
+      <ul>
+        <li><a href="#lambda-function">Lambda Function</a></li>
+        <li><a href="#recursive-function">Recursive Function</a></li>
+      </ul>
+    </li>
+    <li><a href="#documentation-strings">Documentation Strings</a></li>
+    <li><a href="#modules">Modules</a>
+      <ul>
+        <li><a href="#module-loading--execution">Module Loading &amp; Execution</a></li>
+        <li><a href="#name-of-the-module">Name of the Module</a></li>
+        <li><a href="#making-your-own-module">Making Your Own Module</a></li>
+        <li><a href="#modules--namespaces">Modules &amp; Namespaces</a></li>
+        <li><a href="#local-global--built-in-namespaces">Local, Global &amp; Built-in Namespaces</a></li>
+        <li><a href="#module-private-variables">Module Private Variables</a></li>
+      </ul>
+    </li>
+    <li><a href="#packages">Packages</a>
+      <ul>
+        <li><a href="#creating-packages-in-python">Creating Packages in Python</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown book-article"><h1 id="python-notes">
+  Python Notes
+  <a class="anchor" href="#python-notes">#</a>
+</h1>
+<h2 id="programming-tips">
+  Programming Tips
+  <a class="anchor" href="#programming-tips">#</a>
+</h2>
+<ol>
+<li>
+<p>Use &rsquo;&rsquo;&rsquo; &lsquo;&rsquo;&rsquo;, &rsquo;&rsquo; &rsquo;&rsquo; or &rsquo; &rsquo; to write comments in the script.</p>
+</li>
+<li>
+<p>Multiple Assignment in Python : Example : a, b, c, good = 5, True, &lsquo;Stranger&rsquo;</p>
+</li>
+<li>
+<p>The following keywords are reserved in Python :</p>
+<p><code>and</code> <code>assert</code> <code>break</code> <code>class</code> <code>continue</code> <code>def</code> <code>del</code> <code>elif</code> <code>in</code> <code>is</code> <code>lambda</code> <code>not</code> <code>or</code> <code>else</code> <code>except</code> <code>exec</code> <code>finally</code> <code>for</code> <code>from</code> <code>global</code> <code>if</code> <code>import</code> <code>while</code> <code>with</code> <code>pass</code> <code>print</code> <code>raise</code> <code>return</code> <code>try</code> <code>yield</code></p>
+</li>
+<li>
+<p>Python has one <strong>unary</strong> operator, <strong>Unary Minus</strong> Operator. If a number is positive, it becomes negative when preceded by a unary minus operator.</p>
+</li>
+<li>
+<p>Python does not support prefix and postfix increment as well as decrement operators.</p>
+</li>
+<li>
+<p>Parentheses can change the order in which an operator is applied. The operator in the parenthesis is applied first even if there is a higher priority operator in the expression.</p>
+</li>
+<li>
+<p>Operators are associated from left to right. This means that operators with same precedence are evaluated in a left to right manner.</p>
+</li>
+<li>
+<p>Always prefer slicing over looping.</p>
+</li>
+<li>
+<p>Python is more forgiving when stepping over the range when slicing than when indexing or looping.</p>
+</li>
+</ol>
+<hr>
+<h2 id="operators-in-python">
+  Operators in Python
+  <a class="anchor" href="#operators-in-python">#</a>
+</h2>
+<table>
+<thead>
+<tr>
+<th>Operator</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>**</td>
+<td>Exponentiation</td>
+</tr>
+<tr>
+<td>~, +, -</td>
+<td>Complement, unary plus and unary minus</td>
+</tr>
+<tr>
+<td>*, /, %, //</td>
+<td>Multiply, divide, modulo and floor division</td>
+</tr>
+<tr>
+<td>+, -</td>
+<td>Addition and Subtraction</td>
+</tr>
+<tr>
+<td>&raquo;, &laquo;</td>
+<td>Right and Left bitwise shift</td>
+</tr>
+<tr>
+<td>&amp;</td>
+<td>Bitwise &lsquo;AND&rsquo;</td>
+</tr>
+<tr>
+<td>^ |</td>
+<td>Bitwise exclusive &lsquo;OR&rsquo; and regular &lsquo;AND&rsquo;</td>
+</tr>
+<tr>
+<td>&lt;= &lt; &gt; &gt;=</td>
+<td>Comparison Operators</td>
+</tr>
+<tr>
+<td>&lt;&gt; == !=</td>
+<td>Equality Operators</td>
+</tr>
+<tr>
+<td>=, %=, /=, //=, -=, +=, *=, **=</td>
+<td>Assignment Operators</td>
+</tr>
+<tr>
+<td>is, is not</td>
+<td>Identity Operators</td>
+</tr>
+<tr>
+<td>in, not in</td>
+<td>Membership Operators</td>
+</tr>
+<tr>
+<td>not, or, and</td>
+<td>Logical Operators</td>
+</tr>
+</tbody>
+</table>
+<h3 id="shift-operators">
+  Shift Operators
+  <a class="anchor" href="#shift-operators">#</a>
+</h3>
+<p>x = 0001 1101</p>
+<p><strong>Shift Left (&laquo;)</strong>
+x &laquo; 1 gives result 0011 1010</p>
+<p><strong>Shift Right (&raquo;)</strong>
+x &raquo; 1 gives result 0000 1110</p>
+<h3 id="bitwise-operators">
+  Bitwise Operators
+  <a class="anchor" href="#bitwise-operators">#</a>
+</h3>
+<ol>
+<li><strong>Bitwise AND(&amp;)</strong>
+The bit operand is ANDed with the corresponding bit in the second operand. The bitwise AND operator compares each bit of its first operand with the corresponding bit of its second operand. If both bits are 1, the corresponding bit in the result is 1 and 0 otherwise.</li>
+</ol>
+<p><code>10101010 &amp; 01010101 = 00000000</code></p>
+<ol start="2">
+<li><strong>Bitwise OR(|)</strong>
+The bit operand is ORed with the corresponding bit in the second operand. The bitwise OR operator compares each bit of its first operand with the corresponding bit of its second operand. If one or both of the bits is 1, the corresponding bit in the result is 1 and 0 otherwise.</li>
+</ol>
+<p><code>10101010 | 01010101 = 11111111</code></p>
+<ol start="3">
+<li><strong>Bitwise XOR(^)</strong>
+The bit operand is XORed with the corresponding bit in the second operand. The bitwise XOR operator compares each bit of its first operand with the corresponding bit of its second operand. If one of the bits is 1, the corresponding bit in the result is 1 and 0 otherwise.</li>
+</ol>
+<p><code>10101010 ^ 01010101 = 11111111</code></p>
+<ol start="4">
+<li><strong>Bitwise NOT(~)</strong>
+The bitwise NOT or Complementary operator, is a unary operation, which performs logical negation on each bit of the operand. By performing negation of each bit, it actually produces the ones&rsquo; complement of the given binary value. Bitwise NOT operator sets the bit to 1, if it was initially 0 and sets the bit to 1, if it was initially 0 and sets it to 0, if it was initially 1.</li>
+</ol>
+<p><code>~10101011 = 01010100</code></p>
+<h3 id="logical-operator">
+  Logical Operator
+  <a class="anchor" href="#logical-operator">#</a>
+</h3>
+<table>
+<thead>
+<tr>
+<th>Command</th>
+<th>Syntax</th>
+<th>Comment</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>AND (&amp;&amp;)</td>
+<td>a &gt; b &amp;&amp; b &gt; c</td>
+<td>Both expressions must be conditional</td>
+</tr>
+<tr>
+<td>OR (||)</td>
+<td>a &gt; b || b &gt; c</td>
+<td>Both expressions must be conditional</td>
+</tr>
+<tr>
+<td>NOT (!)</td>
+<td>b != a</td>
+<td>Both expressions must be conditional</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Truth Table</strong></p>
+<table>
+<thead>
+<tr>
+<th>A</th>
+<th>B</th>
+<th style="text-align:center">A&amp;&amp;B</th>
+<th>A</th>
+<th>B</th>
+<th style="text-align:center">A||B</th>
+<th>A</th>
+<th>!A</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>0</td>
+<td style="text-align:center">0</td>
+<td>0</td>
+<td>0</td>
+<td style="text-align:center">0</td>
+<td>0</td>
+<td>1</td>
+</tr>
+<tr>
+<td>0</td>
+<td>1</td>
+<td style="text-align:center">0</td>
+<td>0</td>
+<td>1</td>
+<td style="text-align:center">1</td>
+<td>1</td>
+<td>0</td>
+</tr>
+<tr>
+<td>1</td>
+<td>0</td>
+<td style="text-align:center">0</td>
+<td>1</td>
+<td>0</td>
+<td style="text-align:center">1</td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr>
+<td>1</td>
+<td>1</td>
+<td style="text-align:center">1</td>
+<td>1</td>
+<td>1</td>
+<td style="text-align:center">1</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="type-conversion-functions">
+  Type Conversion Functions
+  <a class="anchor" href="#type-conversion-functions">#</a>
+</h2>
+<table>
+<thead>
+<tr>
+<th>Function</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>int(x)</td>
+<td>Converts x to an integer</td>
+</tr>
+<tr>
+<td>long(x)</td>
+<td>Converts x to a long integer</td>
+</tr>
+<tr>
+<td>float(x)</td>
+<td>Converts x to a floating point number</td>
+</tr>
+<tr>
+<td>str(x)</td>
+<td>Converts x to a string</td>
+</tr>
+<tr>
+<td>tuple(x)</td>
+<td>Converts x to a tuple</td>
+</tr>
+<tr>
+<td>list(x)</td>
+<td>Converts x to a list</td>
+</tr>
+<tr>
+<td>set(x)</td>
+<td>Converts x to a set</td>
+</tr>
+<tr>
+<td>ord(x)</td>
+<td>Converts a single character to its integer value</td>
+</tr>
+<tr>
+<td>oct(x)</td>
+<td>Converts an integer to its octal value</td>
+</tr>
+<tr>
+<td>hex(x)</td>
+<td>Converts an integer to a hexadecimal string</td>
+</tr>
+<tr>
+<td>chr(x)</td>
+<td>Converts an integer to a character</td>
+</tr>
+<tr>
+<td>unichr(x)</td>
+<td>Converts an integer to a unicode character</td>
+</tr>
+<tr>
+<td>dict(x)</td>
+<td>Creates a dictionary if x contains a key-value pair</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="map-filter--reduce-functions">
+  Map(), Filter() &amp; Reduce() Functions
+  <a class="anchor" href="#map-filter--reduce-functions">#</a>
+</h2>
+<h3 id="map-function">
+  map() Function
+  <a class="anchor" href="#map-function">#</a>
+</h3>
+<p><strong>map()</strong> function applies a particular function to every element in the list.</p>
+<p><strong>Syntax</strong> : <code>map(function, sequence)</code>
+<strong>Notes</strong></p>
+<ul>
+<li>The function must have as many arguments as there are sequences</li>
+<li>Each argument is called with the coresponding item from each sequence (or None if one sequence is shorter then another)</li>
+</ul>
+<p><strong>Demo 1</strong> : A program that adds 2 to every element in the list</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">add_2</span>(x):
+</span></span><span style="display:flex;"><span>    x <span style="color:#f92672">+=</span> <span style="color:#ae81ff">2</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> x
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>num_list <span style="color:#f92672">=</span> [<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">4</span>,<span style="color:#ae81ff">5</span>,<span style="color:#ae81ff">6</span>,<span style="color:#ae81ff">7</span>,<span style="color:#ae81ff">8</span>,<span style="color:#ae81ff">8</span>,<span style="color:#ae81ff">10</span>]
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#34;Original list is : &#34;</span>, num_list)
+</span></span><span style="display:flex;"><span>new_list <span style="color:#f92672">=</span> list(map(add_2,num_list))
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#34;Modified List is :&#34;</span>, new_list)
+</span></span></code></pre></div><p>:arrow_double_down:</p>
+<pre tabindex="0"><code>Original list is :  [1, 2, 3, 4, 5, 6, 7, 8, 8, 10]
+Modified List is : [3, 4, 5, 6, 7, 8, 9, 10, 10, 12]
+</code></pre><p><strong>Demo 2</strong> : Program where more than one sequence is passed to the map() function.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">add</span>(x,y):
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> x <span style="color:#f92672">+</span> y
+</span></span><span style="display:flex;"><span>list1 <span style="color:#f92672">=</span> [<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">4</span>,<span style="color:#ae81ff">5</span>]
+</span></span><span style="display:flex;"><span>list2 <span style="color:#f92672">=</span> [<span style="color:#ae81ff">6</span>,<span style="color:#ae81ff">7</span>,<span style="color:#ae81ff">8</span>,<span style="color:#ae81ff">9</span>,<span style="color:#ae81ff">10</span>]
+</span></span><span style="display:flex;"><span>list3 <span style="color:#f92672">=</span> list(map(add,list1,list2))
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#34;Sum of list1 and list2 is : &#34;</span>,list3)
+</span></span></code></pre></div><p>:arrow_double_down:</p>
+<pre tabindex="0"><code>Sum of list1 and list2 is :  [7, 9, 11, 13, 15]
+</code></pre><h3 id="filter-function">
+  filter() Function
+  <a class="anchor" href="#filter-function">#</a>
+</h3>
+<p><strong>filter()</strong> function constructs a list from those elements of the list for which a function returns True.</p>
+<p><strong>Syntax</strong> : <code>filter(function, sequence)</code></p>
+<p><strong>Notes</strong></p>
+<ul>
+<li>If the sequence is a string, Unicode or a Tuple, then the result will be of the same type, otherwise it is always a list.</li>
+<li>Functions that return a Boolean value are called predicates.</li>
+</ul>
+<p><strong>Demo 1</strong> :</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">check</span>(x):
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> (x <span style="color:#f92672">%</span> <span style="color:#ae81ff">2</span> <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span> <span style="color:#f92672">or</span> x  <span style="color:#f92672">%</span> <span style="color:#ae81ff">4</span> <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>):
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Call check for every value between 2 to 21.</span>
+</span></span><span style="display:flex;"><span>evens <span style="color:#f92672">=</span> list(filter(check,range(<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">22</span>)))
+</span></span><span style="display:flex;"><span>print(evens)
+</span></span></code></pre></div><p>:arrow_double_down:</p>
+<pre tabindex="0"><code>[2, 4, 6, 8, 10, 12, 14, 16, 18, 20]
+</code></pre><h3 id="reduce-functions">
+  reduce() Functions
+  <a class="anchor" href="#reduce-functions">#</a>
+</h3>
+<p>The <strong>reduce()</strong> function returns a single value generated by calling the function on the first two itemsof the sequence, then on the result and the next item and so on.</p>
+<p><strong>Syntax</strong> : <code>reduce(function, sequence)</code></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">add</span>(x,y):
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> x <span style="color:#f92672">+</span> y
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>num_list <span style="color:#f92672">=</span> [<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">4</span>,<span style="color:#ae81ff">5</span>]
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#39;Sum of the values in list =&#39;</span>)
+</span></span><span style="display:flex;"><span>print(functools<span style="color:#f92672">.</span>reduce(add,num_list))
+</span></span></code></pre></div><p>:arrow_double_down:</p>
+<pre tabindex="0"><code>Sum of the values in list =
+15
+</code></pre><ul>
+<li><strong>reduce()</strong> function is not imported by default. Import <code>functools</code> module to use <strong>reduce</strong> function.</li>
+<li>If there is only one item in the sequence, then its value will be returned.</li>
+<li>If the sequence is empty, then an exception is raised.</li>
+<li>Creating a list in a very extensive range will generate a <em>MemoryError</em> or <em>OverflowError</em>.</li>
+</ul>
+<p><strong>Eg.</strong> <code>list = [5*i for i in range(100*100)</code></p>
+<p>When this statement is executed, you will get the system overflow problem. Python window will stop responding and you will have to press ==Ctrl+C== to get out of this state.</p>
+<hr>
+<h2 id="random-module">
+  Random Module
+  <a class="anchor" href="#random-module">#</a>
+</h2>
+<p><strong>choice() Attribute</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> random
+</span></span><span style="display:flex;"><span>coin <span style="color:#f92672">=</span> random(choice([<span style="color:#e6db74">&#39;heads&#39;</span>, <span style="color:#e6db74">&#39;tails&#39;</span>]))
+</span></span><span style="display:flex;"><span>print(coin)
+</span></span></code></pre></div><p>:arrow_double_down:</p>
+<pre tabindex="0"><code>heads
+</code></pre><p><strong>RANDINT()</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> random
+</span></span><span style="display:flex;"><span>num <span style="color:#f92672">=</span> random<span style="color:#f92672">.</span>randint(<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">10</span>)
+</span></span><span style="display:flex;"><span>print(num)
+</span></span></code></pre></div><p>:arrow_double_down:</p>
+<pre tabindex="0"><code>9
+</code></pre><p><strong>SHUFFLE()</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> random
+</span></span><span style="display:flex;"><span>cards <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;jack&#39;</span>,<span style="color:#e6db74">&#39;queen&#39;</span>,<span style="color:#e6db74">&#39;jack&#39;</span>]
+</span></span><span style="display:flex;"><span>random<span style="color:#f92672">.</span>shuffle(cards) <span style="color:#75715e"># The list order is shuffled.</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># print(cards)</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> card <span style="color:#f92672">in</span> cards:
+</span></span><span style="display:flex;"><span>    print(card)
+</span></span></code></pre></div><p>:arrow_double_down:</p>
+<pre tabindex="0"><code>queen
+jack
+jack
+</code></pre><hr>
+<h2 id="iteration-functions">
+  Iteration Functions
+  <a class="anchor" href="#iteration-functions">#</a>
+</h2>
+<h3 id="enumerate-function">
+  enumerate function
+  <a class="anchor" href="#enumerate-function">#</a>
+</h3>
+<ul>
+<li>When you want to print both index as well as an item in the list, <strong>enumerate()</strong> is used.</li>
+<li>The <strong>enumerate()</strong> function returns an enumerate object which contains the index and value of all the items of the list as tuple.</li>
+</ul>
+<p><strong>Example</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>num_list <span style="color:#f92672">=</span> [<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">4</span>,<span style="color:#ae81ff">5</span>]
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> index, i <span style="color:#f92672">in</span> enumerate(num_list):
+</span></span><span style="display:flex;"><span>    print(i, <span style="color:#e6db74">&#34; is at index : &#34;</span>,index)
+</span></span></code></pre></div><p>:arrow_double_down:</p>
+<pre tabindex="0"><code>1  is at index :  0
+2  is at index :  1
+3  is at index :  2
+4  is at index :  3
+5  is at index :  4
+</code></pre><h3 id="range-function">
+  range function
+  <a class="anchor" href="#range-function">#</a>
+</h3>
+<ul>
+<li>If you need to print index alone, use <strong>range()</strong> function</li>
+</ul>
+<p><strong>Example</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>num_list <span style="color:#f92672">=</span> [<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">4</span>,<span style="color:#ae81ff">5</span>]
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(len(num_list)):
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">&#34;index : &#34;</span>, i)
+</span></span></code></pre></div><p>:arrow_double_down:</p>
+<pre tabindex="0"><code>index :  0
+index :  1
+index :  2
+index :  3
+index :  4
+</code></pre><h3 id="iter-function">
+  iter function
+  <a class="anchor" href="#iter-function">#</a>
+</h3>
+<ul>
+<li>Iterator function is used using the built-in <strong>iter()</strong> function.</li>
+<li>The iterator is used to loop over the elements of the list.</li>
+<li>For this, the iterator fetches the value and then automatically points to the next item in the list when it is used with the <strong>next()</strong> method.</li>
+</ul>
+<p><strong>Example</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>num_list <span style="color:#f92672">=</span> [<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">4</span>,<span style="color:#ae81ff">5</span>]
+</span></span><span style="display:flex;"><span>it <span style="color:#f92672">=</span> iter(num_list)
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(len(num_list)):
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">&#34;Element at index &#34;</span>,i, <span style="color:#e6db74">&#34; is : &#34;</span>,next(it))
+</span></span></code></pre></div><p>:arrow_double_down:</p>
+<pre tabindex="0"><code>Element at index  0  is :  1
+Element at index  1  is :  2
+Element at index  2  is :  3
+Element at index  3  is :  4
+Element at index  4  is :  5
+</code></pre><h3 id="zip-function">
+  zip function
+  <a class="anchor" href="#zip-function">#</a>
+</h3>
+<ul>
+<li><strong>zip()</strong> is a built-in function that takes two or more sequences and &lsquo;zips&rsquo; them into a list of tuples.</li>
+<li>The tuple thus formed has one element from each sequence.</li>
+<li>If the sequences have different lengths, then the result has the length of the shortest one.</li>
+</ul>
+<p><strong>Example</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>tup_1 <span style="color:#f92672">=</span> (<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">4</span>,<span style="color:#ae81ff">5</span>,<span style="color:#ae81ff">6</span>)
+</span></span><span style="display:flex;"><span>list_1 <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;astrisk&#39;</span>, <span style="color:#66d9ef">True</span>, <span style="color:#ae81ff">45</span>, <span style="color:#ae81ff">3.1456789</span>]
+</span></span><span style="display:flex;"><span>print(list(zip(tup_1, list_1)))
+</span></span></code></pre></div><p>:arrow_double_down:</p>
+<pre tabindex="0"><code>[(1, &#39;astrisk&#39;), (3, True), (4, 45), (5, 3.1456789)]
+</code></pre><hr>
+<h2 id="trivial-functions">
+  Trivial Functions
+  <a class="anchor" href="#trivial-functions">#</a>
+</h2>
+<h3 id="update-function">
+  update function
+  <a class="anchor" href="#update-function">#</a>
+</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>s <span style="color:#f92672">=</span> set([<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">4</span>])
+</span></span><span style="display:flex;"><span>t <span style="color:#f92672">=</span> set([<span style="color:#ae81ff">6</span>, <span style="color:#ae81ff">7</span>, <span style="color:#ae81ff">8</span>])
+</span></span><span style="display:flex;"><span>s<span style="color:#f92672">.</span>update(t)
+</span></span><span style="display:flex;"><span>print(s)
+</span></span></code></pre></div><p>:arrow_double_down:</p>
+<pre tabindex="0"><code>{1, 2, 3, 4, 6, 7, 8}
+</code></pre><h3 id="ord--chr-functions">
+  ord &amp; chr Functions
+  <a class="anchor" href="#ord--chr-functions">#</a>
+</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>str <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;r&#39;</span>
+</span></span><span style="display:flex;"><span>print(ord(str))
+</span></span><span style="display:flex;"><span>str2 <span style="color:#f92672">=</span> <span style="color:#ae81ff">112</span>
+</span></span><span style="display:flex;"><span>print(chr(str2))
+</span></span></code></pre></div><p>:arrow_double_down:</p>
+<pre tabindex="0"><code>114
+p
+</code></pre><h3 id="dir-functions">
+  dir Functions
+  <a class="anchor" href="#dir-functions">#</a>
+</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>dtr <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Hello&#34;</span>
+</span></span><span style="display:flex;"><span>print(dir(str))
+</span></span></code></pre></div><p>:arrow_double_down:</p>
+<pre tabindex="0"><code>[&#39;__add__&#39;, &#39;__class__&#39;, &#39;__contains__&#39;, &#39;__delattr__&#39;, &#39;__dir__&#39;, &#39;__doc__&#39;, &#39;__eq__&#39;,
+&#39;__format__&#39;, &#39;__ge__&#39;, &#39;__getattribute__&#39;, &#39;__getitem__&#39;, &#39;__getnewargs__&#39;, &#39;__getstate__&#39;, &#39;__gt__&#39;, &#39;__hash__&#39;,
+&#39;__init__&#39;, &#39;__init_subclass__&#39;, &#39;__iter__&#39;, &#39;__le__&#39;, &#39;__len__&#39;, &#39;__lt__&#39;, &#39;__mod__&#39;, &#39;__mul__&#39;, &#39;__ne__&#39;, &#39;__new__&#39;,
+&#39;__reduce__&#39;, &#39;__reduce_ex__&#39;, &#39;__repr__&#39;, &#39;__rmod__&#39;, &#39;__rmul__&#39;, &#39;__setattr__&#39;, &#39;__sizeof__&#39;,
+&#39;__str__&#39;, &#39;__subclasshook__&#39;, &#39;capitalize&#39;, &#39;casefold&#39;, &#39;center&#39;, &#39;count&#39;, &#39;encode&#39;, &#39;endswith&#39;, &#39;expandtabs&#39;,
+&#39;find&#39;, &#39;format&#39;, &#39;format_map&#39;, &#39;index&#39;, &#39;isalnum&#39;,
+&#39;isalpha&#39;, &#39;isascii&#39;, &#39;isdecimal&#39;, &#39;isdigit&#39;, &#39;isidentifier&#39;, &#39;islower&#39;, &#39;isnumeric&#39;, &#39;isprintable&#39;,
+&#39;isspace&#39;, &#39;istitle&#39;, &#39;isupper&#39;, &#39;join&#39;, &#39;ljust&#39;, &#39;lower&#39;, &#39;lstrip&#39;, &#39;maketrans&#39;, &#39;partition&#39;, &#39;removeprefix&#39;, &#39;removesuffix&#39;,
+&#39;replace&#39;, &#39;rfind&#39;, &#39;rindex&#39;, &#39;rjust&#39;, &#39;rpartition&#39;,
+&#39;rsplit&#39;, &#39;rstrip&#39;, &#39;split&#39;, &#39;splitlines&#39;, &#39;startswith&#39;, &#39;strip&#39;, &#39;swapcase&#39;, &#39;title&#39;, &#39;translate&#39;, &#39;upper&#39;, &#39;zfill&#39;]
+</code></pre><h3 id="match-case-functions">
+  match case Functions
+  <a class="anchor" href="#match-case-functions">#</a>
+</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>name <span style="color:#f92672">=</span> input(<span style="color:#e6db74">&#34;What&#39;s your name?&#34;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">match</span> name:
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">case</span> <span style="color:#e6db74">&#39;Harry&#39;</span><span style="color:#f92672">|</span> <span style="color:#e6db74">&#39;Hermione&#39;</span> <span style="color:#f92672">|</span> <span style="color:#e6db74">&#39;Ron&#39;</span>:
+</span></span><span style="display:flex;"><span>        print(<span style="color:#e6db74">&#39;Gryffindor&#39;</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">case</span> <span style="color:#e6db74">&#39;Draco&#39;</span>:
+</span></span><span style="display:flex;"><span>        print(<span style="color:#e6db74">&#39;Slytherin&#39;</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">case</span> _:
+</span></span><span style="display:flex;"><span>        print(<span style="color:#e6db74">&#39;Who?&#39;</span>)
+</span></span></code></pre></div><p>:arrow_double_down:</p>
+<pre tabindex="0"><code>Input In [5]
+    match name:
+          ^
+SyntaxError: invalid syntax
+</code></pre><h3 id="hash-function">
+  hash() Function
+  <a class="anchor" href="#hash-function">#</a>
+</h3>
+<ul>
+<li>Python <strong>hash()</strong> function is a built-in function and returns the hash value of an object if it has one.</li>
+<li>The hash value is an integer which is used to quickly compare dictionary keys while looking at a dictionary.
+<code>Syntax : hash(obj)</code></li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>int_val <span style="color:#f92672">=</span> <span style="color:#ae81ff">4</span>
+</span></span><span style="display:flex;"><span>str_val <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;GeeksforGeeks&#39;</span>
+</span></span><span style="display:flex;"><span>flt_val <span style="color:#f92672">=</span> <span style="color:#ae81ff">24.56</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#34;The integer hash value is : &#34;</span> <span style="color:#f92672">+</span> str(hash(int_val)))
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#34;The string hash value is : &#34;</span> <span style="color:#f92672">+</span> str(hash(str_val)))
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#34;The float hash value is : &#34;</span> <span style="color:#f92672">+</span> str(hash(flt_val)))
+</span></span></code></pre></div><p>:arrow_double_down:</p>
+<pre tabindex="0"><code>The integer hash value is : 4
+The string hash value is : 7234223982570738077
+The float hash value is : 1291272085159665688
+</code></pre><h3 id="sysargv">
+  SYS.ARGV()
+  <a class="anchor" href="#sysargv">#</a>
+</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> sys
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#34;Hello I am&#34;</span>, sys<span style="color:#f92672">.</span>argv[<span style="color:#ae81ff">1</span>])
+</span></span></code></pre></div><p>:arrow_forward:</p>
+<pre tabindex="0"><code>Hello, my name is : ---ip=127.0.0.1
+</code></pre><p><strong>Shuffling a deck of cards.</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> random <span style="color:#66d9ef">as</span> rand
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> itertools <span style="color:#66d9ef">as</span> iter
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Now we form a deck of cards.</span>
+</span></span><span style="display:flex;"><span>deck <span style="color:#f92672">=</span> list(iter<span style="color:#f92672">.</span>product(range(<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">14</span>), [<span style="color:#e6db74">&#39;Spade&#39;</span>, <span style="color:#e6db74">&#39;Heart&#39;</span>, <span style="color:#e6db74">&#39;Diamond&#39;</span>, <span style="color:#e6db74">&#39;Club&#39;</span>]))
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Shuffle the cards.</span>
+</span></span><span style="display:flex;"><span>rand<span style="color:#f92672">.</span>shuffle(deck)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Now we draw three cards.</span>
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#34;Your combination of cards is :&#34;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">3</span>):
+</span></span><span style="display:flex;"><span>    print(deck[i][<span style="color:#ae81ff">0</span>], <span style="color:#e6db74">&#34; of &#34;</span>,deck[i][<span style="color:#ae81ff">1</span>])
+</span></span></code></pre></div><hr>
+<h2 id="object-oriented-programming">
+  Object Oriented Programming
+  <a class="anchor" href="#object-oriented-programming">#</a>
+</h2>
+<ul>
+<li>
+<p>Classes define property &amp; behaviour of objects.</p>
+</li>
+<li>
+<p>A class is a blue-print while an object is the actual product.</p>
+</li>
+<li>
+<p>A class is a collection of objects.</p>
+</li>
+<li>
+<p>Defining a class does not create any objects. Objects have to be explicitly created by using syntax :</p>
+<pre><code>    `objName = className()`
+</code></pre>
+</li>
+<li>
+<p>A method is a function associated with a class. It defines the operations that the object can execute when it receives a message.</p>
+</li>
+</ul>
+<p>The set of values that the object takes at a particular time is known as the ==state of the object==.</p>
+<p><strong>Data Abstraction</strong> : Refers to the process by which data &amp; functions are defined in such a way that only essential details are revealed &amp; implementation details are hidden.</p>
+<p><strong>Data Encapsulation</strong> : Also called Data Hiding, this is the technique of packing data &amp; functions into a single component (class) to hide implementation details of a class from the user.</p>
+<p><strong>Encapsulation</strong> organizes the data &amp; methosd into a structure that prevents data access by any function (or method) that is not specified in the class. This ensures the integrity of data contained in the object.</p>
+<h3 id="creating-a-class">
+  Creating a Class
+  <a class="anchor" href="#creating-a-class">#</a>
+</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Computer</span>():
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">config</span>(self):
+</span></span><span style="display:flex;"><span>        print(<span style="color:#e6db74">&#34;i5, 1TB SSD, 32GB RAM&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>comp_1 <span style="color:#f92672">=</span> Computer()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Computer<span style="color:#f92672">.</span>config(comp_1) <span style="color:#75715e"># Older syntax of calling objects.</span>
+</span></span><span style="display:flex;"><span>comp_1<span style="color:#f92672">.</span>config() <span style="color:#75715e"># Frequently used syntax to call objects.</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>print(type(comp_1)) <span style="color:#75715e"># Printing out the object type.</span>
+</span></span></code></pre></div><p>:arrow_double_down:</p>
+<pre tabindex="0"><code>i5, 1TB SSD, 32GB RAM
+i5, 1TB SSD, 32GB RAM
+&lt;class &#39;__main__.Computer&#39;&gt;
+</code></pre><h3 id="__init__-method">
+  __init__ method
+  <a class="anchor" href="#__init__-method">#</a>
+</h3>
+<p>==Program I==</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Computer</span>:
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> __init__(self):
+</span></span><span style="display:flex;"><span>        print(<span style="color:#e6db74">&#34;The computer specs :&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">config</span>(self):
+</span></span><span style="display:flex;"><span>        print(<span style="color:#e6db74">&#34;i5, 1TB SSD, 32GB RAM&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>comp_1 <span style="color:#f92672">=</span> Computer()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Computer<span style="color:#f92672">.</span>config(comp_1) <span style="color:#75715e"># Older syntax of calling objects.</span>
+</span></span><span style="display:flex;"><span>comp_1<span style="color:#f92672">.</span>config() <span style="color:#75715e"># Frequently used syntax to call objects.</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>print(type(comp_1)) <span style="color:#75715e"># Printing out the object type.</span>
+</span></span></code></pre></div><p>:arrow_double_down:</p>
+<pre tabindex="0"><code>The computer specs :
+i5, 1TB SSD, 32GB RAM
+i5, 1TB SSD, 32GB RAM
+&lt;class &#39;__main__.Computer&#39;&gt;
+</code></pre><p>==Program II==</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Computer</span>:
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> __init__(self, cpu, ram):
+</span></span><span style="display:flex;"><span>        print(<span style="color:#e6db74">&#34;The computer specs :&#34;</span>)
+</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>cpu <span style="color:#f92672">=</span> cpu
+</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>ram <span style="color:#f92672">=</span> ram
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">config</span>(self):
+</span></span><span style="display:flex;"><span>        print(<span style="color:#e6db74">&#34;Config is &#34;</span>, self<span style="color:#f92672">.</span>cpu, self<span style="color:#f92672">.</span>ram)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>comp_1 <span style="color:#f92672">=</span> Computer(<span style="color:#e6db74">&#39;i9&#39;</span>, <span style="color:#ae81ff">16</span>)
+</span></span><span style="display:flex;"><span>comp_2 <span style="color:#f92672">=</span> Computer(<span style="color:#e6db74">&#39;R6 3600&#39;</span>, <span style="color:#ae81ff">32</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>comp_1<span style="color:#f92672">.</span>config()
+</span></span><span style="display:flex;"><span>comp_2<span style="color:#f92672">.</span>config()
+</span></span></code></pre></div><p>:arrow_double_down:</p>
+<pre tabindex="0"><code>The computer specs :
+The computer specs :
+Config is  i9 16
+Config is  R6 3600 32
+</code></pre><h3 id="constructor">
+  Constructor
+  <a class="anchor" href="#constructor">#</a>
+</h3>
+<p><strong>__init__</strong> is a constructor</p>
+<p>==Program==</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Computer</span>:
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> __init__(self):
+</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>name <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;Deepak&#39;</span>
+</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>age <span style="color:#f92672">=</span> <span style="color:#ae81ff">28</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">update</span>(self):
+</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>age <span style="color:#f92672">=</span> <span style="color:#ae81ff">20</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">compare</span>(self,other):
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> self<span style="color:#f92672">.</span>age <span style="color:#f92672">==</span> other<span style="color:#f92672">.</span>age:
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">True</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">else</span>:
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">False</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>c1 <span style="color:#f92672">=</span> Computer()
+</span></span><span style="display:flex;"><span>c2 <span style="color:#f92672">=</span> Computer()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>c1<span style="color:#f92672">.</span>update()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>print(c1<span style="color:#f92672">.</span>age)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">if</span> c1<span style="color:#f92672">.</span>compare(c2):
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">&#34;They are same.&#34;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">else</span>:
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">&#34;They are different.&#34;</span>)
+</span></span></code></pre></div><p>:arrow_double_down:</p>
+<pre tabindex="0"><code>Output :
+20
+They are different.
+</code></pre><h3 id="types-of-variables-in-python---instance-variable--static-variable">
+  Types of variables in Python - Instance variable &amp; Static Variable
+  <a class="anchor" href="#types-of-variables-in-python---instance-variable--static-variable">#</a>
+</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Car</span>:
+</span></span><span style="display:flex;"><span>    wheels <span style="color:#f92672">=</span> <span style="color:#ae81ff">4</span> <span style="color:#75715e"># Class/Static Variable.</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> __init__(self):
+</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>mil <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span>      <span style="color:#75715e"># Instance Variable</span>
+</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>com <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;BMW&#39;</span>   <span style="color:#75715e"># Instance Variable</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>c1 <span style="color:#f92672">=</span> Car()
+</span></span><span style="display:flex;"><span>c2 <span style="color:#f92672">=</span> Car()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>c1<span style="color:#f92672">.</span>mil <span style="color:#f92672">=</span> <span style="color:#ae81ff">8</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>print(c1<span style="color:#f92672">.</span>com, c1<span style="color:#f92672">.</span>mil, c1<span style="color:#f92672">.</span>wheels)
+</span></span><span style="display:flex;"><span>print(c2<span style="color:#f92672">.</span>com, c2<span style="color:#f92672">.</span>mil, c2<span style="color:#f92672">.</span>wheels)
+</span></span></code></pre></div><p>:arrow_double_down:</p>
+<pre tabindex="0"><code>Output :
+BMW 8 4
+BMW 10 4
+</code></pre><h3 id="methods-in-python">
+  Methods in Python
+  <a class="anchor" href="#methods-in-python">#</a>
+</h3>
+<ol>
+<li>Instance Methods</li>
+<li>Class Methods</li>
+<li>Static Methods</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Student</span>:
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    school <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;DataMan&#39;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> __init__(self, m1, m2, m3):
+</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>m1 <span style="color:#f92672">=</span> m1
+</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>m2 <span style="color:#f92672">=</span> m2
+</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>m3 <span style="color:#f92672">=</span> m3
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">avg</span>(self):
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> (self<span style="color:#f92672">.</span>m1 <span style="color:#f92672">+</span> self<span style="color:#f92672">.</span>m2 <span style="color:#f92672">+</span> self<span style="color:#f92672">.</span>m3) <span style="color:#f92672">/</span> <span style="color:#ae81ff">3</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">get_m1</span>(self):
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> self<span style="color:#f92672">.</span>m1
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>s1 <span style="color:#f92672">=</span> Student(<span style="color:#ae81ff">34</span>,<span style="color:#ae81ff">67</span>,<span style="color:#ae81ff">32</span>)
+</span></span><span style="display:flex;"><span>s2 <span style="color:#f92672">=</span> Student(<span style="color:#ae81ff">67</span>,<span style="color:#ae81ff">32</span>,<span style="color:#ae81ff">12</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>print(s1<span style="color:#f92672">.</span>avg())
+</span></span></code></pre></div><p>:arrow_double_down:</p>
+<pre tabindex="0"><code>Output :
+44.333333333333336
+</code></pre><h2 id="tuples">
+  Tuples
+  <a class="anchor" href="#tuples">#</a>
+</h2>
+<ul>
+<li>Tuples are useful for records / structures in other programming languages.</li>
+<li>Unlike lists, Tuples do not support pop(), remove(), append(), insert() etc. methods.</li>
+<li>If a sequence is specified without parentheses, it is treated as tuple by default.</li>
+</ul>
+<p><strong>Advantages of tuple over list :</strong>
+A. Tuples can be used as keys for dictionaries but lists cannot be.
+B. Tuples are best-suited for storing data that is write-protected.
+C. Tuples can store values of differenet datatypes whereas lists can only store values of same datatype.
+D. Tuples can be used in place of lists where the number of values is known and small.
+E. Multiple values from a function can be returned using a tuple.
+F. Tuples are used to format strings.</p>
+<p>Tuples are not just immutable but also acts as records with no field names.Each item in the tuple holds the data for one filed and the position of the item gives the meaning.</p>
+<p>Benefits of using tuples :
+A. <strong>Clarity</strong> : Its clear that the length is never going to change.
+B. <strong>Performance</strong> : Occupies less memory than a list of same length.</p>
+<p>References in a tuple cannot be changed. But if one of those references points to a mutable object, once that object is changed, then the value of the tuple changes.</p>
+<p>Tuples with mutable items can be a source of bugs. An object is only hashable if its value cannot ever change. An unhashable tuple cannot be inserted as a dictionary key, or a set element.</p>
+<p><strong>Parallel Assignment</strong> : Assigning items from an iterable to a tuple of variables.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>lax_coord <span style="color:#f92672">=</span> (<span style="color:#ae81ff">33.9426</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">118.408</span>)
+</span></span><span style="display:flex;"><span>latitude, longitude <span style="color:#f92672">=</span> lax_coord
+</span></span><span style="display:flex;"><span>print(latitude, longitude)
+</span></span></code></pre></div><p>:arrow_double_down:</p>
+<pre tabindex="0"><code>33.9426 -118.408
+</code></pre><p><strong>Example for Parallel Assignment</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>a <span style="color:#f92672">=</span> <span style="color:#ae81ff">5</span>
+</span></span><span style="display:flex;"><span>b <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span>
+</span></span><span style="display:flex;"><span>print(a, b)
+</span></span><span style="display:flex;"><span>a, b <span style="color:#f92672">=</span> b, a
+</span></span><span style="display:flex;"><span>print(a, b)
+</span></span></code></pre></div><p>:arrow_double_down:</p>
+<pre tabindex="0"><code>Output :
+5 10
+10 5
+</code></pre><p>In function calls, <strong>*</strong> can be used multiple times</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">fun</span>(a, b, c, d, <span style="color:#f92672">*</span>rest):
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> a, b, c, d, rest
+</span></span></code></pre></div><p>:arrow_forward:</p>
+<pre tabindex="0"><code>fun(*[1,2], 3, 4, *range(5, 7))
+</code></pre><hr>
+<h2 id="lists">
+  Lists
+  <a class="anchor" href="#lists">#</a>
+</h2>
+<table>
+<thead>
+<tr>
+<th>Action</th>
+<th>Syntax</th>
+<th>Explanation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Extend a list</td>
+<td>list1.extend(list2[0:2])</td>
+<td>Adds items 1 to 3 from list2 to list1</td>
+</tr>
+<tr>
+<td>Append</td>
+<td>list1.append(&lsquo;item&rsquo;)</td>
+<td>Appends &lsquo;item&rsquo; to the end of list1</td>
+</tr>
+<tr>
+<td>Insert</td>
+<td>list1.insert(index,element)</td>
+<td>Inserts an element at desired index in list1</td>
+</tr>
+<tr>
+<td>Clear</td>
+<td>list1.clear()</td>
+<td>Clears all elements in the list</td>
+</tr>
+<tr>
+<td>Pop</td>
+<td>list1.pop()</td>
+<td>Eliminates the last element in the list</td>
+</tr>
+<tr>
+<td>index(element)</td>
+<td>list1.index(element)</td>
+<td>Gives the index number of the position in the list or the first instance position if duplicates exist</td>
+</tr>
+<tr>
+<td>count(element)</td>
+<td>list1.count(element)</td>
+<td>Gives out the no. of times an element is repeated in the list.</td>
+</tr>
+<tr>
+<td>sort()</td>
+<td>list1.sort()</td>
+<td>Sorts the list in an ascending order. Uses ASCII values to sort the list elements.Num &lt; Upper &lt; Lower</td>
+</tr>
+<tr>
+<td>reverse()</td>
+<td>list.reverse()</td>
+<td>Sorts the list in an descending order</td>
+</tr>
+<tr>
+<td>copy()</td>
+<td>list2 = list1.copy()</td>
+<td>Copies elements in list1 to create list2. Editing list1 maked edits in list2 bcoz only reference is copied and not the actual elements in the list.</td>
+</tr>
+<tr>
+<td>Replace()</td>
+<td>print(list2.replace(&rsquo;elem2&rsquo;,&rsquo;elem1&rsquo;))</td>
+<td>Replaces elem1 with elem2 in list2</td>
+</tr>
+<tr>
+<td>abs</td>
+<td>abs.var</td>
+<td>Gives the absolute number of the variable</td>
+</tr>
+<tr>
+<td>copy()</td>
+<td>lst_2 = copy.copy(lst_1)</td>
+<td>Copies elements from one list to other with distinct id</td>
+</tr>
+<tr>
+<td>deepcopy()</td>
+<td>lst_2 = copy.deepcopy(lst_1)</td>
+<td>Copies elements from one list to other with distinct id. Used when the list has lists within it</td>
+</tr>
+<tr>
+<td>set()</td>
+<td>set(list_1)</td>
+<td>Duplicates in a list or tuple can be eliminated by using set() method</td>
+</tr>
+<tr>
+<td>List Comprehension</td>
+<td>list = [i**3 for I in range(5)]</td>
+<td>Creating a list of cubes for numbers upto 5</td>
+</tr>
+<tr>
+<td>enumerate()</td>
+<td>for index, element in enumerate(list):</td>
+<td>Used when both both index and item needed to be printed</td>
+</tr>
+<tr>
+<td>iterator</td>
+<td>next(list)</td>
+<td>Used to iterate a list</td>
+</tr>
+<tr>
+<td>sorted()</td>
+<td>list2 = sorted(list1)</td>
+<td>Returns a sorted list. Original list is not sorted</td>
+</tr>
+<tr>
+<td>max(), min()</td>
+<td>x = max(list1)</td>
+<td>Returns the max/min element in the list</td>
+</tr>
+<tr>
+<td>len()</td>
+<td>print(len(list1))</td>
+<td>Prints the length of a list</td>
+</tr>
+<tr>
+<td>id(list1)</td>
+<td>print(id(list1))</td>
+<td>Prints the ID of the list</td>
+</tr>
+</tbody>
+</table>
+<h3 id="list-comprehension">
+  List Comprehension
+  <a class="anchor" href="#list-comprehension">#</a>
+</h3>
+<p><code>List = [expression for variable in sequence]</code></p>
+<p><strong>Examples</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>cubes <span style="color:#f92672">=</span> [i<span style="color:#f92672">**</span><span style="color:#ae81ff">3</span> <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">11</span>)]
+</span></span><span style="display:flex;"><span>z <span style="color:#f92672">=</span> [(x,y) <span style="color:#66d9ef">for</span> x <span style="color:#f92672">in</span> [<span style="color:#ae81ff">10</span>,<span style="color:#ae81ff">20</span>,<span style="color:#ae81ff">30</span>] <span style="color:#66d9ef">for</span> y <span style="color:#f92672">in</span> [<span style="color:#ae81ff">40</span>,<span style="color:#ae81ff">50</span>,<span style="color:#ae81ff">10</span>] <span style="color:#66d9ef">if</span> x<span style="color:#f92672">!=</span> y]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>print(cubes)
+</span></span><span style="display:flex;"><span>print(z)
+</span></span></code></pre></div><p>:arrow_forward:</p>
+<pre tabindex="0"><code>[1, 8, 27, 64, 125, 216, 343, 512, 729, 1000]
+[(10, 40), (10, 50), (20, 40), (20, 50), (20, 10), (30, 40), (30, 50), (30, 10)]
+</code></pre><p><strong>Caution</strong> Creating a list in a very extensive range will generate a <em>MemoryError</em> or <em>OverflowError</em>.</p>
+<h2 id="file-access-modes">
+  File Access Modes
+  <a class="anchor" href="#file-access-modes">#</a>
+</h2>
+<table>
+<thead>
+<tr>
+<th>Mode</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>&ldquo;r&rdquo; (read mode)</td>
+<td>Open the file for reading. If the file does not exist, a FileNotFoundError is raised.</td>
+</tr>
+<tr>
+<td>&ldquo;w&rdquo; (write mode)</td>
+<td>Open the file for writing. If the file exists, its contents are truncated. If the file does not exist in the file path, a new file is created.</td>
+</tr>
+<tr>
+<td>&ldquo;a&rdquo; (append mode)</td>
+<td>Open the file for writing, but instead of truncating its contents, new data is added to the end of the file. If the file does not exist in the file path, a new file is created.</td>
+</tr>
+<tr>
+<td>&ldquo;x&rdquo; (exclusive creation mode)</td>
+<td>Open the file for writing, but only if the file does not already exist. If the file exists, a FileExistsError is raised.</td>
+</tr>
+<tr>
+<td>&ldquo;b&rdquo; (binary mode)</td>
+<td>Open the file in binary mode. When used in combination with other modes, the &ldquo;b&rdquo; mode changes the way data is read from or written to the file. For example, &ldquo;rb&rdquo; opens the file in binary read mode, and &ldquo;wb&rdquo; opens the file in binary write mode.</td>
+</tr>
+<tr>
+<td>&ldquo;t&rdquo; (Text mode)</td>
+<td>Used in combination with other modes to indicate that the file should be opened in text mode (default)</td>
+</tr>
+<tr>
+<td>&ldquo;+&rdquo; (read and write mode)</td>
+<td>Open the file for reading and writing. The file&rsquo;s pointer is positioned at the starting of the file.</td>
+</tr>
+<tr>
+<td>&lsquo;r+&rsquo; (Read and write mode)</td>
+<td>Opens the file for reading and writing and the pointer is placed at the beginning of the file. If the file does not exist, an error is raised.</td>
+</tr>
+<tr>
+<td>&lsquo;a+&rsquo; (Read and append mode)</td>
+<td>Opens the file for reading and writing and the pointer is placed at the end of the file. If the file does not exist in the file path, it is created.</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Info</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>fileObj.closed</code></td>
+<td>Returns True if the file is closed</td>
+</tr>
+<tr>
+<td><code>fileObj.mode</code></td>
+<td>Returns access mode with which file has been opened</td>
+</tr>
+<tr>
+<td><code>fileObj.name</code></td>
+<td>Returns name of the file</td>
+</tr>
+</tbody>
+</table>
+<h2 id="strings">
+  Strings
+  <a class="anchor" href="#strings">#</a>
+</h2>
+<table>
+<thead>
+<tr>
+<th>Command</th>
+<th>Syntax</th>
+<th>Comment</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>sep</td>
+<td><code>print(objects, sep =&quot;&quot;)</code></td>
+<td>sep determines how two objects inside the print statement are separated.</td>
+</tr>
+<tr>
+<td>end</td>
+<td><code>print(objects, end =&quot;&quot;)</code></td>
+<td>end determines if the print statement should move on or continue in the same line.</td>
+</tr>
+<tr>
+<td>id</td>
+<td><code>print(id(object))</code></td>
+<td>prints the location id of a variable, list etc.</td>
+</tr>
+<tr>
+<td>len()</td>
+<td><code>print(len('string'))</code></td>
+<td>prints the no. of characters in the string &lsquo;string&rsquo;.</td>
+</tr>
+<tr>
+<td>\n</td>
+<td><code>print(&quot;\n&quot;)</code></td>
+<td>Prints new line.</td>
+</tr>
+<tr>
+<td>\t</td>
+<td><code>print(&quot;\t&quot;)</code></td>
+<td>Prints tab space</td>
+</tr>
+<tr>
+<td>\</td>
+<td><code>print(&quot;\&quot;&quot;) </code></td>
+<td>Prints &quot; inside the string by putting \ (backslash/escape char) before it.</td>
+</tr>
+<tr>
+<td>\f</td>
+<td><code>print('Hello\fWorld')</code></td>
+<td>Prints form feed character</td>
+</tr>
+<tr>
+<td>\a</td>
+<td><code>print('\a')</code></td>
+<td>Rings bell</td>
+</tr>
+<tr>
+<td>\o</td>
+<td><code>print('\o56')</code></td>
+<td>Prints octal value.</td>
+</tr>
+<tr>
+<td>\x</td>
+<td><code>print('\x87')</code></td>
+<td>Prints hex value.</td>
+</tr>
+<tr>
+<td>Raw String</td>
+<td><code>print(r&quot;string&quot;)</code></td>
+<td>Prints the string raw,i.e., escapes &quot; and other chars and treats them as normal text.</td>
+</tr>
+<tr>
+<td>f-string</td>
+<td><code>print(f&quot;String&quot;)</code></td>
+<td>Prints the string with variables inside it.</td>
+</tr>
+<tr>
+<td>lower()</td>
+<td><code>spam.lower()</code></td>
+<td>Converts string into lower/upper case.</td>
+</tr>
+<tr>
+<td>Unicode String</td>
+<td><code>u'Sample Unicode String'</code></td>
+<td>Specifies that the text is in Unicode format i.e., written in language other than English. Both /u and /U can be used.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="string-functions">
+  String Functions
+  <a class="anchor" href="#string-functions">#</a>
+</h3>
+<table>
+<thead>
+<tr>
+<th>Command</th>
+<th>Syntax</th>
+<th>Comment</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>islower()</td>
+<td>spam.islower()</td>
+<td>Is True if String is lower case.</td>
+</tr>
+<tr>
+<td>isupper()</td>
+<td>spam.isupper()</td>
+<td>String is upper case.</td>
+</tr>
+<tr>
+<td>isinteger()</td>
+<td>spam[index No.].isinteger()</td>
+<td>String has integers only.</td>
+</tr>
+<tr>
+<td>isspace()</td>
+<td>spam[index No.].isspace()</td>
+<td>String or string index pos has space.</td>
+</tr>
+<tr>
+<td>endswith()</td>
+<td>string.endswith()</td>
+<td>String or string index ends with char or integer (within the parentheses)</td>
+</tr>
+<tr>
+<td>istitle()</td>
+<td>string.istitle()</td>
+<td>Checks whether string is title (starts with Capital Letter and every word starts with a Capital Letter)</td>
+</tr>
+<tr>
+<td>startswith()</td>
+<td>string.startswith(pattern)</td>
+<td>Checks if a string starts with a pattern.</td>
+</tr>
+<tr>
+<td>().join()</td>
+<td>(x).join(string items)</td>
+<td>Joins a bunch of strings into one using a joining character.</td>
+</tr>
+<tr>
+<td>split()</td>
+<td>&lsquo;I am a man&rsquo;.split( )</td>
+<td>Splits a string along the defined character.</td>
+</tr>
+<tr>
+<td>rjust()</td>
+<td>&lsquo;hello&rsquo;.rjust(10,&rsquo;*&rsquo;)</td>
+<td>Right-justifies by 10 characters.</td>
+</tr>
+<tr>
+<td>rstrip()</td>
+<td>spam.rstrip()</td>
+<td>Removes white spaces from right of the string. Strip() just removes whitespace.</td>
+</tr>
+<tr>
+<td>replace()</td>
+<td>spam.replace(replaced, replacer)</td>
+<td>Replaces a char or a group of chars with other char/group of chars.</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Symbol</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>%c</td>
+<td>Character</td>
+</tr>
+<tr>
+<td>%d or %i</td>
+<td>Signed Decimal Integer</td>
+</tr>
+<tr>
+<td>%s</td>
+<td>String</td>
+</tr>
+<tr>
+<td>%u</td>
+<td>Unsigned Decimal Integer</td>
+</tr>
+<tr>
+<td>%o</td>
+<td>Octal Integer</td>
+</tr>
+<tr>
+<td>%x or %X</td>
+<td>Hexadecimal Integer (x for lowercase a-f, X for uppercase characters A-F)</td>
+</tr>
+<tr>
+<td>%E or %e</td>
+<td>Exponential Notation</td>
+</tr>
+<tr>
+<td>%f</td>
+<td>Floating Point Number</td>
+</tr>
+<tr>
+<td>%g or %G</td>
+<td>Short Numbers in floating point or exponential notation</td>
+</tr>
+</tbody>
+</table>
+<h3 id="string-notes">
+  String Notes
+  <a class="anchor" href="#string-notes">#</a>
+</h3>
+<ol>
+<li>Python strings are immutable. Once created, they cannot be changed.</li>
+<li>Can be concatenated using the + operator.</li>
+<li>A substring of slice is called a slice.</li>
+<li>Slice operation is used to refer to sub-parts of sequences and strings.</li>
+<li>Use the dir() with the module name as an argument to see the contents of the string module.</li>
+<li>Use help() to print details of a particular item in the string module.</li>
+<li>type() shows the type of an object.</li>
+<li>Passing ‘\n’ in split() allows us to split the multiline string stored in the string variable.</li>
+<li>To find the details of a particular function, you can print its documentation using the docstring through <strong>__doc__</strong> attribute.</li>
+<li>A string can be printed muliple times using print(&lsquo;str&rsquo; * n) where n is the no. of times to be printed.</li>
+</ol>
+<p><strong>Stride Example</strong></p>
+<p>Stride refers to the number of characters the string has to move forward after retrieving the first character.
+Specifying stride while slicing strings.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>str <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Welcome to the world of Python.&#34;</span>
+</span></span><span style="display:flex;"><span>print(str[<span style="color:#ae81ff">2</span>:<span style="color:#ae81ff">10</span>]) <span style="color:#75715e"># Here default stride is 1.</span>
+</span></span><span style="display:flex;"><span>print(str[<span style="color:#ae81ff">2</span>:<span style="color:#ae81ff">10</span>:<span style="color:#ae81ff">1</span>]) <span style="color:#75715e"># Same as above.</span>
+</span></span><span style="display:flex;"><span>print(str[<span style="color:#ae81ff">2</span>:<span style="color:#ae81ff">10</span>:<span style="color:#ae81ff">2</span>]) <span style="color:#75715e"># Stride by 2 i.e., skips every alternate character.</span>
+</span></span><span style="display:flex;"><span>print(str[<span style="color:#ae81ff">2</span>:<span style="color:#ae81ff">13</span>:<span style="color:#ae81ff">4</span>]) <span style="color:#75715e"># Stride by 4 i.e., skips every 4 character.</span>
+</span></span></code></pre></div><p>:arrow_forward:</p>
+<pre tabindex="0"><code>Output :
+lcome to
+lcome to
+loet
+le
+</code></pre><p>Slice operation with just last positive argument.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>str <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;Welcome to the world of Python.&#39;</span>
+</span></span><span style="display:flex;"><span>print(str[::<span style="color:#ae81ff">3</span>])
+</span></span></code></pre></div><p>:arrow_forward:</p>
+<pre tabindex="0"><code>WceohwloPh.
+</code></pre><h2 id="dictionaries">
+  Dictionaries
+  <a class="anchor" href="#dictionaries">#</a>
+</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>actors <span style="color:#f92672">=</span> {<span style="color:#e6db74">&#39;Michael&#39;</span> : <span style="color:#e6db74">&#39;Nacho&#39;</span>, <span style="color:#e6db74">&#39;Bob&#39;</span> : <span style="color:#e6db74">&#39;Saul&#39;</span>,<span style="color:#e6db74">&#39;Giancarlo&#39;</span>:<span style="color:#e6db74">&#39;Fring&#39;</span>,<span style="color:#e6db74">&#39;Rhea&#39;</span>:<span style="color:#e6db74">&#39;Kim&#39;</span>}
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> actor <span style="color:#f92672">in</span> actors:
+</span></span><span style="display:flex;"><span>    print(actor, actors[actor], sep<span style="color:#f92672">=</span><span style="color:#e6db74">&#39; : &#39;</span>)
+</span></span></code></pre></div><p>The <strong>key</strong> is accessed using <strong>actor</strong> variable from <strong>for</strong> loop, while the values/definitions are accessed using <strong>dict_name[for_var]</strong>. Both are separated using the separator &quot; <strong>:</strong> &ldquo;.</p>
+<p>:arrow_forward:</p>
+<pre tabindex="0"><code>Michael : Nacho
+Bob : Saul
+Giancarlo : Fring
+Rhea : Kim
+</code></pre><p><strong>Note</strong> : When more key value pairs exist, a <strong>list</strong> of dictionaries can be defined and accessed.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>actors <span style="color:#f92672">=</span> [
+</span></span><span style="display:flex;"><span>    {<span style="color:#e6db74">&#39;name&#39;</span>:<span style="color:#e6db74">&#39;mando&#39;</span>,<span style="color:#e6db74">&#39;character&#39;</span>:<span style="color:#e6db74">&#39;Nacho&#39;</span>,<span style="color:#e6db74">&#39;profession&#39;</span>:<span style="color:#e6db74">&#39;enforcer&#39;</span>},
+</span></span><span style="display:flex;"><span>    {<span style="color:#e6db74">&#39;name&#39;</span>:<span style="color:#e6db74">&#39;rhea&#39;</span>,<span style="color:#e6db74">&#39;character&#39;</span>:<span style="color:#e6db74">&#39;kim&#39;</span>,<span style="color:#e6db74">&#39;profession&#39;</span>:<span style="color:#e6db74">&#39;lawyer&#39;</span>},
+</span></span><span style="display:flex;"><span>    {<span style="color:#e6db74">&#39;name&#39;</span>:<span style="color:#e6db74">&#39;bob&#39;</span>,<span style="color:#e6db74">&#39;character&#39;</span>:<span style="color:#e6db74">&#39;jimmy&#39;</span>,<span style="color:#e6db74">&#39;profession&#39;</span>:<span style="color:#e6db74">&#39;lawyer&#39;</span>},
+</span></span><span style="display:flex;"><span>    {<span style="color:#e6db74">&#39;name&#39;</span>:<span style="color:#e6db74">&#39;esposito&#39;</span>,<span style="color:#e6db74">&#39;character&#39;</span>:<span style="color:#e6db74">&#39;gustavo&#39;</span>,<span style="color:#e6db74">&#39;profession&#39;</span>:<span style="color:#e6db74">&#39;businessman&#39;</span>}
+</span></span><span style="display:flex;"><span>         ]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>print(actors[<span style="color:#ae81ff">1</span>][<span style="color:#e6db74">&#39;name&#39;</span>]) <span style="color:#75715e"># Accessing individual character within the dict_list.</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> actors:
+</span></span><span style="display:flex;"><span>    print(i[<span style="color:#e6db74">&#39;name&#39;</span>])
+</span></span></code></pre></div><p>:arrow_forward:</p>
+<pre tabindex="0"><code>rhea
+
+mando
+rhea
+bob
+esposito
+</code></pre><blockquote>
+<p>Another way of accessing dictionary definitions is by using keys.</p>
+</blockquote>
+<p><code>Syntax : print(dict_name(key))</code></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>actors <span style="color:#f92672">=</span> {<span style="color:#e6db74">&#39;Michael&#39;</span> : <span style="color:#e6db74">&#39;Nacho&#39;</span>, <span style="color:#e6db74">&#39;Bob&#39;</span> : <span style="color:#e6db74">&#39;Saul&#39;</span>,<span style="color:#e6db74">&#39;Giancarlo&#39;</span>:<span style="color:#e6db74">&#39;Fring&#39;</span>,<span style="color:#e6db74">&#39;Rhea&#39;</span>:<span style="color:#e6db74">&#39;Kim&#39;</span>}
+</span></span><span style="display:flex;"><span>print(actors<span style="color:#f92672">.</span>get(<span style="color:#e6db74">&#39;Michael&#39;</span>))
+</span></span></code></pre></div><p>:arrow_forward:</p>
+<pre tabindex="0"><code>Nacho
+</code></pre><blockquote>
+<p>When populating a dictionary, make sure that there are no keys or values that are duplicate and that every key is unique. If not, then Python keeps only the first key and removes the duplicates.</p>
+</blockquote>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>dict_1 <span style="color:#f92672">=</span> {<span style="color:#ae81ff">1</span>:<span style="color:#e6db74">&#39;one&#39;</span>, <span style="color:#66d9ef">True</span>:<span style="color:#e6db74">&#39;Boolean&#39;</span>}
+</span></span><span style="display:flex;"><span>dict_2 <span style="color:#f92672">=</span> {<span style="color:#66d9ef">False</span>:<span style="color:#e6db74">&#39;Bool&#39;</span>, <span style="color:#ae81ff">0</span>:<span style="color:#e6db74">&#39;Zero&#39;</span>}
+</span></span><span style="display:flex;"><span>dict_3 <span style="color:#f92672">=</span> {<span style="color:#ae81ff">0</span>:<span style="color:#e6db74">&#39;Zero&#39;</span>, <span style="color:#ae81ff">1</span>:<span style="color:#e6db74">&#39;one&#39;</span>,<span style="color:#ae81ff">2</span>:<span style="color:#e6db74">&#39;two&#39;</span>,<span style="color:#66d9ef">True</span>:<span style="color:#e6db74">&#39;true&#39;</span>}
+</span></span><span style="display:flex;"><span>print(dict_1)
+</span></span><span style="display:flex;"><span>print(dict_2)
+</span></span><span style="display:flex;"><span>print(dict_3)
+</span></span></code></pre></div><p>:arrow_forward:</p>
+<pre tabindex="0"><code>{1: &#39;Boolean&#39;}
+{False: &#39;Zero&#39;}
+{0: &#39;Zero&#39;, 1: &#39;true&#39;, 2: &#39;two&#39;}
+</code></pre><hr>
+<h2 id="running-python-files">
+  Running Python Files
+  <a class="anchor" href="#running-python-files">#</a>
+</h2>
+<p><strong>Shebang Line</strong> The first line of all your Python programs should be a shebang line, which tells your
+computer that you want Python to execute this program.
+The shebang line begins with #!, but the rest depends on your operating system.</p>
+<p>On Windows, the shebang line is <strong>#! python3</strong>
+On OS X, the shebang line is <strong>#! /usr/bin/env python3</strong>
+On Linux, the shebang line is <strong>#! /usr/bin/python3</strong></p>
+<p><strong>Batch File Code Format</strong></p>
+<p>Place the following in a .bat file :</p>
+<pre tabindex="0"><code>@py.exe E:\Pending Projects\hsquery.py %*
+@pause
+</code></pre><hr>
+<h2 id="functions">
+  Functions
+  <a class="anchor" href="#functions">#</a>
+</h2>
+<p><strong>Defining a Function</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">display</span>(name, course <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;Gender Studies&#39;</span>):
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">&#34;Name :&#39; + name)</span>
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">&#34;Course :&#39; + course)</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>display(course<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;Engineering&#39;</span>, name <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;Blaskowicz&#39;</span>)
+</span></span><span style="display:flex;"><span>display(name <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;Geralt&#39;</span>)
+</span></span></code></pre></div><p>:arrow_forward:</p>
+<pre tabindex="0"><code>Name : Blaskowicz
+Course : Engineering
+Name : Geralt
+Course : Gender Studies
+</code></pre><blockquote>
+<p>When default argument comes before non-default argument(s), it gives <strong>SyntaxError</strong></p>
+</blockquote>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">func</span>(m <span style="color:#f92672">=</span> <span style="color:#ae81ff">500</span>, v):
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#34;Force of the body is :&#34;</span> <span style="color:#f92672">+</span> str(m <span style="color:#f92672">*</span> v)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>func(m <span style="color:#f92672">=</span> <span style="color:#ae81ff">500</span>, <span style="color:#ae81ff">5</span>)
+</span></span></code></pre></div><p>:arrow_forward:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>File <span style="color:#e6db74">&#34;Path\program.py&#34;</span>, line <span style="color:#ae81ff">2</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">func</span>(m <span style="color:#f92672">=</span> <span style="color:#ae81ff">500</span>, v):
+</span></span><span style="display:flex;"><span>                    <span style="color:#f92672">^</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">SyntaxError</span> : Non<span style="color:#f92672">-</span>default argument follows default argument
+</span></span></code></pre></div><h3 id="lambda-function">
+  Lambda Function
+  <a class="anchor" href="#lambda-function">#</a>
+</h3>
+<ol>
+<li><strong>Lambda</strong> functions are created using the Lambda keyword. They are a one-line version of functions added to Python due to demand from LISP programmers.</li>
+<li><strong>Lambda Functions</strong> have no name.</li>
+<li>Can take any number of arguments.</li>
+<li>Can return just one value in the form of expression.</li>
+<li>Lambda function definition does not have an explicit return statement but contains an expression which is returned.</li>
+<li>Since they are one-line version of functions, they cannot contain/return multiple expressions.</li>
+<li>They cannot access variables other than those in their parameter list. They also cannot access global variables.</li>
+<li>Lambda functions can be passed as variables in other functions.</li>
+</ol>
+<p><strong>Example</strong></p>
+<p>Program written using regular function</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">small</span>(a, b):
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> a <span style="color:#f92672">&gt;</span> b:
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> a
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">else</span>:
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> b
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>small(<span style="color:#ae81ff">4</span>,<span style="color:#ae81ff">5</span>)
+</span></span></code></pre></div><p>:arrow_forward:</p>
+<pre tabindex="0"><code>Output :
+5
+</code></pre><p>Program written using Lambda Function</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>summ <span style="color:#f92672">=</span> <span style="color:#66d9ef">lambda</span> x, y: x <span style="color:#f92672">+</span> y <span style="color:#75715e"># Smaller number using lambda function.</span>
+</span></span><span style="display:flex;"><span>diff <span style="color:#f92672">=</span> <span style="color:#66d9ef">lambda</span> x, y: x <span style="color:#f92672">-</span> y
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#34;Smaller of the numbers is : &#34;</span>, small(summ(<span style="color:#f92672">-</span><span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">2</span>), diff(<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">5</span>)))
+</span></span></code></pre></div><p>:arrow_forward:</p>
+<pre tabindex="0"><code>Smaller of the numbers is :  -1
+</code></pre><p><strong>More Examples</strong></p>
+<p>Using a Lambda FUnction with an ordinary function</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">increment</span>(y):
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> (<span style="color:#66d9ef">lambda</span> x: x<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>)(y)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>a <span style="color:#f92672">=</span> int(input(<span style="color:#e6db74">&#34;Enter the value of a :&#34;</span>))
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#34;a = &#34;</span>, a)
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#34;a after incrementing = &#34;</span>,end <span style="color:#f92672">=</span><span style="color:#e6db74">&#34;&#34;</span>)
+</span></span><span style="display:flex;"><span>b <span style="color:#f92672">=</span> increment(a)
+</span></span><span style="display:flex;"><span>print(a)
+</span></span></code></pre></div><p>:arrow_forward:</p>
+<pre tabindex="0"><code>a =  -5
+a after incrementing = -5
+</code></pre><p>Program where Lambda Function is used without assigning it to a variable</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># Lambda function assigned to a variable.</span>
+</span></span><span style="display:flex;"><span>twice <span style="color:#f92672">=</span> <span style="color:#66d9ef">lambda</span> x: x<span style="color:#f92672">**</span><span style="color:#ae81ff">2</span>
+</span></span><span style="display:flex;"><span>print(twice(<span style="color:#ae81ff">9</span>))
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Lambda function not assigned to any variable twice.</span>
+</span></span><span style="display:flex;"><span>print((<span style="color:#66d9ef">lambda</span> x: x<span style="color:#f92672">**</span><span style="color:#ae81ff">2</span>)(<span style="color:#ae81ff">9</span>))
+</span></span></code></pre></div><p>:arrow_forward:</p>
+<pre tabindex="0"><code>81
+81
+</code></pre><p>A Lambda function that receives no arguments but returns an expression</p>
+<p>Sum of first 10 natural numbers</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>x <span style="color:#f92672">=</span> <span style="color:#66d9ef">lambda</span> : sum(range(<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">11</span>))
+</span></span><span style="display:flex;"><span>print(x()) <span style="color:#75715e"># Invokes the lambda expression that accepts no arrguments but returns a value in y</span>
+</span></span></code></pre></div><p>:arrow_forward:</p>
+<pre tabindex="0"><code>55
+</code></pre><h3 id="recursive-function">
+  Recursive Function
+  <a class="anchor" href="#recursive-function">#</a>
+</h3>
+<p>A ==recursive function== is a function that calls itself to solve a smaller version of its task until a final call is made which does not require a call to itself. Every recursive function has two major cases, which are as follows.</p>
+<ol>
+<li>Base Case, in which the problem is simple enough to be solved directly without making any further calls to the same function.</li>
+<li>Recursive Case, in which first the problem at hand is divided into simpler sub-parts. Second, the function calls itself but with sub-parts of the problem obtained in the first step. Third, the result is obtained by combining the solutions of simpler sub-parts.</li>
+</ol>
+<p>Thus, we see that recursion utilized the divide and conquer technique of problem solving.
+Recursion can also be indirect. That is, one function may call the second function which may call the first function, which again calls the first and so on. This can occur on any number of functions.</p>
+<p>Python does not allow more than 1000 recursive calls thereby setting a limit in case of infinite recursion and reports a runtime error message.</p>
+<p>Pros and Cons of using recursion :</p>
+<p><strong>Pros</strong></p>
+<ul>
+<li>Recursive Solutions often tends to be shorter (and simpler) than conventional ones.</li>
+<li>Code is clearer and easier to use.</li>
+<li>Recursion uses the original formula to solve a problem.</li>
+<li>It follows a Divide and Conquer technique to solve problems. In some instances, recursion may be more efficient.</li>
+</ul>
+<p><strong>Cons</strong></p>
+<ul>
+<li>Aborting a recursive function is sometimes slow and nasty.</li>
+<li>Takes more memory and time to complete as compared to the conventionasl, non-recursional code.</li>
+<li>Difficult to find bugs, especially when using global variables.</li>
+<li><strong>Factorial of a Number</strong></li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">fact</span>(n):
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> (n <span style="color:#f92672">==</span> <span style="color:#ae81ff">1</span> <span style="color:#f92672">or</span> n <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>):
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">else</span>:
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> n <span style="color:#f92672">*</span> fact(n<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>n <span style="color:#f92672">=</span> int(input(<span style="color:#e6db74">&#34;Enter the value of n :&#34;</span>))
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#34;The factorial of&#34;</span>,n,<span style="color:#e6db74">&#34;is&#34;</span>,fact(n))
+</span></span></code></pre></div><p><strong>Program to calculate GCD using Recursive Function</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">gcd</span>(a, b):
+</span></span><span style="display:flex;"><span>    rem <span style="color:#f92672">=</span> a <span style="color:#f92672">&amp;</span> b
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> rem <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>:
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> b
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">else</span>:
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> gcd(b, rem)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>a <span style="color:#f92672">=</span> int(input(<span style="color:#e6db74">&#34;Enter the greatest number :&#34;</span>))
+</span></span><span style="display:flex;"><span>b <span style="color:#f92672">=</span> int(input(<span style="color:#e6db74">&#34;Enter the other number : &#34;</span>))
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#34;GCD of&#34;</span>,a,<span style="color:#e6db74">&#34; and &#34;</span>,b,<span style="color:#e6db74">&#34; is &#34;</span>,gcd(a, b))
+</span></span></code></pre></div><p><strong>Fibonacci Series using recursion</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">fibo</span>(n):
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> (n <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">2</span>):
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> (fibo(n<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>) <span style="color:#f92672">+</span> fibo(n<span style="color:#f92672">-</span><span style="color:#ae81ff">2</span>))
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>n <span style="color:#f92672">=</span> int(input(<span style="color:#e6db74">&#34;Enter the number of terms you want :&#34;</span>))
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(n):
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">&#34;Fibonacci(&#34;</span>, i, <span style="color:#e6db74">&#34;) =&#34;</span>, fibo(i))
+</span></span></code></pre></div><p>:arrow_forward:</p>
+<pre tabindex="0"><code>Enter the number of terms you want : 5
+Fibonacci( 0 ) = 1
+Fibonacci( 1 ) = 1
+Fibonacci( 2 ) = 2
+Fibonacci( 3 ) = 3
+Fibonacci( 4 ) = 5
+</code></pre><p><strong>Program to calculate the exponent of a given number</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">exporec</span>(x, y):
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> y <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>:
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">else</span>:
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> (x <span style="color:#f92672">*</span> exporec(x, y<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>))
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>x <span style="color:#f92672">=</span> int(input(<span style="color:#e6db74">&#34;Enter the index :&#34;</span>))
+</span></span><span style="display:flex;"><span>y <span style="color:#f92672">=</span> int(input(<span style="color:#e6db74">&#34;Enter the exponent :&#34;</span>))
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#34;Result :&#34;</span>, exporec(x, y))
+</span></span></code></pre></div><p>:arrow_forward:</p>
+<pre tabindex="0"><code>Result : 25
+</code></pre><p><strong>Program to concatenate two strings using recursion</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">orderedConcat</span>(string1, string2):
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> len(string1 <span style="color:#f92672">+</span> string2) <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>:
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#39;&#39;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">elif</span> (len(string1) <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">0</span> <span style="color:#f92672">and</span> len(string2) <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>) <span style="color:#f92672">or</span> (len(string1) <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span> <span style="color:#f92672">and</span> len(string2) <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">0</span>):
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> string1 <span style="color:#f92672">+</span> string2
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">else</span>:
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> string1[<span style="color:#ae81ff">0</span>] <span style="color:#f92672">&lt;</span> string2[<span style="color:#ae81ff">0</span>]:
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span> string1[<span style="color:#ae81ff">0</span>] <span style="color:#f92672">+</span> orderedConcat(string1[<span style="color:#ae81ff">1</span>:], string2)
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">elif</span> string2[<span style="color:#ae81ff">0</span>] <span style="color:#f92672">&lt;</span> string1[<span style="color:#ae81ff">0</span>]:
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span> string2[<span style="color:#ae81ff">0</span>] <span style="color:#f92672">+</span> orderedConcat(string1, string2[<span style="color:#ae81ff">1</span>:])
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">else</span>: <span style="color:#75715e"># if they&#39;re equal</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span> string1[<span style="color:#ae81ff">0</span>] <span style="color:#f92672">+</span> string2[<span style="color:#ae81ff">0</span>] <span style="color:#f92672">+</span> \
+</span></span><span style="display:flex;"><span>                orderedConcat(string1[<span style="color:#ae81ff">1</span>:], string2[<span style="color:#ae81ff">1</span>:])
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">main</span>():
+</span></span><span style="display:flex;"><span>    string1 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;acdrt&#34;</span>
+</span></span><span style="display:flex;"><span>    string2 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;bdet&#34;</span>
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">&#34;First string:&#34;</span>, string1)
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">&#34;Second string:&#34;</span>, string2)
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">&#34;Result :&#34;</span>, end<span style="color:#f92672">=</span><span style="color:#e6db74">&#39; &#39;</span>)
+</span></span><span style="display:flex;"><span>    print(orderedConcat(<span style="color:#e6db74">&#34;acdrt&#34;</span>, <span style="color:#e6db74">&#34;bdet&#34;</span>))
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>main()
+</span></span></code></pre></div><p>:arrow_forward:</p>
+<pre tabindex="0"><code>First string: acdrt
+Second string: bdet
+Result : abcddertt
+</code></pre><p><strong>Fibonacci Series using Recursive Function</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">fibonacci</span>(n):
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> n <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">2</span>:
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> (fibonacci(n<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>) <span style="color:#f92672">+</span> fibonacci(n<span style="color:#f92672">-</span><span style="color:#ae81ff">2</span>))
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>n <span style="color:#f92672">=</span> int(input(<span style="color:#e6db74">&#34;Enter the no. of items :&#34;</span>))
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(n):
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">&#34;Fibonacci (&#34;</span>,i,<span style="color:#e6db74">&#34;) = &#34;</span>, fibonacci(i))
+</span></span></code></pre></div><p>:arrow_forward:</p>
+<pre tabindex="0"><code>Fibonacci ( 0 ) =  1
+Fibonacci ( 1 ) =  1
+Fibonacci ( 2 ) =  2
+Fibonacci ( 3 ) =  3
+Fibonacci ( 4 ) =  5
+</code></pre><p><strong>Program to calculate exp(x, y) using Recursive Function</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">exp_rec</span>(x, y):
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> y <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>:
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">else</span>:
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> (x <span style="color:#f92672">*</span> exp_rec(x, y<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>))
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>n <span style="color:#f92672">=</span> int(input(<span style="color:#e6db74">&#34;Enter the base number :&#34;</span>))
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#34;BASE :&#34;</span>,n)
+</span></span><span style="display:flex;"><span>m <span style="color:#f92672">=</span> int(input(<span style="color:#e6db74">&#34;Enter the power number :&#34;</span>))
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#34;POWER :&#34;</span>,m)
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#34;Result is &#34;</span>,exp_rec(n, m))
+</span></span></code></pre></div><p>:arrow_forward:</p>
+<pre tabindex="0"><code>BASE : 5
+POWER : 3
+Result is  125
+</code></pre><h2 id="documentation-strings">
+  Documentation Strings
+  <a class="anchor" href="#documentation-strings">#</a>
+</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">func</span>():
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;&#39;&#39; The program just prints the message. It will display Hello World!&#39;&#39;&#39;</span>
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">&#34;Hello World!&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>print(func<span style="color:#f92672">.</span>__doc__) <span style="color:#75715e"># func.__doc__prints the docstring</span>
+</span></span></code></pre></div><p>:arrow_forward:</p>
+<pre tabindex="0"><code>The program just prints the message. It will display Hello World!
+</code></pre><p><strong>Notes</strong>
+Documentation Strings are the same as that of comments, they explain the code. However, they are more specific and have proper syntax. They are created by putting a multiline string to explain the function.</p>
+<ol>
+<li>As the first line, it should always be short and concise highlighting the summary of the object’s purpose.</li>
+<li>Begin with capital and end with a period.</li>
+<li>Triple quotes to be used to extend the docstrings into multiple lines.</li>
+<li>Should not specify info like object name or type.</li>
+<li>In case of multiple lines in the doc string, the second line should be blank, to separate the summary from the rest of the description.</li>
+<li>The other lines should be one or more paragraphs describing the object’s calling conventions, side effects etc.</li>
+<li>The first non-blank line after the first line of the documentation string determines the indentation for the entire doc string.</li>
+<li>Unlike comments, docstrings are retained throughout the runtime of the program. So, users can inspect them during program execution.</li>
+</ol>
+<h2 id="modules">
+  Modules
+  <a class="anchor" href="#modules">#</a>
+</h2>
+<ul>
+<li>When a python file is executed directly, it is considered the main module of that program.</li>
+<li>Main modules are given the special name <strong>main</strong> and provide the basis for a complete Python program.</li>
+<li>The main module may import any number of other modules which in turn may import other modules.But the main module of a Python program cannot be imported into other modules.</li>
+</ul>
+<p><strong>Program to print the sys.path variable</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> sys
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74"> Python Path = </span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>, sys<span style="color:#f92672">.</span>path)
+</span></span></code></pre></div><p><strong>Notes</strong></p>
+<ol>
+<li>A module must be first be located and loaded into memory before it can be imported and used in the program.</li>
+<li>Python searches for modules at different locations in the following order: &lsquo;CWD\Python310\Lib&rsquo;</li>
+<li>If the module is still not found, an error ImportError exception is generated.</li>
+</ol>
+<h3 id="module-loading--execution">
+  Module Loading &amp; Execution
+  <a class="anchor" href="#module-loading--execution">#</a>
+</h3>
+<ol>
+<li>Once the module is located, it is loaded in memory. A compiled version of the module with file extension ==pyc== is generated. Next time, when the module is imprted, this pyc module is loaded to save recompile time.</li>
+<li>A new recompiled version of the module is again produced whenever the compiled version is out of date(based on the dates when the pyc file was created.)</li>
+<li>The programmer can force the Python shell to reload and recompile the .py file to generate a new .pyc file by using the <code>reload()</code> function.</li>
+</ol>
+<p>To import all the identifiers in a module (in this case sys), type from <code>sys</code> import . However, you should avoid using the import statement as it confuses the variables in the code with the variables in the modules.</p>
+<p><strong>Program that shows the use of from import statement</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">from</span> math <span style="color:#f92672">import</span> pi
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#34;Pi =&#34;</span>,pi)
+</span></span></code></pre></div><p><strong>Program that shows importing a function within a mosule as another variable</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">from</span> math <span style="color:#f92672">import</span> sqrt <span style="color:#66d9ef">as</span> sq
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#34;Square root of 25 is &#34;</span>,sq(<span style="color:#ae81ff">25</span>))
+</span></span></code></pre></div><p>:arrow_forward:</p>
+<pre tabindex="0"><code>Pi = 3.141592653589793
+Square root of 25 is  5.0
+</code></pre><h3 id="name-of-the-module">
+  Name of the Module
+  <a class="anchor" href="#name-of-the-module">#</a>
+</h3>
+<p>You can find the name of the module by using the <strong>name</strong> attribute of the module.</p>
+<p><strong>Printing the name of the module</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>print(<span style="color:#e6db74">&#34;Hello)</span>
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#34;Name of the module is &#34;</span>, __name__)
+</span></span></code></pre></div><p>:arrow_forward:</p>
+<pre tabindex="0"><code>Hello
+Name of the module is __main__
+</code></pre><p><strong>Notes</strong></p>
+<ol>
+<li>Modules provide all the benefits of modular software design.</li>
+<li>They provide service and functionality that can be reused in other programs.</li>
+<li>Even the standard library of Python contains a set of modules.</li>
+<li>It allows you to logically organize the code so that it becomes easy to understand and use.</li>
+<li>Modules can only be loaded once, regardless of how many times it is imported.</li>
+<li>It is customary, but not mandatory, to place the import module code at the beginning of a module.</li>
+</ol>
+<h3 id="making-your-own-module">
+  Making Your Own Module
+  <a class="anchor" href="#making-your-own-module">#</a>
+</h3>
+<p>Every Python file is a <code>module</code>, that is, every file saved as a ==.py== file is a <code>module</code>.</p>
+<p>The MyModule.py program file is created, which will be imported into the main.py file.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># Develping the MyModule.py</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">display</span>():
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">&#34;Hello)</span>
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">&#34;Name of the called module is :&#34;</span>, __name__)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>str <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Welcome to the world of Python !!!!&#34;</span> <span style="color:#75715e"># Variable definition.</span>
+</span></span></code></pre></div><p>The ==main.py== is now created below</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> MyModule
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#34;MyModule str = &#34;</span>, MyModule<span style="color:#f92672">.</span>str)
+</span></span><span style="display:flex;"><span>MyModule<span style="color:#f92672">.</span>display()
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#34;Name of the calling module is :&#34;</span>, __name__)
+</span></span></code></pre></div><p>:arrow_forward:</p>
+<pre tabindex="0"><code>MyModule str = Welcome to the world of Python !!!
+Hello
+Name of the module is :
+MyModule
+Name of the calling module is :
+__main__
+</code></pre><p>We have used str and display attributes from <code>MyModule</code> module. Both these can also be imported as <code>from MyModule import str, display</code>. By convention, modules are named using lowercase letters &amp; optional underscore characters.</p>
+<h3 id="modules--namespaces">
+  Modules &amp; Namespaces
+  <a class="anchor" href="#modules--namespaces">#</a>
+</h3>
+<p>Created in Module 1 (==module1.py==)</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">repeat_x</span>(x):
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> x<span style="color:#f92672">*</span><span style="color:#ae81ff">2</span>
+</span></span></code></pre></div><p>Created in Module 2 (==module2.py==)</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">repeat_x</span>(x):
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> x<span style="color:#f92672">**</span><span style="color:#ae81ff">2</span>
+</span></span></code></pre></div><p>On ==main.py==</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> module1
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> module2
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>result <span style="color:#f92672">=</span> repeat_x(<span style="color:#ae81ff">10</span>) <span style="color:#75715e"># Ambiguous reference for identifier repeat_x.</span>
+</span></span></code></pre></div><ul>
+<li>A namespace is a container that provides a named context for identifiers. Two identifiers with the same name in the same scope will lead to a a nameclash.</li>
+<li>Hence, Python does not allow programmers to have two different identifiers with the same name.</li>
+<li>However, in some situations, we need to have same name identifiers.</li>
+<li>Namespaces caters to such situations.</li>
+<li>Namespaces allows programs to avoid potential name clashes by associating each identifier with the namespace from which it originates.</li>
+<li>Module1 &amp; Module2 are imported into the same program. Each module has a function repeat_x(), which return very different result.</li>
+<li>There will be a name clash as it will be difficult to determine which of these two functions should be called.</li>
+<li>Namespaces provide a means for resolving such problems.</li>
+</ul>
+<h3 id="local-global--built-in-namespaces">
+  Local, Global &amp; Built-in Namespaces
+  <a class="anchor" href="#local-global--built-in-namespaces">#</a>
+</h3>
+<ol>
+<li>During a program’s main execution, there are three main namespaces that are referenced
+<ul>
+<li><strong>built-in namespace</strong></li>
+<li><strong>global namespace</strong></li>
+<li><strong>local namespace</strong></li>
+</ul>
+</li>
+<li>The built-in namespace contains all the built-in functions, constants, etc.</li>
+<li>The global namespace contains identifiers of the currently executing module.</li>
+<li>The local namespace contains identifiers defined in the currently executing function.</li>
+</ol>
+<p>In this program, we have used function <strong>max()</strong> which is defined in the global namespace of the program. Local identifier, large is defined in a function. So it is accessible.</p>
+<p>Program to demonstrate nameclashes in different namespaces.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">max</span>(number):
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">&#34;User defined function max...&#34;</span>)
+</span></span><span style="display:flex;"><span>    large <span style="color:#f92672">=</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> number:
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> i <span style="color:#f92672">&gt;</span> large:
+</span></span><span style="display:flex;"><span>            large <span style="color:#f92672">=</span> i
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> large
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>number <span style="color:#f92672">=</span> [<span style="color:#ae81ff">9</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">7</span>]
+</span></span><span style="display:flex;"><span>print(max(number))
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#34;Sum of these numbers = &#34;</span>, sum(number)) <span style="color:#75715e"># Built-in namespace</span>
+</span></span></code></pre></div><p>:arrow_forward:</p>
+<pre tabindex="0"><code>User defined function max...
+9
+Sum of these numbers =  21
+</code></pre><h3 id="module-private-variables">
+  Module Private Variables
+  <a class="anchor" href="#module-private-variables">#</a>
+</h3>
+<ul>
+<li>If you want some variables or functions in a module to be accessed privately within the module, but not to be accessed from outside it, then you need to declare those identifiers as private.</li>
+<li>In Python, identifiers whose name starts with two underscores (__) are private identifiers. These identifiers can be use d only within the module, but not to be accessed from outside it, then you need to declare those identifiers as private.</li>
+<li>When the module is imported using the <code>import * from modulename</code>, all the identifiers of a module’s namespace is imported except the private ones. Thus, private modules become inaccessible from within the importing module.</li>
+</ul>
+<h2 id="packages">
+  Packages
+  <a class="anchor" href="#packages">#</a>
+</h2>
+<p>A package is a hierarchical file directory structure that has modules and other packages within it. Like modules, one can easily create a package. Every package is a directory which must have a special file called __init__.py . This file need not contain a single line of code. It is added to indicate that the directory is not a normal one, but a Python Package. 3. You can import the package the same way that you import a module.</p>
+<h3 id="creating-packages-in-python">
+  Creating Packages in Python
+  <a class="anchor" href="#creating-packages-in-python">#</a>
+</h3>
+<ul>
+<li>To create a package called <code>MyPackage</code>, create a directory called ==MyPackage== having the module <code>MyModule</code> and the ==__init__.py== file.</li>
+<li>Now, to use the MyModule program, you must import it. This is done in two ways.</li>
+</ul>
+<p><code>import MyPackage.Mymodule</code></p>
+<p>or</p>
+<p><code>from  MyPackage import MyModule</code></p>
+<ul>
+<li>The ==__init**.py== is a very important file that also determines which modules the package exports as the API, while keeping other modules internal, by overriding the <code>**all\_\_</code> variable as shown below.</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>__init__<span style="color:#f92672">.</span>py:
+</span></span><span style="display:flex;"><span>__all__ <span style="color:#f92672">=</span> [<span style="color:#960050;background-color:#1e0010">“</span>MyModule<span style="color:#960050;background-color:#1e0010">”</span>]
+</span></span></code></pre></div><p><strong>Notes</strong></p>
+<ol>
+<li>Packages are searched for in the path specified by sys.path.</li>
+<li>==__init**.py== file can be an empty file and may also be used to execute initialization code for the package or set the __all** variable.</li>
+<li>The import statement first checks if the item is defined in the package. If it is unable to find it, an ImportError exception is raised.</li>
+<li>When importing an item using syntax like Python import item.subitem.subitem, each item except the last must be a package. In no case, it can be a class or function or variable defined in the previous item.</li>
+<li>Packages have an attribute <strong>path</strong> which is initialized with a list having the name of the dirtectory holding the ==__init**.py== file. The **path__attribute can be modified to change the future searches for modules and sub-packages contained in the package.</li>
+</ol>
+<p><strong>Program that prints absolute value, square root and cube of a number</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> math
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">cube</span>(x):
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> x <span style="color:#f92672">**</span> <span style="color:#ae81ff">3</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>a <span style="color:#f92672">=</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">100</span>
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#34;a =&#34;</span>, a)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>a <span style="color:#f92672">=</span> abs(a)
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#34;Square root of &#34;</span>, a, <span style="color:#e6db74">&#34;is&#34;</span>, math<span style="color:#f92672">.</span>sqrt(a))
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#34;Cube of&#34;</span>,a, <span style="color:#e6db74">&#34; is &#34;</span>, cube(a))
+</span></span></code></pre></div><p>:arrow_forward:</p>
+<pre tabindex="0"><code>a = -100
+Square root of 100 is 10.0
+Cube of 100 is 1000000
+</code></pre></article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+
+
+
+
+</div>
+
+
+
+  <script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){if(window.getSelection().toString())return;e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script>
+
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside class="book-toc">
+      <div class="book-toc-content">
+        
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#programming-tips">Programming Tips</a></li>
+    <li><a href="#operators-in-python">Operators in Python</a>
+      <ul>
+        <li><a href="#shift-operators">Shift Operators</a></li>
+        <li><a href="#bitwise-operators">Bitwise Operators</a></li>
+        <li><a href="#logical-operator">Logical Operator</a></li>
+      </ul>
+    </li>
+    <li><a href="#type-conversion-functions">Type Conversion Functions</a></li>
+    <li><a href="#map-filter--reduce-functions">Map(), Filter() &amp; Reduce() Functions</a>
+      <ul>
+        <li><a href="#map-function">map() Function</a></li>
+        <li><a href="#filter-function">filter() Function</a></li>
+        <li><a href="#reduce-functions">reduce() Functions</a></li>
+      </ul>
+    </li>
+    <li><a href="#random-module">Random Module</a></li>
+    <li><a href="#iteration-functions">Iteration Functions</a>
+      <ul>
+        <li><a href="#enumerate-function">enumerate function</a></li>
+        <li><a href="#range-function">range function</a></li>
+        <li><a href="#iter-function">iter function</a></li>
+        <li><a href="#zip-function">zip function</a></li>
+      </ul>
+    </li>
+    <li><a href="#trivial-functions">Trivial Functions</a>
+      <ul>
+        <li><a href="#update-function">update function</a></li>
+        <li><a href="#ord--chr-functions">ord &amp; chr Functions</a></li>
+        <li><a href="#dir-functions">dir Functions</a></li>
+        <li><a href="#match-case-functions">match case Functions</a></li>
+        <li><a href="#hash-function">hash() Function</a></li>
+        <li><a href="#sysargv">SYS.ARGV()</a></li>
+      </ul>
+    </li>
+    <li><a href="#object-oriented-programming">Object Oriented Programming</a>
+      <ul>
+        <li><a href="#creating-a-class">Creating a Class</a></li>
+        <li><a href="#__init__-method">__init__ method</a></li>
+        <li><a href="#constructor">Constructor</a></li>
+        <li><a href="#types-of-variables-in-python---instance-variable--static-variable">Types of variables in Python - Instance variable &amp; Static Variable</a></li>
+        <li><a href="#methods-in-python">Methods in Python</a></li>
+      </ul>
+    </li>
+    <li><a href="#tuples">Tuples</a></li>
+    <li><a href="#lists">Lists</a>
+      <ul>
+        <li><a href="#list-comprehension">List Comprehension</a></li>
+      </ul>
+    </li>
+    <li><a href="#file-access-modes">File Access Modes</a></li>
+    <li><a href="#strings">Strings</a>
+      <ul>
+        <li><a href="#string-functions">String Functions</a></li>
+        <li><a href="#string-notes">String Notes</a></li>
+      </ul>
+    </li>
+    <li><a href="#dictionaries">Dictionaries</a></li>
+    <li><a href="#running-python-files">Running Python Files</a></li>
+    <li><a href="#functions">Functions</a>
+      <ul>
+        <li><a href="#lambda-function">Lambda Function</a></li>
+        <li><a href="#recursive-function">Recursive Function</a></li>
+      </ul>
+    </li>
+    <li><a href="#documentation-strings">Documentation Strings</a></li>
+    <li><a href="#modules">Modules</a>
+      <ul>
+        <li><a href="#module-loading--execution">Module Loading &amp; Execution</a></li>
+        <li><a href="#name-of-the-module">Name of the Module</a></li>
+        <li><a href="#making-your-own-module">Making Your Own Module</a></li>
+        <li><a href="#modules--namespaces">Modules &amp; Namespaces</a></li>
+        <li><a href="#local-global--built-in-namespaces">Local, Global &amp; Built-in Namespaces</a></li>
+        <li><a href="#module-private-variables">Module Private Variables</a></li>
+      </ul>
+    </li>
+    <li><a href="#packages">Packages</a>
+      <ul>
+        <li><a href="#creating-packages-in-python">Creating Packages in Python</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+ 
+      </div>
+    </aside>
+    
+  </main>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

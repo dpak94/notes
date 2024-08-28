@@ -1,0 +1,1165 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="JavaScript#CodePen.io for trying out new HTML, CSS &amp; JS stuff.
+JavaScript W3 School Quick References#DOM Reference | DOM Document | Arrays | Operators | Strings | Operator Precedence | RegExp | Math | Date | Number | Global | Chrome Dev Tools | RegExp CheatSheet | Can I Use
+MDN Docs#MDN Web Docs | Maths | Arrays |
+Asynchronous JS | Functions | Events | Client-side Web APIs">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
+<meta name="color-scheme" content="light dark"><meta property="og:url" content="https://example.org/docs/web-dev/js/">
+  <meta property="og:site_name" content="My New Hugo Site">
+  <meta property="og:title" content="JavaScript">
+  <meta property="og:description" content="JavaScript#CodePen.io for trying out new HTML, CSS &amp; JS stuff.
+JavaScript W3 School Quick References#DOM Reference | DOM Document | Arrays | Operators | Strings | Operator Precedence | RegExp | Math | Date | Number | Global | Chrome Dev Tools | RegExp CheatSheet | Can I Use
+MDN Docs#MDN Web Docs | Maths | Arrays |
+Asynchronous JS | Functions | Events | Client-side Web APIs">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="docs">
+<title>JavaScript | My New Hugo Site</title>
+<link rel="manifest" href="/manifest.json">
+<link rel="icon" href="/favicon.png" >
+<link rel="canonical" href="https://example.org/docs/web-dev/js/">
+<link rel="stylesheet" href="/book.min.309b7ed028807cdb68d8d61e26d609f48369c098dbf5e4d8c0dcf4cdf49feafc.css" integrity="sha256-MJt&#43;0CiAfNto2NYeJtYJ9INpwJjb9eTYwNz0zfSf6vw=" crossorigin="anonymous">
+  <script defer src="/fuse.min.js"></script>
+  <script defer src="/en.search.min.3ffc475d28c2c37408205e68dcdf235a9b1b3863f3d737e18d972d457d081021.js" integrity="sha256-P/xHXSjCw3QIIF5o3N8jWpsbOGPz1zfhjZctRX0IECE=" crossorigin="anonymous"></script>
+
+  
+
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+  
+</head>
+<body dir="ltr">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      <div class="book-menu-content">
+        
+  <nav>
+<h2 class="book-brand">
+  <a class="flex align-center" href="/"><span>My New Hugo Site</span>
+  </a>
+</h2>
+
+
+<div class="book-search hidden">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+<script>document.querySelector(".book-search").classList.remove("hidden")</script>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/general/unix-commands/" class="">UNIX Commands</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/web-dev/clean-code/" class="">Clean Code for JS</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/general/conda/" class="">Conda</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/web-dev/css/" class="">CSS</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/git/" class="">Git</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/web-dev/html/" class="">HTML</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/web-dev/js/" class="active">JavaScript</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/jekyll/" class="">Jekyll</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/misc/mongodb/" class="">Mongo DB</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/mysql/" class="">MySQL</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/web-dev/node/" class="">NodeJS</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/ds/python/" class="">Python</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/general/virtualenv/" class="">PythonEnv</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/web-dev/react/" class="">React</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/sql-python/" class="">SQL Python</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+ 
+      </div>
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>JavaScript</strong>
+
+  <label for="toc-control">
+    
+    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#javascript-w3-school-quick-references">JavaScript W3 School Quick References</a></li>
+    <li><a href="#mdn-docs">MDN Docs</a></li>
+    <li><a href="#variables-in-js">Variables in JS</a>
+      <ul>
+        <li><a href="#declaring-constants-in-javascript">Declaring constants in JavaScript</a></li>
+      </ul>
+    </li>
+    <li><a href="#string-literals--multi-line-strings">String Literals &amp; Multi-line Strings</a></li>
+    <li><a href="#type-conversion-and-coercion">Type Conversion and Coercion</a></li>
+    <li><a href="#truthy--falsy-values">Truthy &amp; Falsy Values</a></li>
+    <li><a href="#operators">Operators</a>
+      <ul>
+        <li><a href="#equality-operators">Equality Operators</a></li>
+        <li><a href="#ternary-conditional-operator">Ternary (Conditional) Operator</a></li>
+      </ul>
+    </li>
+    <li><a href="#switch-statements">Switch Statements</a></li>
+    <li><a href="#javascript-releases">JavaScript Releases</a></li>
+    <li><a href="#strict-mode">Strict Mode</a></li>
+    <li><a href="#functions-a-namefunctionsa">Functions <!-- raw HTML omitted --><!-- raw HTML omitted --></a></li>
+    <li><a href="#arrays">Arrays</a></li>
+    <li><a href="#objects">Objects</a>
+      <ul>
+        <li><a href="#object-methods">Object Methods</a></li>
+      </ul>
+    </li>
+    <li><a href="#loops">Loops</a>
+      <ul>
+        <li><a href="#for-loop">for loop</a></li>
+      </ul>
+    </li>
+    <li><a href="#object-oriented-programming">Object Oriented Programming</a>
+      <ul>
+        <li><a href="#3-ways-of-implementing-prototypal-inheritance-in-js">3 ways of Implementing Prototypal Inheritance in JS</a></li>
+        <li><a href="#constructor-functions">Constructor Functions</a></li>
+        <li><a href="#prototypes">Prototypes</a></li>
+      </ul>
+    </li>
+    <li><a href="#document-object-model">Document Object Model</a>
+      <ul>
+        <li><a href="#events">Events</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown book-article"><h1 id="javascript">
+  JavaScript
+  <a class="anchor" href="#javascript">#</a>
+</h1>
+<p><a href="https://codepen.io/pen/">CodePen.io</a> for trying out new HTML, CSS &amp; JS stuff.</p>
+<h2 id="javascript-w3-school-quick-references">
+  JavaScript W3 School Quick References
+  <a class="anchor" href="#javascript-w3-school-quick-references">#</a>
+</h2>
+<p><a href="https://www.w3schools.com/jsref/default.asp">DOM Reference</a> | <a href="https://www.w3schools.com/jsref/dom_obj_document.asp">DOM Document</a> | <a href="https://www.w3schools.com/jsref/jsref_obj_array.asp">Arrays</a> | <a href="https://www.w3schools.com/jsref/jsref_operators.asp">Operators</a> | <a href="https://www.w3schools.com/jsref/jsref_obj_string.asp">Strings</a> | <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Operator_precedence#table">Operator Precedence</a> | <a href="https://www.w3schools.com/jsref/jsref_obj_regexp.asp">RegExp</a> | <a href="https://www.w3schools.com/jsref/jsref_obj_math.asp">Math</a> | <a href="https://www.w3schools.com/jsref/jsref_obj_date.asp">Date</a> | <a href="https://www.w3schools.com/jsref/jsref_obj_number.asp">Number</a> | <a href="https://www.w3schools.com/jsref/jsref_obj_global.asp">Global</a> | <a href="https://developer.chrome.com/docs/devtools/">Chrome Dev Tools</a> | <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_expressions/Cheatsheet">RegExp CheatSheet</a> | <a href="https://caniuse.com/">Can I Use</a></p>
+<h2 id="mdn-docs">
+  MDN Docs
+  <a class="anchor" href="#mdn-docs">#</a>
+</h2>
+<p><a href="https://developer.mozilla.org/en-US/">MDN Web Docs</a> | <a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Client-side_web_APIs">Maths</a> | <a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/Arrays">Arrays</a> |</p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Asynchronous">Asynchronous JS</a> | <a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Functions">Functions</a> | <a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Events">Events</a> | <a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Client-side_web_APIs">Client-side Web APIs</a></p>
+<p><strong>JavaScript</strong> is a language used along with HTML and CSS to communicate with the user.</p>
+<ul>
+<li><code>console.log(&quot;text&quot;)</code> is used to print something to the developer console in the browser</li>
+<li>Link a <strong>JS</strong> script file to the html file by using command <code>&lt;script src=&quot;javascript.js&quot;&gt;&lt;/script&gt;</code></li>
+</ul>
+<hr>
+<h2 id="variables-in-js">
+  Variables in JS
+  <a class="anchor" href="#variables-in-js">#</a>
+</h2>
+<p><code>let message;</code></p>
+<p>Now, put some data into the variable by using assignment operator <code>=</code> :</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">message</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">message</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Hello&#34;</span>; <span style="color:#75715e">//store the string &#39;Hello&#39; in the variable message
+</span></span></span></code></pre></div><p>Access the stored variable <strong>message</strong> using the variable name :</p>
+<p><code>alert(message); // shows the variable content</code></p>
+<p>Variable declaration and printing its content in a more precise way as :</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">message</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Hello&#34;</span>;
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">alert</span>(<span style="color:#a6e22e">message</span>);
+</span></span></code></pre></div><p>Declare multiple variables in single line (not recommended, use multi-lines or multiline style, where after comma each variable lies in a new line for readability) :</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">user</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;John&#34;</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">age</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">25</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">message</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Hello&#34;</span>;
+</span></span></code></pre></div><blockquote>
+<p>[!NOTE]
+In older scripts, <code>var</code> is used inplace of <code>let</code><br>
+<strong>Eg:</strong> <code>var message = 'Ciao';</code></p>
+</blockquote>
+<blockquote>
+<p>[!IMPORTANT]</p>
+<ol>
+<li>The name must only contain letters, digits or symbols <strong>$</strong> and <strong>_</strong>.</li>
+<li>The first character must not be digit.</li>
+<li>Case matters. <strong>apple</strong> and <strong>APPLE</strong> are differnet variables.</li>
+<li>Do not draw variables from <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#reserved_words">reserved words</a></li>
+</ol>
+</blockquote>
+<blockquote>
+<p>When the name contains multiple words, <!-- raw HTML omitted -->camelCase<!-- raw HTML omitted --> is commonly used. That is: words go one after another, each word except first starting with a capital letter: <strong>myVeryLongName</strong></p>
+</blockquote>
+<h3 id="declaring-constants-in-javascript">
+  Declaring constants in JavaScript
+  <a class="anchor" href="#declaring-constants-in-javascript">#</a>
+</h3>
+<p><code>const myBirthday = '18.04.1982;</code></p>
+<p>Any attempt to reassign value would result in error.</p>
+<ol>
+<li>We generally use upper case for constants that we &ldquo;hard-coded&rdquo; i.e., when the value is known prior to execution and directly written into the code.
+<strong>Eg :</strong> birthday, planet count etc.</li>
+</ol>
+<hr>
+<h2 id="string-literals--multi-line-strings">
+  String Literals &amp; Multi-line Strings
+  <a class="anchor" href="#string-literals--multi-line-strings">#</a>
+</h2>
+<p>Use backtick (`) in place of &rsquo; &rsquo; or &quot; &quot;</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">firstName</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;stranger&#34;</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">firstJob</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;writer&#34;</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">birthYear</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">1901</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">desc</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">`I&#39;m </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">firstName</span><span style="color:#e6db74">}</span><span style="color:#e6db74"> and my first job was </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">firstJob</span><span style="color:#e6db74">}</span><span style="color:#e6db74">.`</span>;
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">desc</span>);
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// I am stranger and I was born in 1901 and my first job was writer
+</span></span></span></code></pre></div><p><strong>Multi-line Strings</strong></p>
+<p>Strarting from 2015, thanks to ES6, multi-line strings can be written like below :</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">`
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">I&#39;m a party worker
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">from Sevastopol.
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">I came here yesterday.`</span>);
+</span></span></code></pre></div><p><strong>Note :</strong> Don&rsquo;t forget to use backticks (`) instead of &rsquo; or &quot; for the string.</p>
+<hr>
+<h2 id="type-conversion-and-coercion">
+  Type Conversion and Coercion
+  <a class="anchor" href="#type-conversion-and-coercion">#</a>
+</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">inputYear</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;1991&#34;</span>;
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#66d9ef">typeof</span> <span style="color:#a6e22e">inputYear</span>); <span style="color:#75715e">// 1991
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(Number(<span style="color:#a6e22e">inputYear</span>) <span style="color:#f92672">+</span> <span style="color:#ae81ff">18</span>); <span style="color:#75715e">// 2009
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(Number(<span style="color:#e6db74">&#34;Jonas&#34;</span>)); <span style="color:#75715e">//NaN
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#66d9ef">typeof</span> <span style="color:#66d9ef">NaN</span>); <span style="color:#75715e">// number
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Type Coercion
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;24&#34;</span> <span style="color:#f92672">+</span> <span style="color:#ae81ff">2</span>); <span style="color:#75715e">// 242
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;12&#34;</span> <span style="color:#f92672">*</span> <span style="color:#e6db74">&#34;12&#34;</span>); <span style="color:#75715e">// 144
+</span></span></span></code></pre></div><hr>
+<h2 id="truthy--falsy-values">
+  Truthy &amp; Falsy Values
+  <a class="anchor" href="#truthy--falsy-values">#</a>
+</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#75715e">// Truthy and Falsy Values
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(Boolean(<span style="color:#ae81ff">0</span>)); <span style="color:#75715e">// false
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(Boolean(<span style="color:#66d9ef">undefined</span>)); <span style="color:#75715e">// false
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(Boolean({})); <span style="color:#75715e">//true
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(Boolean(<span style="color:#e6db74">&#34;&#34;</span>)); <span style="color:#75715e">// false
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">money</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">money</span>) {
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;Don&#39;t spend it all!&#34;</span>);
+</span></span><span style="display:flex;"><span>} <span style="color:#66d9ef">else</span> {
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;Earn money First!&#34;</span>);
+</span></span><span style="display:flex;"><span>} <span style="color:#75715e">// Earn money First !!!
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">height</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">height</span>) {
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;Good! Height is defined!&#34;</span>);
+</span></span><span style="display:flex;"><span>} <span style="color:#66d9ef">else</span> {
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;Please define height!!!&#34;</span>);
+</span></span><span style="display:flex;"><span>} <span style="color:#75715e">// Please define Height!!!
+</span></span></span></code></pre></div><hr>
+<h2 id="operators">
+  Operators
+  <a class="anchor" href="#operators">#</a>
+</h2>
+<h3 id="equality-operators">
+  Equality Operators
+  <a class="anchor" href="#equality-operators">#</a>
+</h3>
+<p><code>===</code> and <code>==</code> are equality operators.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#75715e">// Equality Operators
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">age</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">18</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">age</span> <span style="color:#f92672">===</span> <span style="color:#ae81ff">18</span>) <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;You are an adult!!!! (strict)&#34;</span>);
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// You are an adult !!!! (strict) === &gt; Comparison Operator
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">age</span> <span style="color:#f92672">==</span> <span style="color:#ae81ff">18</span>) <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;You are an adult!!!! (strict)&#34;</span>);
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// You are an adult !!!! (loose) == &gt; Comparison Operator
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Always use strict equality operator (===) over loose equality operator (==)
+</span></span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">favNum</span> <span style="color:#f92672">=</span> Number(<span style="color:#a6e22e">prompt</span>(<span style="color:#e6db74">&#34;What&#39;s your favorite Number ?&#34;</span>));
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">`Your favorite number is </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">favNum</span><span style="color:#e6db74">}</span><span style="color:#e6db74">`</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">favNum</span> <span style="color:#f92672">===</span> <span style="color:#ae81ff">23</span>) {
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">`23 is a favorite number`</span>);
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span><span style="color:#75715e">//  === strictly treats the variable as a string.
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">// Thus the if condition is not true
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">favNum</span> <span style="color:#f92672">===</span> <span style="color:#ae81ff">16</span>) {
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">`16 is the second fav number`</span>);
+</span></span><span style="display:flex;"><span>} <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">favNum</span> <span style="color:#f92672">!==</span> <span style="color:#ae81ff">16</span>) {
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">`16 is not the second fav number`</span>);
+</span></span><span style="display:flex;"><span>} <span style="color:#66d9ef">else</span> {
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">`Not a favorite number`</span>);
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#75715e">// Boolean Logic Basics
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">isIsland</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">false</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">isPeninsula</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">true</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">`AND result for the statements : </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">isIsland</span> <span style="color:#f92672">&amp;&amp;</span> <span style="color:#a6e22e">isPeninsula</span><span style="color:#e6db74">}</span><span style="color:#e6db74">`</span>); <span style="color:#75715e">// false
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">`OR result for the statements : </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">isIsland</span> <span style="color:#f92672">||</span> <span style="color:#a6e22e">isPeninsula</span><span style="color:#e6db74">}</span><span style="color:#e6db74">`</span>); <span style="color:#75715e">// true
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">`NOT result for the statements : </span><span style="color:#e6db74">${</span><span style="color:#f92672">!</span><span style="color:#a6e22e">isIsland</span> <span style="color:#f92672">||</span> <span style="color:#f92672">!</span><span style="color:#a6e22e">isPeninsula</span><span style="color:#e6db74">}</span><span style="color:#e6db74">`</span>); <span style="color:#75715e">//true
+</span></span></span></code></pre></div><h3 id="ternary-conditional-operator">
+  Ternary (Conditional) Operator
+  <a class="anchor" href="#ternary-conditional-operator">#</a>
+</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#75715e">// Conditional Operator
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">age</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">25</span>;
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">age</span> <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">18</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">?</span> <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">`I like to drink wine 🍷 (❁´◡\`❁)`</span>)
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">:</span> <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">`I had to drink water 💧 
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">😒`</span>); <span style="color:#75715e">// `I had to drink water 💧 😒`
+</span></span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#75715e">// Conditional Operator
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">age</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">15</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">drink</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">age</span> <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">18</span> <span style="color:#f92672">?</span> <span style="color:#e6db74">&#34;wine 🍷&#34;</span> <span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;water 💧&#34;</span>;
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">drink</span>); <span style="color:#75715e">// water 💧
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">drink2</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">age</span> <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">18</span>) {
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">drink2</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;wine 🍷&#34;</span>;
+</span></span><span style="display:flex;"><span>} <span style="color:#66d9ef">else</span> {
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">drink2</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;water 💧&#34;</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">drink2</span>); <span style="color:#75715e">// water 💧
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">`I like to drink </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">age</span> <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">18</span> <span style="color:#f92672">?</span> <span style="color:#e6db74">&#34;wine 🍷&#34;</span> <span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;water 💧&#34;</span><span style="color:#e6db74">}</span><span style="color:#e6db74">`</span>); <span style="color:#75715e">// water 💧
+</span></span></span></code></pre></div><h2 id="switch-statements">
+  Switch Statements
+  <a class="anchor" href="#switch-statements">#</a>
+</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#75715e">// Switch Statements
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">day</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;thursday&#34;</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">switch</span> (<span style="color:#a6e22e">day</span>) {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">case</span> <span style="color:#e6db74">&#34;monday&#34;</span><span style="color:#f92672">:</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;Plan my course&#34;</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;Go to coding meetup&#34;</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">break</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">case</span> <span style="color:#e6db74">&#34;tuesday&#34;</span><span style="color:#f92672">:</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;Prepare course material&#34;</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;Sheen the roof&#34;</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">break</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">case</span> <span style="color:#e6db74">&#34;wednesday&#34;</span><span style="color:#f92672">:</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;Record Vids&#34;</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">break</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">case</span> <span style="color:#e6db74">&#34;thursday&#34;</span><span style="color:#f92672">:</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;Upload the vids&#34;</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">break</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">default</span><span style="color:#f92672">:</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;Not a valid day.&#34;</span>);
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h2 id="javascript-releases">
+  JavaScript Releases
+  <a class="anchor" href="#javascript-releases">#</a>
+</h2>
+<p><strong>Brief History of JS:</strong></p>
+<ul>
+<li>
+<p>Brendan Eich creates the first version of JavaScript in 10 days. Initially called <strong>Mocha</strong></p>
+</li>
+<li>
+<p>EcmaScript 1 released in 1997</p>
+</li>
+<li>
+<p><strong>ES5</strong> released in 2015 with lots of great new features.</p>
+</li>
+<li>
+<p><strong>ES6</strong> brought biggest updates to the language. *<em>ECMAScript</em> * changes to yearly releases.</p>
+</li>
+<li>
+<p>Modern JavaScript Engine is backwards compatible.</p>
+</li>
+</ul>
+<h2 id="strict-mode">
+  Strict Mode
+  <a class="anchor" href="#strict-mode">#</a>
+</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#e6db74">&#34;use strict&#34;</span>; <span style="color:#75715e">// Activates strict mode for the entire script file
+</span></span></span></code></pre></div><ul>
+<li>
+<p>Avoids accidental bugs and errors in the code.</p>
+</li>
+<li>
+<p>Prefer to turn on Strict Mode while coding.</p>
+</li>
+</ul>
+<hr>
+<h2 id="functions-a-namefunctionsa">
+  Functions <!-- raw HTML omitted --><!-- raw HTML omitted -->
+  <a class="anchor" href="#functions-a-namefunctionsa">#</a>
+</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#75715e">// Functions
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">logger</span>() {
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">// Function Definition
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;My Name is John&#34;</span>);
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">logger</span>(); <span style="color:#75715e">// Function Calling/ invoking / running
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">fruitProcessor</span>(<span style="color:#a6e22e">apples</span>, <span style="color:#a6e22e">oranges</span>) {
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">apples</span>, <span style="color:#a6e22e">oranges</span>);
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">juice</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">`Juice with </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">apples</span><span style="color:#e6db74">}</span><span style="color:#e6db74"> apples and </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">oranges</span><span style="color:#e6db74">}</span><span style="color:#e6db74"> oranges.`</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">juice</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">appleJuice</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">fruitProcessor</span>(<span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">6</span>);
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">appleJuice</span>);
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// My Name is John
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">// 5 6
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">// Juice with 5 appleas and 6 oranges
+</span></span></span></code></pre></div><p><strong>Function Declaration and Expression</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#75715e">// JavaScript Function Declaration
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">calcAge</span>(<span style="color:#a6e22e">birthYear</span>) {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">2024</span> <span style="color:#f92672">-</span> <span style="color:#a6e22e">birthYear</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">age</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">calcAge</span>(<span style="color:#ae81ff">1994</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Function Expression
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">calcAge2</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">function</span> (<span style="color:#a6e22e">birthYear</span>) {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">2024</span> <span style="color:#f92672">-</span> <span style="color:#a6e22e">birthYear</span>;
+</span></span><span style="display:flex;"><span>};
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">age2</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">calcAge2</span>(<span style="color:#ae81ff">1997</span>);
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">age</span>, <span style="color:#a6e22e">age2</span>); <span style="color:#75715e">// 30 27
+</span></span></span></code></pre></div><p><strong>Arrow Function</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#75715e">// Arrow Function
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">// Like Lambda Function in Python. Easy to write a function
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">yearsUntilRetirement</span> <span style="color:#f92672">=</span> (<span style="color:#a6e22e">birthYear</span>, <span style="color:#a6e22e">firstName</span>) =&gt; {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">age</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">2024</span> <span style="color:#f92672">-</span> <span style="color:#a6e22e">birthYear</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">retirement</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">65</span> <span style="color:#f92672">-</span> <span style="color:#a6e22e">age</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">// return retirement;
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#66d9ef">return</span> <span style="color:#e6db74">`Hello </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">firstName</span><span style="color:#e6db74">}</span><span style="color:#e6db74">, you will retire in </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">retirement</span><span style="color:#e6db74">}</span><span style="color:#e6db74"> years.`</span>;
+</span></span><span style="display:flex;"><span>};
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">yearsUntilRetirement</span>(<span style="color:#ae81ff">1994</span>, <span style="color:#e6db74">&#34;Jackson&#34;</span>));
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Hello Jackson, you will retire in 35 years.
+</span></span></span></code></pre></div><p><strong>Functions Calling Other Functions</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#75715e">// Function(s) calling other function(s)
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">cutFruitPieces</span>(<span style="color:#a6e22e">fruit</span>) {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">fruit</span> <span style="color:#f92672">*</span> <span style="color:#ae81ff">4</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">FruitProcessor</span>(<span style="color:#a6e22e">apples</span>, <span style="color:#a6e22e">oranges</span>) {
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">applePieces</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">cutFruitPieces</span>(<span style="color:#a6e22e">apples</span>);
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">orangePieces</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">cutFruitPieces</span>(<span style="color:#a6e22e">oranges</span>);
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">juice</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">`Juice made with </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">applePieces</span><span style="color:#e6db74">}</span><span style="color:#e6db74"> pieces from </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">oranges</span><span style="color:#e6db74">}</span><span style="color:#e6db74"> oranges &amp; </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">orangePieces</span><span style="color:#e6db74">}</span><span style="color:#e6db74"> pieces from </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">apples</span><span style="color:#e6db74">}</span><span style="color:#e6db74"> apples`</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">juice</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">FruitProcessor</span>(<span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">3</span>));
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Juice made with 12 pieces from 3 oranges &amp; 12 pieces from 3 apples
+</span></span></span></code></pre></div><h2 id="arrays">
+  Arrays
+  <a class="anchor" href="#arrays">#</a>
+</h2>
+<ul>
+<li>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array MDN Docs Reference</a></p>
+</li>
+<li>
+<p>Declared using <em>const</em> keyword. Once declared, the array cannot be reassigned.</p>
+</li>
+<li>
+<p>Arrays declared with <em>var</em> can be initialized at any time.</p>
+</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#a6e22e">cars</span> <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#34;Saab&#34;</span>, <span style="color:#e6db74">&#34;Volvo&#34;</span>, <span style="color:#e6db74">&#34;BMW&#34;</span>];
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">cars</span>;
+</span></span></code></pre></div><ul>
+<li>An array declared with <em>const</em> has <strong>Block Scope</strong></li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">cars</span> <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#34;Saab&#34;</span>, <span style="color:#e6db74">&#34;Volvo&#34;</span>, <span style="color:#e6db74">&#34;BMW&#34;</span>];
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Here cars[0] is &#34;Saab&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>{
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">cars</span> <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#34;Toyota&#34;</span>, <span style="color:#e6db74">&#34;Volvo&#34;</span>, <span style="color:#e6db74">&#34;BMW&#34;</span>];
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">// Here cars[0] is &#34;Toyota&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>}
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Here cars[0] is &#34;Saab&#34;
+</span></span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#75715e">// Array Declaration
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">friends</span> <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#34;Mike&#34;</span>, <span style="color:#e6db74">&#34;Ike&#34;</span>, <span style="color:#e6db74">&#34;Jake&#34;</span>, <span style="color:#e6db74">&#34;Pike&#34;</span>, <span style="color:#e6db74">&#34;Kyle&#34;</span>];
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">friends</span>[<span style="color:#ae81ff">1</span>]); <span style="color:#75715e">// Ike
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">years</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Array(<span style="color:#ae81ff">1991</span>, <span style="color:#ae81ff">1992</span>, <span style="color:#ae81ff">1993</span>, <span style="color:#ae81ff">1997</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">//Access elements in array. Index starts from 0 (like Python)
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">years</span>[<span style="color:#ae81ff">2</span>]); <span style="color:#75715e">// 1993
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">friends</span>[<span style="color:#a6e22e">friends</span>.<span style="color:#a6e22e">length</span> <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>]); <span style="color:#75715e">// Access last element via length
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">friends</span>.<span style="color:#a6e22e">reverse</span>()[<span style="color:#ae81ff">0</span>]); <span style="color:#75715e">// The array is reversed and the last element becomes first element and is accessed.
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Replacing an element in array
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">friends</span>[<span style="color:#ae81ff">2</span>] <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Jim&#34;</span>;
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">friends</span>[<span style="color:#ae81ff">2</span>]); <span style="color:#75715e">// Jim
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Adding a variable as an array member
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">nome</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Tyler&#34;</span>;
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">friends</span>[<span style="color:#ae81ff">5</span>] <span style="color:#f92672">=</span> <span style="color:#a6e22e">nome</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Finding the length of the array
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">friends</span>); <span style="color:#75715e">// (6) [&#39;Mike&#39;, &#39;Ike&#39;, &#39;Jim&#39;, &#39;Pike&#39;, &#39;Kyle&#39;, &#39;Tyler&#39;]
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">friends</span>.<span style="color:#a6e22e">length</span>); <span style="color:#75715e">// Length of the array - 6
+</span></span></span></code></pre></div><p><strong>Array Methods</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#75715e">// Array Methods
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">friends</span> <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#34;Michael&#34;</span>, <span style="color:#e6db74">&#34;John&#34;</span>, <span style="color:#e6db74">&#34;Charles&#34;</span>, <span style="color:#e6db74">&#34;William&#34;</span>, <span style="color:#e6db74">&#34;George&#34;</span>];
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Adds element to the end of the array
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">friends</span>.<span style="color:#a6e22e">push</span>(<span style="color:#e6db74">&#34;Jake&#34;</span>);
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">friends</span>); <span style="color:#75715e">// (6) [&#39;Michael&#39;, &#39;John&#39;, &#39;Charles&#39;, &#39;William&#39;, &#39;George&#39;, &#39;Jake&#39;]
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Adds elements at the beginning of the array
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">friends</span>.<span style="color:#a6e22e">unshift</span>(<span style="color:#e6db74">&#34;Richard&#34;</span>);
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">friends</span>); <span style="color:#75715e">// (7) [&#39;Richard&#39;, &#39;Michael&#39;, &#39;John&#39;, &#39;Charles&#39;, &#39;William&#39;, &#39;George&#39;, &#39;Jake&#39;];
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Removes the last element
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">friends</span>.<span style="color:#a6e22e">pop</span>();
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">friends</span>); <span style="color:#75715e">// [&#39;Richard&#39;, &#39;Michael&#39;, &#39;John&#39;, &#39;Charles&#39;, &#39;William&#39;, &#39;George&#39;]
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Removes the first element
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">friends</span>.<span style="color:#a6e22e">shift</span>();
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">friends</span>); <span style="color:#75715e">//(5) [&#39;Michael&#39;, &#39;John&#39;, &#39;Charles&#39;, &#39;William&#39;, &#39;George&#39;]
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Gives the index of element =&gt; 2
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">friends</span>.<span style="color:#a6e22e">indexOf</span>(<span style="color:#e6db74">&#34;Charles&#34;</span>));
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Gives the index of element =&gt; 3
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">friends</span>.<span style="color:#a6e22e">indexOf</span>(<span style="color:#e6db74">&#34;William&#34;</span>));
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// ES6 Method to confirm the existence of element
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">friends</span>.<span style="color:#a6e22e">includes</span>(<span style="color:#e6db74">&#34;William&#34;</span>)); <span style="color:#75715e">// Modern method
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Convert array elements into comma separated string array valuse
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">friends</span>.<span style="color:#a6e22e">toString</span>());
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// =&gt; Michael,John,Charles,William,George
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Using at(), access the elements in an array. Supported since March 2022
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">friends</span>.<span style="color:#a6e22e">at</span>(<span style="color:#ae81ff">2</span>)); <span style="color:#75715e">// =&gt; &#39;Charles&#39;
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Join all array elements into a string using join() method
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">friends</span>.<span style="color:#a6e22e">join</span>(<span style="color:#e6db74">&#34; - &#34;</span>)); <span style="color:#75715e">// =&gt; Michael - John - Charles - William - George
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Concatenate arrays. Can also concatenate a string to an array.
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">twoArray</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">friends</span>.<span style="color:#a6e22e">concat</span>(<span style="color:#a6e22e">fruits</span>);
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">twoArray</span>);
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// =&gt; [&#39;Michael&#39;, &#39;John&#39;, &#39;Charles&#39;, &#39;William&#39;, &#39;George&#39;, &#39;Banana&#39;, &#39;Orange&#39;, &#39;Apple&#39;, &#39;Mango&#39;]
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Copy an element to another index in the array using copyWithin()
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">friends</span> <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#34;Michael&#34;</span>, <span style="color:#e6db74">&#34;John&#34;</span>, <span style="color:#e6db74">&#34;Charles&#34;</span>, <span style="color:#e6db74">&#34;William&#34;</span>, <span style="color:#e6db74">&#34;George&#34;</span>];
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">friends</span>.<span style="color:#a6e22e">copyWithin</span>(<span style="color:#ae81ff">0</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>)); <span style="color:#75715e">// Copy to index 0, the leemnt at index -1
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">// =&gt; [&#39;George&#39;, &#39;John&#39;, &#39;Charles&#39;, &#39;William&#39;, &#39;George&#39;]
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">/* flat() - flattens the array by  creating a new array with sub-array 
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">elements to a specified depth */</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">myArray</span> <span style="color:#f92672">=</span> [
+</span></span><span style="display:flex;"><span>  [<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>],
+</span></span><span style="display:flex;"><span>  [<span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">4</span>],
+</span></span><span style="display:flex;"><span>  [<span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">6</span>],
+</span></span><span style="display:flex;"><span>  [<span style="color:#ae81ff">7</span>, <span style="color:#ae81ff">8</span>],
+</span></span><span style="display:flex;"><span>];
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">newArray</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">myArray</span>.<span style="color:#a6e22e">flat</span>();
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">newArray</span>);
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// =&gt;  [1, 2, 3, 4, 5, 6]
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// splice() - add new items to an array
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">fruits</span> <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#34;Banana&#34;</span>, <span style="color:#e6db74">&#34;Orange&#34;</span>, <span style="color:#e6db74">&#34;Apple&#34;</span>, <span style="color:#e6db74">&#34;Mango&#34;</span>];
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">fruits</span>.<span style="color:#a6e22e">splice</span>(<span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">0</span>, <span style="color:#e6db74">&#34;Lemon&#34;</span>, <span style="color:#e6db74">&#34;Kiwi&#34;</span>);
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// 2- new place where element is to be added,
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">// 0 - how many elements to be removed,
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">// &#34;Lemon&#34;, &#34;Kiwi&#34; -  new elements to be added
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">fruits</span>);
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// =&gt; [&#39;Banana&#39;, &#39;Orange&#39;, &#39;Lemon&#39;, &#39;Kiwi&#39;, &#39;Apple&#39;, &#39;Mango&#39;]
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">/* toSpliced() - ES2023 Addition as a safe way to splice an array without altering the original array. This method creates a new array that is spliced while keeping the original unchanged.*/</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">months</span> <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#34;Jan&#34;</span>, <span style="color:#e6db74">&#34;Feb&#34;</span>, <span style="color:#e6db74">&#34;Mar&#34;</span>, <span style="color:#e6db74">&#34;Apr&#34;</span>];
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">spliced</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">months</span>.<span style="color:#a6e22e">toSpliced</span>(<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">1</span>);
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// =&gt; [&#39;Feb&#39;, &#39;Mar&#39;, &#39;Apr&#39;]
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// slice() - slice out a part of an array into a new array
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">fruits</span> <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#34;Banana&#34;</span>, <span style="color:#e6db74">&#34;Orange&#34;</span>, <span style="color:#e6db74">&#34;Lemon&#34;</span>, <span style="color:#e6db74">&#34;Apple&#34;</span>, <span style="color:#e6db74">&#34;Mango&#34;</span>];
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">citrus</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">fruits</span>.<span style="color:#a6e22e">slice</span>(<span style="color:#ae81ff">1</span>); <span style="color:#75715e">// Slicing from index 1.
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">// slice takes two args : start point and end point. If end point not given, rest of the array is sliced out.
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">citrus</span>);
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// =&gt; [&#39;Orange&#39;, &#39;Lemon&#39;, &#39;Apple&#39;, &#39;Mango&#39;]
+</span></span></span></code></pre></div><h2 id="objects">
+  Objects
+  <a class="anchor" href="#objects">#</a>
+</h2>
+<ul>
+<li>Similar to dictionaries in Python</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#75715e">// Objects (Dictionaries)
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">myBio</span> <span style="color:#f92672">=</span> {
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">firstName</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;Dpak&#34;</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">lastName</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;94&#34;</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">age</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">29</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">job</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;Engineer&#34;</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">hobbies</span><span style="color:#f92672">:</span> [<span style="color:#e6db74">&#34;gaming&#34;</span>, <span style="color:#e6db74">&#34;movies&#34;</span>, <span style="color:#e6db74">&#34;book reading&#34;</span>],
+</span></span><span style="display:flex;"><span>};
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Accessing the contents of the objects
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">myBio</span>[<span style="color:#e6db74">&#34;firstName&#34;</span>]); <span style="color:#75715e">// Dpak
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">myBio</span>.<span style="color:#a6e22e">age</span>); <span style="color:#75715e">//29
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">myBio</span>.<span style="color:#a6e22e">city</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Hyderabad&#34;</span>;
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">myBio</span>[<span style="color:#e6db74">&#34;city&#34;</span>]);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">query</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">prompt</span>(<span style="color:#e6db74">&#34;What do you want to know about the user?&#34;</span>);
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">myBio</span>[<span style="color:#a6e22e">query</span>]);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">myBio</span>[<span style="color:#a6e22e">query</span>]) {
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">myBio</span>[<span style="color:#a6e22e">query</span>]);
+</span></span><span style="display:flex;"><span>} <span style="color:#66d9ef">else</span> {
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;Please enter valid data query&#34;</span>);
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#75715e">// Best Friend Challenge. Print the No. of Jonas&#39;s friends and his best friend.
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">bioData</span> <span style="color:#f92672">=</span> {
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">name</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;Jonas&#34;</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">friends</span><span style="color:#f92672">:</span> [<span style="color:#e6db74">&#34;Mike&#34;</span>, <span style="color:#e6db74">&#34;Pike&#34;</span>, <span style="color:#e6db74">&#34;Richard&#34;</span>, <span style="color:#e6db74">&#34;Wilhelm&#34;</span>],
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">age</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">24</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">location</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;Deutschland&#34;</span>,
+</span></span><span style="display:flex;"><span>};
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(
+</span></span><span style="display:flex;"><span>  <span style="color:#e6db74">`</span><span style="color:#e6db74">${</span><span style="color:#a6e22e">bioData</span>.<span style="color:#a6e22e">name</span><span style="color:#e6db74">}</span><span style="color:#e6db74"> has </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">bioData</span>[<span style="color:#e6db74">&#34;friends&#34;</span>].<span style="color:#a6e22e">length</span><span style="color:#e6db74">}</span><span style="color:#e6db74"> friends. His best friend is </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">bioData</span>.<span style="color:#a6e22e">friends</span>[<span style="color:#ae81ff">0</span>]<span style="color:#e6db74">}</span><span style="color:#e6db74">.`</span>
+</span></span><span style="display:flex;"><span>);
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Jonas has 4 friends. His best friend is Mike.
+</span></span></span></code></pre></div><h3 id="object-methods">
+  Object Methods
+  <a class="anchor" href="#object-methods">#</a>
+</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#75715e">// this keyword - used to indicate the curent object
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">jonas</span> <span style="color:#f92672">=</span> {
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">firstName</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;Jonas&#34;</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">lastName</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;Schmedtmann&#34;</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">job</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;Engineer&#34;</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">friends</span><span style="color:#f92672">:</span> [<span style="color:#e6db74">&#34;Rob&#34;</span>, <span style="color:#e6db74">&#34;Tom&#34;</span>, <span style="color:#e6db74">&#34;Dan&#34;</span>, <span style="color:#e6db74">&#34;Ulrich&#34;</span>],
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">hasDriversLicense</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">false</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">birthYear</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">1991</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">ageCalc</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">function</span> () {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">age</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">2024</span> <span style="color:#f92672">-</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">birthYear</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">age</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// &#34;this&#34; replacing the current object the element is a member of.
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  },
+</span></span><span style="display:flex;"><span>};
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">jonas</span>.<span style="color:#a6e22e">ageCalc</span>()); <span style="color:#75715e">// 33 Use dot notation to access the function output i.e age
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">jonas</span>.<span style="color:#a6e22e">age</span>); <span style="color:#75715e">// 33 The age variable in the ageCalc function
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Challenge
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">// Jonas is a 46 year old teacher.....
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">getSumm</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">function</span> () {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">return</span> <span style="color:#e6db74">`</span><span style="color:#e6db74">${</span><span style="color:#a6e22e">jonas</span>.<span style="color:#a6e22e">firstName</span><span style="color:#e6db74">}</span><span style="color:#e6db74"> is a </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">jonas</span>.<span style="color:#a6e22e">ageCalc</span>()<span style="color:#e6db74">}</span><span style="color:#e6db74"> years old programmer. He </span><span style="color:#e6db74">${</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">hasDriversLicense</span> <span style="color:#f92672">?</span> <span style="color:#e6db74">`has`</span> <span style="color:#f92672">:</span> <span style="color:#e6db74">`does not have`</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#e6db74">}</span><span style="color:#e6db74"> a Driver&#39;s License.`</span>;
+</span></span><span style="display:flex;"><span>};
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">getSumm</span>());
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Jonas is a 33 years old programmer. He does not have a Driver&#39;s License.
+</span></span></span></code></pre></div><h2 id="loops">
+  Loops
+  <a class="anchor" href="#loops">#</a>
+</h2>
+<h3 id="for-loop">
+  for loop
+  <a class="anchor" href="#for-loop">#</a>
+</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">jonas</span> <span style="color:#f92672">=</span> [
+</span></span><span style="display:flex;"><span>  <span style="color:#e6db74">&#34;Jonas&#34;</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#e6db74">&#34;Schmedtmann&#34;</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#e6db74">&#34;Engineer&#34;</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#ae81ff">420</span>,
+</span></span><span style="display:flex;"><span>  [<span style="color:#e6db74">&#34;Rob&#34;</span>, <span style="color:#e6db74">&#34;Tom&#34;</span>, <span style="color:#e6db74">&#34;Dan&#34;</span>, <span style="color:#e6db74">&#34;Ulrich&#34;</span>],
+</span></span><span style="display:flex;"><span>];
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">types</span> <span style="color:#f92672">=</span> [];
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">i</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; <span style="color:#a6e22e">i</span> <span style="color:#f92672">&lt;</span> <span style="color:#a6e22e">jonas</span>.<span style="color:#a6e22e">length</span>; <span style="color:#a6e22e">i</span><span style="color:#f92672">++</span>) {
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">jonas</span>[<span style="color:#a6e22e">i</span>], <span style="color:#66d9ef">typeof</span> <span style="color:#a6e22e">jonas</span>[<span style="color:#a6e22e">i</span>]);
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">types</span>.<span style="color:#a6e22e">push</span>(<span style="color:#66d9ef">typeof</span> <span style="color:#a6e22e">jonas</span>[<span style="color:#a6e22e">i</span>]);
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">`New types array : </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">types</span><span style="color:#e6db74">}</span><span style="color:#e6db74">`</span>); <span style="color:#75715e">//Outputs the new array.
+</span></span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#75715e">// Nested Loops
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">players</span> <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#34;Mark&#34;</span>, <span style="color:#e6db74">&#34;Peter&#34;</span>, <span style="color:#e6db74">&#34;Thomas&#34;</span>];
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">sports</span> <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#34;Cricket&#34;</span>, <span style="color:#e6db74">&#34;Wrestling&#34;</span>, <span style="color:#e6db74">&#34;Soccer&#34;</span>];
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">player</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; <span style="color:#a6e22e">player</span> <span style="color:#f92672">&lt;</span> <span style="color:#a6e22e">players</span>.<span style="color:#a6e22e">length</span>; <span style="color:#a6e22e">player</span><span style="color:#f92672">++</span>) {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">sport</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; <span style="color:#a6e22e">sport</span> <span style="color:#f92672">&lt;</span> <span style="color:#a6e22e">sports</span>.<span style="color:#a6e22e">length</span>; <span style="color:#a6e22e">sport</span><span style="color:#f92672">++</span>) {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">`</span><span style="color:#e6db74">${</span><span style="color:#a6e22e">players</span>[<span style="color:#a6e22e">player</span>]<span style="color:#e6db74">}</span><span style="color:#e6db74"> plays </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">sports</span>[<span style="color:#a6e22e">sport</span>]<span style="color:#e6db74">}</span><span style="color:#e6db74">. `</span>);
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#75715e">// While Loop
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">rep</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">while</span> (<span style="color:#a6e22e">rep</span> <span style="color:#f92672">&lt;=</span> <span style="color:#ae81ff">10</span>) {
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">`While : Running instance </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">rep</span><span style="color:#e6db74">}</span><span style="color:#e6db74">`</span>);
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">rep</span><span style="color:#f92672">++</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><hr>
+<h2 id="object-oriented-programming">
+  Object Oriented Programming
+  <a class="anchor" href="#object-oriented-programming">#</a>
+</h2>
+<p><strong>Features of OOP:</strong></p>
+<ol>
+<li>Encapsulation</li>
+<li>Abstraction</li>
+<li>Inheritance</li>
+<li>Polymorphism</li>
+</ol>
+<ul>
+<li>OOP in JS uses Prototypal Inheritance</li>
+</ul>
+<h3 id="3-ways-of-implementing-prototypal-inheritance-in-js">
+  3 ways of Implementing Prototypal Inheritance in JS
+  <a class="anchor" href="#3-ways-of-implementing-prototypal-inheritance-in-js">#</a>
+</h3>
+<ol>
+<li>Constructor Functions
+<ul>
+<li>Technique to create objects from a function</li>
+<li><strong>Examples</strong> - Arrays, Maps &amp; Sets</li>
+</ul>
+</li>
+<li>ES6 Classes
+<ul>
+<li>Modern alternative to constructive function syntax</li>
+<li>ES6 classes work exactly like <strong>constructor classes</strong></li>
+<li>ES6 Classes do not behave like classes in &ldquo;classical OOP&rdquo;</li>
+</ul>
+</li>
+<li>Object.create()
+<ul>
+<li>Easiest &amp; most straight-forward way to create objects</li>
+<li>Not commmonly used.</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h3 id="constructor-functions">
+  Constructor Functions
+  <a class="anchor" href="#constructor-functions">#</a>
+</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">`</span><span style="color:#e6db74">${</span><span style="color:#a6e22e">fatherName</span><span style="color:#e6db74">}</span><span style="color:#e6db74"> is your father`</span>);
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">x</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">6</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">y</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">9</span>;
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">x</span>, <span style="color:#a6e22e">y</span>);
+</span></span></code></pre></div><p><strong>Note</strong> - Never create Functions inside constructor functions.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#75715e">// Constructor Function
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">Person</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">function</span> (<span style="color:#a6e22e">firstName</span>, <span style="color:#a6e22e">birthYear</span>) {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">firstName</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">firstName</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">birthYear</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">birthYear</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">calcAge</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">2024</span> <span style="color:#f92672">-</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">birthYear</span>;
+</span></span><span style="display:flex;"><span>};
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#66d9ef">new</span> <span style="color:#a6e22e">Person</span>(<span style="color:#e6db74">&#34;Jonas&#34;</span>, <span style="color:#ae81ff">1994</span>));
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// 1. New empty object is created
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">// 2. Function is called, this = empty object
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">// 3. The empty object is linked to a prototype
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">// 4. Function  automatically returns empty object
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">matilda</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">Person</span>(<span style="color:#e6db74">&#34;matilda&#34;</span>, <span style="color:#ae81ff">2017</span>);
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">jack</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">Person</span>(<span style="color:#e6db74">&#34;Jack&#34;</span>, <span style="color:#ae81ff">1975</span>);
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">matilda</span>, <span style="color:#a6e22e">jack</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">jack</span> <span style="color:#66d9ef">instanceof</span> <span style="color:#a6e22e">Person</span>); <span style="color:#75715e">// Checking if an object is an isntance of the constructor function
+</span></span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-txt" data-lang="txt"><span style="display:flex;"><span>// Output
+</span></span><span style="display:flex;"><span>Person {firstName: &#39;Jonas&#39;, birthYear: 1994, calcAge: 30}
+</span></span><span style="display:flex;"><span>Person {firstName: &#39;matilda&#39;, birthYear: 2017, calcAge: 7}
+</span></span><span style="display:flex;"><span>Person {firstName: &#39;Jack&#39;, birthYear: 1975, calcAge: 49}
+</span></span><span style="display:flex;"><span>true
+</span></span></code></pre></div><h3 id="prototypes">
+  Prototypes
+  <a class="anchor" href="#prototypes">#</a>
+</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"></code></pre></div><hr>
+<h2 id="document-object-model">
+  Document Object Model
+  <a class="anchor" href="#document-object-model">#</a>
+</h2>
+<p><strong>DOM</strong> - Document Object Model</p>
+<p>Tree-like representation of the contents of a webpage - a tree of &ldquo;nodes&rdquo; with different relationships depending on how they&rsquo;re arranged in the HTML doc.</p>
+<h3 id="events">
+  Events
+  <a class="anchor" href="#events">#</a>
+</h3>
+<p><strong>Three methods of declaring Events</strong></p>
+<p><strong>Method 1</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#f92672">button</span> <span style="color:#a6e22e">onclick</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;alert(&#39;Hello World&#39;)&#34;</span>&gt;Click Me&lt;/<span style="color:#f92672">button</span>&gt;
+</span></span></code></pre></div><p>This method is not prefered because it makes the HTML file look clunky and there is less manipulation possible with this method.</p>
+<p><strong>Method 2</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span><span style="color:#75715e">&lt;!-- the HTML file --&gt;</span>
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">button</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;btn&#34;</span>&gt;Click Me&lt;/<span style="color:#f92672">button</span>&gt;
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#75715e">// the JavaScript file
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">btn</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">querySelector</span>(<span style="color:#e6db74">&#34;#btn&#34;</span>);
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">btn</span>.<span style="color:#a6e22e">onclick</span> <span style="color:#f92672">=</span> () =&gt; <span style="color:#a6e22e">alert</span>(<span style="color:#e6db74">&#34;Hello World&#34;</span>);
+</span></span></code></pre></div><p><strong>Method 3</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span><span style="color:#75715e">&lt;!-- the HTML file --&gt;</span>
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">button</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;btn&#34;</span>&gt;Click Me Too&lt;/<span style="color:#f92672">button</span>&gt;
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#75715e">// the JavaScript file
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">btn</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">querySelector</span>(<span style="color:#e6db74">&#34;#btn&#34;</span>);
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">btn</span>.<span style="color:#a6e22e">addEventListener</span>(<span style="color:#e6db74">&#34;click&#34;</span>, () =&gt; {
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">alert</span>(<span style="color:#e6db74">&#34;Hello World&#34;</span>);
+</span></span><span style="display:flex;"><span>});
+</span></span></code></pre></div><p>Method 3 allows for <em>separation of concerns</em></p>
+<h4 id="attaching-listerners-to-groups-of-nodes">
+  Attaching listerners to groups of nodes
+  <a class="anchor" href="#attaching-listerners-to-groups-of-nodes">#</a>
+</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;container&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>  &lt;<span style="color:#f92672">button</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;1&#34;</span>&gt;Click Me&lt;/<span style="color:#f92672">button</span>&gt;
+</span></span><span style="display:flex;"><span>  &lt;<span style="color:#f92672">button</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;2&#34;</span>&gt;Click Me&lt;/<span style="color:#f92672">button</span>&gt;
+</span></span><span style="display:flex;"><span>  &lt;<span style="color:#f92672">button</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;3&#34;</span>&gt;Click Me&lt;/<span style="color:#f92672">button</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">div</span>&gt;
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#75715e">// buttons is a node list. It looks and acts much like an array.
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">buttons</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">querySelectorAll</span>(<span style="color:#e6db74">&#34;button&#34;</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// we use the .forEach method to iterate through each button
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">buttons</span>.<span style="color:#a6e22e">forEach</span>((<span style="color:#a6e22e">button</span>) =&gt; {
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// and for each one we add a &#39;click&#39; listener
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">button</span>.<span style="color:#a6e22e">addEventListener</span>(<span style="color:#e6db74">&#34;click&#34;</span>, () =&gt; {
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">alert</span>(<span style="color:#a6e22e">button</span>.<span style="color:#a6e22e">id</span>);
+</span></span><span style="display:flex;"><span>});
+</span></span></code></pre></div></article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+
+
+
+
+</div>
+
+
+
+  <script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){if(window.getSelection().toString())return;e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script>
+
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside class="book-toc">
+      <div class="book-toc-content">
+        
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#javascript-w3-school-quick-references">JavaScript W3 School Quick References</a></li>
+    <li><a href="#mdn-docs">MDN Docs</a></li>
+    <li><a href="#variables-in-js">Variables in JS</a>
+      <ul>
+        <li><a href="#declaring-constants-in-javascript">Declaring constants in JavaScript</a></li>
+      </ul>
+    </li>
+    <li><a href="#string-literals--multi-line-strings">String Literals &amp; Multi-line Strings</a></li>
+    <li><a href="#type-conversion-and-coercion">Type Conversion and Coercion</a></li>
+    <li><a href="#truthy--falsy-values">Truthy &amp; Falsy Values</a></li>
+    <li><a href="#operators">Operators</a>
+      <ul>
+        <li><a href="#equality-operators">Equality Operators</a></li>
+        <li><a href="#ternary-conditional-operator">Ternary (Conditional) Operator</a></li>
+      </ul>
+    </li>
+    <li><a href="#switch-statements">Switch Statements</a></li>
+    <li><a href="#javascript-releases">JavaScript Releases</a></li>
+    <li><a href="#strict-mode">Strict Mode</a></li>
+    <li><a href="#functions-a-namefunctionsa">Functions <!-- raw HTML omitted --><!-- raw HTML omitted --></a></li>
+    <li><a href="#arrays">Arrays</a></li>
+    <li><a href="#objects">Objects</a>
+      <ul>
+        <li><a href="#object-methods">Object Methods</a></li>
+      </ul>
+    </li>
+    <li><a href="#loops">Loops</a>
+      <ul>
+        <li><a href="#for-loop">for loop</a></li>
+      </ul>
+    </li>
+    <li><a href="#object-oriented-programming">Object Oriented Programming</a>
+      <ul>
+        <li><a href="#3-ways-of-implementing-prototypal-inheritance-in-js">3 ways of Implementing Prototypal Inheritance in JS</a></li>
+        <li><a href="#constructor-functions">Constructor Functions</a></li>
+        <li><a href="#prototypes">Prototypes</a></li>
+      </ul>
+    </li>
+    <li><a href="#document-object-model">Document Object Model</a>
+      <ul>
+        <li><a href="#events">Events</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+ 
+      </div>
+    </aside>
+    
+  </main>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Conda#Action Command list all environments and locations conda env list update all packages in environment conda update --all --name ENVNAME install packages in environment conda install --name ENVNAME PKG1 PKG2 remove package from environment conda uninstall PKGNAME --name ENVNAME reactivate base environment (recommended for end of session) conda activate base Environment Management
+Action Command list packages &#43; source channels conda list -n ENVNAME --show-channel-urls uninstall package from specific channel conda remove -n ENVNAME -c CHANNELNAME PKGNAME create environment with Python version conda create -n ENVNAME python=3.">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
+<meta name="color-scheme" content="light dark"><meta property="og:url" content="https://example.org/docs/general/conda/">
+  <meta property="og:site_name" content="My New Hugo Site">
+  <meta property="og:title" content="Conda">
+  <meta property="og:description" content="Conda#Action Command list all environments and locations conda env list update all packages in environment conda update --all --name ENVNAME install packages in environment conda install --name ENVNAME PKG1 PKG2 remove package from environment conda uninstall PKGNAME --name ENVNAME reactivate base environment (recommended for end of session) conda activate base Environment Management
+Action Command list packages &#43; source channels conda list -n ENVNAME --show-channel-urls uninstall package from specific channel conda remove -n ENVNAME -c CHANNELNAME PKGNAME create environment with Python version conda create -n ENVNAME python=3.">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="docs">
+<title>Conda | My New Hugo Site</title>
+<link rel="manifest" href="/manifest.json">
+<link rel="icon" href="/favicon.png" >
+<link rel="canonical" href="https://example.org/docs/general/conda/">
+<link rel="stylesheet" href="/book.min.309b7ed028807cdb68d8d61e26d609f48369c098dbf5e4d8c0dcf4cdf49feafc.css" integrity="sha256-MJt&#43;0CiAfNto2NYeJtYJ9INpwJjb9eTYwNz0zfSf6vw=" crossorigin="anonymous">
+  <script defer src="/fuse.min.js"></script>
+  <script defer src="/en.search.min.3ffc475d28c2c37408205e68dcdf235a9b1b3863f3d737e18d972d457d081021.js" integrity="sha256-P/xHXSjCw3QIIF5o3N8jWpsbOGPz1zfhjZctRX0IECE=" crossorigin="anonymous"></script>
+
+  
+
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+  
+</head>
+<body dir="ltr">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      <div class="book-menu-content">
+        
+  <nav>
+<h2 class="book-brand">
+  <a class="flex align-center" href="/"><span>My New Hugo Site</span>
+  </a>
+</h2>
+
+
+<div class="book-search hidden">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+<script>document.querySelector(".book-search").classList.remove("hidden")</script>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/general/unix-commands/" class="">UNIX Commands</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/web-dev/clean-code/" class="">Clean Code for JS</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/general/conda/" class="active">Conda</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/web-dev/css/" class="">CSS</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/git/" class="">Git</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/web-dev/html/" class="">HTML</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/web-dev/js/" class="">JavaScript</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/jekyll/" class="">Jekyll</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/misc/mongodb/" class="">Mongo DB</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/mysql/" class="">MySQL</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/web-dev/node/" class="">NodeJS</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/ds/python/" class="">Python</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/general/virtualenv/" class="">PythonEnv</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/web-dev/react/" class="">React</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/sql-python/" class="">SQL Python</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+ 
+      </div>
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>Conda</strong>
+
+  <label for="toc-control">
+    
+    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+    
+  
+<nav id="TableOfContents"></nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown book-article"><h1 id="conda">
+  Conda
+  <a class="anchor" href="#conda">#</a>
+</h1>
+<table>
+<thead>
+<tr>
+<th>Action</th>
+<th>Command</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>list all environments and locations</td>
+<td><code>conda env list</code></td>
+</tr>
+<tr>
+<td>update all packages in environment</td>
+<td><code>conda update --all --name ENVNAME</code></td>
+</tr>
+<tr>
+<td>install packages in environment</td>
+<td><code>conda install --name ENVNAME PKG1 PKG2</code></td>
+</tr>
+<tr>
+<td>remove package from environment</td>
+<td><code>conda uninstall PKGNAME --name ENVNAME</code></td>
+</tr>
+<tr>
+<td>reactivate base environment (recommended for end of session)</td>
+<td><code>conda activate base</code></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Environment Management</strong></p>
+<table>
+<thead>
+<tr>
+<th>Action</th>
+<th>Command</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>list packages + source channels</td>
+<td><code>conda list -n ENVNAME --show-channel-urls</code></td>
+</tr>
+<tr>
+<td>uninstall package from specific channel</td>
+<td><code>conda remove -n ENVNAME -c CHANNELNAME PKGNAME</code></td>
+</tr>
+<tr>
+<td>create environment with Python version</td>
+<td><code>conda create -n ENVNAME python=3.10</code></td>
+</tr>
+<tr>
+<td>clone environment</td>
+<td><code>conda create --clone ENVNAME -n NEWENV</code></td>
+</tr>
+<tr>
+<td>list revisions made to environment</td>
+<td><code>conda list -n ENVNAME --revisions</code></td>
+</tr>
+<tr>
+<td>restore environment to a revision</td>
+<td><code>conda install -n ENVNAME --revision NUMBER</code></td>
+</tr>
+<tr>
+<td>delete environment by name</td>
+<td><code>conda remove -n ENVNAME --all</code></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Exporting Environments</strong></p>
+<table>
+<thead>
+<tr>
+<th>Action</th>
+<th>Command</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>cross-platform compatible</td>
+<td><code>conda env export --from-history&gt;ENV.yml</code></td>
+</tr>
+<tr>
+<td>platform + package specific</td>
+<td><code>conda env export ENVNAME&gt;ENV.yml</code></td>
+</tr>
+<tr>
+<td>platform + package + channel specific</td>
+<td><code>conda list --explicit&gt;ENV.txt</code></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Importing Environments</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Action</th>
+<th style="text-align:left">Command</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">Import from a .yml file</td>
+<td style="text-align:left"><code>conda env create -n ENVNAME --file ENV.yml</code></td>
+</tr>
+<tr>
+<td style="text-align:left">Import from a .txt file</td>
+<td style="text-align:left"><code>conda create -n ENVNAME --file ENV.txt</code></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Additional Commands</strong></p>
+<table>
+<thead>
+<tr>
+<th>Action</th>
+<th style="text-align:left">Command</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>get help for any command</td>
+<td style="text-align:left"><code>conda COMMAND --help</code></td>
+</tr>
+<tr>
+<td>get info for any package</td>
+<td style="text-align:left"><code>conda search PKGNAME --info</code></td>
+</tr>
+<tr>
+<td>run commands w/o user prompt eg, installing multiple packages</td>
+<td style="text-align:left"><code>conda COMMAND ARG --yes &lt;/br&gt; conda install PKG1 PKG2 --yes</code></td>
+</tr>
+<tr>
+<td>remove all unused files</td>
+<td style="text-align:left"><code>conda clean --all</code></td>
+</tr>
+<tr>
+<td>examine conda configuration</td>
+<td style="text-align:left"><code>conda config --show</code></td>
+</tr>
+</tbody>
+</table>
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+
+
+
+
+</div>
+
+
+
+  <script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){if(window.getSelection().toString())return;e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script>
+
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside class="book-toc">
+      <div class="book-toc-content">
+        
+  
+<nav id="TableOfContents"></nav>
+
+
+ 
+      </div>
+    </aside>
+    
+  </main>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

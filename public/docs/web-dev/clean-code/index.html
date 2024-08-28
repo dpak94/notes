@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Clean Code Norms For JavaScript#// Example A : Bad Code const x = function (z) { const w = &#34;Hello&#34;; return w &#43; z; }; // Example B : Good Code const generateUserGreeting = function (name) { const greeting = &#34;Hello&#34;; return greeting &#43; name; }; Of the above two examples, code B is:
+Easy to read. Assigns names to functions and variables that convey their task/nature instead of single letters, resultin in less confusion.">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
+<meta name="color-scheme" content="light dark"><meta property="og:url" content="https://example.org/docs/web-dev/clean-code/">
+  <meta property="og:site_name" content="My New Hugo Site">
+  <meta property="og:title" content="Clean Code for JS">
+  <meta property="og:description" content="Clean Code Norms For JavaScript#// Example A : Bad Code const x = function (z) { const w = &#34;Hello&#34;; return w &#43; z; }; // Example B : Good Code const generateUserGreeting = function (name) { const greeting = &#34;Hello&#34;; return greeting &#43; name; }; Of the above two examples, code B is:
+Easy to read. Assigns names to functions and variables that convey their task/nature instead of single letters, resultin in less confusion.">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="docs">
+<title>Clean Code for JS | My New Hugo Site</title>
+<link rel="manifest" href="/manifest.json">
+<link rel="icon" href="/favicon.png" >
+<link rel="canonical" href="https://example.org/docs/web-dev/clean-code/">
+<link rel="stylesheet" href="/book.min.309b7ed028807cdb68d8d61e26d609f48369c098dbf5e4d8c0dcf4cdf49feafc.css" integrity="sha256-MJt&#43;0CiAfNto2NYeJtYJ9INpwJjb9eTYwNz0zfSf6vw=" crossorigin="anonymous">
+  <script defer src="/fuse.min.js"></script>
+  <script defer src="/en.search.min.3ffc475d28c2c37408205e68dcdf235a9b1b3863f3d737e18d972d457d081021.js" integrity="sha256-P/xHXSjCw3QIIF5o3N8jWpsbOGPz1zfhjZctRX0IECE=" crossorigin="anonymous"></script>
+
+  
+
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+  
+</head>
+<body dir="ltr">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      <div class="book-menu-content">
+        
+  <nav>
+<h2 class="book-brand">
+  <a class="flex align-center" href="/"><span>My New Hugo Site</span>
+  </a>
+</h2>
+
+
+<div class="book-search hidden">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+<script>document.querySelector(".book-search").classList.remove("hidden")</script>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/general/unix-commands/" class="">UNIX Commands</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/web-dev/clean-code/" class="active">Clean Code for JS</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/general/conda/" class="">Conda</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/web-dev/css/" class="">CSS</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/git/" class="">Git</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/web-dev/html/" class="">HTML</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/web-dev/js/" class="">JavaScript</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/jekyll/" class="">Jekyll</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/misc/mongodb/" class="">Mongo DB</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/mysql/" class="">MySQL</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/web-dev/node/" class="">NodeJS</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/ds/python/" class="">Python</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/general/virtualenv/" class="">PythonEnv</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/web-dev/react/" class="">React</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/sql-python/" class="">SQL Python</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+ 
+      </div>
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>Clean Code for JS</strong>
+
+  <label for="toc-control">
+    
+    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#naming-functions-and-variables">Naming Functions and Variables</a>
+      <ul>
+        <li><a href="#1-a-good-name-is-descriptive">1. A good name is descriptive</a></li>
+        <li><a href="#2-use-consistent-vocabulary">2. Use consistent vocabulary</a></li>
+        <li><a href="#3-use-searchable-and-easily-understandable-names">3. Use searchable and easily understandable names</a></li>
+      </ul>
+    </li>
+    <li><a href="#other-rules-for-clean-code">Other rules for clean code</a></li>
+    <li><a href="#more-info">More Info</a></li>
+  </ul>
+</nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown book-article"><h1 id="clean-code-norms-for-javascript">
+  Clean Code Norms For JavaScript
+  <a class="anchor" href="#clean-code-norms-for-javascript">#</a>
+</h1>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#75715e">// Example A : Bad Code
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">x</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">function</span> (<span style="color:#a6e22e">z</span>) {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">w</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Hello&#34;</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">w</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">z</span>;
+</span></span><span style="display:flex;"><span>};
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Example B : Good Code
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">generateUserGreeting</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">function</span> (<span style="color:#a6e22e">name</span>) {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">greeting</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Hello&#34;</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">greeting</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">name</span>;
+</span></span><span style="display:flex;"><span>};
+</span></span></code></pre></div><p>Of the above two examples, code B is:</p>
+<ol>
+<li>Easy to read.</li>
+<li>Assigns names to functions and variables that convey their task/nature instead of single letters, resultin in less confusion.</li>
+<li>Assigned names follow camelCase naming convention.</li>
+</ol>
+<hr>
+<h2 id="naming-functions-and-variables">
+  Naming Functions and Variables
+  <a class="anchor" href="#naming-functions-and-variables">#</a>
+</h2>
+<h3 id="1-a-good-name-is-descriptive">
+  1. A good name is descriptive
+  <a class="anchor" href="#1-a-good-name-is-descriptive">#</a>
+</h3>
+<p>Variables should always begin with a noun or an adjective (that is, a noun phrase) and functions with a verb. The only exception would be constants, which must be declared with all caps.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">getName</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Alex&#34;</span>; <span style="color:#75715e">// Bad variable name 👎🏽👎🏽👎🏽
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">userName</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Alex&#34;</span>; <span style="color:#75715e">// Good variable name 👍👍👍
+</span></span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">MILLISECONDS_PER_HOUR</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">60</span> <span style="color:#f92672">*</span> <span style="color:#ae81ff">60</span> <span style="color:#f92672">*</span> <span style="color:#ae81ff">1000</span>;
+</span></span></code></pre></div><h3 id="2-use-consistent-vocabulary">
+  2. Use consistent vocabulary
+  <a class="anchor" href="#2-use-consistent-vocabulary">#</a>
+</h3>
+<p>Do not use threee different verbs for the same kind of task when assigning names to variables.</p>
+<p>In the below bad example, 3 different verbs (<em>get, fetch &amp; retrieve</em>) are used</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">sumArray</span>; <span style="color:#960050;background-color:#1e0010">👍</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">array1</span>; <span style="color:#960050;background-color:#1e0010">👎</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#75715e">// Good
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">getPlayerScore</span>();
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">getPlayerName</span>();
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">getPlayerTag</span>();
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Bad
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">getUserScore</span>();
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">fetchPlayerName</span>();
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">retrievePlayerOneTag</span>();
+</span></span></code></pre></div><h3 id="3-use-searchable-and-easily-understandable-names">
+  3. Use searchable and easily understandable names
+  <a class="anchor" href="#3-use-searchable-and-easily-understandable-names">#</a>
+</h3>
+<p>Instead of</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#a6e22e">setTimeout</span>(<span style="color:#a6e22e">stopTimer</span>, <span style="color:#ae81ff">3600000</span>);
+</span></span></code></pre></div><p>implement</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">MILLISECONDS_PER_HOUR</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">60</span> <span style="color:#f92672">*</span> <span style="color:#ae81ff">60</span> <span style="color:#f92672">*</span> <span style="color:#ae81ff">1000</span>; <span style="color:#75715e">// 3,600,000;
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">setTimeout</span>(<span style="color:#a6e22e">stopTimer</span>, <span style="color:#a6e22e">MILLISECONDS_PER_HOUR</span>);
+</span></span></code></pre></div><hr>
+<h2 id="other-rules-for-clean-code">
+  Other rules for clean code
+  <a class="anchor" href="#other-rules-for-clean-code">#</a>
+</h2>
+<ol>
+<li>Don&rsquo;t comment where you&rsquo;re supposed to use Git.</li>
+<li>Don&rsquo;t comment <em>how</em>, comment <em>why</em>. The viewer reads the code to find <em>how</em>.</li>
+<li>Semicolons are optional, JS Compiler takes care of it by adding semicoloms automatically.</li>
+<li>When employing a formula in a function, it would be a good idea to put a brief comment explaining the formula.</li>
+<li>Use correct indentation.</li>
+<li>Avoid abusive comments.</li>
+<li>Avoid extremely large function. Break them into smaller ones.</li>
+<li>Treat changes with caution.</li>
+<li>Avoid indiscriminate mixing of coding languages</li>
+<li>Summarize the imported files, packages etc.</li>
+</ol>
+<hr>
+<h2 id="more-info">
+  More Info
+  <a class="anchor" href="#more-info">#</a>
+</h2>
+<ul>
+<li><a href="https://github.com/airbnb/javascript">AirBnB Style Guide for JavaScript Styling</a></li>
+<li><a href="https://web.archive.org/web/20190211152543/https://javascriptissexy.com/beautiful-javascript-easily-create-chainable-cascading-methods-for-expressiveness/">Beautiful JavaScript: Easily Create Chainable (Cascading) Methods for Expressiveness</a></li>
+</ul>
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+
+
+
+
+</div>
+
+
+
+  <script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){if(window.getSelection().toString())return;e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script>
+
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside class="book-toc">
+      <div class="book-toc-content">
+        
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#naming-functions-and-variables">Naming Functions and Variables</a>
+      <ul>
+        <li><a href="#1-a-good-name-is-descriptive">1. A good name is descriptive</a></li>
+        <li><a href="#2-use-consistent-vocabulary">2. Use consistent vocabulary</a></li>
+        <li><a href="#3-use-searchable-and-easily-understandable-names">3. Use searchable and easily understandable names</a></li>
+      </ul>
+    </li>
+    <li><a href="#other-rules-for-clean-code">Other rules for clean code</a></li>
+    <li><a href="#more-info">More Info</a></li>
+  </ul>
+</nav>
+
+
+ 
+      </div>
+    </aside>
+    
+  </main>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

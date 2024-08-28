@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="CSS Notes#Basic Syntax#Selectors#Selectors simply refer to the HTML elements to which CSS rules apply - they are what is actually being selected for each rule.
+Universal Selector will select elements of any type, hence the name &ldquo;universal&rdquo;, and the syntax for it is a simple asterisk *. In the below example, every element would have the color : purple style applied to it.">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
+<meta name="color-scheme" content="light dark"><meta property="og:url" content="https://example.org/docs/web-dev/css/">
+  <meta property="og:site_name" content="My New Hugo Site">
+  <meta property="og:title" content="CSS">
+  <meta property="og:description" content="CSS Notes#Basic Syntax#Selectors#Selectors simply refer to the HTML elements to which CSS rules apply - they are what is actually being selected for each rule.
+Universal Selector will select elements of any type, hence the name “universal”, and the syntax for it is a simple asterisk *. In the below example, every element would have the color : purple style applied to it.">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="docs">
+<title>CSS | My New Hugo Site</title>
+<link rel="manifest" href="/manifest.json">
+<link rel="icon" href="/favicon.png" >
+<link rel="canonical" href="https://example.org/docs/web-dev/css/">
+<link rel="stylesheet" href="/book.min.309b7ed028807cdb68d8d61e26d609f48369c098dbf5e4d8c0dcf4cdf49feafc.css" integrity="sha256-MJt&#43;0CiAfNto2NYeJtYJ9INpwJjb9eTYwNz0zfSf6vw=" crossorigin="anonymous">
+  <script defer src="/fuse.min.js"></script>
+  <script defer src="/en.search.min.3ffc475d28c2c37408205e68dcdf235a9b1b3863f3d737e18d972d457d081021.js" integrity="sha256-P/xHXSjCw3QIIF5o3N8jWpsbOGPz1zfhjZctRX0IECE=" crossorigin="anonymous"></script>
+
+  
+
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+  
+</head>
+<body dir="ltr">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      <div class="book-menu-content">
+        
+  <nav>
+<h2 class="book-brand">
+  <a class="flex align-center" href="/"><span>My New Hugo Site</span>
+  </a>
+</h2>
+
+
+<div class="book-search hidden">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+<script>document.querySelector(".book-search").classList.remove("hidden")</script>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/general/unix-commands/" class="">UNIX Commands</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/web-dev/clean-code/" class="">Clean Code for JS</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/general/conda/" class="">Conda</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/web-dev/css/" class="active">CSS</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/git/" class="">Git</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/web-dev/html/" class="">HTML</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/web-dev/js/" class="">JavaScript</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/jekyll/" class="">Jekyll</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/misc/mongodb/" class="">Mongo DB</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/mysql/" class="">MySQL</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/web-dev/node/" class="">NodeJS</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/ds/python/" class="">Python</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/general/virtualenv/" class="">PythonEnv</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/web-dev/react/" class="">React</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/sql-python/" class="">SQL Python</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+ 
+      </div>
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>CSS</strong>
+
+  <label for="toc-control">
+    
+    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#basic-syntax">Basic Syntax</a></li>
+    <li><a href="#selectors">Selectors</a></li>
+    <li><a href="#box-model">Box Model</a>
+      <ul>
+        <li><a href="#display-types">Display Types</a></li>
+        <li><a href="#display--block">Display : block</a></li>
+        <li><a href="#display--inline">Display : inline</a></li>
+        <li><a href="#display--inner-display">Display : inner display</a></li>
+        <li><a href="#tips">Tips</a></li>
+      </ul>
+    </li>
+    <li><a href="#flex-box">Flex Box</a>
+      <ul>
+        <li><a href="#growing--shrinking">Growing &amp; Shrinking</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown book-article"><h1 id="css-notes">
+  CSS Notes
+  <a class="anchor" href="#css-notes">#</a>
+</h1>
+<h2 id="basic-syntax">
+  Basic Syntax
+  <a class="anchor" href="#basic-syntax">#</a>
+</h2>
+<p><img src="https://cdn.statically.io/gh/TheOdinProject/curriculum/05ce472eabf8e04eeb2cc9139e66db884074fd7d/foundations/html_css/css-foundations/imgs/00.jpg" alt="" /></p>
+<h2 id="selectors">
+  Selectors
+  <a class="anchor" href="#selectors">#</a>
+</h2>
+<p><strong>Selectors</strong> simply refer to the HTML elements to which CSS rules apply - they are what is actually being <em>selected</em> for each rule.</p>
+<p><strong>Universal Selector</strong> will select elements of any type, hence the name &ldquo;universal&rdquo;, and the syntax for it is a simple asterisk <code>*</code>. In the below example, every element would have the <code>color : purple</code> style applied to it.</p>
+<p><strong>Type Selector</strong> will select all elements of the given element type, and the syntax is just the name of the element.</p>
+<p><strong>Class Selectors</strong> will select all elements with the given class, which is just an attribute youplace on an HTML Element. Here&rsquo;s how you add a class to an HTML tag and select it in CSS.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;alert-text&#34;</span>&gt;Please agree to our terms of service.&lt;/<span style="color:#f92672">div</span>&gt;
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-css" data-lang="css"><span style="display:flex;"><span>.<span style="color:#a6e22e">alert-text</span> {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">color</span>: <span style="color:#66d9ef">red</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p><strong>ID Selectors</strong> are similar to class selectors. They select an element with the given ID, which is another attribute you place on an HTML Element. The major difference between classes and IDs is that an element can only have one ID.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;title&#34;</span>&gt;My Awesome 90&#39;s Page&lt;/<span style="color:#f92672">div</span>&gt;
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-css" data-lang="css"><span style="display:flex;"><span>#title {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">background-color</span>: <span style="color:#66d9ef">red</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">/* Hash instead of period */</span>
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p><strong>Grouping Selector</strong> If we have two groups of elements that share some of their style declarations :</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-css" data-lang="css"><span style="display:flex;"><span>.<span style="color:#a6e22e">read</span><span style="color:#f92672">,</span>
+</span></span><span style="display:flex;"><span>.<span style="color:#a6e22e">unread</span> {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">color</span>: <span style="color:#66d9ef">white</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">background-color</span>: <span style="color:#66d9ef">black</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>.<span style="color:#a6e22e">read</span> {
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">/* several unique declarations */</span>
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>.<span style="color:#a6e22e">unread</span> {
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">/* several unique declarations */</span>
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p><strong>Chaining Selectors</strong> Another way to use selectors is to chain thema as a list without any separation.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#f92672">div</span>&gt;
+</span></span><span style="display:flex;"><span>  &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;subsection header&#34;</span>&gt;Latest Posts&lt;/<span style="color:#f92672">div</span>&gt;
+</span></span><span style="display:flex;"><span>  &lt;<span style="color:#f92672">p</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;subsection preview&#34;</span>&gt;This is where a preview for a post might go.&lt;/<span style="color:#f92672">p</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">div</span>&gt;
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-css" data-lang="css"><span style="display:flex;"><span>.<span style="color:#a6e22e">subsection</span>.<span style="color:#a6e22e">header</span> {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">color</span>: <span style="color:#66d9ef">red</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>.<span style="color:#a6e22e">subsection</span>#preview {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">color</span>: <span style="color:#66d9ef">blue</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>In general, you can’t chain more than one type selector since an element can’t be two different types at once.</p>
+<hr>
+<p><strong>Combinators</strong> allow us to combine multiple selectors differently than either grouping or chaining them, as they show a relationship between the selectors.</p>
+<p>A <strong>Descendant Combinator</strong> will only cause elements that match the last selector to be selected if they also have an ancestor (parent, grandparent, etc.) that matches the previous selector.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span><span style="color:#75715e">&lt;!-- index.html --&gt;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;ancestor&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">&lt;!-- A --&gt;</span>
+</span></span><span style="display:flex;"><span>  &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;contents&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">&lt;!-- B --&gt;</span>
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;contents&#34;</span>&gt;<span style="color:#75715e">&lt;!-- C --&gt;</span>&lt;/<span style="color:#f92672">div</span>&gt;
+</span></span><span style="display:flex;"><span>  &lt;/<span style="color:#f92672">div</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">div</span>&gt;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;contents&#34;</span>&gt;&lt;/<span style="color:#f92672">div</span>&gt;
+</span></span><span style="display:flex;"><span><span style="color:#75715e">&lt;!-- D --&gt;</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-css" data-lang="css"><span style="display:flex;"><span><span style="color:#75715e">/* styles.css */</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>.<span style="color:#a6e22e">ancestor</span> .<span style="color:#a6e22e">contents</span> {
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">/* some declarations */</span>
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>This code affects only B and C but not D becasue it does not share the ancestor class &ldquo;ancestor&rdquo; with B and C.</p>
+<p>There is no limit on how many combinators you can add to a rule, but too many combinators may result in confusion. Tread carefully.</p>
+<p><strong>Image Height and Width</strong> If you wanted to adjust the size of the image without causing it to lose its proportions, you would use a value of “auto” for the <code>height</code> property and adjust the <code>width</code> value</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-css" data-lang="css"><span style="display:flex;"><span><span style="color:#f92672">img</span> {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">height</span>: <span style="color:#66d9ef">auto</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">width</span>: <span style="color:#ae81ff">500</span><span style="color:#66d9ef">px</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>It’s best to include both of these properties for <code>&lt;img&gt;</code> elements, even if you don’t plan on adjusting the values from the image file’s original ones. When these values aren’t included, if an image takes longer to load than the rest of the page contents, the image won’t take up any space on the page at first, but will suddenly cause a drastic shift of the other page contents once it does load in.</p>
+<p>Explicitly stating a <code>height</code> and <code>width</code> prevents this from happening, as space will be “reserved” on the page and will just appear as a blank space until the image loads.</p>
+<blockquote>
+<p>Inline CSS will override the other two methods, which can cause unexpected results.</p>
+</blockquote>
+<hr>
+<h2 id="box-model">
+  Box Model
+  <a class="anchor" href="#box-model">#</a>
+</h2>
+<p><strong>Positioning</strong> &amp; <strong>Layout</strong> are the most important skills to be mastered.</p>
+<p><strong>The Box Model</strong></p>
+<ol>
+<li>
+<p>Every single thing on a webpage is a rectangular box.</p>
+</li>
+<li>
+<p>These boxes can have other boxes in them and can sit alongside one another.</p>
+</li>
+</ol>
+<p><code>padding</code> - increases the space between the border of a box and the content of the box.</p>
+<p><code>margin</code> - increases the space between the borders of a box and the borders of adjacent boxes</p>
+<p><code>border</code> - adds space (even if it&rsquo;s only a pixel or two) between the margin and the padding</p>
+<p><img src="https://cdn.statically.io/gh/TheOdinProject/curriculum/main/foundations/html_css/css-foundations/the-box-model/imgs/box-model.png" alt="pm&amp;amp;b" /></p>
+<h3 id="display-types">
+  Display Types
+  <a class="anchor" href="#display-types">#</a>
+</h3>
+<p><strong>Inline, Block &amp; Flex</strong> Using the <code>display</code> property, you can set various values for the display type.</p>
+<h3 id="display--block">
+  Display : block
+  <a class="anchor" href="#display--block">#</a>
+</h3>
+<ul>
+<li>
+<p>If <code>display: block</code>, then the box will break onto a new line. The <code>width</code> and <code>height</code> props are respected.</p>
+</li>
+<li>
+<p><code>padding</code>, <code>margin</code> &amp;<code> border</code> props willcause other elements to be pushed away from the box.</p>
+</li>
+<li>
+<p>If <code>width</code> is not specified, the box will extend in the inline directioon to fill the space available in its container. In most cases, the box will become as wide as its container, filling up 100% of the space available.</p>
+<p><strong>Eg :</strong> Some HTML elements like <code>h1</code> and <code>p</code>, use <code>block</code> as their outer display type by default.</p>
+</li>
+</ul>
+<h3 id="display--inline">
+  Display : inline
+  <a class="anchor" href="#display--inline">#</a>
+</h3>
+<ul>
+<li>
+<p>If a box has an outer display type of <code>inline</code>, then the box will not break onto a new line.</p>
+</li>
+<li>
+<p>The <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/width"><code>width</code></a> and <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/height"><code>height</code></a> properties will not apply.</p>
+</li>
+<li>
+<p>Top and bottom padding, margins, and borders will apply but will not cause other inline boxes to move away from the box.</p>
+</li>
+<li>
+<p>Left and right padding, margins, and borders will apply and will cause other inline boxes to move away from the box.</p>
+</li>
+</ul>
+<p><strong>Eg :</strong> Some HTML elements, such as <code>&lt;a&gt;</code>, <code>&lt;span&gt;</code>, <code>&lt;em&gt;</code> and <code>&lt;strong&gt;</code> use <code>inline</code> as their outer display type by default.</p>
+<h3 id="display--inner-display">
+  Display : inner display
+  <a class="anchor" href="#display--inner-display">#</a>
+</h3>
+<ul>
+<li>
+<p>Boxes also have an <code>inner</code> display type, which dictates how elements inside that box are laid out.</p>
+</li>
+<li>
+<p>Block and inline layout is the default way things behave on the web. By default and without any other instruction, the elements inside a box are also laid out in <strong><a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Normal_Flow">normal flow</a></strong> and behave as block or inline boxes.</p>
+</li>
+<li>
+<p>You can change the inner display type for example by setting <code>display: flex;</code>. The element will still use the outer display type <code>block</code> but this changes the inner display type to <code>flex</code>. Any direct children of this box will become flex items and behave according to the <a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Flexbox">Flexbox</a> specification.</p>
+</li>
+</ul>
+<p>More info @ <a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/The_box_model">Mozilla Docs</a></p>
+<h3 id="tips">
+  Tips
+  <a class="anchor" href="#tips">#</a>
+</h3>
+<ul>
+<li>Always use <code>box-sizing: border-box;</code> property in the <strong>Universal Selector</strong> so that the height and width properties applied to descending elements remain what they they are.</li>
+<li>An inline element cannot contain a block-level element!</li>
+</ul>
+<p><strong>Resources</strong></p>
+<ol>
+<li><a href="https://scrimba.com/scrim/co5024997a7e46c232d9abe55">Scrim Interactive on inline and block</a></li>
+</ol>
+<hr>
+<h2 id="flex-box">
+  Flex Box
+  <a class="anchor" href="#flex-box">#</a>
+</h2>
+<p>Flexbox is a way to arrange items into rows or columns. These items will flex (i.e. grow or shrink) based on some simple rules that you can define.</p>
+<ul>
+<li>A <strong>flex container</strong> is any element that has <code>display: flex</code> on it. A flex item is any element that lives directly inside of a flex container.</li>
+</ul>
+<p><img src="https://cdn.statically.io/gh/TheOdinProject/curriculum/8c0402439e1b0a9a156731bdab4ea64162688dab/foundations/html_css/flexbox/imgs/03.png" alt="Flexbox-illustration" /></p>
+<ul>
+<li>Any element can be both a flex container and a flex item. Said another way, you can also put <code>display: flex</code> on a flex item and then use flexbox to arrange its children.</li>
+</ul>
+<p><img src="https://cdn.statically.io/gh/TheOdinProject/curriculum/495704c6eb6bf33bc927534f231533a82b27b2ac/html_css/v2/foundations/flexbox/imgs/04.png" alt="Flexbox-iluustration-2" /></p>
+<p><img src="https://internetingishard.netlify.app/flex-direction-axes-b30e85.d1bca75a.png" alt="Flex Direction" /></p>
+<p><img src="https://internetingishard.netlify.app/flex-direction-reverse-532d8f.d1f2fbd3.png" alt="Flex Direction Types" /></p>
+<p><strong>Flex Order</strong>
+<img src="https://internetingishard.netlify.app/flex-direction-vs-order-021cee.7a3e129a.png" alt="Flex Order" /></p>
+<p><strong>Flexible Items</strong>
+<img src="https://internetingishard.netlify.app/flexible-items-cfe7a3.e3584961.png" alt="Flexible Items" /></p>
+<ul>
+<li>Use <code>display: flex;</code> to create a flex container.</li>
+<li>Use <code>justify-content</code> to define the horizontal alignment of items.</li>
+<li>Use <code>align-items</code> to define the vertical alignment of items.</li>
+<li>Use <code>flex-direction</code> if you need columns instead of rows.</li>
+<li>Use the <code>row-reverse</code> or<code>column-reverse</code> values to flip item order.</li>
+<li>Use <code>order</code> to customize the order of individual elements.</li>
+<li>Use <code>align-self</code> to vertically align individual items.</li>
+<li>Use <code>flex</code> to create flexible boxes that can stretch and shrink.</li>
+</ul>
+<p><strong>Flex Shorthand</strong></p>
+<p>The <strong>flex</strong> declaration is actually a shorthand for 3 properties that you can set on a flex item.<br>
+<strong>Eg :</strong> <code>flex</code> is actually shorthand for <code>flex-grow</code>, <code>flex-shrink</code> and <code>flex-basis</code>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-css" data-lang="css"><span style="display:flex;"><span><span style="color:#f92672">div</span> {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">flex</span>: <span style="color:#ae81ff">1</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>In the above screenshot, <code>flex:1</code> equates to <code>flex-grow: 1</code>, <code>flex-shrink: 1</code> and <code>flex-basis: 0</code></p>
+<h3 id="growing--shrinking">
+  Growing &amp; Shrinking
+  <a class="anchor" href="#growing--shrinking">#</a>
+</h3>
+<h4 id="flex-grow">
+  Flex-Grow
+  <a class="anchor" href="#flex-grow">#</a>
+</h4>
+<p><code>flex-grow</code> expects a single number as its value, and that number is used as the flex-item’s “growth factor”. When we applied <code>flex: 1</code> to every <code>div</code> inside our container, we were telling every <code>div</code> to grow the same amount.</p>
+<h4 id="flex-shrink">
+  Flex-Shrink
+  <a class="anchor" href="#flex-shrink">#</a>
+</h4>
+<p><code>flex-shrink</code> is similar to <code>flex-grow</code>, but sets the “shrink factor” of a flex item. <code>flex-shrink</code> only ends up being applied if the size of all flex items is larger than their parent container. For example, if our 3 divs from above had a width declaration like: <code>width: 100px</code>, and <strong>.flex-container</strong> was smaller than 300px, our divs would have to shrink to fit.</p>
+<h4 id="flex-basis">
+  Flex-Basis
+  <a class="anchor" href="#flex-basis">#</a>
+</h4>
+<p><code>flex-basis</code> sets the initial size of a flex item, so any sort of flex-growing or flex-shrinking starts from that baseline size. The shorthand value defaults to <code>flex-basis: 0%</code></p>
+<blockquote>
+<p>Authors are encouraged to control flexibility using the flex shorthand rather than with its longhand properties directly, as the shorthand correctly resets any unspecified components to accommodate common uses.</p>
+</blockquote>
+<p>More on flex <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/flex">here</a></p>
+<hr>
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+
+
+
+
+</div>
+
+
+
+  <script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){if(window.getSelection().toString())return;e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script>
+
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside class="book-toc">
+      <div class="book-toc-content">
+        
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#basic-syntax">Basic Syntax</a></li>
+    <li><a href="#selectors">Selectors</a></li>
+    <li><a href="#box-model">Box Model</a>
+      <ul>
+        <li><a href="#display-types">Display Types</a></li>
+        <li><a href="#display--block">Display : block</a></li>
+        <li><a href="#display--inline">Display : inline</a></li>
+        <li><a href="#display--inner-display">Display : inner display</a></li>
+        <li><a href="#tips">Tips</a></li>
+      </ul>
+    </li>
+    <li><a href="#flex-box">Flex Box</a>
+      <ul>
+        <li><a href="#growing--shrinking">Growing &amp; Shrinking</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+ 
+      </div>
+    </aside>
+    
+  </main>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

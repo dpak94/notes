@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>My New Hugo Site</title>
+    <link>https://example.org/</link>
+    <description>Recent content on My New Hugo Site</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 28 Aug 2024 23:17:33 +0530</lastBuildDate>
+    <atom:link href="https://example.org/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>UNIX Commands</title>
+      <link>https://example.org/docs/general/unix-commands/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://example.org/docs/general/unix-commands/</guid>
+      <description>UNIX&#xD;#&#xD;Cheatsheet [here](Unix Commands Cheat Sheet: All the Commands You Need) Commonly Used Commands&#xD;#&#xD;Command Function Command Function echo Hola Outputs Hola man {command} Get manual information on the command echo hello &amp;gt; file.txt Saves the text hello to the file file.txt help {function} Get help on the function nano hello there &amp;gt; hola.txt Multiple lines can be saved to the file hola.txt using nano whatis {command} Explains what a command is cd - Returns to previous directory whereis {packageName} Shows where a package is installed cd ~ Returns to Home Directory uname -a Detailed UNIX system information ls -1 Lists all files and dirs line by line halt Stop the system immediately pwd Present Working Directory who Display who is logged in touch fileName Creates an empty file called fileName head -n 5 /etc/adduser.</description>
+    </item>
+    <item>
+      <title>Sample Post</title>
+      <link>https://example.org/posts/sample-post/</link>
+      <pubDate>Wed, 28 Aug 2024 23:17:33 +0530</pubDate>
+      <guid>https://example.org/posts/sample-post/</guid>
+      <description>My First Post on Book Theme Hugo</description>
+    </item>
+    <item>
+      <title>Clean Code for JS</title>
+      <link>https://example.org/docs/web-dev/clean-code/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://example.org/docs/web-dev/clean-code/</guid>
+      <description>Clean Code Norms For JavaScript&#xD;#&#xD;// Example A : Bad Code const x = function (z) { const w = &amp;#34;Hello&amp;#34;; return w + z; }; // Example B : Good Code const generateUserGreeting = function (name) { const greeting = &amp;#34;Hello&amp;#34;; return greeting + name; }; Of the above two examples, code B is:&#xA;Easy to read. Assigns names to functions and variables that convey their task/nature instead of single letters, resultin in less confusion.</description>
+    </item>
+    <item>
+      <title>Conda</title>
+      <link>https://example.org/docs/general/conda/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://example.org/docs/general/conda/</guid>
+      <description>Conda&#xD;#&#xD;Action Command list all environments and locations conda env list update all packages in environment conda update --all --name ENVNAME install packages in environment conda install --name ENVNAME PKG1 PKG2 remove package from environment conda uninstall PKGNAME --name ENVNAME reactivate base environment (recommended for end of session) conda activate base Environment Management&#xA;Action Command list packages + source channels conda list -n ENVNAME --show-channel-urls uninstall package from specific channel conda remove -n ENVNAME -c CHANNELNAME PKGNAME create environment with Python version conda create -n ENVNAME python=3.</description>
+    </item>
+    <item>
+      <title>CSS</title>
+      <link>https://example.org/docs/web-dev/css/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://example.org/docs/web-dev/css/</guid>
+      <description>CSS Notes&#xD;#&#xD;Basic Syntax&#xD;#&#xD;Selectors&#xD;#&#xD;Selectors simply refer to the HTML elements to which CSS rules apply - they are what is actually being selected for each rule.&#xA;Universal Selector will select elements of any type, hence the name &amp;ldquo;universal&amp;rdquo;, and the syntax for it is a simple asterisk *. In the below example, every element would have the color : purple style applied to it.</description>
+    </item>
+    <item>
+      <title>Git</title>
+      <link>https://example.org/docs/git/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://example.org/docs/git/</guid>
+      <description>Git&#xD;#&#xD;Git is the free and open source distributed version control system that&amp;rsquo;s responsible for everything GitHub related that happens locally on your computer.&#xA;Installation&#xD;#&#xD;Windows Mac All Platforms Configuring User Information&#xD;#&#xD;Configuring User Information to be used across all repositories&#xA;Command Function git config --global user.name “[firstname lastname]” Set a name that is identifiable for credit when review version history git config --global user.email “[valid-email]” Set an email address that will be associated with each history marker git config --global color.</description>
+    </item>
+    <item>
+      <title>HTML</title>
+      <link>https://example.org/docs/web-dev/html/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://example.org/docs/web-dev/html/</guid>
+      <description>HTML&#xD;#&#xD;HTML - Hyper Text Markup Language&#xA;Tags and Elements&#xA;&amp;lt;p&amp;gt;some text content&amp;lt;/p&amp;gt; &amp;lt;!-- Tag --&amp;gt; #&#xD;Reserved Characters, Quotes &amp;amp; Other Escape Characters&#xA;Character Escape Syntax &amp;lt; &amp;amp;lt &amp;gt; &amp;amp;gt &amp;amp; &amp;amp;amp &#39; &amp;amp;rsquo; &amp;quot; &amp;amp;ldquo; &amp;quot; &amp;amp;rdquo; ‘ &amp;amp;lsquo; More characters here&#xA;Void Elements - Some elements do not have a closing tag. These elements have only opening tag.Eg : &amp;lt;br&amp;gt;, &amp;lt;img&amp;gt; etc. Some elements just have a forward slash at the end like : &amp;lt;br /&amp;gt; or &amp;lt;img /&amp;gt;.</description>
+    </item>
+    <item>
+      <title>JavaScript</title>
+      <link>https://example.org/docs/web-dev/js/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://example.org/docs/web-dev/js/</guid>
+      <description>JavaScript&#xD;#&#xD;CodePen.io for trying out new HTML, CSS &amp;amp; JS stuff.&#xA;JavaScript W3 School Quick References&#xD;#&#xD;DOM Reference | DOM Document | Arrays | Operators | Strings | Operator Precedence | RegExp | Math | Date | Number | Global | Chrome Dev Tools | RegExp CheatSheet | Can I Use&#xA;MDN Docs&#xD;#&#xD;MDN Web Docs | Maths | Arrays |&#xA;Asynchronous JS | Functions | Events | Client-side Web APIs</description>
+    </item>
+    <item>
+      <title>Jekyll</title>
+      <link>https://example.org/docs/jekyll/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://example.org/docs/jekyll/</guid>
+      <description>Jekyll Commands&#xD;#&#xD;Command Function jekyll new siteName Create a site and generate relevant sitefiles bundle exec jekyll serve Start the server jekyll serve --livereload Live server jekyll build Builds the static site instead of running the server jekyll serve --draft Builds the site with draft content included Important Notes&#xD;#&#xD;Contains layouts to create templates of websites. Use layout within pre-defines layouts to make formats even more interesting without entering data in every HTML/MD page.</description>
+    </item>
+    <item>
+      <title>Mongo DB</title>
+      <link>https://example.org/docs/misc/mongodb/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://example.org/docs/misc/mongodb/</guid>
+      <description>Installation Link : MongoDB MongoDB is a document database. It is open-source and cross platform. It stores data in a type of JSON format called BSON. A record in MongoDB is a document, which is a data structure composed of key value pairs similar to the structure of JSON objects. Records in a MongoDB database are called documents, and the field values may include numbers, strings, booleans, arrays, or even nested documents.</description>
+    </item>
+    <item>
+      <title>MySQL</title>
+      <link>https://example.org/docs/mysql/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://example.org/docs/mysql/</guid>
+      <description>Intro&#xD;#&#xD;MySQL Installation Link : MySQL&#xA;Notes:&#xA;DBMS - Data Base Management System RDBMS - Relational Data Base Management System SQL - Structured Query Language SQL is basically 4 kinds of languages in one package: Data Query Language Data Definition Language Data Control Language Data Manipulation Language Commenting in MySQL :&#xA;# One-line comment - One-line comment /*Multi Line Comment*/ Tables&#xD;#&#xD;A table is a database object that is made of rows and columns.</description>
+    </item>
+    <item>
+      <title>NodeJS</title>
+      <link>https://example.org/docs/web-dev/node/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://example.org/docs/web-dev/node/</guid>
+      <description>Node JS&#xD;#&#xD;A JavaScript Runtime built on Google&amp;rsquo;s OpenSource V8 Javascript Engine Node JS is an environment in which a program written in JS can be executed.&#xA;Pros for Node JS&#xD;#&#xD;Single threaded, based on event driven, non-blocking I/O model. Perfect for building superfast and scalable data-intensive apps. JavaScript for the entire stack resulting in faster and efficient development NPM : Huge library of open-source packages available for free.</description>
+    </item>
+    <item>
+      <title>Python</title>
+      <link>https://example.org/docs/ds/python/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://example.org/docs/ds/python/</guid>
+      <description>Python Notes&#xD;#&#xD;Programming Tips&#xD;#&#xD;Use &amp;rsquo;&amp;rsquo;&amp;rsquo; &amp;lsquo;&amp;rsquo;&amp;rsquo;, &amp;rsquo;&amp;rsquo; &amp;rsquo;&amp;rsquo; or &amp;rsquo; &amp;rsquo; to write comments in the script.&#xA;Multiple Assignment in Python : Example : a, b, c, good = 5, True, &amp;lsquo;Stranger&amp;rsquo;&#xA;The following keywords are reserved in Python :&#xA;and assert break class continue def del elif in is lambda not or else except exec finally for from global if import while with pass print raise return try yield</description>
+    </item>
+    <item>
+      <title>PythonEnv</title>
+      <link>https://example.org/docs/general/virtualenv/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://example.org/docs/general/virtualenv/</guid>
+      <description>VirtualEnv and PIP&#xD;#&#xD;Virtualenv&#xD;#&#xD;Documentation Command Description python -m pip install --user virtualenv Install virtualenv via pip python -m virtualenv venv Create a new env called venv in the current direectory .\venv\Scripts\activate Activate the virtual environment (*venv here) Pip Commands&#xD;#&#xD;Command Description pip freeze Outputs all the packages used in requirements.txt pip freeze &amp;gt; requirements.txt Generates a requirements file containing all the package info pip install -r requirements.</description>
+    </item>
+    <item>
+      <title>React</title>
+      <link>https://example.org/docs/web-dev/react/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://example.org/docs/web-dev/react/</guid>
+      <description>&#xD;React Notes&#xD;#&#xD;Official Docs&#xA;Intro&#xD;#&#xD;React is a JavaScript Library used to create interactive websites. It is used to easily create Single Page Applications. </description>
+    </item>
+    <item>
+      <title>SQL Python</title>
+      <link>https://example.org/docs/sql-python/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://example.org/docs/sql-python/</guid>
+      <description>SQL in Python&#xD;#&#xD;Use the command pip install mysql-connector-python to install MySQL Python. Import the module as import mysql.connector Creating a Database&#xD;#&#xD;import mysql.connector db = mysql.connector.connect( host=&amp;#34;localhost&amp;#34;, user=&amp;#34;root&amp;#34;, passwd=&amp;#34;0334&amp;#34; ) mycursor = db.cursor() mycursor.execute(&amp;#39;CREATE DATABASE sampleDB&amp;#39;) db.close() A database called sampleDB is created. Checking if a Database Exists&#xD;#&#xD;import mysql.connector db = mysql.connector.connect( host=&amp;#34;localhost&amp;#34;, user=&amp;#34;root&amp;#34;, passwd=&amp;#34;0334&amp;#34; ) mycursor = db.cursor() mycursor.execute(&amp;#39;SHOW DATABASES&amp;#39;) for x in mycursor: print(x) db.</description>
+    </item>
+  </channel>
+</rss>

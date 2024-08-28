@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="UNIX#Cheatsheet [here](Unix Commands Cheat Sheet: All the Commands You Need) Commonly Used Commands#Command Function Command Function echo Hola Outputs Hola man {command} Get manual information on the command echo hello &gt; file.txt Saves the text hello to the file file.txt help {function} Get help on the function nano hello there &gt; hola.txt Multiple lines can be saved to the file hola.txt using nano whatis {command} Explains what a command is cd - Returns to previous directory whereis {packageName} Shows where a package is installed cd ~ Returns to Home Directory uname -a Detailed UNIX system information ls -1 Lists all files and dirs line by line halt Stop the system immediately pwd Present Working Directory who Display who is logged in touch fileName Creates an empty file called fileName head -n 5 /etc/adduser.">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
+<meta name="color-scheme" content="light dark"><meta property="og:url" content="https://example.org/docs/general/unix-commands/">
+  <meta property="og:site_name" content="My New Hugo Site">
+  <meta property="og:title" content="UNIX Commands">
+  <meta property="og:description" content="UNIX#Cheatsheet [here](Unix Commands Cheat Sheet: All the Commands You Need) Commonly Used Commands#Command Function Command Function echo Hola Outputs Hola man {command} Get manual information on the command echo hello &gt; file.txt Saves the text hello to the file file.txt help {function} Get help on the function nano hello there &gt; hola.txt Multiple lines can be saved to the file hola.txt using nano whatis {command} Explains what a command is cd - Returns to previous directory whereis {packageName} Shows where a package is installed cd ~ Returns to Home Directory uname -a Detailed UNIX system information ls -1 Lists all files and dirs line by line halt Stop the system immediately pwd Present Working Directory who Display who is logged in touch fileName Creates an empty file called fileName head -n 5 /etc/adduser.">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="docs">
+<title>UNIX Commands | My New Hugo Site</title>
+<link rel="manifest" href="/manifest.json">
+<link rel="icon" href="/favicon.png" >
+<link rel="canonical" href="https://example.org/docs/general/unix-commands/">
+<link rel="stylesheet" href="/book.min.309b7ed028807cdb68d8d61e26d609f48369c098dbf5e4d8c0dcf4cdf49feafc.css" integrity="sha256-MJt&#43;0CiAfNto2NYeJtYJ9INpwJjb9eTYwNz0zfSf6vw=" crossorigin="anonymous">
+  <script defer src="/fuse.min.js"></script>
+  <script defer src="/en.search.min.3ffc475d28c2c37408205e68dcdf235a9b1b3863f3d737e18d972d457d081021.js" integrity="sha256-P/xHXSjCw3QIIF5o3N8jWpsbOGPz1zfhjZctRX0IECE=" crossorigin="anonymous"></script>
+
+  
+
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+  
+</head>
+<body dir="ltr">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      <div class="book-menu-content">
+        
+  <nav>
+<h2 class="book-brand">
+  <a class="flex align-center" href="/"><span>My New Hugo Site</span>
+  </a>
+</h2>
+
+
+<div class="book-search hidden">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+<script>document.querySelector(".book-search").classList.remove("hidden")</script>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/general/unix-commands/" class="active">UNIX Commands</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/web-dev/clean-code/" class="">Clean Code for JS</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/general/conda/" class="">Conda</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/web-dev/css/" class="">CSS</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/git/" class="">Git</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/web-dev/html/" class="">HTML</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/web-dev/js/" class="">JavaScript</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/jekyll/" class="">Jekyll</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/misc/mongodb/" class="">Mongo DB</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/mysql/" class="">MySQL</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/web-dev/node/" class="">NodeJS</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/ds/python/" class="">Python</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/general/virtualenv/" class="">PythonEnv</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/web-dev/react/" class="">React</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/sql-python/" class="">SQL Python</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+ 
+      </div>
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>UNIX Commands</strong>
+
+  <label for="toc-control">
+    
+    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#commonly-used-commands">Commonly Used Commands</a></li>
+    <li><a href="#pacman-commands">Pacman Commands</a></li>
+  </ul>
+</nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown book-article"><h1 id="unix">
+  UNIX
+  <a class="anchor" href="#unix">#</a>
+</h1>
+<ul>
+<li>Cheatsheet [here](<a href="https://www.stationx.net/unix-commands-cheat-sheet/">Unix Commands Cheat Sheet: All the Commands You Need</a>)</li>
+</ul>
+<h2 id="commonly-used-commands">
+  Commonly Used Commands
+  <a class="anchor" href="#commonly-used-commands">#</a>
+</h2>
+<table>
+<thead>
+<tr>
+<th><strong>Command</strong></th>
+<th><strong>Function</strong></th>
+<th><strong>Command</strong></th>
+<th><strong>Function</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>echo Hola</code></td>
+<td>Outputs Hola</td>
+<td><code>man {command}</code></td>
+<td>Get manual information on the command</td>
+</tr>
+<tr>
+<td><code>echo hello &gt; file.txt</code></td>
+<td>Saves the text <em>hello</em> to the file <em>file.txt</em></td>
+<td><code>help {function}</code></td>
+<td>Get help on the function</td>
+</tr>
+<tr>
+<td><code>nano hello there &gt; hola.txt</code></td>
+<td>Multiple lines can be saved to the file <em>hola.txt</em> using <strong>nano</strong></td>
+<td><code>whatis {command}</code></td>
+<td>Explains what a command is</td>
+</tr>
+<tr>
+<td><code>cd -</code></td>
+<td>Returns to previous directory</td>
+<td><code>whereis {packageName}</code></td>
+<td>Shows where a package is installed</td>
+</tr>
+<tr>
+<td><code>cd ~</code></td>
+<td>Returns to Home Directory</td>
+<td><code>uname -a</code></td>
+<td>Detailed UNIX system information</td>
+</tr>
+<tr>
+<td><code>ls -1</code></td>
+<td>Lists all files and dirs line by line</td>
+<td><code>halt</code></td>
+<td>Stop the system immediately</td>
+</tr>
+<tr>
+<td><code>pwd</code></td>
+<td>Present Working Directory</td>
+<td><code>who</code></td>
+<td>Display who is logged in</td>
+</tr>
+<tr>
+<td><code>touch fileName</code></td>
+<td>Creates an empty file called fileName</td>
+<td><code>head -n 5 /etc/adduser.conf</code></td>
+<td>Shows first 5 lines in file <em>adduser.conf</em></td>
+</tr>
+<tr>
+<td><code>file banana.jpg</code></td>
+<td>Describes file content</td>
+<td><code>tail -n 5 /etc/adduser.conf</code></td>
+<td>Shows last 5 lines in file <em>adduser.conf</em></td>
+</tr>
+<tr>
+<td><code>cat file1 file2</code></td>
+<td>Concatenates and display the content of files <em>file1</em> &amp; <em>file2</em></td>
+<td><code>sudo unmount /media/disk</code></td>
+<td>Unmount a disc from Linux</td>
+</tr>
+<tr>
+<td><code>cat file.txt file2.txt &gt; combined.txt</code></td>
+<td>Writes all the content from files <em>file.txt</em> &amp; <em>file2.txt</em> into <em>combined.txt</em></td>
+<td><code>mount /grp {diskName}</code></td>
+<td>Confirms that the disc has successfully unmounted</td>
+</tr>
+<tr>
+<td><code>history</code></td>
+<td>Prints out the most recently used commands. Execute the commands by typing <code>!{number-of-the-command}</code></td>
+<td><code>cp -i fileX Docs/fileX</code></td>
+<td>Overwrite a file with another file of same name. <code>-i</code> prompts you (interactive) before overwriting</td>
+</tr>
+<tr>
+<td><code>rm file1</code></td>
+<td>Removes file1</td>
+<td><code>cp -r Docs/ Downloads/pics/</code></td>
+<td>Copies everything recursively in folder <em>Docs</em> to folder <em>pics</em></td>
+</tr>
+<tr>
+<td><code>rmdir Docs</code></td>
+<td>Removes directory  <em>Docs</em></td>
+<td><code>mkdir -p books/hemmingway/favs</code></td>
+<td>Create a dir through sub-dirs</td>
+</tr>
+<tr>
+<td><code>rm -f file2</code></td>
+<td>Force removes <em>file2</em></td>
+<td><code>mv test submission</code></td>
+<td>Changes the names or moves a directory file</td>
+</tr>
+<tr>
+<td><code>rm -i file3</code></td>
+<td>Interactive deletion. Asks you whether to remove the file or not</td>
+<td><code>cmd1 | cmd2</code></td>
+<td>is the pipe character; feeds the output of the command <em>cmd1</em> and sends it to the command <em>cmd2</em>, e.g. <code>ps aux | grep python3</code></td>
+</tr>
+<tr>
+<td><code>rm -r Downloads</code></td>
+<td>Recursive Deletion. Deletes all the files in the dir <em>Downloads</em></td>
+<td><code>cmd &gt; file</code></td>
+<td>Output of <em>cmd</em> is redirected to <em>file</em>. Overwrites pre-existing content in <em>file</em></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><code>cmd &gt;&gt; file</code></td>
+<td>Output of <em>cmd</em> is appended to <em>file</em></td>
+</tr>
+</tbody>
+</table>
+<p><img src="https://www.stationx.net/wp-content/uploads/2022/11/unix-file-permissions-diagram.png" alt="" /></p>
+<hr>
+<h2 id="pacman-commands">
+  Pacman Commands
+  <a class="anchor" href="#pacman-commands">#</a>
+</h2>
+<table>
+<thead>
+<tr>
+<th><strong>Command</strong></th>
+<th><strong>Function</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>sudo pacman mirrors</code></td>
+<td>Checks the status of the mirros currently in the mirrorlist</td>
+</tr>
+<tr>
+<td><code>sudo pacman-mirrors --fasttrack &amp;&amp; sudo pacman -Syu</code></td>
+<td>Rewrites the local mirrorlist in descending order of download speed</td>
+</tr>
+<tr>
+<td><code>sudo pacman-mirrors --countrylist</code></td>
+<td>Gets a list of countries currently serving mirrors</td>
+</tr>
+<tr>
+<td><code>sudo pacman-mirrors  --api --set-branch {branch}</code></td>
+<td>Changes the branch between stable, testing or unstable. After changing the branch, rebuild the mirror list &amp; update packages</td>
+</tr>
+<tr>
+<td><code>sudo pacman -Syuu</code></td>
+<td>Downgrade the package while changing the branches</td>
+</tr>
+<tr>
+<td><code>pacman-mirrors -G</code></td>
+<td>Check which branch the machine is on</td>
+</tr>
+<tr>
+<td><code>pacman -Qtdq</code></td>
+<td>Lists orphan packages</td>
+</tr>
+<tr>
+<td><code>sudo pacman -Rns {package}</code></td>
+<td>Removes the package</td>
+</tr>
+</tbody>
+</table>
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+
+
+
+
+</div>
+
+
+
+  <script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){if(window.getSelection().toString())return;e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script>
+
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside class="book-toc">
+      <div class="book-toc-content">
+        
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#commonly-used-commands">Commonly Used Commands</a></li>
+    <li><a href="#pacman-commands">Pacman Commands</a></li>
+  </ul>
+</nav>
+
+
+ 
+      </div>
+    </aside>
+    
+  </main>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

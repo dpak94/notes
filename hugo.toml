@@ -1,0 +1,13 @@
+baseURL = 'https://example.org/'
+languageCode = 'en-us'
+title = 'My New Hugo Site'
+theme = 'hugo-book'
+
+bookTheme = 'auto'
+BookToc = true
+BookLogo = 'logo.jpg'
+BookMenuBundle = '/menu'
+BookSection = 'docs'
+BookRepo = 'https://github.com/alex-shpak/hugo-book'
+BookSearch = true
+BookComments = true

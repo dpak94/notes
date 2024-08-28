@@ -1,0 +1,772 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Git#Git is the free and open source distributed version control system that&rsquo;s responsible for everything GitHub related that happens locally on your computer.
+Installation#Windows Mac All Platforms Configuring User Information#Configuring User Information to be used across all repositories
+Command Function git config --global user.name “[firstname lastname]” Set a name that is identifiable for credit when review version history git config --global user.email “[valid-email]” Set an email address that will be associated with each history marker git config --global color.">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
+<meta name="color-scheme" content="light dark"><meta property="og:url" content="https://example.org/docs/git/">
+  <meta property="og:site_name" content="My New Hugo Site">
+  <meta property="og:title" content="Git">
+  <meta property="og:description" content="Git#Git is the free and open source distributed version control system that’s responsible for everything GitHub related that happens locally on your computer.
+Installation#Windows Mac All Platforms Configuring User Information#Configuring User Information to be used across all repositories
+Command Function git config --global user.name “[firstname lastname]” Set a name that is identifiable for credit when review version history git config --global user.email “[valid-email]” Set an email address that will be associated with each history marker git config --global color.">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="docs">
+<title>Git | My New Hugo Site</title>
+<link rel="manifest" href="/manifest.json">
+<link rel="icon" href="/favicon.png" >
+<link rel="canonical" href="https://example.org/docs/git/">
+<link rel="stylesheet" href="/book.min.309b7ed028807cdb68d8d61e26d609f48369c098dbf5e4d8c0dcf4cdf49feafc.css" integrity="sha256-MJt&#43;0CiAfNto2NYeJtYJ9INpwJjb9eTYwNz0zfSf6vw=" crossorigin="anonymous">
+  <script defer src="/fuse.min.js"></script>
+  <script defer src="/en.search.min.3ffc475d28c2c37408205e68dcdf235a9b1b3863f3d737e18d972d457d081021.js" integrity="sha256-P/xHXSjCw3QIIF5o3N8jWpsbOGPz1zfhjZctRX0IECE=" crossorigin="anonymous"></script>
+
+  
+
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+  
+</head>
+<body dir="ltr">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      <div class="book-menu-content">
+        
+  <nav>
+<h2 class="book-brand">
+  <a class="flex align-center" href="/"><span>My New Hugo Site</span>
+  </a>
+</h2>
+
+
+<div class="book-search hidden">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+<script>document.querySelector(".book-search").classList.remove("hidden")</script>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/general/unix-commands/" class="">UNIX Commands</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/web-dev/clean-code/" class="">Clean Code for JS</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/general/conda/" class="">Conda</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/web-dev/css/" class="">CSS</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/git/" class="active">Git</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/web-dev/html/" class="">HTML</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/web-dev/js/" class="">JavaScript</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/jekyll/" class="">Jekyll</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/misc/mongodb/" class="">Mongo DB</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/mysql/" class="">MySQL</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/web-dev/node/" class="">NodeJS</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/ds/python/" class="">Python</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/general/virtualenv/" class="">PythonEnv</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/web-dev/react/" class="">React</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/sql-python/" class="">SQL Python</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+ 
+      </div>
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>Git</strong>
+
+  <label for="toc-control">
+    
+    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#installation">Installation</a></li>
+    <li><a href="#configuring-user-information">Configuring User Information</a></li>
+    <li><a href="#setup--initializing">Setup &amp; Initializing</a></li>
+    <li><a href="#stage--snapshot">Stage &amp; Snapshot</a></li>
+    <li><a href="#branch--merge">Branch &amp; Merge</a></li>
+    <li><a href="#inspect--compare">Inspect &amp; Compare</a></li>
+    <li><a href="#share--update">Share &amp; Update</a></li>
+    <li><a href="#tracking-path-changes">Tracking Path Changes</a></li>
+    <li><a href="#rewrite-history">Rewrite History</a></li>
+    <li><a href="#temporary-commits">Temporary Commits</a></li>
+    <li><a href="#ignoring-patterns">Ignoring Patterns</a></li>
+    <li><a href="#ssh-key-generation">SSH Key Generation</a></li>
+    <li><a href="#commit-message-golden-rules">Commit Message Golden Rules</a></li>
+  </ul>
+</nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown book-article"><h1 id="git">
+  Git
+  <a class="anchor" href="#git">#</a>
+</h1>
+<p><strong>Git</strong> is the free and open source distributed <strong>version control system</strong> that&rsquo;s responsible for everything <strong>GitHub</strong> related that happens locally on your computer.</p>
+<h2 id="installation">
+  Installation
+  <a class="anchor" href="#installation">#</a>
+</h2>
+<ul>
+<li><a href="https://windows.github.com"><strong>Windows</strong></a></li>
+<li><a href="https://mac.github.com"><strong>Mac</strong></a></li>
+<li><a href="https://git-scm.com"><strong>All Platforms</strong></a></li>
+</ul>
+<h2 id="configuring-user-information">
+  Configuring User Information
+  <a class="anchor" href="#configuring-user-information">#</a>
+</h2>
+<p>Configuring User Information to be used across all repositories</p>
+<table>
+<thead>
+<tr>
+<th><strong>Command</strong></th>
+<th><strong>Function</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>git config --global user.name “[firstname lastname]”</code></td>
+<td>Set a name that is identifiable for credit when review version history</td>
+</tr>
+<tr>
+<td><code>git config --global user.email “[valid-email]”</code></td>
+<td>Set an email address that will be associated with each history marker</td>
+</tr>
+<tr>
+<td><code>git config --global color.ui auto</code></td>
+<td>Set automatic command line coloring for Git for easy reviewing</td>
+</tr>
+</tbody>
+</table>
+<h2 id="setup--initializing">
+  Setup &amp; Initializing
+  <a class="anchor" href="#setup--initializing">#</a>
+</h2>
+<table>
+<thead>
+<tr>
+<th><strong>Command</strong></th>
+<th><strong>Function</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>git init</code></td>
+<td>Initialize an existing directory as a Git repository</td>
+</tr>
+<tr>
+<td><code>git clone [url]</code></td>
+<td>Retrieve an entire repository from a hosted location via URL</td>
+</tr>
+</tbody>
+</table>
+<h2 id="stage--snapshot">
+  Stage &amp; Snapshot
+  <a class="anchor" href="#stage--snapshot">#</a>
+</h2>
+<p>Working with snapshots and the Git staging area</p>
+<table>
+<thead>
+<tr>
+<th><strong>Command</strong></th>
+<th><strong>Function</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>git status</code></td>
+<td>Show modified files in working directory, staged for your next commit</td>
+</tr>
+<tr>
+<td><code>git add fileName</code></td>
+<td>Add a file as it looks now to your next commit (stage)</td>
+</tr>
+<tr>
+<td><code>git reset fileName</code></td>
+<td>Unstage a file while retaining the changes in working directory</td>
+</tr>
+<tr>
+<td><code>git diff</code></td>
+<td>Difference of what is changed but not staged</td>
+</tr>
+<tr>
+<td><code>git diff --staged</code></td>
+<td>Difference of what is staged but not yet commited</td>
+</tr>
+<tr>
+<td><code>git commit -m “[descriptive message]”</code></td>
+<td>Commit your staged content as a new commit snapshot</td>
+</tr>
+<tr>
+<td><code>git commit -a -m “[descriptive message]”</code></td>
+<td>Commit your content without staging</td>
+</tr>
+</tbody>
+</table>
+<h2 id="branch--merge">
+  Branch &amp; Merge
+  <a class="anchor" href="#branch--merge">#</a>
+</h2>
+<p>Isolating work in branches, changing context, and integrating changes</p>
+<table>
+<thead>
+<tr>
+<th><strong>Command</strong></th>
+<th><strong>Function</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>git branch</code></td>
+<td>List your branches. a <strong>*</strong> will appear next to the currently active branch</td>
+</tr>
+<tr>
+<td><code>git branch branchName</code></td>
+<td>Create a new branch at the current commit</td>
+</tr>
+<tr>
+<td><code>git checkout</code></td>
+<td>Switch to another branch and check it out into your working directory</td>
+</tr>
+<tr>
+<td><code>git merge branchName</code></td>
+<td>Merge the specified branch’s history into the current one</td>
+</tr>
+<tr>
+<td><code>git log</code></td>
+<td>Show all commits in the current branch’s history</td>
+</tr>
+<tr>
+<td><code>git log --online</code></td>
+<td>Show all commits with only commit messages</td>
+</tr>
+<tr>
+<td><code>git log -p</code></td>
+<td>Show all commits along with changes</td>
+</tr>
+</tbody>
+</table>
+<h2 id="inspect--compare">
+  Inspect &amp; Compare
+  <a class="anchor" href="#inspect--compare">#</a>
+</h2>
+<p>Examining logs, diffs and object information</p>
+<table>
+<thead>
+<tr>
+<th><strong>Command</strong></th>
+<th><strong>Function</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>git log</code></td>
+<td>Show the commit history for the currently active branch</td>
+</tr>
+<tr>
+<td><code>git log branchB..branchA</code></td>
+<td>Show the commits on branchA that are not on branchB</td>
+</tr>
+<tr>
+<td><code>git log --follow [file]</code></td>
+<td>Show the commits that changed file, even across renames</td>
+</tr>
+<tr>
+<td><code>git diff branchB...branchA</code></td>
+<td>Show the diff of what is in branchA that is not in branchB</td>
+</tr>
+<tr>
+<td><code>git show [SHA]</code></td>
+<td>Show any object in Git in human-readable format</td>
+</tr>
+</tbody>
+</table>
+<h2 id="share--update">
+  Share &amp; Update
+  <a class="anchor" href="#share--update">#</a>
+</h2>
+<p>Retrieving updates from another repository and updating local repos</p>
+<table>
+<thead>
+<tr>
+<th><strong>Command</strong></th>
+<th><strong>Function</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>git remote add [alias] [url]</code></td>
+<td>Add a git URL as an alias</td>
+</tr>
+<tr>
+<td><code>git fetch [alias]</code></td>
+<td>Fetch down all the branches from that Git remote</td>
+</tr>
+<tr>
+<td><code>git merge [alias]/[branch]</code></td>
+<td>Merge a remote branch into your current branch to bring it up to date</td>
+</tr>
+<tr>
+<td><code>git push [alias] [branch]</code></td>
+<td>Transmit local branch commits to the remote repository branch</td>
+</tr>
+<tr>
+<td><code>git pull</code></td>
+<td>Fetch and merge any commits from the tracking remote branch</td>
+</tr>
+</tbody>
+</table>
+<h2 id="tracking-path-changes">
+  Tracking Path Changes
+  <a class="anchor" href="#tracking-path-changes">#</a>
+</h2>
+<p>Versioning file removes and path changes</p>
+<table>
+<thead>
+<tr>
+<th><strong>Command</strong></th>
+<th><strong>Function</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>git rm [file]</code></td>
+<td>Delete the file from project and stage the removal for commit</td>
+</tr>
+<tr>
+<td><code>git mv [existing-path] [new-path]</code></td>
+<td>Change an existing file path and stage the move</td>
+</tr>
+<tr>
+<td><code>git log --stat -M</code></td>
+<td>Show all commit logs with indication of any paths that moved</td>
+</tr>
+</tbody>
+</table>
+<h2 id="rewrite-history">
+  Rewrite History
+  <a class="anchor" href="#rewrite-history">#</a>
+</h2>
+<p>Rewriting branches, updating commits and clearing history</p>
+<table>
+<thead>
+<tr>
+<th><strong>Command</strong></th>
+<th><strong>Function</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>git rebase [branch]</code></td>
+<td>Apply any commits of current branch ahead of specified one</td>
+</tr>
+<tr>
+<td><code>git reset --hard [commit]</code></td>
+<td>Clear staging area, rewrite working tree from specified commit</td>
+</tr>
+</tbody>
+</table>
+<h2 id="temporary-commits">
+  Temporary Commits
+  <a class="anchor" href="#temporary-commits">#</a>
+</h2>
+<p>Temporarily store modified, tracked files in order to change branches</p>
+<table>
+<thead>
+<tr>
+<th><strong>Command</strong></th>
+<th><strong>Function</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>git stash</code></td>
+<td>Save modified and staged changes</td>
+</tr>
+<tr>
+<td><code>git stash list</code></td>
+<td>List stack-order of stashed file changes</td>
+</tr>
+<tr>
+<td><code>git stash pop</code></td>
+<td>Write working from top of stash stack</td>
+</tr>
+<tr>
+<td><code>git stash drop</code></td>
+<td>Discard the changes from top of stash stack</td>
+</tr>
+</tbody>
+</table>
+<h2 id="ignoring-patterns">
+  Ignoring Patterns
+  <a class="anchor" href="#ignoring-patterns">#</a>
+</h2>
+<p>Preventing unintentional staging or commiting of files</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>logs/
+</span></span><span style="display:flex;"><span>*.notes
+</span></span><span style="display:flex;"><span>pattern*/
+</span></span></code></pre></div><p>Save a file with desired paterns as <strong>.gitignore</strong> with either direct string matches or wildcard globs</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>git config --global core.excludesfile <span style="color:#f92672">[</span>file<span style="color:#f92672">]</span>
+</span></span></code></pre></div><p>System wide ignore patern for all local repositories</p>
+<h2 id="ssh-key-generation">
+  SSH Key Generation
+  <a class="anchor" href="#ssh-key-generation">#</a>
+</h2>
+<p>Generating SSH Key for local Git Bash to pull remote repos and adding the generated key to the remote repo account.</p>
+<ol>
+<li>
+<p>Open <strong>Git Bash</strong></p>
+</li>
+<li>
+<p>Paste the text below :</p>
+<p><code>ssh-keygen -t rsa -b 4096 -C &quot;dpak@tuta.io&quot;</code></p>
+</li>
+<li>
+<p>This creates a new SSH key, using the provided email as a label</p>
+<blockquote>
+<p>Generating public/private rsa key pair.</p>
+</blockquote>
+</li>
+<li>
+<p>When you get the below prompt :</p>
+<blockquote>
+<p>Enter a file in which to save the key (/c/Users/ranger/.ssh/id_rsa): [Press Enter]</p>
+</blockquote>
+</li>
+<li>
+<p>The public key will be stored in <code>C:\Users\ranger\.ssh</code> as <strong>id_rsa.pub</strong> file. Opening this file with notepad or VSCode gives the <strong>SSH key</strong>. This key can be added to GitHub or GitBucket on their website.</p>
+</li>
+</ol>
+<h2 id="commit-message-golden-rules">
+  Commit Message Golden Rules
+  <a class="anchor" href="#commit-message-golden-rules">#</a>
+</h2>
+<ol>
+<li>Separate subject from body with a blank line</li>
+</ol>
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+
+
+
+
+</div>
+
+
+
+  <script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){if(window.getSelection().toString())return;e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script>
+
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside class="book-toc">
+      <div class="book-toc-content">
+        
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#installation">Installation</a></li>
+    <li><a href="#configuring-user-information">Configuring User Information</a></li>
+    <li><a href="#setup--initializing">Setup &amp; Initializing</a></li>
+    <li><a href="#stage--snapshot">Stage &amp; Snapshot</a></li>
+    <li><a href="#branch--merge">Branch &amp; Merge</a></li>
+    <li><a href="#inspect--compare">Inspect &amp; Compare</a></li>
+    <li><a href="#share--update">Share &amp; Update</a></li>
+    <li><a href="#tracking-path-changes">Tracking Path Changes</a></li>
+    <li><a href="#rewrite-history">Rewrite History</a></li>
+    <li><a href="#temporary-commits">Temporary Commits</a></li>
+    <li><a href="#ignoring-patterns">Ignoring Patterns</a></li>
+    <li><a href="#ssh-key-generation">SSH Key Generation</a></li>
+    <li><a href="#commit-message-golden-rules">Commit Message Golden Rules</a></li>
+  </ul>
+</nav>
+
+
+ 
+      </div>
+    </aside>
+    
+  </main>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
