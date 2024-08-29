@@ -1,6 +1,6 @@
-baseURL = 'https://example.org/'
+baseURL = 'dpak94.github.io/notes'
 languageCode = 'en-us'
-title = 'My New Hugo Site'
+title = 'Web Notes'
 theme = 'hugo-book'
 
 bookTheme = 'auto'
