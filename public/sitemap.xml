@@ -2,49 +2,49 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://example.org/docs/general/unix-commands/</loc>
+    <loc>dpak94.github.io/notes/docs/general/unix-commands/</loc>
   </url><url>
-    <loc>https://example.org/</loc>
+    <loc>dpak94.github.io/notes/posts/</loc>
     <lastmod>2024-08-28T23:17:33+05:30</lastmod>
   </url><url>
-    <loc>https://example.org/posts/</loc>
+    <loc>dpak94.github.io/notes/posts/sample-post/</loc>
     <lastmod>2024-08-28T23:17:33+05:30</lastmod>
   </url><url>
-    <loc>https://example.org/posts/sample-post/</loc>
+    <loc>dpak94.github.io/notes/</loc>
     <lastmod>2024-08-28T23:17:33+05:30</lastmod>
   </url><url>
-    <loc>https://example.org/categories/</loc>
+    <loc>dpak94.github.io/notes/categories/</loc>
   </url><url>
-    <loc>https://example.org/docs/web-dev/clean-code/</loc>
+    <loc>dpak94.github.io/notes/docs/web-dev/clean-code/</loc>
   </url><url>
-    <loc>https://example.org/docs/general/conda/</loc>
+    <loc>dpak94.github.io/notes/docs/general/conda/</loc>
   </url><url>
-    <loc>https://example.org/docs/web-dev/css/</loc>
+    <loc>dpak94.github.io/notes/docs/web-dev/css/</loc>
   </url><url>
-    <loc>https://example.org/docs/</loc>
+    <loc>dpak94.github.io/notes/docs/</loc>
   </url><url>
-    <loc>https://example.org/docs/git/</loc>
+    <loc>dpak94.github.io/notes/docs/git/</loc>
   </url><url>
-    <loc>https://example.org/docs/web-dev/html/</loc>
+    <loc>dpak94.github.io/notes/docs/web-dev/html/</loc>
   </url><url>
-    <loc>https://example.org/docs/web-dev/js/</loc>
+    <loc>dpak94.github.io/notes/docs/web-dev/js/</loc>
   </url><url>
-    <loc>https://example.org/docs/jekyll/</loc>
+    <loc>dpak94.github.io/notes/docs/jekyll/</loc>
   </url><url>
-    <loc>https://example.org/docs/misc/mongodb/</loc>
+    <loc>dpak94.github.io/notes/docs/misc/mongodb/</loc>
   </url><url>
-    <loc>https://example.org/docs/mysql/</loc>
+    <loc>dpak94.github.io/notes/docs/mysql/</loc>
   </url><url>
-    <loc>https://example.org/docs/web-dev/node/</loc>
+    <loc>dpak94.github.io/notes/docs/web-dev/node/</loc>
   </url><url>
-    <loc>https://example.org/docs/ds/python/</loc>
+    <loc>dpak94.github.io/notes/docs/ds/python/</loc>
   </url><url>
-    <loc>https://example.org/docs/general/virtualenv/</loc>
+    <loc>dpak94.github.io/notes/docs/general/virtualenv/</loc>
   </url><url>
-    <loc>https://example.org/docs/web-dev/react/</loc>
+    <loc>dpak94.github.io/notes/docs/web-dev/react/</loc>
   </url><url>
-    <loc>https://example.org/docs/sql-python/</loc>
+    <loc>dpak94.github.io/notes/docs/sql-python/</loc>
   </url><url>
-    <loc>https://example.org/tags/</loc>
+    <loc>dpak94.github.io/notes/tags/</loc>
   </url>
 </urlset>

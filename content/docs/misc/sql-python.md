@@ -107,9 +107,8 @@ db.close()
 
 - And using **PRIMARY KEY** on an existing table
 
-  ```python
+```python
   import mysql.connector
-  ```
 
 db = mysql.connector.connect(
 host="localhost",
@@ -124,11 +123,13 @@ mycursor.execute("ALTER TABLE customers ADD COLUMN id INT AUTO_INCREMENT PRIMARY
 
 db.close()
 
-````
+```
+
 ## INSERT INTO TABLE
 
 ### Single Row Insertion
-``` python
+
+```python
 import mysql.connector
 
 db = mysql.connector.connect(
@@ -147,7 +148,7 @@ mycursor.execute(sql, val)
 db.commit() # Required to make changes in the table
 
 print(mycursor.rowcount, "Record Inserted.")
-````
+```
 
 ### Multiple Row Insertion
 
@@ -332,7 +333,6 @@ mycursor = mydb.cursor()
 sql = "SELECT * FROM customers ORDER BY name"
 
 mycursor.execute(sql)
-
 myresult = mycursor.fetchall()
 
 for x in myresult:
@@ -357,9 +357,7 @@ mycursor = mydb.cursor()
 sql = "DELETE FROM customers WHERE address = 'Mountain 21'"
 
 mycursor.execute(sql)
-
 mydb.commit() # Required when making changes to the Database
-
 print(mycursor.rowcount, "record(s) deleted")
 mydb.close()
 ```
@@ -382,7 +380,6 @@ sql = "DELETE FROM customers WHERE address = %s" # Statement does not have query
 adr = ("Yellow Garden 2", ) # Query is done usiong a variable to which the value is assigned
 
 mycursor.execute(sql, adr)
-
 mydb.commit()
 
 print(mycursor.rowcount, "record(s) deleted")
@@ -433,10 +430,8 @@ db.close()
 
 - Update existing records byusing the **UPDATE** statement
 
-  ```python
-  # Change the address in the column from "Valley 345" to "Canyon 123"
-  ```
-
+```python
+# Change the address in the column from "Valley 345" to "Canyon 123"
 import mysql.connector
 
 mydb = mysql.connector.connect(
@@ -453,16 +448,15 @@ val = ("Canyon 123", "Valley 345")
 mycursor.execute(sql, val) # Injection-proof statement
 
 mydb.commit() # Required to make changes to the database
-
 print(mycursor.rowcount, "record(s) affected")
 mydb.close()
+```
 
-````
 ## LIMIT THE FILTER
 
 - Limit the No. of records returned from the query, by using the **LIMIT** filter
 
-``` python
+```python
 import mysql.connector
 
 db = mysql.connector.connect(
@@ -479,7 +473,7 @@ result = mycursor.fetchball()
 for x in result:
     print(x)
 db.close()
-````
+```
 
 ### START FROM ANOTHER POSITION
 
@@ -509,7 +503,7 @@ mydb.close()
 ## JOIN STATEMENT
 
 ```python
- import mysql.connector
+import mysql.connector
 
 mydb = mysql.connector.connect(
   host="localhost",
@@ -527,7 +521,6 @@ sql = "SELECT \
   INNER JOIN products ON users.fav = products.id"
 
 mycursor.execute(sql)
-
 myresult = mycursor.fetchall()
 
 for x in myresult:
