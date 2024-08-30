@@ -6,28 +6,39 @@ draft: false
 
 # HTML
 
-**HTML** - Hyper Text Markup Language
+**HTML** - Hyper Text Markup Language  
+[Interactive HTML CC](https://htmlcheatsheet.com) |
+[DevDocs](https://devdocs.io/html/) |
+[Browser Default Styles](https://browserdefaultstyles.com) |
 
-**Tags and Elements**
+## MDN Docs Quick Links & Misc
 
-```html
-<p>some text content</p>
-<!-- Tag -->
-```
+[Debugging](https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Debugging_HTML) |
+[Advanced Text Formatting](https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting) |  
+[Multimedia](https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding) |
+[Images](https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML) |
+[Video & Audio](https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content) |
+[Vector Graphics](https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web) |
+[Embedding](https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies) |  
+[Tables](https://developer.mozilla.org/en-US/docs/Learn/HTML/Tables) |
+[Elements](https://developer.mozilla.org/en-US/docs/Web/HTML/Element) |
+[HTML References](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference) |  
+[Forms](https://www.w3schools.com/html/html_forms.asp) |
+[Symbols](https://www.w3schools.com/html/html_symbols.asp) |
+[Layout](https://www.w3schools.com/html/html_layout.asp) |
+[Named Characters](https://html.spec.whatwg.org/multipage/named-characters.html) |
+[HTML Colors](https://htmlcolorcodes.com) |
 
-## <a>
+---
 
 **Reserved Characters, Quotes & Other Escape Characters**
 
-| Character | Escape Syntax |
-| :-------: | :-----------: |
-|    `<`    |     `&lt`     |
-|    `>`    |     `&gt`     |
-|    `&`    |    `&amp`     |
-|    `'`    |   `&rsquo;`   |
-|    `"`    |   `&ldquo;`   |
-|    `"`    |   `&rdquo;`   |
-|    `‘`    |   `&lsquo;`   |
+| Character | Escape Syntax | Character | Escape Syntax |
+| :-------: | :-----------: | :-------: | :-----------: |
+|    `<`    |     `&lt`     |    `"`    |   `&rdquo;`   |
+|    `>`    |     `&gt`     |    `"`    |   `&ldquo;`   |
+|    `&`    |    `&amp`     |    `‘`    |   `&lsquo;`   |
+|    `'`    |   `&rsquo;`   |           |               |
 
 More characters [here](https://html.spec.whatwg.org/multipage/named-characters.html)
 
@@ -61,12 +72,6 @@ The doctypes for older versions of HTML were a bit more complicated. For example
 
 1. Ubuntu - Open terminal in the html file location, type `google-chrome index.html`
 2. MacOS - In the directory, type `open./index.html`
-
-**Commenting in HTML**
-
-```html
-<!-- I am a HTML comment -->
-```
 
 ---
 
@@ -107,7 +112,6 @@ Used on an individual `<li>` list element within an ordered list to change its v
   <li>Turn left on N Orchard St</li>
 </ol>
 <!-- The list number changes to 9 and starts incrementing from there -->
->
 ```
 
 - More kinds of lists and list attributes can be found @ [Shay Howe's Blog](https://learn.shayhowe.com/html-css/creating-lists/)
@@ -135,39 +139,6 @@ Used on an individual `<li>` list element within an ordered list to change its v
 
 > The prevention of access that is caused by _noopener_ prevents **phishing** attacks where the opened link may change the original webpage to a different one to trick users. This is referred to as **tabnabbing**. Adding the _noreferrer_ value can be done if you wish to not let the opened link know that your webpage links to it.
 
-### Absolute and Relative Links
-
-- When including relative links, prepone the link with `./` to avoid unexpected issues if both the pages/content are in the same directory
-
 ### Images
 
-- Image width and height can be adjusted within the `img` tag itself
-
-```html
-<img
-  src="https://www.theodinproject.com/mstile-310x310.png"
-  alt="The Odin Project Logo"
-  height="310"
-  width="310"
-/>
-```
-
-- Image Formats that can be used in HTML :
-
-  - JPG | GIF | PNG | SVG
-
-## 7 Golden Rules for Git Commit
-
-1. Separate the subject from body with a blank line
-
-2. Limit the subject line to 50 characters
-
-3. Capitalize the subject line
-
-4. Do not end the subject line with a period
-
-5. Use the imperative mood in the subject line
-
-6. Wrap the body at 72 characters
-
-7. Use the body to explain _what_ and _why_ vs _how_
+- Image width and height can be adjusted within the `img` tag itself. Accepted formats: **JPG, GIF, PNG & SVG**

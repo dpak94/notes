@@ -1,0 +1,1016 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="MongoDB#Installation Link : MongoDB MongoDB is a document database. It is open-source and cross platform. It stores data in a type of JSON format called BSON. A record in MongoDB is a document, which is a data structure composed of key value pairs similar to the structure of JSON objects. Records in a MongoDB database are called documents, and the field values may include numbers, strings, booleans, arrays, or even nested documents.">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
+<meta name="color-scheme" content="light dark"><meta property="og:url" content="dpak94.github.io/notes/docs/db/mongodb/">
+  <meta property="og:site_name" content="Web Notes">
+  <meta property="og:title" content="Mongo DB">
+  <meta property="og:description" content="MongoDB#Installation Link : MongoDB MongoDB is a document database. It is open-source and cross platform. It stores data in a type of JSON format called BSON. A record in MongoDB is a document, which is a data structure composed of key value pairs similar to the structure of JSON objects. Records in a MongoDB database are called documents, and the field values may include numbers, strings, booleans, arrays, or even nested documents.">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="docs">
+<title>Mongo DB | Web Notes</title>
+<link rel="manifest" href="dpak94.github.io/notes/manifest.json">
+<link rel="icon" href="/dpak94.github.io/notes/favicon.png" >
+<link rel="canonical" href="dpak94.github.io/notes/docs/db/mongodb/">
+<link rel="stylesheet" href="dpak94.github.io/notes/book.min.db7aef107c810e11038f7d601ef11b2a645fae7919925ce6211a9b232f19fe54.css" >
+  <script defer src="/dpak94.github.io/notes/fuse.min.js"></script>
+  <script defer src="dpak94.github.io/notes/en.search.min.8d79535d9befff26179c316f312b7fb984d7c759b92c4040e3c771bee68d88e1.js" ></script>
+
+  
+
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+  
+</head>
+<body dir="ltr">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      <div class="book-menu-content">
+        
+  <nav>
+<h2 class="book-brand">
+  <a class="flex align-center" href="dpak94.github.io/notes/"><span>Web Notes</span>
+  </a>
+</h2>
+
+
+<div class="book-search hidden">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+<script>document.querySelector(".book-search").classList.remove("hidden")</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="dpak94.github.io/notes/docs/web-dev/clean-code/" class="">Clean Code for JS</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="dpak94.github.io/notes/docs/web-dev/css/" class="">CSS</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="dpak94.github.io/notes/docs/general/git/" class="">Git</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="dpak94.github.io/notes/docs/web-dev/html/" class="">HTML</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="dpak94.github.io/notes/docs/web-dev/js/" class="">JavaScript</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="dpak94.github.io/notes/docs/static/jekyll/" class="">Jekyll</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="dpak94.github.io/notes/docs/general/linux/" class="">Linux</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="dpak94.github.io/notes/docs/general/misc/" class="">Misc</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="dpak94.github.io/notes/docs/db/mongodb/" class="active">Mongo DB</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="dpak94.github.io/notes/docs/misc/mysql/" class="">MySQL</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="dpak94.github.io/notes/docs/web-dev/node/" class="">NodeJS</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="dpak94.github.io/notes/docs/ds/python/" class="">Python</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="dpak94.github.io/notes/docs/web-dev/react/" class="">React</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="dpak94.github.io/notes/docs/db/sql-python/" class="">SQL Python</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+ 
+      </div>
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/dpak94.github.io/notes/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>Mongo DB</strong>
+
+  <label for="toc-control">
+    
+    <img src="/dpak94.github.io/notes/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#database-management-systems">Database Management Systems</a></li>
+    <li><a href="#basic-commands">Basic Commands</a></li>
+    <li><a href="#crud-operations">CRUD Operations</a>
+      <ul>
+        <li><a href="#create-documents">Create Documents</a></li>
+        <li><a href="#update-delete-and-replace-documents">Update, Delete and Replace Documents</a></li>
+        <li><a href="#query-commands">Query Commands</a></li>
+        <li><a href="#upsert-documents">Upsert Documents</a></li>
+      </ul>
+    </li>
+    <li><a href="#mongodb-operators">MongoDB Operators</a>
+      <ul>
+        <li></li>
+      </ul>
+    </li>
+    <li><a href="#datatypes-in-mongodb">DataTypes In MongoDB</a></li>
+    <li><a href="#bson-data-identifiers">BSON Data Identifiers</a></li>
+  </ul>
+</nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown book-article"><h1 id="mongodb">
+  MongoDB
+  <a class="anchor" href="#mongodb">#</a>
+</h1>
+<ul>
+<li>Installation Link : <a href="https://www.mongodb.com/download-centerjmp=nav#community">MongoDB</a></li>
+<li>MongoDB is a document database. It is open-source and cross platform.</li>
+<li>It stores data in a type of JSON format called <strong>BSON</strong>. A record in MongoDB is a document, which is a data structure composed of key value pairs similar to the structure of JSON objects.</li>
+<li>Records in a MongoDB database are called documents, and the field values may include numbers, strings, booleans, arrays, or even nested documents.</li>
+</ul>
+<h2 id="database-management-systems">
+  Database Management Systems
+  <a class="anchor" href="#database-management-systems">#</a>
+</h2>
+<p>A special software program that helps users create and maintain a database</p>
+<ul>
+<li>Makes it easy to manage large amounts of information</li>
+<li>Handles security</li>
+<li>Backups</li>
+<li>Importing/Exporting Data</li>
+<li>Concurrency</li>
+<li>Interacts with software applications</li>
+<li><strong>CRUD</strong> - Create Read Update Delete</li>
+<li>Non-Relational (noSQL / not just SQL)</li>
+<li>Data is organized in a non-traditional way, using data structures other than tables, which are used in Relational Database Management Systems.</li>
+<li>Example of Relational Database Management Systems:
+A. Key-Value stores
+B. Documents (JSON, XML etc)
+C. Graphs
+D. Flexible Tables</li>
+<li><strong>Query</strong> &ndash; A request made to Database Management system for specific information. <strong>Eg</strong> : A Google Search is a query.</li>
+</ul>
+<hr>
+<h2 id="basic-commands">
+  Basic Commands
+  <a class="anchor" href="#basic-commands">#</a>
+</h2>
+<table>
+<thead>
+<tr>
+<th>Command</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>mongosh</code></td>
+<td>Open a connection to your local MongoDB instance. All other commands will be run within this mongosh connection</td>
+</tr>
+<tr>
+<td><code>db.help()</code></td>
+<td>Text output listing common methods on the db object.</td>
+</tr>
+<tr>
+<td><code>db.users.help()</code></td>
+<td>Shows help for database methods.</td>
+</tr>
+<tr>
+<td><code>db.&lt;collection&gt;.help()</code></td>
+<td>Show help on collection methods. The <strong>collection</strong> can be the name of an existing collection or a non-existing collection.</td>
+</tr>
+<tr>
+<td><code>show dbs</code></td>
+<td>Print a list of all databases on the server.</td>
+</tr>
+<tr>
+<td><code>use &lt;db&gt;</code></td>
+<td>Switch current database to <!-- raw HTML omitted -->. The mongo shell variable db is set to the current database.</td>
+</tr>
+<tr>
+<td><code>show collections</code></td>
+<td>Print a list of all collections for the current database</td>
+</tr>
+<tr>
+<td><code>show users</code></td>
+<td>Print a list of all users for the current database</td>
+</tr>
+<tr>
+<td><code>show roles</code></td>
+<td>Print a list of all roles, both user-defined and built-in, for the current database</td>
+</tr>
+<tr>
+<td><code>show profile</code></td>
+<td>Print the five most recent operations that took 1 ms. or more on databases with profiling enabled</td>
+</tr>
+<tr>
+<td><code>show databases</code></td>
+<td>Print a list of all existing databases available to the current user.</td>
+</tr>
+<tr>
+<td><code>exit</code></td>
+<td>Exit the mongosh session</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="crud-operations">
+  CRUD Operations
+  <a class="anchor" href="#crud-operations">#</a>
+</h2>
+<p><strong>CRUD</strong> - Create Replace Update Delete</p>
+<h3 id="create-documents">
+  Create Documents
+  <a class="anchor" href="#create-documents">#</a>
+</h3>
+<table>
+<thead>
+<tr>
+<th>Command</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>show dbs</code></td>
+<td>Shows all the available databases</td>
+</tr>
+<tr>
+<td><code>bd</code></td>
+<td>Lists the currently active database</td>
+</tr>
+<tr>
+<td><code>use blog</code></td>
+<td>Creates and activates a database named <strong>blog</strong>. <strong>Note</strong> : In MongoDB, a database is not actually created until it is populated.</td>
+</tr>
+<tr>
+<td><code>db.collectionName.insertOne({att1 : &quot;attr1&quot;, att2 : &quot;attr2&quot;})</code></td>
+<td>Inserts single record into the collection. collectionName = name of the collection in the active database</td>
+</tr>
+<tr>
+<td><code>db.collectionName.insertMany({att1 : &quot;attr1&quot;, att2 : &quot;attr2&quot;}, {att1 : &quot;attr1&quot;, att2 : &quot;attr2&quot;})</code></td>
+<td>Inserts multiple records into the collection</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>Whenever a record is successfully entered into the collection, <em>&ldquo;acknowledged : true&rdquo;</em> will be displayed along with ID for the entry. Each entry has an ID allotted to it unless custom ID is entered, like below :</p>
+</blockquote>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#a6e22e">db</span>.<span style="color:#a6e22e">collectionName</span>.<span style="color:#a6e22e">insertOne</span>({ <span style="color:#a6e22e">_id</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">4</span>, <span style="color:#a6e22e">att1</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;attr1&#34;</span>, <span style="color:#a6e22e">att2</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;attr2&#34;</span> });
+</span></span></code></pre></div><h3 id="update-delete-and-replace-documents">
+  Update, Delete and Replace Documents
+  <a class="anchor" href="#update-delete-and-replace-documents">#</a>
+</h3>
+<table>
+<thead>
+<tr>
+<th>Command</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>db.students.updateOne({major:&quot;Biology&quot;}, {$set: {major:&quot;BioScience&quot;}})</code></td>
+<td>Updates only one record no matter how many records exist with same value for the chosen field</td>
+</tr>
+<tr>
+<td><code>db.students.updateMany({gpa:3.5}, {$set:{gpa:3.1}})</code></td>
+<td>Updates all records matching the field value</td>
+</tr>
+<tr>
+<td><code>db.posts.updateMany({}, { $inc: {likes:1} })</code></td>
+<td>Updates all the records of collection posts, by incrementing likes field by 1</td>
+</tr>
+<tr>
+<td><code>db.students.replaceOne({major : &quot;BioScience&quot;}, {major : &quot;Gender Studies&quot;, gpa : 3.2, name : &quot;Eric&quot;})</code></td>
+<td>Replaces a documents values with others (major category from BioScience to Gender Studies)</td>
+</tr>
+<tr>
+<td><code>db.students.deleteOne({gpa : {$lte : 3.2}})</code></td>
+<td>Deleting only one record using the criteria (gpa &lt;= 3.2)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="query-commands">
+  Query Commands
+  <a class="anchor" href="#query-commands">#</a>
+</h3>
+<table>
+<thead>
+<tr>
+<th>Syntax</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>db.collectionName.find({})</code></td>
+<td>Returns all records</td>
+</tr>
+<tr>
+<td><code>db.collectionName.find({}, {_id : 0})</code></td>
+<td>Returns everything except _id field</td>
+</tr>
+<tr>
+<td><code>db.collectionName.find({}, {_id : 0}).limit(3)</code></td>
+<td>Returns everything except _id field but limits records to 3</td>
+</tr>
+<tr>
+<td><code>db.collectionName.find({}, {_id : 0}).skip(2).limit(3)</code></td>
+<td>Returns everything except _id field but skips 2 records &amp; limits records to 3</td>
+</tr>
+<tr>
+<td><code>db.students.find({}, {_id: 0}).sort({gpa : -1, name : 1})</code></td>
+<td>Returns records and sorts them first by gpa in desc (-1) and by name</td>
+</tr>
+<tr>
+<td><code>db.students.find({major : &quot;Biology&quot;}, {_id: 0})</code></td>
+<td>Filters the records by major, in this case that would be Biology</td>
+</tr>
+<tr>
+<td><code>db.students.find({$or: [{major : &quot;Medicine&quot;}, {name : &quot;Jack&quot;}]}, {_id: 0})</code></td>
+<td>Returns records which either have major as Medicine or have name as Jack (OR Condition)</td>
+</tr>
+<tr>
+<td><code>db.students.find({gpa : {$gt: 3.0}}, {_id: 0})</code></td>
+<td>Returns records where gpa is greater than ($gt ; $lt for less than) 3.0</td>
+</tr>
+<tr>
+<td><code>db.students.find({gpa : {$lte: 3.5}}, {_id: 0})</code></td>
+<td>Returns records where gpa is less than or equal to 3.5</td>
+</tr>
+<tr>
+<td><code>db.students.find({name: {$in: ['Mike', 'Pike']}}, {_id:0})</code></td>
+<td>Returns records that match any of the names in the list ($in:)</td>
+</tr>
+<tr>
+<td><code>db.students.find({awards:{$exists: true}}, {_id:0})</code></td>
+<td>Returns all records for which the entry for awards field exists. Boolean True/False</td>
+</tr>
+<tr>
+<td><code>db.students.find({name:{$type : 2}}, {_id:0})</code></td>
+<td>Returns all records where the name field is of data type 2 (string) <strong>Note</strong> : MongoDB databases have various datatypes of same field</td>
+</tr>
+<tr>
+<td><code>db.students.find({&quot;grades.0&quot;: 90}, {_id:0})</code></td>
+<td>Returns all records where the grades field has its first element(index : 0) equal to 90</td>
+</tr>
+<tr>
+<td><code>db.students.find({grades: {$elemMatch: {\$gte: 90}}}, {_id:0})</code></td>
+<td>Returns all records where the grades field has any of its elements grater than or equal to 90</td>
+</tr>
+<tr>
+<td><code>db.students.find({grades : {$size : 4}}, {_id:0})</code></td>
+<td>Returns records where the No. of elements in the grades field = 4</td>
+</tr>
+</tbody>
+</table>
+<h3 id="upsert-documents">
+  Upsert Documents
+  <a class="anchor" href="#upsert-documents">#</a>
+</h3>
+<p><strong>Upsert</strong> : Updates a document, but if the entry is not found, inserts it.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#a6e22e">db</span>.<span style="color:#a6e22e">posts</span>.<span style="color:#a6e22e">updateOne</span>(
+</span></span><span style="display:flex;"><span>  { <span style="color:#a6e22e">title</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;Post Title 5&#34;</span> },
+</span></span><span style="display:flex;"><span>  {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">$set</span><span style="color:#f92672">:</span> {
+</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">title</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;Post Title 5&#34;</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">body</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;Body of post.&#34;</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">category</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;Event&#34;</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">likes</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">5</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">tags</span><span style="color:#f92672">:</span> [<span style="color:#e6db74">&#34;news&#34;</span>, <span style="color:#e6db74">&#34;events&#34;</span>],
+</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">date</span><span style="color:#f92672">:</span> Date(),
+</span></span><span style="display:flex;"><span>    },
+</span></span><span style="display:flex;"><span>  },
+</span></span><span style="display:flex;"><span>  { <span style="color:#a6e22e">upsert</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">true</span> }
+</span></span><span style="display:flex;"><span>);
+</span></span></code></pre></div><hr>
+<h2 id="mongodb-operators">
+  MongoDB Operators
+  <a class="anchor" href="#mongodb-operators">#</a>
+</h2>
+<h4 id="comparison-operators">
+  Comparison Operators
+  <a class="anchor" href="#comparison-operators">#</a>
+</h4>
+<table>
+<thead>
+<tr>
+<th>Sign</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>$ne</code></td>
+<td>Not Equal to</td>
+</tr>
+<tr>
+<td><code>$eq</code></td>
+<td>Equal to</td>
+</tr>
+<tr>
+<td><code>$gt</code></td>
+<td>Greater Than</td>
+</tr>
+<tr>
+<td><code>$lt</code></td>
+<td>Less Than</td>
+</tr>
+<tr>
+<td><code>$gte</code></td>
+<td>Greater Than or equal to</td>
+</tr>
+<tr>
+<td><code>$lte</code></td>
+<td>Less Than or Equal to</td>
+</tr>
+<tr>
+<td><code>$in</code></td>
+<td>Value is matched within an array</td>
+</tr>
+</tbody>
+</table>
+<h4 id="logical-operators">
+  Logical Operators
+  <a class="anchor" href="#logical-operators">#</a>
+</h4>
+<table>
+<thead>
+<tr>
+<th>Sign</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>$and</code></td>
+<td>Returns documents where both queries match</td>
+</tr>
+<tr>
+<td><code>$or</code></td>
+<td>Returns documents where either query matches</td>
+</tr>
+<tr>
+<td><code>$nor</code></td>
+<td>Returns documents where both queries fail to match</td>
+</tr>
+<tr>
+<td><code>$not</code></td>
+<td>Returns documents where the query does not match</td>
+</tr>
+</tbody>
+</table>
+<h4 id="evaluation-operators">
+  Evaluation Operators
+  <a class="anchor" href="#evaluation-operators">#</a>
+</h4>
+<table>
+<thead>
+<tr>
+<th>Sign</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>$regex</code></td>
+<td>Allows the use of regular expressions when evaluating field values</td>
+</tr>
+<tr>
+<td><code>$text</code></td>
+<td>Performs a text search</td>
+</tr>
+<tr>
+<td><code>$where</code></td>
+<td>Uses a JavaScript expression to match documents</td>
+</tr>
+</tbody>
+</table>
+<h4 id="update-operators">
+  Update Operators
+  <a class="anchor" href="#update-operators">#</a>
+</h4>
+<table>
+<thead>
+<tr>
+<th>Sign</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>$currentDate</code></td>
+<td>Sets the field value to the current date</td>
+</tr>
+<tr>
+<td><code>$inc</code></td>
+<td>Increments the field value</td>
+</tr>
+<tr>
+<td><code>$rename</code></td>
+<td>Renames the field</td>
+</tr>
+<tr>
+<td><code>$set</code></td>
+<td>Sets the value of the field</td>
+</tr>
+<tr>
+<td><code>$unset</code></td>
+<td>Removes the field from the document</td>
+</tr>
+</tbody>
+</table>
+<h4 id="array-operators">
+  Array Operators
+  <a class="anchor" href="#array-operators">#</a>
+</h4>
+<table>
+<thead>
+<tr>
+<th>Sign</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>$addToSet</code></td>
+<td>Adds distinct elements to an array</td>
+</tr>
+<tr>
+<td><code>$pop</code></td>
+<td>Removes the first or last element of an array</td>
+</tr>
+<tr>
+<td><code>$pull</code></td>
+<td>Removes all elements from an array that match the query</td>
+</tr>
+<tr>
+<td><code>$push</code></td>
+<td>Adds an element to an array</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="datatypes-in-mongodb">
+  DataTypes In MongoDB
+  <a class="anchor" href="#datatypes-in-mongodb">#</a>
+</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">string</span> <span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;Text String&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">int</span> <span style="color:#f92672">:</span> <span style="color:#ae81ff">420</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">double</span> <span style="color:#f92672">:</span> <span style="color:#ae81ff">3.654</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">boolean</span> <span style="color:#f92672">:</span> <span style="color:#a6e22e">True</span>, <span style="color:#75715e">// False
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#a6e22e">array</span> <span style="color:#f92672">:</span> [<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>],
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">object</span> <span style="color:#f92672">:</span> {<span style="color:#a6e22e">att1</span> <span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;attr1&#34;</span>, <span style="color:#a6e22e">att2</span> <span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;attr2&#34;</span>, <span style="color:#a6e22e">att3</span> <span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;attr3&#34;</span> },
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">date</span> <span style="color:#f92672">:</span> <span style="color:#66d9ef">new</span> Date(<span style="color:#e6db74">&#34;&lt;YYYY-mm-dd&gt;&#34;</span>),
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">object_id</span> <span style="color:#f92672">:</span> <span style="color:#f92672">&lt;</span><span style="color:#a6e22e">ObjectId</span><span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">no_value</span> <span style="color:#f92672">:</span> <span style="color:#66d9ef">null</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p><strong>Additional Datatypes</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span>    <span style="color:#a6e22e">Timestamp</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">Binary</span> <span style="color:#a6e22e">data</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">Regular</span> <span style="color:#a6e22e">expressions</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">JS</span> <span style="color:#a6e22e">Code</span>
+</span></span></code></pre></div><hr>
+<h2 id="bson-data-identifiers">
+  BSON Data Identifiers
+  <a class="anchor" href="#bson-data-identifiers">#</a>
+</h2>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Number</th>
+<th>Alias</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Double</td>
+<td>1</td>
+<td>&ldquo;double&rdquo;</td>
+<td></td>
+</tr>
+<tr>
+<td>String</td>
+<td>2</td>
+<td>&ldquo;string&rdquo;</td>
+<td></td>
+</tr>
+<tr>
+<td>Object</td>
+<td>3</td>
+<td>&ldquo;object&rdquo;</td>
+<td></td>
+</tr>
+<tr>
+<td>Array</td>
+<td>4</td>
+<td>&ldquo;array&rdquo;</td>
+<td></td>
+</tr>
+<tr>
+<td>Binary data</td>
+<td>5</td>
+<td>&ldquo;binData&rdquo;</td>
+<td></td>
+</tr>
+<tr>
+<td>Undefined</td>
+<td>6</td>
+<td>&ldquo;undefined&rdquo;</td>
+<td>Deprecated.</td>
+</tr>
+<tr>
+<td>ObjectId</td>
+<td>7</td>
+<td>&ldquo;objectId&rdquo;</td>
+<td></td>
+</tr>
+<tr>
+<td>Boolean</td>
+<td>8</td>
+<td>&ldquo;bool&rdquo;</td>
+<td></td>
+</tr>
+<tr>
+<td>Date</td>
+<td>9</td>
+<td>&ldquo;date&rdquo;</td>
+<td></td>
+</tr>
+<tr>
+<td>Null</td>
+<td>10</td>
+<td>&ldquo;null&rdquo;</td>
+<td></td>
+</tr>
+<tr>
+<td>Regular Expression</td>
+<td>11</td>
+<td>&ldquo;regex&rdquo;</td>
+<td></td>
+</tr>
+<tr>
+<td>DBPointer</td>
+<td>12</td>
+<td>&ldquo;dbPointer&rdquo;</td>
+<td>Deprecated.</td>
+</tr>
+<tr>
+<td>JavaScript</td>
+<td>13</td>
+<td>&ldquo;javascript&rdquo;</td>
+<td></td>
+</tr>
+<tr>
+<td>Symbol</td>
+<td>14</td>
+<td>&ldquo;symbol&rdquo;</td>
+<td>Deprecated.</td>
+</tr>
+<tr>
+<td>JavaScript code with scope</td>
+<td>15</td>
+<td>&ldquo;javascriptWithScope&rdquo;</td>
+<td>Deprecated in MongoDB 4.4.</td>
+</tr>
+<tr>
+<td>32-bit integer</td>
+<td>16</td>
+<td>&ldquo;int&rdquo;</td>
+<td></td>
+</tr>
+<tr>
+<td>Timestamp</td>
+<td>17</td>
+<td>&ldquo;timestamp&rdquo;</td>
+<td></td>
+</tr>
+<tr>
+<td>64-bit integer</td>
+<td>18</td>
+<td>&ldquo;long&rdquo;</td>
+<td></td>
+</tr>
+<tr>
+<td>Decimal128</td>
+<td>19</td>
+<td>&ldquo;decimal&rdquo;</td>
+<td></td>
+</tr>
+<tr>
+<td>Min key</td>
+<td>-1</td>
+<td>&ldquo;minKey&rdquo;</td>
+<td></td>
+</tr>
+<tr>
+<td>Max key</td>
+<td>127</td>
+<td>&ldquo;maxKey&rdquo;</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<hr>
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+
+
+
+
+</div>
+
+
+
+  <script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){if(window.getSelection().toString())return;e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script>
+
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside class="book-toc">
+      <div class="book-toc-content">
+        
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#database-management-systems">Database Management Systems</a></li>
+    <li><a href="#basic-commands">Basic Commands</a></li>
+    <li><a href="#crud-operations">CRUD Operations</a>
+      <ul>
+        <li><a href="#create-documents">Create Documents</a></li>
+        <li><a href="#update-delete-and-replace-documents">Update, Delete and Replace Documents</a></li>
+        <li><a href="#query-commands">Query Commands</a></li>
+        <li><a href="#upsert-documents">Upsert Documents</a></li>
+      </ul>
+    </li>
+    <li><a href="#mongodb-operators">MongoDB Operators</a>
+      <ul>
+        <li></li>
+      </ul>
+    </li>
+    <li><a href="#datatypes-in-mongodb">DataTypes In MongoDB</a></li>
+    <li><a href="#bson-data-identifiers">BSON Data Identifiers</a></li>
+  </ul>
+</nav>
+
+
+ 
+      </div>
+    </aside>
+    
+  </main>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,7 +1,7 @@
 ---
-layout: post
+type: "docs"
 title: Jupyter
-permalink: /jupyter/
+url: "/docs/general/jupyter/"
 draft: true
 ---
 

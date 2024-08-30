@@ -5,8 +5,8 @@ theme = 'hugo-book'
 
 bookTheme = 'auto'
 BookToc = true
-BookLogo = 'logo.jpg'
-BookMenuBundle = '/menu'
+BookLogo = 'otter-kid.jpeg'
+# BookMenuBundle = '/menu'
 BookSection = 'docs'
 BookRepo = 'https://github.com/alex-shpak/hugo-book'
 BookSearch = true

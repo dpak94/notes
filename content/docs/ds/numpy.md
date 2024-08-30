@@ -1,7 +1,8 @@
 ---
-title: Numpy
 type: "docs"
+title: Numpy
 draft: true
+url: "/docs/ds/numpy/"
 ---
 
 Documentation Link : [NumPy](https://numpy.org/doc/stable/)

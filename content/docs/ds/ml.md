@@ -2,6 +2,7 @@
 type: "docs"
 title: Machine Learning
 draft: true
+url: "/docs/ds/machine-learning/"
 ---
 
 # Machine Learning Notes

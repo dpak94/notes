@@ -1,0 +1,1307 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="MySQL#Resources#PostgreSQL Official | SQLite
+Cheatsheet | All DB SQL Injection CC | SQL Zoo | SQL Practise | Data Lemur - SQL practise, interviews |
+SQL Bolt | SQL PD | SQL Murder Mystery- SQLite | Pagila |
+MySQL Installation Link : MySQL
+Notes:
+DBMS - Data Base Management System RDBMS - Relational Data Base Management System SQL - Structured Query Language SQL is basically 4 kinds of languages in one package: Data Query Language Data Definition Language Data Control Language Data Manipulation Language Commenting in MySQL :">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
+<meta name="color-scheme" content="light dark"><meta property="og:url" content="dpak94.github.io/notes/docs/misc/mysql/">
+  <meta property="og:site_name" content="Web Notes">
+  <meta property="og:title" content="MySQL">
+  <meta property="og:description" content="MySQL#Resources#PostgreSQL Official | SQLite
+Cheatsheet | All DB SQL Injection CC | SQL Zoo | SQL Practise | Data Lemur - SQL practise, interviews |
+SQL Bolt | SQL PD | SQL Murder Mystery- SQLite | Pagila |
+MySQL Installation Link : MySQL
+Notes:
+DBMS - Data Base Management System RDBMS - Relational Data Base Management System SQL - Structured Query Language SQL is basically 4 kinds of languages in one package: Data Query Language Data Definition Language Data Control Language Data Manipulation Language Commenting in MySQL :">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="docs">
+<title>MySQL | Web Notes</title>
+<link rel="manifest" href="dpak94.github.io/notes/manifest.json">
+<link rel="icon" href="/dpak94.github.io/notes/favicon.png" >
+<link rel="canonical" href="dpak94.github.io/notes/docs/misc/mysql/">
+<link rel="stylesheet" href="dpak94.github.io/notes/book.min.db7aef107c810e11038f7d601ef11b2a645fae7919925ce6211a9b232f19fe54.css" >
+  <script defer src="/dpak94.github.io/notes/fuse.min.js"></script>
+  <script defer src="dpak94.github.io/notes/en.search.min.8d79535d9befff26179c316f312b7fb984d7c759b92c4040e3c771bee68d88e1.js" ></script>
+
+  
+
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+  
+</head>
+<body dir="ltr">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      <div class="book-menu-content">
+        
+  <nav>
+<h2 class="book-brand">
+  <a class="flex align-center" href="dpak94.github.io/notes/"><span>Web Notes</span>
+  </a>
+</h2>
+
+
+<div class="book-search hidden">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+<script>document.querySelector(".book-search").classList.remove("hidden")</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="dpak94.github.io/notes/docs/web-dev/clean-code/" class="">Clean Code for JS</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="dpak94.github.io/notes/docs/web-dev/css/" class="">CSS</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="dpak94.github.io/notes/docs/general/git/" class="">Git</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="dpak94.github.io/notes/docs/web-dev/html/" class="">HTML</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="dpak94.github.io/notes/docs/web-dev/js/" class="">JavaScript</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="dpak94.github.io/notes/docs/static/jekyll/" class="">Jekyll</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="dpak94.github.io/notes/docs/general/linux/" class="">Linux</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="dpak94.github.io/notes/docs/general/misc/" class="">Misc</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="dpak94.github.io/notes/docs/db/mongodb/" class="">Mongo DB</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="dpak94.github.io/notes/docs/misc/mysql/" class="active">MySQL</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="dpak94.github.io/notes/docs/web-dev/node/" class="">NodeJS</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="dpak94.github.io/notes/docs/ds/python/" class="">Python</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="dpak94.github.io/notes/docs/web-dev/react/" class="">React</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="dpak94.github.io/notes/docs/db/sql-python/" class="">SQL Python</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+ 
+      </div>
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/dpak94.github.io/notes/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>MySQL</strong>
+
+  <label for="toc-control">
+    
+    <img src="/dpak94.github.io/notes/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#resources">Resources</a></li>
+    <li><a href="#tables">Tables</a>
+      <ul>
+        <li><a href="#creating-a-table">Creating a Table</a></li>
+        <li><a href="#creating-a-table-from-other-tables">Creating a table from other Tables</a></li>
+        <li><a href="#using-insert-into-query-to-enter-data-into-tables">Using <strong>INSERT INTO</strong> query to enter data into tables</a></li>
+        <li><a href="#populating-a-table-with-data-from-other-table">Populating a Table With Data From Other Table</a></li>
+        <li><a href="#inserting-multiple-rows-into-a-table-in-one-go">Inserting Multiple Rows Into a Table In One Go</a></li>
+        <li><a href="#alter-table">Alter Table</a></li>
+      </ul>
+    </li>
+    <li><a href="#querying-functions">Querying Functions</a>
+      <ul>
+        <li><a href="#nested-query">Nested Query</a></li>
+        <li><a href="#select-query">SELECT Query</a></li>
+        <li><a href="#where-clause">WHERE Clause</a></li>
+        <li><a href="#order-by-clause">ORDER BY Clause</a></li>
+        <li><a href="#group-by-clause">GROUP BY Clause</a></li>
+        <li><a href="#having-clause">HAVING Clause</a></li>
+        <li><a href="#using-clause">USING Clause</a></li>
+      </ul>
+    </li>
+    <li><a href="#datatypes-in-mysql">Datatypes in MySQL</a>
+      <ul>
+        <li><a href="#numeric-data-types">Numeric Data Types</a></li>
+        <li><a href="#date--time-data-types">Date &amp; Time Data Types</a></li>
+        <li><a href="#character-data-types">Character Data Types</a></li>
+        <li><a href="#images">Images</a></li>
+      </ul>
+    </li>
+    <li><a href="#mysql-constraints">MySQL Constraints</a></li>
+    <li><a href="#database-operations">Database Operations</a></li>
+    <li><a href="#trivial-functions">Trivial Functions</a>
+      <ul>
+        <li><a href="#min--max-functions">MIN() &amp; MAX() Functions</a></li>
+        <li><a href="#count-functions">COUNT() Functions</a></li>
+        <li><a href="#sum-function">SUM() Function</a></li>
+        <li><a href="#delete-function">DELETE Function</a></li>
+        <li><a href="#distinct-function">DISTINCT Function</a></li>
+        <li><a href="#union-function">UNION Function</a></li>
+      </ul>
+    </li>
+    <li><a href="#operators-in-mysql">Operators in MySQL</a>
+      <ul>
+        <li><a href="#arithmetic-operators">Arithmetic Operators</a></li>
+        <li><a href="#comparison-operators">Comparison Operators</a></li>
+        <li><a href="#logical-operators">Logical Operators</a></li>
+        <li><a href="#regexp-operators">REGEXP Operators</a></li>
+      </ul>
+    </li>
+    <li><a href="#joining-in-mysql">Joining In MySQL</a>
+      <ul>
+        <li><a href="#inner-join">Inner Join</a></li>
+        <li><a href="#outer-join">Outer Join</a></li>
+      </ul>
+    </li>
+    <li><a href="#unions-in-mysql">Unions in MySQL</a>
+      <ul>
+        <li></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown book-article"><h1 id="mysql">
+  MySQL
+  <a class="anchor" href="#mysql">#</a>
+</h1>
+<h2 id="resources">
+  Resources
+  <a class="anchor" href="#resources">#</a>
+</h2>
+<p><a href="https://www.postgresql.org/docs/">PostgreSQL Official</a> |
+<a href="https://devdocs.io/sqlite/">SQLite</a><br>
+<a href="https://overapi.com/mysql">Cheatsheet</a> |
+<a href="https://portswigger.net/web-security/sql-injection/cheat-sheet">All DB SQL Injection CC</a> |
+<a href="https://sqlzoo.net/wiki/SQL_Tutorial">SQL Zoo</a> |
+<a href="https://www.sql-practice.com">SQL Practise</a> |
+<a href="https://datalemur.com">Data Lemur - SQL practise, interviews</a> |<br>
+<a href="https://sqlbolt.com">SQL Bolt</a> |
+<a href="https://sqlpd.com">SQL PD</a> |
+<a href="https://mystery.knightlab.com">SQL Murder Mystery- SQLite</a> |
+<a href="https://github.com/devrimgunduz/pagila">Pagila</a> |</p>
+<hr>
+<p>MySQL Installation Link : <a href="https://dev.mysql.com/downloads/installer/">MySQL</a></p>
+<p><strong>Notes</strong>:</p>
+<ul>
+<li>DBMS - Data Base Management System</li>
+<li>RDBMS - Relational Data Base Management System</li>
+<li>SQL - Structured Query Language</li>
+<li>SQL is basically 4 kinds of languages in one package:
+<ol>
+<li>Data Query Language</li>
+<li>Data Definition Language</li>
+<li>Data Control Language</li>
+<li>Data Manipulation Language</li>
+</ol>
+</li>
+</ul>
+<p><strong>Commenting in MySQL :</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#f92672">#</span> One<span style="color:#f92672">-</span>line <span style="color:#66d9ef">comment</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">-</span>  One<span style="color:#f92672">-</span>line <span style="color:#66d9ef">comment</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">/*Multi
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">Line
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">Comment*/</span>
+</span></span></code></pre></div><hr>
+<h2 id="tables">
+  Tables
+  <a class="anchor" href="#tables">#</a>
+</h2>
+<ul>
+<li>A table is a database object that is made of rows and columns. It contains data.Table is created using CREATE TABLE command</li>
+<li>A field is a column in a table that is supposed to provide specific info about all the records in the table</li>
+<li>A record is a row in a table. It is also called horizontal entity while field is the vertical entity of the table</li>
+<li>A NULL value is no value, it is neither a space nor a zero, it is nothing</li>
+</ul>
+<h3 id="creating-a-table">
+  Creating a Table
+  <a class="anchor" href="#creating-a-table">#</a>
+</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-SQL" data-lang="SQL"><span style="display:flex;"><span><span style="color:#66d9ef">CREATE</span> <span style="color:#66d9ef">TABLE</span> tableName (
+</span></span><span style="display:flex;"><span>    column1 datatype,
+</span></span><span style="display:flex;"><span>    column2 datatype,
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">PRIMARY</span> <span style="color:#66d9ef">KEY</span>(column1)
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">-- column1 becomes primary key
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>);
+</span></span></code></pre></div><p>To check if the table is created or not, run <code>DESC tableName;</code></p>
+<h3 id="creating-a-table-from-other-tables">
+  Creating a table from other Tables
+  <a class="anchor" href="#creating-a-table-from-other-tables">#</a>
+</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-SQL" data-lang="SQL"><span style="display:flex;"><span><span style="color:#66d9ef">CREATE</span> <span style="color:#66d9ef">TABLE</span> newTable <span style="color:#66d9ef">AS</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> column1, column2.....column5
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">FROM</span> oldTable
+</span></span><span style="display:flex;"><span>[<span style="color:#66d9ef">WHERE</span>]; <span style="color:#f92672">#</span> <span style="color:#66d9ef">WHERE</span> condition <span style="color:#66d9ef">is</span> optional
+</span></span></code></pre></div><table>
+<thead>
+<tr>
+<th>Command</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>DROP TABLE tabName;</code></td>
+<td>Deletes a Table</td>
+</tr>
+<tr>
+<td><code>SHOW TABLES;</code> / <code>DESC tableName;</code></td>
+<td>Verify the existence of a Table</td>
+</tr>
+<tr>
+<td><code>TRUNCATE table_name</code></td>
+<td>Deletes all the records existing inside a table but not the Table itself</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="using-insert-into-query-to-enter-data-into-tables">
+  Using <strong>INSERT INTO</strong> query to enter data into tables
+  <a class="anchor" href="#using-insert-into-query-to-enter-data-into-tables">#</a>
+</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">INSERT</span> <span style="color:#66d9ef">INTO</span> tableName column1, column2, column3
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">VALUES</span> value1, value2, value3;
+</span></span></code></pre></div><p><strong>Notes :</strong></p>
+<ul>
+<li>When the order of the input is in the same order as the field/column order, the columns in the code are omitted</li>
+<li><code>SELECT * FROM tableName;</code> to verify if the data was entered.</li>
+</ul>
+<h3 id="populating-a-table-with-data-from-other-table">
+  Populating a Table With Data From Other Table
+  <a class="anchor" href="#populating-a-table-with-data-from-other-table">#</a>
+</h3>
+<p>The two tables must be compatible for this to work.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">INSERT</span> <span style="color:#66d9ef">INTO</span> TABLE1 column1, column2, column3
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> column1, column2, column3
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">FROM</span> table2
+</span></span><span style="display:flex;"><span>[<span style="color:#66d9ef">WHERE</span>]; <span style="color:#75715e">-- optional WHERE condition
+</span></span></span></code></pre></div><h3 id="inserting-multiple-rows-into-a-table-in-one-go">
+  Inserting Multiple Rows Into a Table In One Go
+  <a class="anchor" href="#inserting-multiple-rows-into-a-table-in-one-go">#</a>
+</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">INSERT</span> <span style="color:#66d9ef">INTO</span> <span style="color:#66d9ef">table</span>(column1)
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">VALUES</span> (value1),
+</span></span><span style="display:flex;"><span>       (value2),
+</span></span><span style="display:flex;"><span>       (value3); <span style="color:#75715e">-- 3 rows of data inserted into column1
+</span></span></span></code></pre></div><h3 id="alter-table">
+  Alter Table
+  <a class="anchor" href="#alter-table">#</a>
+</h3>
+<p>The <code>ALTER TABLE</code> statement is used to add, delete, or modify columns in an existing table. It is also used to add and drop various constraints on an existing table.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#75715e">-- Adding Column
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">ALTER</span> <span style="color:#66d9ef">TABLE</span> <span style="color:#66d9ef">table_name</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">ADD</span> <span style="color:#66d9ef">column_name</span> datatype;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">-- Dropping Column
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">ALTER</span> <span style="color:#66d9ef">TABLE</span> <span style="color:#66d9ef">table_name</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">DROP</span> <span style="color:#66d9ef">COLUMN</span> <span style="color:#66d9ef">column_name</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">-- Modify Column by changing datatype
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">ALTER</span> <span style="color:#66d9ef">TABLE</span> <span style="color:#66d9ef">table_name</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">MODIFY</span> <span style="color:#66d9ef">COLUMN</span> <span style="color:#66d9ef">column_name</span> datatype;
+</span></span></code></pre></div><hr>
+<h2 id="querying-functions">
+  Querying Functions
+  <a class="anchor" href="#querying-functions">#</a>
+</h2>
+<h3 id="nested-query">
+  Nested Query
+  <a class="anchor" href="#nested-query">#</a>
+</h3>
+<blockquote>
+<p>Name all the employees who have sold over $30,000 to a single client
+(problem from Mike Dane&rsquo;s Course)</p>
+</blockquote>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> employee.firstName, employee.lastName
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">FROM</span> employee
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">WHERE</span> employee.emp_id <span style="color:#66d9ef">IN</span> (
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">SELECT</span> works_with.emp_id
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">FROM</span> works_with
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">WHERE</span> works_with.total_sales <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">30000</span>
+</span></span><span style="display:flex;"><span>); <span style="color:#75715e">-- Nested Query
+</span></span></span></code></pre></div><h3 id="select-query">
+  SELECT Query
+  <a class="anchor" href="#select-query">#</a>
+</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> <span style="color:#f92672">*</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">FROM</span> tableName;
+</span></span><span style="display:flex;"><span><span style="color:#75715e">-- Use * to select every column in the table
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> firstName, lastName
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">FROM</span> employees;
+</span></span><span style="display:flex;"><span><span style="color:#75715e">-- Selects firstName, lastName columns from the table employees
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> fistName, lastName
+</span></span><span style="display:flex;"><span>CONCAT(firstName, lastName) <span style="color:#66d9ef">AS</span> fullName
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">FROM</span> employees;
+</span></span><span style="display:flex;"><span><span style="color:#75715e">-- Selects firstName, lastName and creates a new column fullName
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">-- which is a concatenation of firstName, whitespace and lastName columns
+</span></span></span></code></pre></div><p><strong>Note:</strong> Arithmetic Operations can also be performed on the columns during <code>SELECT</code> query</p>
+<h3 id="where-clause">
+  WHERE Clause
+  <a class="anchor" href="#where-clause">#</a>
+</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> <span style="color:#f92672">*</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">FROM</span> customers
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">WHERE</span> points <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">30000</span>;
+</span></span></code></pre></div><h3 id="order-by-clause">
+  ORDER BY Clause
+  <a class="anchor" href="#order-by-clause">#</a>
+</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> <span style="color:#f92672">*</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">FROM</span> customers
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">ORDER</span> <span style="color:#66d9ef">BY</span> <span style="color:#66d9ef">state</span>;
+</span></span><span style="display:flex;"><span><span style="color:#75715e">-- DESC/ASC keywords to order in descending/ascending order respectively.
+</span></span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> firstName, lastName
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">FROM</span> customers
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">ORDER</span> <span style="color:#66d9ef">BY</span> <span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>
+</span></span></code></pre></div><blockquote>
+<p>In the above query, the records are first sorted by firstName followed by lastName. This approach is not recommended and the column name approach should be followed instead.</p>
+</blockquote>
+<h3 id="group-by-clause">
+  GROUP BY Clause
+  <a class="anchor" href="#group-by-clause">#</a>
+</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#75715e">-- MOSH
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">SELECT</span> client_id,
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">SUM</span>(invoice_total) <span style="color:#66d9ef">AS</span> total_sales
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">FROM</span> invoices
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">GROUP</span> <span style="color:#66d9ef">BY</span> client_id
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">ORDER</span> <span style="color:#66d9ef">BY</span> total_sales <span style="color:#66d9ef">DESC</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">-- MOSH
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">SELECT</span>
+</span></span><span style="display:flex;"><span>    date,
+</span></span><span style="display:flex;"><span>    pm.name <span style="color:#66d9ef">AS</span> payment_method
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">SUM</span>(amount) <span style="color:#66d9ef">AS</span> total_payments
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">FROM</span> payments p
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">JOIN</span> payment_methods <span style="color:#66d9ef">AS</span> total_payments
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">ON</span> p.payment_method <span style="color:#f92672">=</span> pm.payment_method_id
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">GROUP</span> <span style="color:#66d9ef">BY</span> date, payment_method
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">ORDER</span> <span style="color:#66d9ef">BY</span> date;
+</span></span></code></pre></div><h3 id="having-clause">
+  HAVING Clause
+  <a class="anchor" href="#having-clause">#</a>
+</h3>
+<p><code>HAVING</code> Clause filters data offer GROUP BY clause is applied</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span>
+</span></span><span style="display:flex;"><span>    client_id,
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">SUM</span>(invoice_total) <span style="color:#66d9ef">AS</span> total_sales
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">FROM</span> invoices
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">WHERE</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">GROUP</span> <span style="color:#66d9ef">BY</span> client_id
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">HAVING</span> total_sales <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">500</span>;
+</span></span></code></pre></div><h3 id="using-clause">
+  USING Clause
+  <a class="anchor" href="#using-clause">#</a>
+</h3>
+<p>If two columns in different tables are to be joined and they have same name (same EXACT name) <code>USING</code> clause is used to reduce length &amp; increase code readability.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span>
+</span></span><span style="display:flex;"><span>    o.order_id,
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">c</span>.first_name,
+</span></span><span style="display:flex;"><span>    sh.name <span style="color:#66d9ef">AS</span> shipper
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">FROM</span> orders o
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">JOIN</span> customers <span style="color:#66d9ef">c</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">USING</span> (customer_id)
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">LEFT</span> <span style="color:#66d9ef">JOIN</span> shippers sh
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">USING</span> (shipper_id)
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span>
+</span></span><span style="display:flex;"><span>    payments.date,
+</span></span><span style="display:flex;"><span>    clients.name,
+</span></span><span style="display:flex;"><span>    payments.amount,
+</span></span><span style="display:flex;"><span>    payment_methods.name
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">FROM</span> payments
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">JOIN</span> clients
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">USING</span> (client_id)
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">JOIN</span> payment_methods
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">ON</span> payments payment_method <span style="color:#f92672">=</span> payment_methods.payment_method_id
+</span></span></code></pre></div><hr>
+<h2 id="datatypes-in-mysql">
+  Datatypes in MySQL
+  <a class="anchor" href="#datatypes-in-mysql">#</a>
+</h2>
+<h3 id="numeric-data-types">
+  Numeric Data Types
+  <a class="anchor" href="#numeric-data-types">#</a>
+</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span>Big INT <span style="color:#f92672">-</span> Really Big <span style="color:#66d9ef">Values</span>
+</span></span><span style="display:flex;"><span>INT <span style="color:#f92672">-</span> Big <span style="color:#66d9ef">Values</span>
+</span></span><span style="display:flex;"><span>smallint <span style="color:#f92672">-</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">32</span>,<span style="color:#ae81ff">768</span> <span style="color:#66d9ef">to</span> <span style="color:#ae81ff">32</span>,<span style="color:#ae81ff">768</span>
+</span></span><span style="display:flex;"><span>tinyint <span style="color:#f92672">-</span> <span style="color:#ae81ff">0</span> <span style="color:#66d9ef">to</span> <span style="color:#ae81ff">255</span>
+</span></span><span style="display:flex;"><span>decimal(m, d)
+</span></span><span style="display:flex;"><span>float(m, d)
+</span></span><span style="display:flex;"><span>numeric(m, d)
+</span></span></code></pre></div><p><strong>Optional Parameters :</strong> m - display length, d - No. of decimals</p>
+<h3 id="date--time-data-types">
+  Date &amp; Time Data Types
+  <a class="anchor" href="#date--time-data-types">#</a>
+</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span>Date Time <span style="color:#f92672">-</span> (YYYY<span style="color:#f92672">-</span>MM<span style="color:#f92672">-</span>DD HH:MM:SS)
+</span></span><span style="display:flex;"><span>Date <span style="color:#f92672">-</span> (YYYY<span style="color:#f92672">-</span>MM<span style="color:#f92672">-</span>DD)
+</span></span><span style="display:flex;"><span>Time <span style="color:#f92672">-</span> (HH:MM:SS)
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">Year</span> <span style="color:#f92672">-</span> (YYYY)
+</span></span></code></pre></div><h3 id="character-data-types">
+  Character Data Types
+  <a class="anchor" href="#character-data-types">#</a>
+</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span>char(m)
+</span></span><span style="display:flex;"><span>VARCHAR(m)
+</span></span><span style="display:flex;"><span>Text <span style="color:#f92672">-</span> <span style="color:#66d9ef">To</span> store <span style="color:#66d9ef">large</span> amount <span style="color:#66d9ef">of</span> text
+</span></span></code></pre></div><p><strong>Optional Parameters :</strong> m - display length, d - No. of decimals</p>
+<h3 id="images">
+  Images
+  <a class="anchor" href="#images">#</a>
+</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span>BLOB <span style="color:#f92672">-</span> Binary <span style="color:#66d9ef">Large</span> <span style="color:#66d9ef">Object</span>
+</span></span></code></pre></div><hr>
+<h2 id="mysql-constraints">
+  MySQL Constraints
+  <a class="anchor" href="#mysql-constraints">#</a>
+</h2>
+<table>
+<thead>
+<tr>
+<th>Constraint</th>
+<th>Explanation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>NOT NULL CONSTRAINT</td>
+<td>Apply this constraint if a field has to get some value for every row</td>
+</tr>
+<tr>
+<td>DEFAULT CONSTRAINT</td>
+<td>While populating a table, if a column misses out on input, then the default value will be used to fill the entry</td>
+</tr>
+<tr>
+<td>UNIQUE CONSTRAINT</td>
+<td>This constraint makes sure that all the values entered for the field to which the constraint is applied are unique i.e., different Error message is generated if duplicate values are input.</td>
+</tr>
+<tr>
+<td>PRIMARY KEY CONSTRAINT</td>
+<td>This constraint is a combination of NOT NULL &amp; UNIQUE constraints. In this constraint, some value would have to be provided for each record(row) and entered values must be unique &amp; not have duplicates.</td>
+</tr>
+</tbody>
+</table>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">CREATE</span> <span style="color:#66d9ef">TABLE</span> student (
+</span></span><span style="display:flex;"><span>    id INT <span style="color:#66d9ef">Primary</span>,
+</span></span><span style="display:flex;"><span>    name VARCHAR(<span style="color:#ae81ff">20</span>) <span style="color:#66d9ef">NOTNULL</span>,
+</span></span><span style="display:flex;"><span>    majors VARCHAR(<span style="color:#ae81ff">20</span>) <span style="color:#66d9ef">UNIQUE</span>
+</span></span><span style="display:flex;"><span>);
+</span></span></code></pre></div><p>Using Auto Increment for id column</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">CREATE</span> <span style="color:#66d9ef">TABLE</span> student (
+</span></span><span style="display:flex;"><span>    id INT AUTO_INCREMENT,
+</span></span><span style="display:flex;"><span>    name VARCHAR(<span style="color:#ae81ff">20</span>)
+</span></span><span style="display:flex;"><span>);
+</span></span></code></pre></div><hr>
+<h2 id="database-operations">
+  Database Operations
+  <a class="anchor" href="#database-operations">#</a>
+</h2>
+<table>
+<thead>
+<tr>
+<th>Command</th>
+<th>Function</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>CREATE DATABASE dbName</code></td>
+<td>Create Database</td>
+</tr>
+<tr>
+<td><code>USE dbName</code></td>
+<td>Use a Database</td>
+</tr>
+<tr>
+<td><code>DROP database dbName</code></td>
+<td>Drop Database Note : The delete is permanent</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="trivial-functions">
+  Trivial Functions
+  <a class="anchor" href="#trivial-functions">#</a>
+</h2>
+<h3 id="min--max-functions">
+  MIN() &amp; MAX() Functions
+  <a class="anchor" href="#min--max-functions">#</a>
+</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> <span style="color:#66d9ef">MIN</span>(<span style="color:#66d9ef">column</span>)
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">FROM</span> tableName
+</span></span><span style="display:flex;"><span>[<span style="color:#66d9ef">WHERE</span>];
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> <span style="color:#66d9ef">MAX</span>(<span style="color:#66d9ef">column</span>)
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">FROM</span> tableName
+</span></span><span style="display:flex;"><span>[<span style="color:#66d9ef">WHERE</span>];
+</span></span></code></pre></div><h3 id="count-functions">
+  COUNT() Functions
+  <a class="anchor" href="#count-functions">#</a>
+</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> <span style="color:#66d9ef">COUNT</span>(<span style="color:#f92672">*</span>)
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">FROM</span> products
+</span></span><span style="display:flex;"><span>[<span style="color:#66d9ef">WHERE</span>];
+</span></span></code></pre></div><h3 id="sum-function">
+  SUM() Function
+  <a class="anchor" href="#sum-function">#</a>
+</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> <span style="color:#66d9ef">SUM</span>(<span style="color:#66d9ef">column</span>)
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">FROM</span> tableName
+</span></span><span style="display:flex;"><span>[<span style="color:#66d9ef">WHERE</span>];
+</span></span></code></pre></div><h3 id="delete-function">
+  DELETE Function
+  <a class="anchor" href="#delete-function">#</a>
+</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">DELETE</span> <span style="color:#66d9ef">FROM</span> tableName
+</span></span><span style="display:flex;"><span>[<span style="color:#66d9ef">WHERE</span>];
+</span></span></code></pre></div><h3 id="distinct-function">
+  DISTINCT Function
+  <a class="anchor" href="#distinct-function">#</a>
+</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> <span style="color:#66d9ef">DISTINCT</span> columnName
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">FROM</span> tableName;
+</span></span><span style="display:flex;"><span><span style="color:#75715e">-- Picks all the distinct values in the selected column
+</span></span></span></code></pre></div><h3 id="union-function">
+  UNION Function
+  <a class="anchor" href="#union-function">#</a>
+</h3>
+<ul>
+<li>
+<p>Union can be used to join two rows from different tables.</p>
+</li>
+<li>
+<p>Unifies two different columns into one column. Each SELECT query should have same No. of columns &amp; same datatype.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> columnX
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">FROM</span> table1
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">UNION</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> branchName
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">FROM</span> table2;
+</span></span></code></pre></div></li>
+</ul>
+<hr>
+<h2 id="operators-in-mysql">
+  Operators in MySQL
+  <a class="anchor" href="#operators-in-mysql">#</a>
+</h2>
+<h3 id="arithmetic-operators">
+  Arithmetic Operators
+  <a class="anchor" href="#arithmetic-operators">#</a>
+</h3>
+<ul>
+<li>Addition (+)</li>
+<li>Subtraction (-)</li>
+<li>Multiplication (*)</li>
+<li>Division (/)</li>
+<li>Modular Division (%)</li>
+</ul>
+<h3 id="comparison-operators">
+  Comparison Operators
+  <a class="anchor" href="#comparison-operators">#</a>
+</h3>
+<ul>
+<li>Equal (=)</li>
+<li>Greater Than (&gt;)</li>
+<li>Lesser Than (&lt;)</li>
+<li>Greater Than or Equal to (&gt;=)</li>
+<li>Lesser Than or Equal to(&lt;=)</li>
+<li>Not Equal to (&lt;&gt; or !=)</li>
+</ul>
+<p><strong>Examples</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> <span style="color:#f92672">*</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">FROM</span> employees
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">WHERE</span> age <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">30</span> <span style="color:#66d9ef">AND</span> salary <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">15000</span>;
+</span></span></code></pre></div><h3 id="logical-operators">
+  Logical Operators
+  <a class="anchor" href="#logical-operators">#</a>
+</h3>
+<ul>
+<li>OR</li>
+<li>ISNULL</li>
+<li>ALL</li>
+<li>AND</li>
+<li>BETWEEN</li>
+<li>IN</li>
+<li>LIKE</li>
+</ul>
+<p><strong>Examples</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> <span style="color:#f92672">*</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">FROM</span> employees
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">WHERE</span> salary <span style="color:#66d9ef">IS</span> <span style="color:#66d9ef">NULL</span>;
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> <span style="color:#f92672">*</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">FROM</span> employees
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">WHERE</span> name <span style="color:#66d9ef">LIKE</span> <span style="color:#e6db74">&#39;p%&#39;</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">-- % is a wildcard character
+</span></span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> <span style="color:#f92672">*</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">FROM</span> employee
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">WHERE</span> age <span style="color:#66d9ef">IN</span> (<span style="color:#ae81ff">28</span>, <span style="color:#ae81ff">30</span>, <span style="color:#ae81ff">36</span>);
+</span></span></code></pre></div><h3 id="regexp-operators">
+  REGEXP Operators
+  <a class="anchor" href="#regexp-operators">#</a>
+</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> <span style="color:#f92672">*</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">FROM</span> customers
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">WHERE</span> last_name REGEXP <span style="color:#e6db74">&#39;^field&#39;</span>
+</span></span></code></pre></div><table>
+<thead>
+<tr>
+<th>Command</th>
+<th>Search</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>%b</td>
+<td>search term has last character b</td>
+</tr>
+<tr>
+<td>%b%</td>
+<td>search term has &lsquo;b&rsquo; in it somewhere</td>
+</tr>
+<tr>
+<td>-y</td>
+<td>second character is y</td>
+</tr>
+<tr>
+<td>&ndash;z</td>
+<td>third character is z</td>
+</tr>
+<tr>
+<td>%</td>
+<td>any No. of characters</td>
+</tr>
+<tr>
+<td>^</td>
+<td>beginning of a string</td>
+</tr>
+<tr>
+<td>$</td>
+<td>end of a string</td>
+</tr>
+<tr>
+<td>/ or |</td>
+<td>logical OR</td>
+</tr>
+<tr>
+<td>[abcd]</td>
+<td>Searches for the chars inside the brackets</td>
+</tr>
+<tr>
+<td>[a-f]</td>
+<td>Searches for the chars in the range</td>
+</tr>
+</tbody>
+</table>
+<p><strong>REGEXP Operator Examples</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#75715e">-- MOSH&#39;S DATABASES
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> <span style="color:#f92672">*</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">FROM</span> customers
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">WHERE</span> last_name REGEXP <span style="color:#e6db74">&#39;field&#39;</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">-- O/P : Brushfield
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> <span style="color:#f92672">*</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">FROM</span> customers
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">WHERE</span> last_name REGEXP <span style="color:#e6db74">&#39;field$&#39;</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">-- O/P : Brushfield
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> <span style="color:#f92672">*</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">FROM</span> customers
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">WHERE</span> last_name REGEXP <span style="color:#e6db74">&#39;^field&#39;</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">-- O/P : No Result. No last name starting with field exist.
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> <span style="color:#f92672">*</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">FROM</span> customers
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">WHERE</span> last_name REGEXP <span style="color:#e6db74">&#39;field|mac&#39;</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">-- O/P : MacCaffey, Brushfield
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> <span style="color:#f92672">*</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">FROM</span> customers
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">WHERE</span> last_name REGEXP <span style="color:#e6db74">&#39;^field|mac|rose&#39;</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">-- O/P : MacCaffrey, Roseburgh
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> <span style="color:#f92672">*</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">FROM</span> customers
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">WHERE</span> last_name REGEXP <span style="color:#e6db74">&#39;field$|mac|rose&#39;</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">-- O/P : MacCaffrey, Brushfield, Roseburgh
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> <span style="color:#f92672">*</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">FROM</span> customers
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">WHERE</span> last_name REGEXP <span style="color:#e6db74">&#39;[gim]e&#39;</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">-- Looks for customers with lastname containing ge or ie or me
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">-- O/P : Brushfield, Boagey
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> <span style="color:#f92672">*</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">FROM</span> customers
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">WHERE</span> last_name REGEXP <span style="color:#e6db74">&#39;e[a-h]&#39;</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">-- Looks for lastnames containing ea, eb, ec,.........eh
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">-- O/P: Roseburgh, Naseby
+</span></span></span></code></pre></div><h2 id="joining-in-mysql">
+  Joining In MySQL
+  <a class="anchor" href="#joining-in-mysql">#</a>
+</h2>
+<h3 id="inner-join">
+  Inner Join
+  <a class="anchor" href="#inner-join">#</a>
+</h3>
+<p>A <code>JOIN</code> command is <code>INNER JOIN</code> by default.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#75715e">-- MOSH
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>USE sql_store
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span>
+</span></span><span style="display:flex;"><span>    oi.order_id,
+</span></span><span style="display:flex;"><span>    oi.product_id, p.name,
+</span></span><span style="display:flex;"><span>    p.name,
+</span></span><span style="display:flex;"><span>    oi.quantity,
+</span></span><span style="display:flex;"><span>    oi.unit_price
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">FROM</span> products p
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">JOIN</span> order_items oi
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">ON</span> oi.product_id <span style="color:#f92672">=</span> p.product_id;
+</span></span></code></pre></div><h4 id="joining-along-databases">
+  Joining Along Databases
+  <a class="anchor" href="#joining-along-databases">#</a>
+</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#75715e">-- MOSH
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">SELECT</span> <span style="color:#f92672">*</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">FROM</span> sql_store.order_items oi
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">JOIN</span> products p
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">ON</span> oi.product_id <span style="color:#f92672">=</span> p.product_id;
+</span></span></code></pre></div><h4 id="self-join">
+  Self JOIN
+  <a class="anchor" href="#self-join">#</a>
+</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span>USE sql_hr
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span>
+</span></span><span style="display:flex;"><span>    e.employee_id,
+</span></span><span style="display:flex;"><span>    e.first_name,
+</span></span><span style="display:flex;"><span>    m.first_name <span style="color:#66d9ef">AS</span> manager
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">FROM</span> employees e
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">JOIN</span> employees m
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">ON</span> e.reports_to <span style="color:#f92672">=</span> m.employee_id;
+</span></span></code></pre></div><h4 id="joining-multiple-tables">
+  Joining Multiple Tables
+  <a class="anchor" href="#joining-multiple-tables">#</a>
+</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#75715e">-- MOSH
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>USE sql_store
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span>
+</span></span><span style="display:flex;"><span>    o.order_id,
+</span></span><span style="display:flex;"><span>    o.order_date,
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">c</span>.first_name,
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">c</span>.last_name,
+</span></span><span style="display:flex;"><span>    os.name <span style="color:#66d9ef">AS</span> status
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">FROM</span> orders o
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">JOIN</span> customers <span style="color:#66d9ef">c</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">ON</span> o customer_id <span style="color:#f92672">=</span> <span style="color:#66d9ef">c</span>.customer_id
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">JOIN</span> order_statuses os
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">ON</span> o.status <span style="color:#f92672">=</span> os.order_status_id;
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#75715e">-- MOSH EXERCISE
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>USE sql_invoicing
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">c</span>.name,
+</span></span><span style="display:flex;"><span>    p.invoice_id,
+</span></span><span style="display:flex;"><span>    p.date,
+</span></span><span style="display:flex;"><span>    p.amount,
+</span></span><span style="display:flex;"><span>    pm.name <span style="color:#66d9ef">AS</span> pay_mode
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">FROM</span> payments p
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">JOIN</span> clients <span style="color:#66d9ef">c</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">ON</span> p.client_id <span style="color:#f92672">=</span> <span style="color:#66d9ef">c</span>.client_id
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">JOIN</span> payment_methods pm
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">ON</span> p.payment_method <span style="color:#f92672">=</span> pm.payment<span style="color:#f92672">-</span><span style="color:#66d9ef">method</span><span style="color:#f92672">-</span>id;
+</span></span></code></pre></div><h4 id="compound-join-conditions">
+  Compound JOIN Conditions
+  <a class="anchor" href="#compound-join-conditions">#</a>
+</h4>
+<p>Compound Join is done when there are more than one primary key existing ina table and the record cannot be chosen uniquely with just one join.</p>
+<p><code>USE sql_store</code></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> <span style="color:#f92672">*</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">FROM</span> order_items oi
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">JOIN</span> order_item_notes oin
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">ON</span> oi.order_id <span style="color:#f92672">=</span> oin.order_id
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">AND</span> oi.product_id <span style="color:#f92672">=</span> oin.product_id;
+</span></span></code></pre></div><h4 id="implicit-join">
+  Implicit Join
+  <a class="anchor" href="#implicit-join">#</a>
+</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#75715e">-- MOSH
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">SELECT</span> <span style="color:#f92672">*</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">FROM</span> orders o, customers <span style="color:#66d9ef">c</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">WHERE</span> o.customer_id <span style="color:#f92672">=</span> <span style="color:#66d9ef">c</span>.customer_id;
+</span></span></code></pre></div><p><strong>Note:</strong> Failure to include the WHERE condition would result in all columns in table 1 joining to all the columns in table 2</p>
+<h3 id="outer-join">
+  Outer Join
+  <a class="anchor" href="#outer-join">#</a>
+</h3>
+<h4 id="left--right-join">
+  Left &amp; Right Join
+  <a class="anchor" href="#left--right-join">#</a>
+</h4>
+<blockquote>
+<p>As a rule, avoid RIGHT JOIN as it may make code-reading harder</p>
+</blockquote>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#75715e">-- MOSH
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">SELECT</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">c</span>.customer_id,
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">c</span>.first_name,
+</span></span><span style="display:flex;"><span>    o.order_id
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">FROM</span> customers <span style="color:#66d9ef">c</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">RIGHT</span> <span style="color:#66d9ef">JOIN</span> orders o
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">ON</span> <span style="color:#66d9ef">c</span>.customer_id <span style="color:#f92672">=</span> o.customer_id
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">ORDER</span> <span style="color:#66d9ef">BY</span> <span style="color:#66d9ef">c</span>.customer_id;
+</span></span></code></pre></div><blockquote>
+<p><strong>NOTE :</strong> The word <code>OUTER</code> after <code>RIGHT</code> &amp; before <code>JOIN</code> keywords is optional</p>
+</blockquote>
+<h4 id="outer-joins-between-multiple-tables">
+  Outer Joins Between Multiple Tables
+  <a class="anchor" href="#outer-joins-between-multiple-tables">#</a>
+</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#75715e">-- MOSH
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">SELECT</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">c</span>.customer_id,
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">c</span>.first_name,
+</span></span><span style="display:flex;"><span>    o.order_id,
+</span></span><span style="display:flex;"><span>    sh.name <span style="color:#66d9ef">AS</span> shipper
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">FROM</span> customers <span style="color:#66d9ef">c</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">LEFT</span> <span style="color:#66d9ef">JOIN</span> orders o
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">ON</span> <span style="color:#66d9ef">c</span>.customers_id <span style="color:#f92672">=</span> o.customer_id
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">LEFT</span> <span style="color:#66d9ef">JOIN</span> shippers sh
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">ON</span> o.shipper_id <span style="color:#f92672">=</span> sh.shipper_id
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">ORDER</span> <span style="color:#66d9ef">BY</span> <span style="color:#66d9ef">c</span>.customer_id;
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#75715e">-- MOSH
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">SELECT</span>
+</span></span><span style="display:flex;"><span>    o.order_id,
+</span></span><span style="display:flex;"><span>    o.order_date,
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">c</span>.first_name <span style="color:#66d9ef">AS</span> customer,
+</span></span><span style="display:flex;"><span>    sh.name <span style="color:#66d9ef">AS</span> shipper,
+</span></span><span style="display:flex;"><span>    os.name <span style="color:#66d9ef">AS</span> status
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">FROM</span> orders o
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">JOIN</span> customers <span style="color:#66d9ef">c</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">ON</span> o.customers_id <span style="color:#f92672">=</span> <span style="color:#66d9ef">c</span>.customers_id
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">LEFT</span> <span style="color:#66d9ef">JOIN</span> shippers sh
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">ON</span> o.shipper_id <span style="color:#f92672">=</span> sh.shipper_id,
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">JOIN</span> order_statuses os
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">ON</span> o.status <span style="color:#f92672">=</span> os.order_status_id;
+</span></span></code></pre></div><h4 id="self-outer-joins">
+  SELF OUTER JOINS
+  <a class="anchor" href="#self-outer-joins">#</a>
+</h4>
+<p>In the previous self join which is INNER, the manager&rsquo;s record does not get shown because the manager doesn&rsquo;t report to the manager. In order to include this record too, SELF OUTER JOIN is used.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span>
+</span></span><span style="display:flex;"><span>    e.employee_id,
+</span></span><span style="display:flex;"><span>    e.first_name,
+</span></span><span style="display:flex;"><span>    m.first_name <span style="color:#66d9ef">AS</span> manager
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">FROM</span> employees e
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">LEFT</span> <span style="color:#66d9ef">JOIN</span> employees m
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">ON</span> e.reports_to <span style="color:#f92672">=</span> m.employees_id;
+</span></span></code></pre></div><h4 id="natural-join--cross-join">
+  NATURAL JOIN &amp; CROSS JOIN
+  <a class="anchor" href="#natural-join--cross-join">#</a>
+</h4>
+<p>Natural Join may produce unexpected results. Use with caution.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#75715e">-- MOSH, NATURAL JOIN
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">SELECT</span>
+</span></span><span style="display:flex;"><span>    o.order_id,
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">c</span>.first_name
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">FROM</span> orders o
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">NATURAL</span> <span style="color:#66d9ef">JOIN</span> customers <span style="color:#66d9ef">c</span>;
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#75715e">-- MOSH, CROSS JOIN
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">SELECT</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">c</span>.first_name <span style="color:#66d9ef">AS</span> customer,
+</span></span><span style="display:flex;"><span>    p.name <span style="color:#66d9ef">AS</span> product,
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">FROM</span> customers <span style="color:#66d9ef">c</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">CROSS</span> <span style="color:#66d9ef">JOIN</span> products p  <span style="color:#75715e">-- Explicit Syntax
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">ORDER</span> <span style="color:#66d9ef">BY</span> <span style="color:#66d9ef">c</span>.first_name;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">c</span>.first_name <span style="color:#66d9ef">AS</span> customer,
+</span></span><span style="display:flex;"><span>    p.name <span style="color:#66d9ef">AS</span> product
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">FROM</span> customers <span style="color:#66d9ef">c</span>, orders o <span style="color:#75715e">-- Implicit Syntax
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">ORDER</span> <span style="color:#66d9ef">BY</span> <span style="color:#66d9ef">c</span>.first_name;
+</span></span></code></pre></div><hr>
+<h2 id="unions-in-mysql">
+  Unions in MySQL
+  <a class="anchor" href="#unions-in-mysql">#</a>
+</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span>
+</span></span><span style="display:flex;"><span>    order_id,
+</span></span><span style="display:flex;"><span>    order_date,
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;Active&#39;</span> <span style="color:#66d9ef">AS</span> status
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">FROM</span> orders
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">WHERE</span> order_datwe <span style="color:#f92672">&gt;=</span> <span style="color:#e6db74">&#39;2019-01-01&#39;</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">UNION</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span>
+</span></span><span style="display:flex;"><span>    order_id,
+</span></span><span style="display:flex;"><span>    order_date,
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;Archived&#39;</span> <span style="color:#66d9ef">AS</span> status
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">FROM</span> orders
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">WHERE</span> order_date <span style="color:#f92672">&lt;</span> <span style="color:#e6db74">&#39;2019-01-01&#39;</span>;
+</span></span></code></pre></div><h4 id="inserting-hierarchical-rows">
+  Inserting Hierarchical Rows
+  <a class="anchor" href="#inserting-hierarchical-rows">#</a>
+</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">INSERT</span> <span style="color:#66d9ef">INTO</span> orders(
+</span></span><span style="display:flex;"><span>    customer_id,
+</span></span><span style="display:flex;"><span>    order_date,
+</span></span><span style="display:flex;"><span>    status
+</span></span><span style="display:flex;"><span>    )
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">VALUES</span>(<span style="color:#ae81ff">1</span>, <span style="color:#e6db74">&#39;2019-01-02&#39;</span>, <span style="color:#ae81ff">1</span>);
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">INSERT</span> <span style="color:#66d9ef">INTO</span> order_items
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">VALUES</span>(LAST_INSERT_ID(), <span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>.<span style="color:#ae81ff">95</span>),
+</span></span><span style="display:flex;"><span>      (LAST_INSERT_ID(), <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">3</span>.<span style="color:#ae81ff">95</span>);
+</span></span></code></pre></div></article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+
+
+
+
+</div>
+
+
+
+  <script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){if(window.getSelection().toString())return;e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script>
+
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside class="book-toc">
+      <div class="book-toc-content">
+        
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#resources">Resources</a></li>
+    <li><a href="#tables">Tables</a>
+      <ul>
+        <li><a href="#creating-a-table">Creating a Table</a></li>
+        <li><a href="#creating-a-table-from-other-tables">Creating a table from other Tables</a></li>
+        <li><a href="#using-insert-into-query-to-enter-data-into-tables">Using <strong>INSERT INTO</strong> query to enter data into tables</a></li>
+        <li><a href="#populating-a-table-with-data-from-other-table">Populating a Table With Data From Other Table</a></li>
+        <li><a href="#inserting-multiple-rows-into-a-table-in-one-go">Inserting Multiple Rows Into a Table In One Go</a></li>
+        <li><a href="#alter-table">Alter Table</a></li>
+      </ul>
+    </li>
+    <li><a href="#querying-functions">Querying Functions</a>
+      <ul>
+        <li><a href="#nested-query">Nested Query</a></li>
+        <li><a href="#select-query">SELECT Query</a></li>
+        <li><a href="#where-clause">WHERE Clause</a></li>
+        <li><a href="#order-by-clause">ORDER BY Clause</a></li>
+        <li><a href="#group-by-clause">GROUP BY Clause</a></li>
+        <li><a href="#having-clause">HAVING Clause</a></li>
+        <li><a href="#using-clause">USING Clause</a></li>
+      </ul>
+    </li>
+    <li><a href="#datatypes-in-mysql">Datatypes in MySQL</a>
+      <ul>
+        <li><a href="#numeric-data-types">Numeric Data Types</a></li>
+        <li><a href="#date--time-data-types">Date &amp; Time Data Types</a></li>
+        <li><a href="#character-data-types">Character Data Types</a></li>
+        <li><a href="#images">Images</a></li>
+      </ul>
+    </li>
+    <li><a href="#mysql-constraints">MySQL Constraints</a></li>
+    <li><a href="#database-operations">Database Operations</a></li>
+    <li><a href="#trivial-functions">Trivial Functions</a>
+      <ul>
+        <li><a href="#min--max-functions">MIN() &amp; MAX() Functions</a></li>
+        <li><a href="#count-functions">COUNT() Functions</a></li>
+        <li><a href="#sum-function">SUM() Function</a></li>
+        <li><a href="#delete-function">DELETE Function</a></li>
+        <li><a href="#distinct-function">DISTINCT Function</a></li>
+        <li><a href="#union-function">UNION Function</a></li>
+      </ul>
+    </li>
+    <li><a href="#operators-in-mysql">Operators in MySQL</a>
+      <ul>
+        <li><a href="#arithmetic-operators">Arithmetic Operators</a></li>
+        <li><a href="#comparison-operators">Comparison Operators</a></li>
+        <li><a href="#logical-operators">Logical Operators</a></li>
+        <li><a href="#regexp-operators">REGEXP Operators</a></li>
+      </ul>
+    </li>
+    <li><a href="#joining-in-mysql">Joining In MySQL</a>
+      <ul>
+        <li><a href="#inner-join">Inner Join</a></li>
+        <li><a href="#outer-join">Outer Join</a></li>
+      </ul>
+    </li>
+    <li><a href="#unions-in-mysql">Unions in MySQL</a>
+      <ul>
+        <li></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+ 
+      </div>
+    </aside>
+    
+  </main>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

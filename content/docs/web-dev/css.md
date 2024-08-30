@@ -7,6 +7,25 @@ draft: false
 
 # CSS Notes
 
+[Interactive CSS CC](https://htmlcheatsheet.com/css/) |
+
+## MDN Docs & Misc
+
+[CSS](https://developer.mozilla.org/en-US/docs/Learn/CSS) |
+[DevDocs.io](https://devdocs.io/css/) |\
+[Building Block](https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks) |
+[Backgrounds and borders](https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders) |
+[Lists](https://developer.mozilla.org/en-US/docs/Learn/CSS/Styling_text/Styling_lists) |
+[Links](https://developer.mozilla.org/en-US/docs/Learn/CSS/Styling_text/Styling_links) |
+[Images, media, forms](https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Images_media_form_elements) |
+[Web Fonts](https://developer.mozilla.org/en-US/docs/Learn/CSS/Styling_text/Web_fonts#web_fonts) |  
+[Layout](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout) - [Flexbox](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Flexbox), [Grids](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Grids), [Floats](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Floats), [Multi-Column Layout](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Multiple-column_Layout), [Positioning](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Positioning), [Responsive Design](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Responsive_Design) |
+
+**FlexBox Resources:** [Interactive Flexbox](https://flexbox.malven.co) |
+[CSS Tricks' Flexbox Layout](https://css-tricks.com/snippets/css/a-guide-to-flexbox/) |
+
+---
+
 ## Basic Syntax
 
 ![](https://cdn.statically.io/gh/TheOdinProject/curriculum/05ce472eabf8e04eeb2cc9139e66db884074fd7d/foundations/html_css/css-foundations/imgs/00.jpg)

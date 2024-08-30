@@ -6,7 +6,11 @@ url: /docs/web-dev/react/
 
 # React Notes
 
-[Official Docs](https://legacy.reactjs.org/docs/getting-started.html)
+[Official Docs](https://legacy.reactjs.org/docs/getting-started.html) |
+[Reference](https://react.dev/reference/react) |
+[Learn](https://react.dev/learn) |
+
+---
 
 ## Intro
 

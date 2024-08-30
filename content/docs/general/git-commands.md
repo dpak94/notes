@@ -1,7 +1,7 @@
 ---
-layout: post
+type: "docs"
 title: Git
-url: /docs/git
+url: "/docs/general/git/"
 ---
 
 # Git
@@ -151,6 +151,14 @@ Generating SSH Key for local Git Bash to pull remote repos and adding the genera
 
 5. The public key will be stored in `C:\Users\ranger\.ssh` as **id_rsa.pub** file. Opening this file with notepad or VSCode gives the **SSH key**. This key can be added to GitHub or GitBucket on their website.
 
-## Commit Message Golden Rules
+---
 
-1. Separate subject from body with a blank line
+## 7 Golden Rules for Git Commit
+
+1. Separate the subject from body with a blank line
+2. Limit the subject line to 50 characters
+3. Capitalize the subject line
+4. Do not end the subject line with a period
+5. Use the imperative mood in the subject line
+6. Wrap the body at 72 characters
+7. Use the body to explain _what_ and _why_ vs _how_

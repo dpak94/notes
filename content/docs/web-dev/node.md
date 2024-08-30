@@ -7,6 +7,12 @@ url: "/docs/web-dev/node"
 
 # Node JS
 
+[Download](https://nodejs.org/en/download/package-manager) -  
+[Official Docs](https://nodejs.org/docs/latest/api/),
+[Learn](https://nodejs.org/en/learn/getting-started/introduction-to-nodejs) |
+
+---
+
 - A JavaScript Runtime built on Google's **OpenSource V8 Javascript Engine**
 
 **Node JS** is an environment in which a program written in JS can be executed.
@@ -41,7 +47,6 @@ url: "/docs/web-dev/node"
 ## Node Terminal
 
 - To enter node, type `node` in the terminal
-
 - To exit, write `.exit` in the node terminal
 
 ```bash

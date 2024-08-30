@@ -6,17 +6,44 @@ permalink: /javascript/
 
 # JavaScript
 
-[CodePen.io](https://codepen.io/pen/) for trying out new HTML, CSS & JS stuff.
+[Interactive JS CC](https://htmlcheatsheet.com/js/) |
+[JS Playground](https://playcode.io) |
 
-## JavaScript W3 School Quick References
+## Quick Links
 
-[DOM Reference](https://www.w3schools.com/jsref/default.asp) | [DOM Document](https://www.w3schools.com/jsref/dom_obj_document.asp) | [Arrays](https://www.w3schools.com/jsref/jsref_obj_array.asp) | [Operators](https://www.w3schools.com/jsref/jsref_operators.asp) | [Strings](https://www.w3schools.com/jsref/jsref_obj_string.asp) | [Operator Precedence](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Operator_precedence#table) | [RegExp](https://www.w3schools.com/jsref/jsref_obj_regexp.asp) | [Math](https://www.w3schools.com/jsref/jsref_obj_math.asp) | [Date](https://www.w3schools.com/jsref/jsref_obj_date.asp) | [Number](https://www.w3schools.com/jsref/jsref_obj_number.asp) | [Global](https://www.w3schools.com/jsref/jsref_obj_global.asp) | [Chrome Dev Tools](https://developer.chrome.com/docs/devtools/) | [RegExp CheatSheet](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_expressions/Cheatsheet) | [Can I Use](https://caniuse.com/)
+- [CodePen.io](https://codepen.io/pen/) for trying out new HTML, CSS & JS stuff.
+- [DevDocs](https://devdocs.io/javascript/)
 
-## MDN Docs
+[MDN JS](https://developer.mozilla.org/en-US/docs/Learn/JavaScript) |
+[Arrays](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/Arrays) |
+[Strings](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/Strings) |
+[String Methods](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/Useful_string_methods) |
+[Math & Operators](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/Math) |
+[Operator Precedence](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Operator_precedence#table) |
+[Functions](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Functions) |
+[Objects](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects) |
+[RegExp](https://www.w3schools.com/jsref/jsref_obj_regexp.asp) |
+[RegExp CheatSheet](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_expressions/Cheatsheet) |
+[Chrome Dev Tools](https://developer.chrome.com/docs/devtools/) |
+[Asynchronous JS](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Asynchronous) |
+[Events](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Events) |
+[Web Forms](https://developer.mozilla.org/en-US/docs/Learn/Forms) |
+[Client-side Web APIs](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Client-side_web_APIs)
 
-[MDN Web Docs](https://developer.mozilla.org/en-US/) | [Maths](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Client-side_web_APIs) | [Arrays](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/Arrays) |
+### W3 School Quick Links
 
-[Asynchronous JS](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Asynchronous) | [Functions](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Functions) | [Events](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Events) | [Client-side Web APIs](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Client-side_web_APIs)
+[DOM Reference](https://www.w3schools.com/jsref/default.asp) |
+[DOM Document](https://www.w3schools.com/jsref/dom_obj_document.asp) |
+[Arrays](https://www.w3schools.com/jsref/jsref_obj_array.asp) |
+[Operators](https://www.w3schools.com/jsref/jsref_operators.asp) |
+[Strings](https://www.w3schools.com/jsref/jsref_obj_string.asp) |
+[Math](https://www.w3schools.com/jsref/jsref_obj_math.asp) |
+[Date](https://www.w3schools.com/jsref/jsref_obj_date.asp) |
+[Number](https://www.w3schools.com/jsref/jsref_obj_number.asp) |
+[Global](https://www.w3schools.com/jsref/jsref_obj_global.asp) |
+[Can I Use?](https://caniuse.com/)
+
+---
 
 **JavaScript** is a language used along with HTML and CSS to communicate with the user.
 
@@ -25,49 +52,16 @@ permalink: /javascript/
 
 ---
 
-## Variables in JS
+## Variables & Constants in JS
 
-`let message;`
+In older scripts, `var` is used inplace of `let`  
+**Eg:** `var message = 'Ciao';`
 
-Now, put some data into the variable by using assignment operator `=` :
-
-```js
-let message;
-
-message = "Hello"; //store the string 'Hello' in the variable message
-```
-
-Access the stored variable **message** using the variable name :
-
-`alert(message); // shows the variable content`
-
-Variable declaration and printing its content in a more precise way as :
-
-```js
-let message = "Hello";
-alert(message);
-```
-
-Declare multiple variables in single line (not recommended, use multi-lines or multiline style, where after comma each variable lies in a new line for readability) :
-
-```js
-let user = "John",
-  age = 25,
-  message = "Hello";
-```
-
-> [!NOTE]
-> In older scripts, `var` is used inplace of `let`  
-> **Eg:** `var message = 'Ciao';`
-
-> [!IMPORTANT]
->
-> 1. The name must only contain letters, digits or symbols **$** and **\_**.
-> 2. The first character must not be digit.
-> 3. Case matters. **apple** and **APPLE** are differnet variables.
-> 4. Do not draw variables from [reserved words](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#reserved_words)
-
-> When the name contains multiple words, <b>camelCase</b> is commonly used. That is: words go one after another, each word except first starting with a capital letter: **myVeryLongName**
+1. The name must only contain letters, digits or symbols **$** and **\_**.
+2. The first character must not be digit.
+3. Case matters. **apple** and **APPLE** are differnet variables.
+4. Do not draw variables from [reserved words](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#reserved_words)
+5. When the name contains multiple words, _camelCase_ is commonly used. That is: words go one after another, each word except first starting with a capital letter: **myVeryLongName**
 
 ### Declaring constants in JavaScript
 
@@ -80,23 +74,9 @@ Any attempt to reassign value would result in error.
 
 ---
 
-## String Literals & Multi-line Strings
-
-Use backtick (`) in place of ' ' or " "
-
-```js
-const firstName = "stranger";
-const firstJob = "writer";
-const birthYear = 1901;
-
-desc = `I'm ${firstName} and my first job was ${firstJob}.`;
-console.log(desc);
-// I am stranger and I was born in 1901 and my first job was writer
-```
-
 **Multi-line Strings**
 
-Strarting from 2015, thanks to ES6, multi-line strings can be written like below :
+Starting from 2015, thanks to ES6, multi-line strings can be written like below :
 
 ```js
 console.log(`
@@ -257,13 +237,9 @@ switch (day) {
 **Brief History of JS:**
 
 - Brendan Eich creates the first version of JavaScript in 10 days. Initially called **Mocha**
-
 - EcmaScript 1 released in 1997
-
 - **ES5** released in 2015 with lots of great new features.
-
 - **ES6** brought biggest updates to the language. \*_ECMAScript_ \* changes to yearly releases.
-
 - Modern JavaScript Engine is backwards compatible.
 
 ## Strict Mode
@@ -273,7 +249,6 @@ switch (day) {
 ```
 
 - Avoids accidental bugs and errors in the code.
-
 - Prefer to turn on Strict Mode while coding.
 
 ---
@@ -356,9 +331,7 @@ console.log(FruitProcessor(3, 3));
 ## Arrays
 
 - [Array MDN Docs Reference](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)
-
 - Declared using _const_ keyword. Once declared, the array cannot be reassigned.
-
 - Arrays declared with _var_ can be initialized at any time.
 
 ```js
@@ -730,7 +703,7 @@ btn.addEventListener("click", () => {
 
 Method 3 allows for _separation of concerns_
 
-#### Attaching listerners to groups of nodes
+#### Attaching listeners to groups of nodes
 
 ```html
 <div id="container">

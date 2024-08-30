@@ -2,6 +2,7 @@
 type: "docs"
 title: Deep Learning
 draft: true
+url: "/docs/ds/deep-learning/"
 ---
 
 # Deep Learning

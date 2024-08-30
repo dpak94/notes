@@ -2,18 +2,23 @@
 type: "docs"
 title: Python
 draft: false
+url: "/docs/ds/python/"
 ---
 
 # Python Notes
+
+[Official Docs](https://docs.python.org/) |
+[RealPython](https://realpython.com) |
+[Setup](https://docs.python.org/3/using/index.html) |
+[RegExp](https://docs.python.org/3/howto/regex.html) |
+[Operator Precedence](https://docs.python.org/3/reference/expressions.html#operator-precedence) |
 
 ## Programming Tips
 
 1. Use ''' ''', '' '' or ' ' to write comments in the script.
 2. Multiple Assignment in Python : Example : a, b, c, good = 5, True, 'Stranger'
 3. The following keywords are reserved in Python :
-
    `and` `assert` `break` `class` `continue` `def` `del` `elif` `in` `is` `lambda` `not` `or` `else` `except` `exec` `finally` `for` `from` `global` `if` `import` `while` `with` `pass` `print` `raise` `return` `try` `yield`
-
 4. Python has one **unary** operator, **Unary Minus** Operator. If a number is positive, it becomes negative when preceded by a unary minus operator.
 5. Python does not support prefix and postfix increment as well as decrement operators.
 6. Parentheses can change the order in which an operator is applied. The operator in the parenthesis is applied first even if there is a higher priority operator in the expression.
@@ -1599,6 +1604,8 @@ Sum of these numbers =  21
 
 A package is a hierarchical file directory structure that has modules and other packages within it. Like modules, one can easily create a package. Every package is a directory which must have a special file called \_\_init\_\_.py . This file need not contain a single line of code. It is added to indicate that the directory is not a normal one, but a Python Package. 3. You can import the package the same way that you import a module.
 
+---
+
 ### Creating Packages in Python
 
 - To create a package called `MyPackage`, create a directory called ==MyPackage== having the module `MyModule` and the ==\_\_init\_\_.py== file.
@@ -1648,3 +1655,78 @@ a = -100
 Square root of 100 is 10.0
 Cube of 100 is 1000000
 ```
+
+---
+
+### Package Managers & Environments
+
+#### Virtualenv
+
+- [Documentation](https://virtualenv.pypa.io/en/latest/index.html)
+
+| Command                                   | Description                                             |
+| ----------------------------------------- | ------------------------------------------------------- |
+| `python -m pip install --user virtualenv` | Install virtualenv via pip                              |
+| `python -m virtualenv venv`               | Create a new env called _venv_ in the current directory |
+| `.\venv\Scripts\activate`                 | Activate the virtual environment (\*_venv_ here)        |
+
+#### Pip Commands
+
+| Command                                                             | Description                                                                       |
+| ------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
+| `pip freeze`                                                        | Outputs all the packages used in requirements.txt                                 |
+| `pip freeze > requirements.txt`                                     | Generates a requirements file containing all the package info                     |
+| `pip install -r requirements.txt`                                   | Installs all the packages in requirements.txt file                                |
+| `pip list --outdated`                                               | Lists all the outdated packages in the environment                                |
+| `pip freeze \| %{$_.split('==')[0]} \| %{pip install --upgrade $_}` | Updates **ALL** the outdated packages in the system to the latest version in PyPI |
+
+#### Conda Commands
+
+[Conda CC](https://docs.conda.io/projects/conda/en/stable/commands/index.html#conda-vs-pip-vs-virtualenv-commands)
+
+| Action                                                       | Command                                  |
+| ------------------------------------------------------------ | ---------------------------------------- |
+| list all environments and locations                          | `conda env list`                         |
+| update all packages in environment                           | `conda update --all --name ENVNAME`      |
+| install packages in environment                              | `conda install --name ENVNAME PKG1 PKG2` |
+| remove package from environment                              | `conda uninstall PKGNAME --name ENVNAME` |
+| reactivate base environment (recommended for end of session) | `conda activate base`                    |
+
+**Environment Management**
+
+| Action                                  | Command                                          |
+| --------------------------------------- | ------------------------------------------------ |
+| list packages + source channels         | `conda list -n ENVNAME --show-channel-urls`      |
+| uninstall package from specific channel | `conda remove -n ENVNAME -c CHANNELNAME PKGNAME` |
+| create environment with Python version  | `conda create -n ENVNAME python=3.10`            |
+| clone environment                       | `conda create --clone ENVNAME -n NEWENV`         |
+| list revisions made to environment      | `conda list -n ENVNAME --revisions`              |
+| restore environment to a revision       | `conda install -n ENVNAME --revision NUMBER`     |
+| delete environment by name              | `conda remove -n ENVNAME --all`                  |
+
+**Exporting Environments**
+
+| Action                                | Command                                   |
+| ------------------------------------- | ----------------------------------------- |
+| cross-platform compatible             | `conda env export --from-history>ENV.yml` |
+| platform + package specific           | `conda env export ENVNAME>ENV.yml`        |
+| platform + package + channel specific | `conda list --explicit>ENV.txt`           |
+
+**Importing Environments**
+
+| Action                  | Command                                      |
+| :---------------------- | :------------------------------------------- |
+| Import from a .yml file | `conda env create -n ENVNAME --file ENV.yml` |
+| Import from a .txt file | `conda create -n ENVNAME --file ENV.txt`     |
+
+**Additional Commands**
+
+| Action                                                        | Command                                                       |
+| ------------------------------------------------------------- | :------------------------------------------------------------ |
+| get help for any command                                      | `conda COMMAND --help`                                        |
+| get info for any package                                      | `conda search PKGNAME --info`                                 |
+| run commands w/o user prompt eg, installing multiple packages | `conda COMMAND ARG --yes </br> conda install PKG1 PKG2 --yes` |
+| remove all unused files                                       | `conda clean --all`                                           |
+| examine conda configuration                                   | `conda config --show`                                         |
+
+---
