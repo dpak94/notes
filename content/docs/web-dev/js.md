@@ -1,7 +1,7 @@
 ---
-layout: post
+type: "docs"
 title: JavaScript
-permalink: /javascript/
+docs: "/docs/web-dec/javascript"
 ---
 
 # JavaScript
@@ -71,21 +71,6 @@ Any attempt to reassign value would result in error.
 
 1. We generally use upper case for constants that we "hard-coded" i.e., when the value is known prior to execution and directly written into the code.
    **Eg :** birthday, planet count etc.
-
----
-
-**Multi-line Strings**
-
-Starting from 2015, thanks to ES6, multi-line strings can be written like below :
-
-```js
-console.log(`
-I'm a party worker
-from Sevastopol.
-I came here yesterday.`);
-```
-
-**Note :** Don't forget to use backticks (`) instead of ' or " for the string.
 
 ---
 
@@ -186,8 +171,7 @@ console.log(`NOT result for the statements : ${!isIsland || !isPeninsula}`); //t
 const age = 25;
 age >= 18
   ? console.log(`I like to drink wine 🍷 (❁´◡\`❁)`)
-  : console.log(`I had to drink water 💧 
-😒`); // `I had to drink water 💧 😒`
+  : console.log(`I had to drink water 💧 😒`); // `I had to drink water 💧😒`
 ```
 
 ```js

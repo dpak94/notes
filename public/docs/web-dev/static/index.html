@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+<head><script src="/notes/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=notes/livereload" data-no-instant defer></script>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Static Site Generators#Hugo#Command Function hugo new site &lt;siteName&gt; Create new site using Hugo hugo server Start the hugo server hugo server -D Start the server with drafts loaded hugo new content &lt;link/fileName&gt; Add new page Jekyll#Command Function jekyll new siteName Create a site and generate relevant sitefiles bundle exec jekyll serve Start the server jekyll serve --livereload Live server jekyll build Builds the static site instead of running the server jekyll serve --draft Builds the site with draft content included Important Notes#Contains layouts to create templates of websites.">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
+<meta name="color-scheme" content="light dark"><meta property="og:url" content="//localhost:1313/notes/docs/web-dev/static/">
+  <meta property="og:site_name" content="Web Notes">
+  <meta property="og:title" content="Static Sites">
+  <meta property="og:description" content="Static Site Generators#Hugo#Command Function hugo new site &lt;siteName&gt; Create new site using Hugo hugo server Start the hugo server hugo server -D Start the server with drafts loaded hugo new content &lt;link/fileName&gt; Add new page Jekyll#Command Function jekyll new siteName Create a site and generate relevant sitefiles bundle exec jekyll serve Start the server jekyll serve --livereload Live server jekyll build Builds the static site instead of running the server jekyll serve --draft Builds the site with draft content included Important Notes#Contains layouts to create templates of websites.">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="docs">
+<title>Static Sites | Web Notes</title>
+<link rel="manifest" href="/notes/manifest.json">
+<link rel="icon" href="/notes/favicon.png" >
+<link rel="canonical" href="//localhost:1313/notes/docs/web-dev/static/">
+<link rel="stylesheet" href="/notes/book.min.0683e139e16dbe15886b33e18accef3f4745606d01f63fbcc419247467fd8d23.css" integrity="sha256-BoPhOeFtvhWIazPhiszvP0dFYG0B9j&#43;8xBkkdGf9jSM=" crossorigin="anonymous">
+  <script defer src="/notes/fuse.min.js"></script>
+  <script defer src="/notes/en.search.min.0659e2cb56af5cb469ea2335d43ad29dd06aa21daff44d5d340c668293beca2a.js" integrity="sha256-Blniy1avXLRp6iM11DrSndBqoh2v9E1dNAxmgpO&#43;yio=" crossorigin="anonymous"></script>
+
+  
+
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+  
+</head>
+<body dir="ltr">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      <div class="book-menu-content">
+        
+  <nav>
+<h2 class="book-brand">
+  <a class="flex align-center" href="/notes/"><span>Web Notes</span>
+  </a>
+</h2>
+
+
+<div class="book-search hidden">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+<script>document.querySelector(".book-search").classList.remove("hidden")</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/notes/docs/web-dev/clean-code/" class="">Clean Code for JS</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/notes/docs/web-dev/css/" class="">CSS</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/notes/docs/general/git/" class="">Git</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/notes/docs/web-dev/html/" class="">HTML</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/notes/docs/web-dev/js/" class="">JavaScript</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/notes/docs/general/linux/" class="">Linux</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/notes/docs/general/misc/" class="">Misc</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/notes/docs/db/mongodb/" class="">Mongo DB</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/notes/docs/misc/mysql/" class="">MySQL</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/notes/docs/web-dev/node/" class="">NodeJS</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/notes/docs/ds/python/" class="">Python</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/notes/docs/web-dev/react/" class="">React</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/notes/docs/db/sql-python/" class="">SQL Python</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/notes/docs/web-dev/static/" class="active">Static Sites</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+ 
+      </div>
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/notes/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>Static Sites</strong>
+
+  <label for="toc-control">
+    
+    <img src="/notes/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#hugo">Hugo</a></li>
+    <li><a href="#jekyll">Jekyll</a></li>
+    <li><a href="#important-notes">Important Notes</a></li>
+  </ul>
+</nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown book-article"><h1 id="static-site-generators">
+  Static Site Generators
+  <a class="anchor" href="#static-site-generators">#</a>
+</h1>
+<h2 id="hugo">
+  Hugo
+  <a class="anchor" href="#hugo">#</a>
+</h2>
+<table>
+<thead>
+<tr>
+<th><strong><code>Command</code></strong></th>
+<th><strong><code>Function</code></strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>hugo new site &lt;siteName&gt;</code></td>
+<td>Create new site using Hugo</td>
+</tr>
+<tr>
+<td><code>hugo server</code></td>
+<td>Start the hugo server</td>
+</tr>
+<tr>
+<td><code>hugo server -D</code></td>
+<td>Start the server with drafts loaded</td>
+</tr>
+<tr>
+<td><code>hugo new content &lt;link/fileName&gt;</code></td>
+<td>Add new page</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="jekyll">
+  Jekyll
+  <a class="anchor" href="#jekyll">#</a>
+</h2>
+<table>
+<thead>
+<tr>
+<th><strong><code>Command</code></strong></th>
+<th><strong><code>Function</code></strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>jekyll new siteName</code></td>
+<td>Create a site and generate relevant sitefiles</td>
+</tr>
+<tr>
+<td><code>bundle exec jekyll serve</code></td>
+<td>Start the server</td>
+</tr>
+<tr>
+<td><code>jekyll serve --livereload</code></td>
+<td>Live server</td>
+</tr>
+<tr>
+<td><code>jekyll build</code></td>
+<td>Builds the static site instead of running the server</td>
+</tr>
+<tr>
+<td><code>jekyll serve --draft</code></td>
+<td>Builds the site with draft content included</td>
+</tr>
+</tbody>
+</table>
+<h2 id="important-notes">
+  Important Notes
+  <a class="anchor" href="#important-notes">#</a>
+</h2>
+<ul>
+<li>Contains layouts to create templates of websites. Use layout within pre-defines layouts to make formats even more interesting without entering data in every HTML/MD page.</li>
+<li><a href="https://jekyllrb.com/docs/permalinks/#placeholders">List of placeholders</a></li>
+</ul>
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+
+
+
+
+</div>
+
+
+
+  <script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){if(window.getSelection().toString())return;e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script>
+
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside class="book-toc">
+      <div class="book-toc-content">
+        
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#hugo">Hugo</a></li>
+    <li><a href="#jekyll">Jekyll</a></li>
+    <li><a href="#important-notes">Important Notes</a></li>
+  </ul>
+</nav>
+
+
+ 
+      </div>
+    </aside>
+    
+  </main>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

@@ -24,7 +24,7 @@ Of the above two examples, code B is:
 
 1. Easy to read.
 2. Assigns names to functions and variables that convey their task/nature instead of single letters, resultin in less confusion.
-3. Assigned names follow camelCase naming convention.
+3. Assigned names follow _camelCase_ naming convention.
 
 ---
 

@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on Web Notes</title>
-    <link>dpak94.github.io/notes/posts/</link>
+    <link>//localhost:1313/notes/posts/</link>
     <description>Recent content in Posts on Web Notes</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 28 Aug 2024 23:17:33 +0530</lastBuildDate>
-    <atom:link href="dpak94.github.io/notes/posts/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="//localhost:1313/notes/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Sample Post</title>
-      <link>dpak94.github.io/notes/posts/sample-post/</link>
+      <link>//localhost:1313/notes/posts/sample-post/</link>
       <pubDate>Wed, 28 Aug 2024 23:17:33 +0530</pubDate>
-      <guid>dpak94.github.io/notes/posts/sample-post/</guid>
+      <guid>//localhost:1313/notes/posts/sample-post/</guid>
       <description>My First Post on Book Theme Hugo</description>
     </item>
   </channel>

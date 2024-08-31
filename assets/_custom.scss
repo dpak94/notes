@@ -1,18 +1,26 @@
 h1 {
   text-align: center;
-  font-size: bolder;
+  font-size: 2em;
 }
 
 h2 {
   color: #211E55;
+  font-size: 1.75em;
+
 }
 
 h3 {
   color: #006284;
+  font-size: 1.60em;
+}
+
+h4 {
+  font-size: 1.75em;
 }
 
 strong {
   color: #D0104C;
+  font-weight: bold;
 }
 
 em {
@@ -22,4 +30,11 @@ em {
 
 aside nav ul li {
   margin: 0.5em 0;
+}
+
+
+li a:hover, a:hover, p > a:hover {
+  text-shadow: 0.5px 0.5px 0.5px #000000;
+  filter: dropshadow(color=#296d35, offx=2, offy=2);
+  // text-decoration: none;
 }

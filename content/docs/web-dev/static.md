@@ -1,10 +1,23 @@
 ---
 type: "docs"
-title: Jekyll
-url: "/docs/static/jekyll"
+title: Static Sites
+url: "/docs/web-dev/static/"
 ---
 
-# Jekyll
+# Static Site Generators
+
+## Hugo
+
+| **`Command`**                      | **`Function`**                      |
+| ---------------------------------- | ----------------------------------- |
+| `hugo new site <siteName>`         | Create new site using Hugo          |
+| `hugo server`                      | Start the hugo server               |
+| `hugo server -D`                   | Start the server with drafts loaded |
+| `hugo new content <link/fileName>` | Add new page                        |
+
+---
+
+## Jekyll
 
 | **`Command`**               | **`Function`**                                       |
 | --------------------------- | ---------------------------------------------------- |
