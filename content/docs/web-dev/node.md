@@ -19,7 +19,7 @@ url: "/docs/web-dev/node"
 
 ---
 
-## Pros for Node JS
+**Pros for Node JS**
 
 - Single threaded, based on event driven, non-blocking I/O model.
 - Perfect for building superfast and scalable data-intensive apps.
@@ -27,24 +27,18 @@ url: "/docs/web-dev/node"
 - **NPM** : Huge library of open-source packages available for free.
 - Very active developer community.
 
----
-
-## Use Cases for Node
+**Use Cases for Node**
 
 - API with database behind it (preferably NoSQL)
 - Data Streaming (eg., YouTube)
 - Real time chat apps
 - Server-side web apps
 
----
-
-## Non-use cases
+**Non-use cases**
 
 - Applications with heavy server-side processing (CPU intensive) like video compression, audio compression etc. **Ruby on Rails** or **PHP** or **Python** is good for these apps.
 
----
-
-## Node Terminal
+**Node Terminal**
 
 - To enter node, type `node` in the terminal
 - To exit, write `.exit` in the node terminal
@@ -56,8 +50,6 @@ url: "/docs/web-dev/node"
 22 //carries previous results into current command
 ```
 
----
-
-## Asynchronous vs Synchronous Code
+**Asynchronous vs Synchronous Code**
 
 - **Async** code does not block the execution of consecutive lines of code while **Synchronous** code does.
