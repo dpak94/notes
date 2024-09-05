@@ -3,9 +3,9 @@ languageCode = 'en-us'
 title = 'Web Notes'
 theme = 'hugo-book'
 
+BookLogo = 'otter-kid.jpeg'
 bookTheme = 'auto'
 BookToc = true
-BookLogo = 'otter-kid.jpeg'
 # BookMenuBundle = '/menu'
 BookSection = 'docs'
 BookRepo = 'https://github.com/alex-shpak/hugo-book'

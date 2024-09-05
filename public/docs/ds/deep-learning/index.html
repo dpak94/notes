@@ -1,0 +1,1037 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+<head><script src="/notes/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=notes/livereload" data-no-instant defer></script>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Deep Learning#Link to machine Learning Notes
+Neural Networks#Neural Networks take in data as input, train themselves to understand the patterns in the data and output the useful predictions. The fundamental component in a neural network is Neuron. Learning Process#Two Types: Forward Propagation Backward Propagation Forward Propagation#Forward propagation is a technique that moves input data through a network in a forward direction to generate an output.">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
+<meta name="color-scheme" content="light dark"><meta property="og:url" content="//localhost:1313/notes/docs/ds/deep-learning/">
+  <meta property="og:site_name" content="Web Notes">
+  <meta property="og:title" content="Deep Learning">
+  <meta property="og:description" content="Deep Learning#Link to machine Learning Notes
+Neural Networks#Neural Networks take in data as input, train themselves to understand the patterns in the data and output the useful predictions. The fundamental component in a neural network is Neuron. Learning Process#Two Types: Forward Propagation Backward Propagation Forward Propagation#Forward propagation is a technique that moves input data through a network in a forward direction to generate an output.">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="docs">
+<title>Deep Learning | Web Notes</title>
+<link rel="manifest" href="/notes/manifest.json">
+<link rel="icon" href="/notes/favicon.png" >
+<link rel="canonical" href="//localhost:1313/notes/docs/ds/deep-learning/">
+<link rel="stylesheet" href="/notes/book.min.0683e139e16dbe15886b33e18accef3f4745606d01f63fbcc419247467fd8d23.css" integrity="sha256-BoPhOeFtvhWIazPhiszvP0dFYG0B9j&#43;8xBkkdGf9jSM=" crossorigin="anonymous">
+  <script defer src="/notes/fuse.min.js"></script>
+  <script defer src="/notes/en.search.min.db4fee774957137b82280ec3b8fd89ae0eb5eac9ec5b1992910c3e3ceacd902f.js" integrity="sha256-20/ud0lXE3uCKA7DuP2Jrg616snsWxmSkQw&#43;POrNkC8=" crossorigin="anonymous"></script>
+
+  
+
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+  
+</head>
+<body dir="ltr">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      <div class="book-menu-content">
+        
+  <nav>
+<h2 class="book-brand">
+  <a class="flex align-center" href="/notes/"><span>Web Notes</span>
+  </a>
+</h2>
+
+
+<div class="book-search hidden">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+<script>document.querySelector(".book-search").classList.remove("hidden")</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/notes/docs/web-dev/clean-code/" class="">Clean Code for JS</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/notes/docs/web-dev/css/" class="">CSS</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/notes/docs/ds/deep-learning/" class="active">Deep Learning</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/notes/docs/general/git/" class="">Git</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/notes/docs/web-dev/html/" class="">HTML</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/notes/docs/web-dev/js/" class="">JavaScript</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/notes/docs/general/jupyter/" class="">Jupyter</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/notes/docs/general/linux/" class="">Linux</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/notes/docs/ds/machine-learning/" class="">Machine Learning</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/notes/docs/general/misc/" class="">Misc</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/notes/docs/db/mongodb/" class="">Mongo DB</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/notes/docs/misc/mysql/" class="">MySQL</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/notes/docs/web-dev/node/" class="">NodeJS</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/notes/docs/ds/numpy/" class="">Numpy</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/notes/docs/db/pyspark/" class="">PySpark</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/notes/docs/ds/python/" class="">Python</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/notes/docs/web-dev/react/" class="">React</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/notes/docs/db/sql-python/" class="">SQL Python</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/notes/docs/web-dev/static/" class="">Static Sites</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+ 
+      </div>
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/notes/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>Deep Learning</strong>
+
+  <label for="toc-control">
+    
+    <img src="/notes/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#neural-networks">Neural Networks</a>
+      <ul>
+        <li><a href="#learning-process">Learning Process</a></li>
+        <li><a href="#forward-propagation">Forward Propagation</a></li>
+        <li><a href="#backward-propagation">Backward Propagation</a></li>
+      </ul>
+    </li>
+    <li><a href="#learning-algorithms">Learning Algorithms</a></li>
+    <li><a href="#activation-functions">Activation Functions</a></li>
+    <li><a href="#epochs-batches-batch-sizes--iterations">Epochs, Batches, Batch Sizes &amp; Iterations</a></li>
+    <li><a href="#optimizers">Optimizers</a>
+      <ul>
+        <li><a href="#gradient-descent">Gradient Descent</a></li>
+        <li><a href="#stochastic-gradient-descent">Stochastic Gradient Descent</a></li>
+        <li><a href="#adagrad">ADAGRAD</a></li>
+        <li><a href="#rmsprop">RMSprop</a></li>
+        <li><a href="#adam">Adam</a></li>
+      </ul>
+    </li>
+    <li><a href="#regularization">Regularization</a>
+      <ul>
+        <li><a href="#dropout">Dropout</a></li>
+        <li><a href="#dataset-augmentation">Dataset Augmentation</a></li>
+        <li><a href="#early-stopping">Early Stopping</a></li>
+      </ul>
+    </li>
+    <li><a href="#neural-network-architectures">Neural Network Architectures</a>
+      <ul>
+        <li><a href="#fully-connected-feed-forward-neural-networks">Fully Connected Feed Forward Neural Networks</a></li>
+        <li><a href="#recurrent-neural-networks">Recurrent Neural Networks</a></li>
+        <li><a href="#convolutional-neural-networks">Convolutional Neural Networks</a></li>
+      </ul>
+    </li>
+    <li><a href="#creating-a-deep-learning-model">Creating a Deep Learning Model</a>
+      <ul>
+        <li><a href="#gathering-data">Gathering data</a></li>
+        <li><a href="#preprocessing-data">Preprocessing Data</a></li>
+        <li><a href="#training-the-model">Training the Model</a></li>
+        <li><a href="#evaluation">Evaluation</a></li>
+        <li><a href="#optimization-of-model">Optimization of Model</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown book-article"><h1 id="deep-learning">
+  Deep Learning
+  <a class="anchor" href="#deep-learning">#</a>
+</h1>
+<p><img src="https://www.ibm.com/blog/wp-content/uploads/2023/07/deep-neural-network.png" alt="Neural Network" /></p>
+<p><a href="./ml-notes.md">Link to machine Learning Notes</a></p>
+<hr>
+<h2 id="neural-networks">
+  Neural Networks
+  <a class="anchor" href="#neural-networks">#</a>
+</h2>
+<ul>
+<li>Neural Networks take in <strong>data as input</strong>, <strong>train themselves</strong> to understand the patterns in the data and <strong>output the useful predictions</strong>.</li>
+<li>The fundamental component in a neural network is Neuron.</li>
+</ul>
+<h3 id="learning-process">
+  Learning Process
+  <a class="anchor" href="#learning-process">#</a>
+</h3>
+<ul>
+<li>Two Types:
+<ul>
+<li>Forward Propagation</li>
+<li>Backward Propagation</li>
+</ul>
+</li>
+</ul>
+<h3 id="forward-propagation">
+  Forward Propagation
+  <a class="anchor" href="#forward-propagation">#</a>
+</h3>
+<p><strong>Forward propagation</strong> is a technique that moves input data through a network in a forward direction to generate an output. Each hidden layer accepts the input data, processes it as per the activation function and passes to the successive layer.</p>
+<p><strong>Weight</strong> - Indicates how important a Neuron is.
+<strong>Bias</strong> - Allows for the shifting of <strong>activation function</strong> to the right or left.</p>
+<h3 id="backward-propagation">
+  Backward Propagation
+  <a class="anchor" href="#backward-propagation">#</a>
+</h3>
+<p>Similar to <strong>Forward Propagation</strong>, except that information is passed from output layer to the previous hidden layer.
+Back Propagation is one reason why Neural Networks are good at learning.
+In <strong>Back Propagation</strong>, <strong>Loss Functions</strong> help qunatify the deviation from the expected output.</p>
+<h4 id="loss-functions">
+  Loss Functions
+  <a class="anchor" href="#loss-functions">#</a>
+</h4>
+<p>Quantify the deviation of the <strong>predicted</strong> output by the neural network to the <strong>expected</strong> output.</p>
+<p>Depending on the case, there are various loss functions</p>
+<ol>
+<li><strong>Regression</strong> Squared Error, Huber Loss</li>
+<li><strong>Binary Classification</strong> Hinge Loss, Binary Cross-Entropy</li>
+<li><strong>Multi-Class Classification</strong> Multi-Class Class-Entropy, Kullback Divergence</li>
+</ol>
+<hr>
+<h2 id="learning-algorithms">
+  Learning Algorithms
+  <a class="anchor" href="#learning-algorithms">#</a>
+</h2>
+<ol>
+<li>Initialize parameters with random values</li>
+<li>Feed input data to network</li>
+<li>Compare predicted value with expected value &amp; calculate loss</li>
+<li>Perform <strong>Backpropagation</strong> to propagate this loss back through the network</li>
+<li>Update parameters based on the loss</li>
+<li>Iterate previous steps till loss is minimized</li>
+</ol>
+<hr>
+<h2 id="activation-functions">
+  Activation Functions
+  <a class="anchor" href="#activation-functions">#</a>
+</h2>
+<ul>
+<li>Introduces Non-linearity in the network.</li>
+<li>Decide whether a neuron can contribute to the next layer.</li>
+</ul>
+<p>A. <strong>Step Function</strong></p>
+<pre tabindex="0"><code>    if value  &gt; 0  ==&gt; Activate
+    else  ==&gt; Do not activate
+        0 is the &#34;threshold&#34;
+</code></pre><ul>
+<li>Fails when more than one neuron is activated.</li>
+</ul>
+<p>B. <strong>Linear Function</strong></p>
+<p>$$
+y = mx + c
+$$</p>
+<p>C. <strong>Sigmoid Function</strong></p>
+<p><img src="https://machinelearningmastery.com/wp-content/uploads/2021/08/sigmoid.png" alt="reference link" /></p>
+<ul>
+<li>Non-linear</li>
+<li>Analog Outputs</li>
+<li>Vanishing Gradient Problem. Gradient becomes less at extremes.</li>
+</ul>
+<p>D. <strong>Tanh Function</strong></p>
+<p><img src="https://in.mathworks.com/help/examples/matlab/win64/GraphHyperbolicTangentFunctionExample_01.png" alt="Tanh Function" /></p>
+<p>$$
+tanh(x) = 2 * sigmoid(2x) - 1
+$$</p>
+<ul>
+<li>Non-linear</li>
+<li>Derivative steeper than Sigmoid</li>
+<li>Has the vanishing geadient problem like Sigmoid</li>
+</ul>
+<p>E. RELU Function</p>
+<ul>
+<li><strong>RELU Function</strong> : Rectified Linear Unit Function</li>
+</ul>
+<p><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/ReLU_and_GELU.svg/1280px-ReLU_and_GELU.svg.png" alt="RELU &amp;amp; GELU" /></p>
+<p>$$
+R(z) = max(0, z)
+$$</p>
+<p>A piecewise linear function that will output the input directly if it is positive, otherwise, it will output zero.</p>
+<p>It has become the default activation function for many types of neural networks because a model that uses it is easier to train and often achieves better performance.</p>
+<ul>
+<li>Range : 0 to ∞</li>
+<li>Non-linear</li>
+<li>Sparse Activation</li>
+<li>Gradient is 0 for -ve values of x. During back propagation, weights will not be adjuusted to GD and the Neurons wil stop responding to errors (<strong>Dying RELU Problem</strong>)</li>
+<li>This can be overcome by adding slope to the -ve part of the plot. Usually like <code>y = 0.001x</code> (<em>Leaky RELU</em>) or <code>y = ax</code> (<em>parametric RELU</em>). thus gradient will not be zero.</li>
+</ul>
+<p><strong>When to use what Activation Function?</strong></p>
+<ul>
+<li>Choose the Activation Function that approximate the function faster, leading to faster training.</li>
+<li><strong>Binary Classification</strong> - Sigmoid</li>
+<li>If unsure, RELU or Modified RELU</li>
+</ul>
+<p><strong>Why Non-linear Functions?</strong></p>
+<ul>
+<li>Polynomial Functions of multiple degrees (&gt; 1) can fit data better then monomial functions.</li>
+</ul>
+<hr>
+<h2 id="epochs-batches-batch-sizes--iterations">
+  Epochs, Batches, Batch Sizes &amp; Iterations
+  <a class="anchor" href="#epochs-batches-batch-sizes--iterations">#</a>
+</h2>
+<p>Above terms are required only when the dataset is large.</p>
+<p>These break-down the dataset into smaller chunks and feed those to the neural network one-by-one</p>
+<p><strong>Epochs</strong></p>
+<p>When the entire dataset is passed through the neural network once, it is said to have completed one <em>Epoch</em></p>
+<p>Multiple epochs helps generalizing the model better. There is no right number of epochs :skull:</p>
+<p><strong>Batches &amp; Batch Size</strong></p>
+<p>Dataset is divided into smaller batches and fed to <strong>neural network</strong></p>
+<p>Batch Size is the total No. of training examples in a <strong>Batch</strong></p>
+<p><strong>Iterations</strong></p>
+<p>Number of batches needed to complete one epoch</p>
+<blockquote>
+<p>No. of batches = No. of iterations per epoch</p>
+</blockquote>
+<hr>
+<h2 id="optimizers">
+  Optimizers
+  <a class="anchor" href="#optimizers">#</a>
+</h2>
+<p>During training, parameters are adjusted to minimize the loss functions and make the model as optimized as possible.</p>
+<p>Optimizers update the network based on the output of the loss function. This adjusts the weights of the layer</p>
+<h3 id="gradient-descent">
+  Gradient Descent
+  <a class="anchor" href="#gradient-descent">#</a>
+</h3>
+<blockquote>
+<p>Iterative algorithm that starts off at a random point on the loss function and travels down its slope in steps until it reaches the lowest point (minimum) of the function</p>
+</blockquote>
+<ul>
+<li><strong>Backpropagation</strong> is essentially Gradient Descent implemented on a network.</li>
+<li>Gradient Descent is a popular Optimizer</li>
+<li>Robust, fast &amp; flexible</li>
+</ul>
+<p><strong>Algorithm</strong></p>
+<ol>
+<li>Calculate what a small change in each individual weight would do to the loss function</li>
+<li>Adjust each parameter based on its gradient (i.e. take a small step in the determined direction)</li>
+<li>Repeat the steps 1 &amp; 2 until the loss function is as low as possible</li>
+</ol>
+<p>To avoid getting stuck in a local minima, <em>learning rate</em> is used.<br>
+<strong>Learning Rate</strong></p>
+<ul>
+<li>Usually, <em>learning rate</em> is a small value like 0.001 that is multiplied to scale the gradient.</li>
+<li>Ensures that any changes made to weights are small.</li>
+<li>Large <em>learning rate</em> overshoots the global minimum while a too small learning rate will take forever to converge to the global minimum.</li>
+</ul>
+<h3 id="stochastic-gradient-descent">
+  Stochastic Gradient Descent
+  <a class="anchor" href="#stochastic-gradient-descent">#</a>
+</h3>
+<ul>
+<li>Similar to GD, except that it uses a subset of training examples rather than the entire lot.</li>
+<li><strong>Stochastic Gradient Descent</strong> uses batches on each pass.</li>
+<li>Uses momentum to accumulate gradients.</li>
+<li>Less intensive computation.</li>
+</ul>
+<h3 id="adagrad">
+  ADAGRAD
+  <a class="anchor" href="#adagrad">#</a>
+</h3>
+<ul>
+<li>Adapts Learning Rates to individual features</li>
+<li>Some weights will have different learning rates</li>
+<li>Ideal for sparse datasets with many input examples missing</li>
+<li>Learning Rate tends to get small with time.</li>
+</ul>
+<h3 id="rmsprop">
+  RMSprop
+  <a class="anchor" href="#rmsprop">#</a>
+</h3>
+<ul>
+<li>Specialized version of Adagrad</li>
+<li>Accumulates Gradients in a fixed window</li>
+<li>Similar to Adaprop</li>
+</ul>
+<h3 id="adam">
+  Adam
+  <a class="anchor" href="#adam">#</a>
+</h3>
+<ul>
+<li>Stands for <strong>Adaptive Moment Estimation</strong></li>
+<li>Uses the concept of Momentum</li>
+<li>Pretty widespread today</li>
+</ul>
+<hr>
+<h2 id="regularization">
+  Regularization
+  <a class="anchor" href="#regularization">#</a>
+</h2>
+<p>Overfitting can be tackled with:</p>
+<ol>
+<li><strong>Dropout</strong></li>
+<li><strong>Dataset Augmentation</strong></li>
+<li><strong>Early Stopping</strong></li>
+</ol>
+<h3 id="dropout">
+  Dropout
+  <a class="anchor" href="#dropout">#</a>
+</h3>
+<p><img src="https://www.researchgate.net/publication/333159107/figure/fig7/AS:759365778825217@1558058318369/Schematic-diagram-of-Dropout-a-a-standard-neural-network-b-the-neural-network-using.png" alt="Dropout Figure" /></p>
+<ul>
+<li>Random nodes are selected and dropped alongwith their incoming and outgoing in every iteration. Thus each iteration has different set of outputs.</li>
+<li>Captures randomness &amp; memorizes less training data</li>
+<li>Builds robust predictive model</li>
+</ul>
+<h3 id="dataset-augmentation">
+  Dataset Augmentation
+  <a class="anchor" href="#dataset-augmentation">#</a>
+</h3>
+<ul>
+<li>Create <em>fake data</em> to increase training set size.</li>
+<li>Apply transformations on the existing dataset to get synthesize more data</li>
+<li>Very good for classification models, especially <strong>Object Recognition</strong></li>
+<li>Not recommended in case of classifying between like <strong>6 vs 9</strong> or <strong>b vs d</strong></li>
+</ul>
+<h3 id="early-stopping">
+  Early Stopping
+  <a class="anchor" href="#early-stopping">#</a>
+</h3>
+<ul>
+<li>Training error decreases steadily</li>
+<li>However, validation error increases after a certain point</li>
+</ul>
+<hr>
+<h2 id="neural-network-architectures">
+  Neural Network Architectures
+  <a class="anchor" href="#neural-network-architectures">#</a>
+</h2>
+<ol>
+<li>Fully Connected Feed Forward Neural Networks</li>
+<li>Recurrent Neural Networks</li>
+<li>Convolutional Neural Networks</li>
+</ol>
+<h3 id="fully-connected-feed-forward-neural-networks">
+  Fully Connected Feed Forward Neural Networks
+  <a class="anchor" href="#fully-connected-feed-forward-neural-networks">#</a>
+</h3>
+<p>Every Neuron is connected to every neuron in subsequent layer with no backward connections.</p>
+<p><img src="https://upload.wikimedia.org/wikipedia/en/5/54/Feed_forward_neural_net.gif" alt="Fully Connected Feed Forward Neural Network" /></p>
+<ul>
+<li>Unidirectional</li>
+<li>More neurons translates to more computation, requiring large computational resources</li>
+</ul>
+<h3 id="recurrent-neural-networks">
+  Recurrent Neural Networks
+  <a class="anchor" href="#recurrent-neural-networks">#</a>
+</h3>
+<p><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Recurrent_neural_network_unfold.svg/1920px-Recurrent_neural_network_unfold.svg.png" alt="Recurrent NN" /></p>
+<p><img src="https://www.researchgate.net/publication/317192370/figure/fig3/AS:513608797097985@1499465287220/The-four-types-of-recurrent-neural-network-architectures-a-univariate-many-to-one.png" alt="Recurrent NN Types" /></p>
+<p>Vanilla NNs cannot handle sequential data</p>
+<ul>
+<li>Uses a feedback loop in the hidden layers</li>
+</ul>
+<p>LSTM - Long Short Term Memory
+GRNN - Gated Recurent Neural Network</p>
+<p>These two are capable of learning long-term dependencies using <em>gates</em></p>
+<h3 id="convolutional-neural-networks">
+  Convolutional Neural Networks
+  <a class="anchor" href="#convolutional-neural-networks">#</a>
+</h3>
+<ul>
+<li>Inspired by the organization of neurons in the visual cortex of human brain</li>
+<li>Good for processing data like <strong>images, audio and video</strong></li>
+</ul>
+<p>Hidden Layers in Convolutional Neural Networks consist of the following :</p>
+<ul>
+<li>Convolutional Layers</li>
+<li>Pooling Layers</li>
+<li>Fully-Connected Layers</li>
+<li>Normalization Layers</li>
+</ul>
+<p><strong>Convolution</strong> is a process which allows us to extract say, visual features in <strong>chunks</strong></p>
+<p><strong>Pooling</strong> reduces the neurons necessary in subsequent layers<br>
+Two types :</p>
+<p><strong>A. Max Pooling</strong> Picks the maximum value from the region<br>
+<img src="https://production-media.paperswithcode.com/methods/MaxpoolSample2.png" alt="Max Pooling" /></p>
+<p><strong>B. Min Pooling</strong> Picks the minimum value from the region
+<img src="https://www.researchgate.net/profile/Dr-Rajeev-Tiwari/publication/358362955/figure/fig25/AS:1128783046295570@1646134258649/Min-Pooling-Operations.png" alt="Min Pooling" /></p>
+<p><strong>CNN Architecture Algorithm</strong></p>
+<ol>
+<li>Convolve the image : Use a convolutional layer with multiple filters to create a 2D feature matrix as output for each filter</li>
+<li>Pool the result to produce a down-sample filter matrix for each layer</li>
+<li>Repeat above steps multiple times using previous features as input</li>
+<li>Add few fully connected hidden layers to help classify the image</li>
+<li>Produce a classification prediction in output layer</li>
+</ol>
+<p><strong>Applications of Convolutional Neural Networks</strong></p>
+<ol>
+<li>Computer Vision</li>
+<li>Image Recognition</li>
+<li>Image Processing</li>
+<li>Image Segmentation</li>
+<li>Video Analysis</li>
+</ol>
+<hr>
+<h2 id="creating-a-deep-learning-model">
+  Creating a Deep Learning Model
+  <a class="anchor" href="#creating-a-deep-learning-model">#</a>
+</h2>
+<p>5 steps common in every DL model</p>
+<h3 id="gathering-data">
+  Gathering data
+  <a class="anchor" href="#gathering-data">#</a>
+</h3>
+<ul>
+<li>Picking the right data is key. Bad dat gives bad model</li>
+<li>Make assumption about the data you need</li>
+<li>As a rule of thumb, <strong>Amount of Data Needed = 10 x No. of Model Parameters</strong></li>
+<li>For regression, 10 examples per predictor variable</li>
+<li>For Image Classification, 1000 images per class</li>
+<li>Quality matters.
+<ul>
+<li>How common are labelling errors?</li>
+<li>Are the features noisy?</li>
+</ul>
+</li>
+</ul>
+<h3 id="preprocessing-data">
+  Preprocessing Data
+  <a class="anchor" href="#preprocessing-data">#</a>
+</h3>
+<h4 id="data-splitting">
+  Data Splitting
+  <a class="anchor" href="#data-splitting">#</a>
+</h4>
+<ul>
+<li>Splitting data into subsets
+<ul>
+<li>Train on training sets</li>
+<li>Evaluate on validation data</li>
+<li>Test it on Test Data</li>
+</ul>
+</li>
+<li>How data is split dependss on :
+<ul>
+<li>Number of samples in the dataset</li>
+<li>Model being trained</li>
+</ul>
+</li>
+</ul>
+<pre tabindex="0"><code>Models with few hyperparameters --&gt; Small Validation Set
+Model with many hyperparameters  --&gt; Large Validation Set
+No Hyperparameters --&gt; No validation set required
+</code></pre><ul>
+<li>Train-Validation-Split ratio is specific to each case.</li>
+<li><strong>Cross-Validation</strong> Training set is split into different ratios of Training &amp; Validation sets</li>
+<li>In <strong>Time-Series</strong> datasets, split must be done by time. Time-based splits work well for large datasets.</li>
+</ul>
+<pre tabindex="0"><code>If in a time-series dataset, the total time is 40 days, then the training set will be on Day 1 to day 39 while testing/validation will be done on Day 40
+</code></pre><h4 id="dealing-with-missing-data">
+  Dealing with missing data
+  <a class="anchor" href="#dealing-with-missing-data">#</a>
+</h4>
+<ul>
+<li>Missing data is represented as <strong>NULL</strong> or <strong>NaN</strong>.</li>
+<li>Eliminate features with missing values.</li>
+<li>Input the missing values.</li>
+</ul>
+<h4 id="sampling">
+  Sampling
+  <a class="anchor" href="#sampling">#</a>
+</h4>
+<ul>
+<li>Uses a small sample of the dataset</li>
+<li><strong>Downsampling</strong> is done to counter majority bias</li>
+</ul>
+<p>$$
+Example Weight = Original Weight \ * \  DownSampling Factor
+$$</p>
+<p>DownSampling Advantages</p>
+<ul>
+<li>Faster Convergence</li>
+<li>Reduces Diskspace</li>
+<li>Dataset is in similar ratio</li>
+</ul>
+<h4 id="feature-scaling">
+  Feature Scaling
+  <a class="anchor" href="#feature-scaling">#</a>
+</h4>
+<ul>
+<li>
+<p>Crucial step in DL</p>
+</li>
+<li>
+<p>Techniques:</p>
+<ul>
+<li><strong>Normalization</strong> The goal of normalization is to change the values of numeric columns in the dataset to use a common scale, without distorting differences in the ranges of values or losing information. The data values are ranged between 0 and 1. <code>MinMaxScaler()</code> Function is typically used to achieve this.</li>
+<li><strong>Standardization</strong> Change the values to Standard Normal Distribution while being smilar to Normalization.</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Standardization</th>
+<th>Normalization</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>This method scales the model using minimum and maximum values.</td>
+<td>This method scales the model using the mean and standard deviation.</td>
+</tr>
+<tr>
+<td>When features are on various scales, it is functional.</td>
+<td>When a variable&rsquo;s mean and standard deviation are both set to 0, it is beneficial.</td>
+</tr>
+<tr>
+<td>Values on the scale fall between [0, 1] and [-1, 1]</td>
+<td>Values on a scale are not constrained to a particular range</td>
+</tr>
+<tr>
+<td>Additionally known as scaling normalization</td>
+<td>This process is called Z-score normalization</td>
+</tr>
+<tr>
+<td>When the feature distribution is unclear, it is helpful</td>
+<td>When the feature distribution is consistent, it is helpful</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+<h3 id="training-the-model">
+  Training the Model
+  <a class="anchor" href="#training-the-model">#</a>
+</h3>
+<ol>
+<li>Feed Data</li>
+<li>Forward Propagation</li>
+<li>Loss Function</li>
+<li>Backpropagation</li>
+</ol>
+<h3 id="evaluation">
+  Evaluation
+  <a class="anchor" href="#evaluation">#</a>
+</h3>
+<p>Test model on the <strong>validation</strong> set<br>
+Meant to be representative of the model in the real world</p>
+<h3 id="optimization-of-model">
+  Optimization of Model
+  <a class="anchor" href="#optimization-of-model">#</a>
+</h3>
+<h4 id="tuning-hyperparameters">
+  Tuning Hyperparameters
+  <a class="anchor" href="#tuning-hyperparameters">#</a>
+</h4>
+<ol>
+<li>Increase the number of epochs</li>
+<li>Adjust Learning Rate</li>
+</ol>
+<pre tabindex="0"><code>Initial conditions play important role in determing the model outcome
+</code></pre><h4 id="addresing-model-overfitting">
+  Addresing Model Overfitting
+  <a class="anchor" href="#addresing-model-overfitting">#</a>
+</h4>
+<ol>
+<li>Getting more data</li>
+<li>Reducing model size :point_right: Remove unncessary parameters to improve training. By reducing the capacity of the network, relevant parameters can be more weighed to learn</li>
+<li>Regularization</li>
+</ol>
+<h4 id="data-augmentation">
+  Data Augmentation
+  <a class="anchor" href="#data-augmentation">#</a>
+</h4>
+<p>Good way of increasing dataset artificially
+Flipping axes, blurring and zooming (in a image classification problem)</p>
+<h4 id="droput">
+  Droput
+  <a class="anchor" href="#droput">#</a>
+</h4>
+<p>Ignoring randomly chosen neurons during training. This reduces co-dependency of neurons</p>
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+
+
+
+
+</div>
+
+
+
+  <script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){if(window.getSelection().toString())return;e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script>
+
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside class="book-toc">
+      <div class="book-toc-content">
+        
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#neural-networks">Neural Networks</a>
+      <ul>
+        <li><a href="#learning-process">Learning Process</a></li>
+        <li><a href="#forward-propagation">Forward Propagation</a></li>
+        <li><a href="#backward-propagation">Backward Propagation</a></li>
+      </ul>
+    </li>
+    <li><a href="#learning-algorithms">Learning Algorithms</a></li>
+    <li><a href="#activation-functions">Activation Functions</a></li>
+    <li><a href="#epochs-batches-batch-sizes--iterations">Epochs, Batches, Batch Sizes &amp; Iterations</a></li>
+    <li><a href="#optimizers">Optimizers</a>
+      <ul>
+        <li><a href="#gradient-descent">Gradient Descent</a></li>
+        <li><a href="#stochastic-gradient-descent">Stochastic Gradient Descent</a></li>
+        <li><a href="#adagrad">ADAGRAD</a></li>
+        <li><a href="#rmsprop">RMSprop</a></li>
+        <li><a href="#adam">Adam</a></li>
+      </ul>
+    </li>
+    <li><a href="#regularization">Regularization</a>
+      <ul>
+        <li><a href="#dropout">Dropout</a></li>
+        <li><a href="#dataset-augmentation">Dataset Augmentation</a></li>
+        <li><a href="#early-stopping">Early Stopping</a></li>
+      </ul>
+    </li>
+    <li><a href="#neural-network-architectures">Neural Network Architectures</a>
+      <ul>
+        <li><a href="#fully-connected-feed-forward-neural-networks">Fully Connected Feed Forward Neural Networks</a></li>
+        <li><a href="#recurrent-neural-networks">Recurrent Neural Networks</a></li>
+        <li><a href="#convolutional-neural-networks">Convolutional Neural Networks</a></li>
+      </ul>
+    </li>
+    <li><a href="#creating-a-deep-learning-model">Creating a Deep Learning Model</a>
+      <ul>
+        <li><a href="#gathering-data">Gathering data</a></li>
+        <li><a href="#preprocessing-data">Preprocessing Data</a></li>
+        <li><a href="#training-the-model">Training the Model</a></li>
+        <li><a href="#evaluation">Evaluation</a></li>
+        <li><a href="#optimization-of-model">Optimization of Model</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+ 
+      </div>
+    </aside>
+    
+  </main>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

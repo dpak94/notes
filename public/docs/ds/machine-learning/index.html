@@ -1,0 +1,768 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+<head><script src="/notes/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=notes/livereload" data-no-instant defer></script>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Machine Learning Notes#AI vs ML vs DL#Artificial Intelligence Machine Learning Deep Learning AI stands for Artificial Intelligence, and is basically the study/process which enables machines to mimic human behaviour through particular algorithm. ML stands for Machine Learning, and is the study that uses statistical methods enabling machines to improve with experience. DL stands for Deep Learning, and is the study that makes use of Neural Networks(similar to neurons present in human brain) to imitate functionality just like a human brain.">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
+<meta name="color-scheme" content="light dark"><meta property="og:url" content="//localhost:1313/notes/docs/ds/machine-learning/">
+  <meta property="og:site_name" content="Web Notes">
+  <meta property="og:title" content="Machine Learning">
+  <meta property="og:description" content="Machine Learning Notes#AI vs ML vs DL#Artificial Intelligence Machine Learning Deep Learning AI stands for Artificial Intelligence, and is basically the study/process which enables machines to mimic human behaviour through particular algorithm. ML stands for Machine Learning, and is the study that uses statistical methods enabling machines to improve with experience. DL stands for Deep Learning, and is the study that makes use of Neural Networks(similar to neurons present in human brain) to imitate functionality just like a human brain.">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="docs">
+<title>Machine Learning | Web Notes</title>
+<link rel="manifest" href="/notes/manifest.json">
+<link rel="icon" href="/notes/favicon.png" >
+<link rel="canonical" href="//localhost:1313/notes/docs/ds/machine-learning/">
+<link rel="stylesheet" href="/notes/book.min.0683e139e16dbe15886b33e18accef3f4745606d01f63fbcc419247467fd8d23.css" integrity="sha256-BoPhOeFtvhWIazPhiszvP0dFYG0B9j&#43;8xBkkdGf9jSM=" crossorigin="anonymous">
+  <script defer src="/notes/fuse.min.js"></script>
+  <script defer src="/notes/en.search.min.db4fee774957137b82280ec3b8fd89ae0eb5eac9ec5b1992910c3e3ceacd902f.js" integrity="sha256-20/ud0lXE3uCKA7DuP2Jrg616snsWxmSkQw&#43;POrNkC8=" crossorigin="anonymous"></script>
+
+  
+
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+  
+</head>
+<body dir="ltr">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      <div class="book-menu-content">
+        
+  <nav>
+<h2 class="book-brand">
+  <a class="flex align-center" href="/notes/"><span>Web Notes</span>
+  </a>
+</h2>
+
+
+<div class="book-search hidden">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+<script>document.querySelector(".book-search").classList.remove("hidden")</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/notes/docs/web-dev/clean-code/" class="">Clean Code for JS</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/notes/docs/web-dev/css/" class="">CSS</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/notes/docs/ds/deep-learning/" class="">Deep Learning</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/notes/docs/general/git/" class="">Git</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/notes/docs/web-dev/html/" class="">HTML</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/notes/docs/web-dev/js/" class="">JavaScript</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/notes/docs/general/jupyter/" class="">Jupyter</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/notes/docs/general/linux/" class="">Linux</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/notes/docs/ds/machine-learning/" class="active">Machine Learning</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/notes/docs/general/misc/" class="">Misc</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/notes/docs/db/mongodb/" class="">Mongo DB</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/notes/docs/misc/mysql/" class="">MySQL</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/notes/docs/web-dev/node/" class="">NodeJS</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/notes/docs/ds/numpy/" class="">Numpy</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/notes/docs/db/pyspark/" class="">PySpark</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/notes/docs/ds/python/" class="">Python</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/notes/docs/web-dev/react/" class="">React</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/notes/docs/db/sql-python/" class="">SQL Python</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/notes/docs/web-dev/static/" class="">Static Sites</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+ 
+      </div>
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/notes/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>Machine Learning</strong>
+
+  <label for="toc-control">
+    
+    <img src="/notes/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#ai-vs-ml-vs-dl">AI vs ML vs DL</a></li>
+    <li><a href="#some-ml-terminology">Some ML Terminology</a>
+      <ul>
+        <li><a href="#precision--recall">Precision &amp; Recall</a></li>
+      </ul>
+    </li>
+    <li><a href="#scaling-in-ml">Scaling in ML</a>
+      <ul>
+        <li><a href="#minmaxscaler-function">MinMaxScaler() Function</a></li>
+        <li><a href="#standardscaler-function">StandardScaler() Function</a></li>
+        <li><a href="#robustscaler-function">RobustScaler Function</a></li>
+      </ul>
+    </li>
+    <li><a href="#ensemble-algorithms">Ensemble Algorithms</a>
+      <ul>
+        <li><a href="#bagging-method">Bagging Method</a></li>
+        <li><a href="#random-forest-method">Random Forest Method</a></li>
+      </ul>
+    </li>
+    <li><a href="#learning-algorithms---types-of-learning">Learning Algorithms - Types of Learning</a></li>
+    <li><a href="#supervised-learning">Supervised Learning</a>
+      <ul>
+        <li><a href="#classification">Classification</a></li>
+        <li><a href="#regression">Regression</a></li>
+      </ul>
+    </li>
+    <li><a href="#unsupervised-learning">Unsupervised Learning</a>
+      <ul>
+        <li><a href="#clustering">Clustering</a></li>
+        <li><a href="#association">Association</a></li>
+      </ul>
+    </li>
+    <li><a href="#reinforcement-learning">Reinforcement Learning</a></li>
+  </ul>
+</nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown book-article"><h1 id="machine-learning-notes">
+  Machine Learning Notes
+  <a class="anchor" href="#machine-learning-notes">#</a>
+</h1>
+<h2 id="ai-vs-ml-vs-dl">
+  AI vs ML vs DL
+  <a class="anchor" href="#ai-vs-ml-vs-dl">#</a>
+</h2>
+<table>
+<thead>
+<tr>
+<th>Artificial Intelligence</th>
+<th>Machine Learning</th>
+<th>Deep Learning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>AI stands for Artificial Intelligence, and is basically the study/process which enables machines to mimic human behaviour through particular algorithm.</td>
+<td>ML stands for Machine Learning, and is the study that uses statistical methods enabling machines to improve with experience.</td>
+<td>DL stands for Deep Learning, and is the study that makes use of Neural Networks(similar to neurons present in human brain) to imitate functionality just like a human brain.</td>
+</tr>
+<tr>
+<td>AI is the broader family consisting of ML and DL as it’s components.</td>
+<td>ML is the subset of AI.</td>
+<td>DL is the subset of ML.</td>
+</tr>
+<tr>
+<td>AI is a computer algorithm which exhibits intelligence through decision making.</td>
+<td>ML is an AI algorithm which allows system to learn from data.</td>
+<td>DL is a ML algorithm that uses deep(more than one layer) neural networks to analyze data and provide output accordingly.</td>
+</tr>
+<tr>
+<td>The aim is to basically increase chances of success and not accuracy.</td>
+<td>The aim is to increase accuracy not caring much about the success ratio.</td>
+<td>It attains the highest rank in terms of accuracy when it is trained with large amount of data.</td>
+</tr>
+<tr>
+<td>Three broad categories/types Of AI are: Artificial Narrow Intelligence (ANI), Artificial General Intelligence (AGI) and Artificial Super Intelligence (ASI)</td>
+<td>Three broad categories/types Of ML are: Supervised Learning, Unsupervised Learning and Reinforcement Learning</td>
+<td>DL can be considered as neural networks with a large number of parameters layers lying in one of the four fundamental network architectures: Unsupervised Pre-trained Networks, Convolutional Neural Networks, Recurrent Neural Networks and Recursive Neural Networks</td>
+</tr>
+<tr>
+<td>The efficiency Of AI is basically the efficiency provided by ML and DL respectively.</td>
+<td>Less efficient than DL as it can’t work for longer dimensions or higher amount of data.</td>
+<td>More powerful than ML as it can easily work for larger sets of data.</td>
+</tr>
+<tr>
+<td><strong>Examples:</strong> Google’s AI-Powered Predictions, Ridesharing Apps Like Uber and Lyft, Commercial Flights Use an AI Autopilot, etc.</td>
+<td><strong>Examples :</strong> Virtual Personal Assistants: Siri, Alexa, Google, etc., Email Spam and Malware Filtering.</td>
+<td><strong>Examples :</strong> Sentiment based news aggregation, Image analysis and caption generation, etc.</td>
+</tr>
+<tr>
+<td>AI refers to the broad field of computer science that focuses on creating intelligent machines that can perform tasks that would normally require human intelligence, such as reasoning, perception, and decision-making.</td>
+<td>ML is a subset of AI that focuses on developing algorithms that can learn from data and improve their performance over time without being explicitly programmed.</td>
+<td>DL is a subset of ML that focuses on developing deep neural networks that can automatically learn and extract features from data.</td>
+</tr>
+<tr>
+<td>AI can be further broken down into various subfields such as robotics, natural language processing, computer vision, expert systems, and more.</td>
+<td>ML algorithms can be categorized as supervised, unsupervised, or reinforcement learning. In supervised learning, the algorithm is trained on labeled data, where the desired output is known. In unsupervised learning, the algorithm is trained on unlabeled data, where the desired output is unknown.</td>
+<td>DL algorithms are inspired by the structure and function of the human brain, and they are particularly well-suited to tasks such as image and speech recognition.</td>
+</tr>
+<tr>
+<td>AI systems can be rule-based, knowledge-based, or data-driven.</td>
+<td>In reinforcement learning, the algorithm learns by trial and error, receiving feedback in the form of rewards or punishments.</td>
+<td>DL networks consist of multiple layers of interconnected neurons that process data in a hierarchical manner, allowing them to learn increasingly complex representations of the data.</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="some-ml-terminology">
+  Some ML Terminology
+  <a class="anchor" href="#some-ml-terminology">#</a>
+</h2>
+<h3 id="precision--recall">
+  Precision &amp; Recall
+  <a class="anchor" href="#precision--recall">#</a>
+</h3>
+<ul>
+<li>Precision describes how many retrieved items are relevant.</li>
+<li>Recall gives how many relevant items are retrieved.</li>
+</ul>
+<hr>
+<h2 id="scaling-in-ml">
+  Scaling in ML
+  <a class="anchor" href="#scaling-in-ml">#</a>
+</h2>
+<p><strong>Feature scaling</strong> is the process of normalizing the range of features in a dataset. Real-world datasets often contain features that are varying in degrees of magnitude, range, and units. Therefore, in order for machine learning models to interpret these features on the same scale, we need to perform feature scaling.</p>
+<p><strong>Types of Scalar Functions :</strong>
+A. MinMaxScalar() Function
+B. StandardScaler Function
+C. RobustScaler Function</p>
+<h3 id="minmaxscaler-function">
+  MinMaxScaler() Function
+  <a class="anchor" href="#minmaxscaler-function">#</a>
+</h3>
+<p>Transform features by scaling each feature to a given range. This estimator scales and translates each feature individually such that it is in the given range on the training set, <strong>e.g.</strong> between zero and one.</p>
+<p><strong>Scikit Learn Syntax :</strong> ==from sklearn.preprocessing import MinMaxScaler==</p>
+<h3 id="standardscaler-function">
+  StandardScaler() Function
+  <a class="anchor" href="#standardscaler-function">#</a>
+</h3>
+<p>Standardize features by removing the <strong>mean</strong> and scaling to <strong>unit variance</strong>. The standard score of a sample x is calculated as:</p>
+<p>$$
+z = (x - u) / s
+$$</p>
+<p><strong>Scikit Learn Syntax :</strong> ==from sklearn.preprocessing import StandardScaler==</p>
+<h3 id="robustscaler-function">
+  RobustScaler Function
+  <a class="anchor" href="#robustscaler-function">#</a>
+</h3>
+<p>Scale features using statistics that are robust to outliers.</p>
+<p>This Scaler removes the median and scales the data according to the quantile range (defaults to <strong>IQR: Interquartile Range</strong>). The IQR is the range between the 1st quartile (25th quantile) and the 3rd quartile (75th quantile).</p>
+<p>Centering and scaling happen independently on each feature by computing the relevant statistics on the samples in the training set. Median and interquartile range are then stored to be used on later data using the transform method.</p>
+<p>Standardization of a dataset is a common requirement for many machine learning estimators. Typically this is done by removing the mean and scaling to unit variance. However, outliers can often influence the sample mean / variance in a negative way. In such cases, the median and the interquartile range often give better results.</p>
+<p><strong>Scikit Learn Syntax :</strong> ==from sklearn.preprocessing import RobustScaler==</p>
+<hr>
+<h2 id="ensemble-algorithms">
+  Ensemble Algorithms
+  <a class="anchor" href="#ensemble-algorithms">#</a>
+</h2>
+<h3 id="bagging-method">
+  Bagging Method
+  <a class="anchor" href="#bagging-method">#</a>
+</h3>
+<p>In this method, a random sample of data in a training set is selected with replacement—meaning that the individual data points can be chosen more than once. After several data samples are generated, these models are then trained independently, and depending on the type of task—i.e. regression or classification—the average or majority of those predictions yield a more accurate estimate.</p>
+<p>This approach is commonly used to reduce variance within a noisy dataset.</p>
+<h3 id="random-forest-method">
+  Random Forest Method
+  <a class="anchor" href="#random-forest-method">#</a>
+</h3>
+<p><img src="https://www.ibm.com/content/dam/connectedassets-adobe-cms/worldwide-content/cdp/cf/ul/g/50/f9/ICLH_Diagram_Batch_03_27-RandomForest.component.xl.ts=1679336476850.png/content/adobe-cms/us/en/topics/random-forest/jcr:content/root/table_of_contents/body/content_section_styled/content-section-body/simple_narrative0/image" alt="Random Forest" /></p>
+<p>The random forest algorithm is an extension of the bagging method as it utilizes both bagging and feature randomness to create an uncorrelated forest of decision trees.</p>
+<p><strong>Applications :</strong></p>
+<ul>
+<li><strong>Finance :</strong> Preferred algo over others as it reduces time spent on data management and pre-processing tasks. It can be used to evaluate customers with high credit risk, fraud detection and option pricing problems.</li>
+<li>Gene expression classification, biomarker discovery, sequence annotation, estimating drug responses to specific medications.</li>
+<li><strong>E-commerce :</strong> It can be used for recommendation engines for cross-sell purposes.</li>
+</ul>
+<hr>
+<h2 id="learning-algorithms---types-of-learning">
+  Learning Algorithms - Types of Learning
+  <a class="anchor" href="#learning-algorithms---types-of-learning">#</a>
+</h2>
+<ol>
+<li>Supervised Learning</li>
+<li>Clustering</li>
+<li>Reinforcement Learning</li>
+</ol>
+<h2 id="supervised-learning">
+  Supervised Learning
+  <a class="anchor" href="#supervised-learning">#</a>
+</h2>
+<ul>
+<li>Algorithms designed to learn by example</li>
+<li>Models are trained on <strong>well-labeled</strong> data</li>
+<li>Each training example is a pair consisting of :
+<ul>
+<li><strong>Input</strong> Object (typically a vector)</li>
+<li><strong>Desired</strong> Output (Supervisory Signal)</li>
+</ul>
+</li>
+<li>During training, <strong>Supervised Learning</strong> Algorithm searches for patterns that correlate with the desired output</li>
+<li>After training, it takes in unseen inputs and determine which label to classify it to</li>
+<li>Supervised Learning is of two types:
+<ul>
+<li><strong>Classification</strong></li>
+<li><strong>Regression</strong></li>
+</ul>
+</li>
+</ul>
+<h3 id="classification">
+  Classification
+  <a class="anchor" href="#classification">#</a>
+</h3>
+<p>In classification, input data is taken and assigned to a class/category</p>
+<p><strong>Example :</strong> Classification of e-mails as spam or not spam</p>
+<p>Models find features in the data that correlate to a class and creates a <strong>Mapping Function</strong>. This mapping function will be used to classify unseen data.</p>
+<p><strong>Popular Classification Algorithms</strong></p>
+<ul>
+<li>Linear Classifiers</li>
+<li>Support Vector Machines</li>
+<li>K-Nearest Neighbour</li>
+<li>Random Forest</li>
+</ul>
+<h3 id="regression">
+  Regression
+  <a class="anchor" href="#regression">#</a>
+</h3>
+<p>Model attempts to find a relationship between dependent &amp; independent variables. The goal is to predict continuous values such as test scores, stock prices etc.</p>
+<p><strong>Popular Regression Algorithms</strong></p>
+<ul>
+<li>Linear Regression</li>
+<li>Lasso Regression</li>
+<li>Multi-Variate Regression</li>
+</ul>
+<h2 id="unsupervised-learning">
+  Unsupervised Learning
+  <a class="anchor" href="#unsupervised-learning">#</a>
+</h2>
+<ul>
+<li>Uses to manifest <strong>underlying patterns</strong> in data</li>
+<li>Used in exploratory data analysis</li>
+<li>Does not use labelled data, rather relies on the <strong>data features</strong></li>
+<li><strong>Goal</strong> is to analyze data and find important underlying patterns</li>
+</ul>
+<p>Types of Unsupervised Learning:</p>
+<ul>
+<li>Clustering</li>
+<li>Association</li>
+</ul>
+<h3 id="clustering">
+  Clustering
+  <a class="anchor" href="#clustering">#</a>
+</h3>
+<p>Process of grouping data into different groups or clusters.The goal s to predict continuous values such as test scores</p>
+<p><strong>A. Partitional Clustering</strong>
+Each data point can belong to a single cluster
+<strong>B. Hierarchical Clustering</strong>
+Clusters within clusters
+Data point may belong to many clusters</p>
+<p>Popular Clustering Algorithms</p>
+<ul>
+<li><strong>K-Means</strong></li>
+<li><strong>Expectation Maximization</strong></li>
+<li><strong>Hierarchical Cluster Analysis (HCA)</strong></li>
+</ul>
+<h3 id="association">
+  Association
+  <a class="anchor" href="#association">#</a>
+</h3>
+<p>Attempts to find relationships between different entities
+<strong>Example</strong> Market Basket Analysis</p>
+<hr>
+<h2 id="reinforcement-learning">
+  Reinforcement Learning
+  <a class="anchor" href="#reinforcement-learning">#</a>
+</h2>
+<p><strong>Reinforcement Learning</strong> is a machine learning training method based on rewarding desired behaviors and punishing undesired ones. In general, a reinforcement learning agent &ndash; the entity being trained &ndash; is able to perceive and interpret its environment, take actions and learn through trial and error.</p>
+<p><strong>Example</strong>
+Maximize the points won in a game over many moves, Chess Game etc.</p>
+<ul>
+<li><strong>Penalize</strong> when wrong decisions are made</li>
+<li><strong>Reward</strong> when right decisions are made</li>
+</ul>
+<p>This is known as <strong>Markov Decision Process</strong></p>
+<p><strong>Applications</strong></p>
+<ul>
+<li>Robotics</li>
+<li>Business Strategy Planning</li>
+<li>Traffic Light Control</li>
+<li>Web System Configuration</li>
+</ul>
+<hr>
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+
+
+
+
+</div>
+
+
+
+  <script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){if(window.getSelection().toString())return;e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script>
+
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside class="book-toc">
+      <div class="book-toc-content">
+        
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#ai-vs-ml-vs-dl">AI vs ML vs DL</a></li>
+    <li><a href="#some-ml-terminology">Some ML Terminology</a>
+      <ul>
+        <li><a href="#precision--recall">Precision &amp; Recall</a></li>
+      </ul>
+    </li>
+    <li><a href="#scaling-in-ml">Scaling in ML</a>
+      <ul>
+        <li><a href="#minmaxscaler-function">MinMaxScaler() Function</a></li>
+        <li><a href="#standardscaler-function">StandardScaler() Function</a></li>
+        <li><a href="#robustscaler-function">RobustScaler Function</a></li>
+      </ul>
+    </li>
+    <li><a href="#ensemble-algorithms">Ensemble Algorithms</a>
+      <ul>
+        <li><a href="#bagging-method">Bagging Method</a></li>
+        <li><a href="#random-forest-method">Random Forest Method</a></li>
+      </ul>
+    </li>
+    <li><a href="#learning-algorithms---types-of-learning">Learning Algorithms - Types of Learning</a></li>
+    <li><a href="#supervised-learning">Supervised Learning</a>
+      <ul>
+        <li><a href="#classification">Classification</a></li>
+        <li><a href="#regression">Regression</a></li>
+      </ul>
+    </li>
+    <li><a href="#unsupervised-learning">Unsupervised Learning</a>
+      <ul>
+        <li><a href="#clustering">Clustering</a></li>
+        <li><a href="#association">Association</a></li>
+      </ul>
+    </li>
+    <li><a href="#reinforcement-learning">Reinforcement Learning</a></li>
+  </ul>
+</nav>
+
+
+ 
+      </div>
+    </aside>
+    
+  </main>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

@@ -2,7 +2,7 @@
 type: "docs"
 title: PySpark
 draft: true
-url: "/docs/db/pyspark/"
+url: "/docs/ds/pyspark/"
 ---
 
 # PySpark

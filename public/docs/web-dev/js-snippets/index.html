@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="JS Snippets#Click button#&lt;button onClick={() =&gt; { handleClickAgain(`Mario`); }} &gt; Click Me Again &lt;/button&gt; Note: Call a func with args only after a button click &amp; not automatically.">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
+<meta name="color-scheme" content="light dark"><meta property="og:url" content="dpak94.github.io/notes/docs/web-dev/js-snippets/">
+  <meta property="og:site_name" content="Web Notes">
+  <meta property="og:title" content="JS Snippets">
+  <meta property="og:description" content="JS Snippets#Click button#&lt;button onClick={() =&gt; { handleClickAgain(`Mario`); }} &gt; Click Me Again &lt;/button&gt; Note: Call a func with args only after a button click &amp; not automatically.">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="docs">
+<title>JS Snippets | Web Notes</title>
+<link rel="manifest" href="dpak94.github.io/notes/manifest.json">
+<link rel="icon" href="/dpak94.github.io/notes/favicon.png" >
+<link rel="canonical" href="dpak94.github.io/notes/docs/web-dev/js-snippets/">
+<link rel="stylesheet" href="dpak94.github.io/notes/book.min.0695a444ece92a757a691fcaa8f90d89cd58b19f2de03a87f8fc75bc9ae2ae1e.css" >
+  <script defer src="/dpak94.github.io/notes/fuse.min.js"></script>
+  <script defer src="dpak94.github.io/notes/en.search.min.6e3bdcdca2d7b4e3e51321f7ab7d596e8ec97b5c0d3ac9added0351cde338e42.js" ></script>
+
+  
+
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+  
+</head>
+<body dir="ltr">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      <div class="book-menu-content">
+        
+  <nav>
+<h2 class="book-brand">
+  <a class="flex align-center" href="dpak94.github.io/notes/"><span>Web Notes</span>
+  </a>
+</h2>
+
+
+<div class="book-search hidden">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+<script>document.querySelector(".book-search").classList.remove("hidden")</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="dpak94.github.io/notes/docs/web-dev/clean-code/" class="">Clean Code for JS</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="dpak94.github.io/notes/docs/web-dev/css/" class="">CSS</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="dpak94.github.io/notes/docs/general/git/" class="">Git</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="dpak94.github.io/notes/docs/web-dev/html/" class="">HTML</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="dpak94.github.io/notes/docs/web-dev/js/" class="">JavaScript</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="dpak94.github.io/notes/docs/web-dev/js-snippets/" class="active">JS Snippets</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="dpak94.github.io/notes/docs/general/linux/" class="">Linux</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="dpak94.github.io/notes/docs/general/misc/" class="">Misc</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="dpak94.github.io/notes/docs/db/mongodb/" class="">Mongo DB</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="dpak94.github.io/notes/docs/misc/mysql/" class="">MySQL</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="dpak94.github.io/notes/docs/web-dev/node/" class="">NodeJS</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="dpak94.github.io/notes/docs/ds/python/" class="">Python</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="dpak94.github.io/notes/docs/web-dev/react/" class="">React</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="dpak94.github.io/notes/docs/db/sql-python/" class="">SQL Python</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="dpak94.github.io/notes/docs/web-dev/static/" class="">Static Sites</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+ 
+      </div>
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/dpak94.github.io/notes/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>JS Snippets</strong>
+
+  <label for="toc-control">
+    
+    <img src="/dpak94.github.io/notes/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#click-button">Click button</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown book-article"><h1 id="js-snippets">
+  JS Snippets
+  <a class="anchor" href="#js-snippets">#</a>
+</h1>
+<h3 id="click-button">
+  Click button
+  <a class="anchor" href="#click-button">#</a>
+</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#f92672">button</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">onClick</span><span style="color:#f92672">=</span><span style="color:#e6db74">{()</span> <span style="color:#960050;background-color:#1e0010">=</span>&gt; {
+</span></span><span style="display:flex;"><span>    handleClickAgain(`Mario`);
+</span></span><span style="display:flex;"><span>  }}
+</span></span><span style="display:flex;"><span>&gt;
+</span></span><span style="display:flex;"><span>  Click Me Again
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">button</span>&gt;
+</span></span></code></pre></div><p><em>Note</em>: Call a func with args only after a button click &amp; not automatically.</p>
+<hr>
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+
+
+
+
+</div>
+
+
+
+  <script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){if(window.getSelection().toString())return;e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script>
+
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside class="book-toc">
+      <div class="book-toc-content">
+        
+  
+<nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#click-button">Click button</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+ 
+      </div>
+    </aside>
+    
+  </main>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,858 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+<head><script src="/notes/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=notes/livereload" data-no-instant defer></script>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Documentation Link : NumPy
+Installation
+Conda : conda install numpy PIP : pip install numpy Importing Module import numpy as np
+Command Syntax Description Ones array a = np.ones(5) Creates an array of 5 elements, each having 1 as its value Zeros Array b = np.zeros(3, dtype = int) Creates an array of 3 zeros. Specified int datatype Empty Array c = np.empty(2) Creates an array whose initial content is random and depends on the state of the memory.">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
+<meta name="color-scheme" content="light dark"><meta property="og:url" content="//localhost:1313/notes/docs/ds/numpy/">
+  <meta property="og:site_name" content="Web Notes">
+  <meta property="og:title" content="Numpy">
+  <meta property="og:description" content="Documentation Link : NumPy
+Installation
+Conda : conda install numpy PIP : pip install numpy Importing Module import numpy as np
+Command Syntax Description Ones array a = np.ones(5) Creates an array of 5 elements, each having 1 as its value Zeros Array b = np.zeros(3, dtype = int) Creates an array of 3 zeros. Specified int datatype Empty Array c = np.empty(2) Creates an array whose initial content is random and depends on the state of the memory.">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="docs">
+<title>Numpy | Web Notes</title>
+<link rel="manifest" href="/notes/manifest.json">
+<link rel="icon" href="/notes/favicon.png" >
+<link rel="canonical" href="//localhost:1313/notes/docs/ds/numpy/">
+<link rel="stylesheet" href="/notes/book.min.0683e139e16dbe15886b33e18accef3f4745606d01f63fbcc419247467fd8d23.css" integrity="sha256-BoPhOeFtvhWIazPhiszvP0dFYG0B9j&#43;8xBkkdGf9jSM=" crossorigin="anonymous">
+  <script defer src="/notes/fuse.min.js"></script>
+  <script defer src="/notes/en.search.min.db4fee774957137b82280ec3b8fd89ae0eb5eac9ec5b1992910c3e3ceacd902f.js" integrity="sha256-20/ud0lXE3uCKA7DuP2Jrg616snsWxmSkQw&#43;POrNkC8=" crossorigin="anonymous"></script>
+
+  
+
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+  
+</head>
+<body dir="ltr">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      <div class="book-menu-content">
+        
+  <nav>
+<h2 class="book-brand">
+  <a class="flex align-center" href="/notes/"><span>Web Notes</span>
+  </a>
+</h2>
+
+
+<div class="book-search hidden">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+<script>document.querySelector(".book-search").classList.remove("hidden")</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/notes/docs/web-dev/clean-code/" class="">Clean Code for JS</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/notes/docs/web-dev/css/" class="">CSS</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/notes/docs/ds/deep-learning/" class="">Deep Learning</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/notes/docs/general/git/" class="">Git</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/notes/docs/web-dev/html/" class="">HTML</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/notes/docs/web-dev/js/" class="">JavaScript</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/notes/docs/general/jupyter/" class="">Jupyter</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/notes/docs/general/linux/" class="">Linux</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/notes/docs/ds/machine-learning/" class="">Machine Learning</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/notes/docs/general/misc/" class="">Misc</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/notes/docs/db/mongodb/" class="">Mongo DB</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/notes/docs/misc/mysql/" class="">MySQL</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/notes/docs/web-dev/node/" class="">NodeJS</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/notes/docs/ds/numpy/" class="active">Numpy</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/notes/docs/db/pyspark/" class="">PySpark</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/notes/docs/ds/python/" class="">Python</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/notes/docs/web-dev/react/" class="">React</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/notes/docs/db/sql-python/" class="">SQL Python</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/notes/docs/web-dev/static/" class="">Static Sites</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+ 
+      </div>
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/notes/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>Numpy</strong>
+
+  <label for="toc-control">
+    
+    <img src="/notes/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#array-attributes">Array Attributes</a>
+      <ul>
+        <li><a href="#shape-of-the-array">Shape of the array</a></li>
+        <li><a href="#dimension-of-array">Dimension of Array</a></li>
+        <li><a href="#size-of-the-array">Size of the array</a></li>
+        <li><a href="#knowing-object-type--data-type">Knowing Object Type &amp; Data Type</a></li>
+        <li><a href="#forcing-datatype">Forcing DataType</a></li>
+        <li><a href="#printing-elements">Printing Elements</a></li>
+        <li><a href="#array-slicing">Array Slicing</a></li>
+        <li><a href="#modifying-elements-using-index-position">Modifying elements using index position</a></li>
+        <li><a href="#array-reshape-operations">Array Reshape Operations</a></li>
+        <li><a href="#sorting-an-array">Sorting an array</a></li>
+        <li><a href="#reversing-an-array">Reversing an array</a></li>
+        <li><a href="#concatenate-arrays">Concatenate Arrays</a></li>
+        <li><a href="#reshaping-an-array">Reshaping an array</a></li>
+        <li><a href="#using-conditional-and-logical-operators-to-filter-values-in-arrays">Using conditional and logical operators to filter values in arrays</a></li>
+        <li><a href="#converting-1d-array-into-multi-dimensional-arrays">Converting 1D array into Multi-Dimensional arrays</a></li>
+      </ul>
+    </li>
+    <li><a href="#arithmetic-operations">Arithmetic Operations</a></li>
+  </ul>
+</nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown book-article"><p>Documentation Link : <a href="https://numpy.org/doc/stable/">NumPy</a></p>
+<p><strong>Installation</strong></p>
+<ul>
+<li>Conda : <code>conda install numpy</code></li>
+<li>PIP : <code>pip install numpy</code></li>
+</ul>
+<p><strong>Importing Module</strong> <code>import numpy as np</code></p>
+<table>
+<thead>
+<tr>
+<th>Command</th>
+<th>Syntax</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Ones array</td>
+<td><code>a = np.ones(5)</code></td>
+<td>Creates an array of 5 elements, each having 1 as its value</td>
+</tr>
+<tr>
+<td>Zeros Array</td>
+<td><code>b = np.zeros(3, dtype = int)</code></td>
+<td>Creates an array of 3 zeros. Specified int datatype</td>
+</tr>
+<tr>
+<td>Empty Array</td>
+<td><code>c = np.empty(2)</code></td>
+<td>Creates an array whose initial content is random and depends on the state of the memory. <!-- raw HTML omitted --> The reason to use empty over zeros (or something similar) is speed</td>
+</tr>
+<tr>
+<td>Full Array</td>
+<td><code>z = np.full((2,2), 9)</code></td>
+<td>Creates an 2x2 array having 9 as each element</td>
+</tr>
+<tr>
+<td>Arange Array</td>
+<td><code>d = np.arange(2,6, 1)</code></td>
+<td>The start number, end number and the difference beween the numbers are input</td>
+</tr>
+<tr>
+<td>Linspace Array</td>
+<td><code>e = np.linspace(0, 10, 5)</code></td>
+<td>The start number, the end number and the no. of elements needed are entered</td>
+</tr>
+<tr>
+<td>Logspace Array</td>
+<td><code>f = np.logspace(0, 10, 5)</code></td>
+<td>Start, End and No. of divisions</td>
+</tr>
+<tr>
+<td>Random Elements Array</td>
+<td><code>r = np.random.random((2, 2))</code></td>
+<td>Creates a 2x2 array of random elements</td>
+</tr>
+<tr>
+<td>MxN Array</td>
+<td><code>b = np.array([[1, 2, 4], [4, 6, 5], [9, 56, 34]])</code></td>
+<td></td>
+</tr>
+<tr>
+<td>Shape of the array</td>
+<td><code>d.shape</code></td>
+<td>Prints shape of the array</td>
+</tr>
+<tr>
+<td>Dimension of Array</td>
+<td><code>d.ndim</code></td>
+<td>Prints Dimension of the array</td>
+</tr>
+<tr>
+<td>Size of the array</td>
+<td><code>d.size</code></td>
+<td>Prints Size of the array</td>
+</tr>
+<tr>
+<td>Object Type</td>
+<td><code>print(type(d))</code></td>
+<td>Prints object type</td>
+</tr>
+<tr>
+<td>Array Data Type</td>
+<td><code>print(d.dtype)</code></td>
+<td>Prints data type</td>
+</tr>
+<tr>
+<td>Forcing Data Type</td>
+<td><code>l = np.array([1,2], dtype = np.float64)</code></td>
+<td>Forces the datatype from int32 to float64</td>
+</tr>
+<tr>
+<td>Printing Array Elements</td>
+<td><code>print(d[2])</code></td>
+<td>Prints elements based on their index</td>
+</tr>
+</tbody>
+</table>
+<h2 id="array-attributes">
+  Array Attributes
+  <a class="anchor" href="#array-attributes">#</a>
+</h2>
+<h3 id="shape-of-the-array">
+  Shape of the array
+  <a class="anchor" href="#shape-of-the-array">#</a>
+</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>d <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>arange(<span style="color:#ae81ff">6</span>)
+</span></span><span style="display:flex;"><span>d<span style="color:#f92672">.</span>shape <span style="color:#75715e"># OP:= (6, )</span>
+</span></span></code></pre></div><h3 id="dimension-of-array">
+  Dimension of Array
+  <a class="anchor" href="#dimension-of-array">#</a>
+</h3>
+<p><code>d.ndim # OP:= 1</code></p>
+<h3 id="size-of-the-array">
+  Size of the array
+  <a class="anchor" href="#size-of-the-array">#</a>
+</h3>
+<p><code>d.size # OP:= 6</code></p>
+<h3 id="knowing-object-type--data-type">
+  Knowing Object Type &amp; Data Type
+  <a class="anchor" href="#knowing-object-type--data-type">#</a>
+</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>print(type(d)) <span style="color:#75715e"># object Type</span>
+</span></span><span style="display:flex;"><span>print(d<span style="color:#f92672">.</span>dtype) <span style="color:#75715e"># Array Data Type</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># OP:=</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># &lt;class &#39;numpy.ndarray&#39;&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># int32</span>
+</span></span></code></pre></div><h3 id="forcing-datatype">
+  Forcing DataType
+  <a class="anchor" href="#forcing-datatype">#</a>
+</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>l <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>array([[<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">2</span>],[<span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">4</span>],[<span style="color:#ae81ff">5</span>,<span style="color:#ae81ff">8</span>]],dtype <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>float64)
+</span></span><span style="display:flex;"><span>print(l<span style="color:#f92672">.</span>dtype)
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># OP:=</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># float64</span>
+</span></span></code></pre></div><h3 id="printing-elements">
+  Printing Elements
+  <a class="anchor" href="#printing-elements">#</a>
+</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>print(d[<span style="color:#ae81ff">2</span>]) <span style="color:#75715e"># Prints eleemnts based on their index</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># OP:= 2</span>
+</span></span></code></pre></div><h3 id="array-slicing">
+  Array Slicing
+  <a class="anchor" href="#array-slicing">#</a>
+</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>x <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>array([
+</span></span><span style="display:flex;"><span>    [<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>],
+</span></span><span style="display:flex;"><span>    [<span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">6</span>],
+</span></span><span style="display:flex;"><span>    [<span style="color:#ae81ff">9</span>, <span style="color:#ae81ff">8</span>, <span style="color:#ae81ff">5</span>]
+</span></span><span style="display:flex;"><span>])
+</span></span><span style="display:flex;"><span>i <span style="color:#f92672">=</span> x[:<span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">1</span>:]
+</span></span><span style="display:flex;"><span>print(i)
+</span></span></code></pre></div><pre tabindex="0"><code>Output :
+array([[2, 3],
+       [5, 6]])
+</code></pre><h3 id="modifying-elements-using-index-position">
+  Modifying elements using index position
+  <a class="anchor" href="#modifying-elements-using-index-position">#</a>
+</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>x <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>array([
+</span></span><span style="display:flex;"><span>    [<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>],
+</span></span><span style="display:flex;"><span>    [<span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">6</span>],
+</span></span><span style="display:flex;"><span>    [<span style="color:#ae81ff">9</span>, <span style="color:#ae81ff">8</span>, <span style="color:#ae81ff">5</span>]
+</span></span><span style="display:flex;"><span>])
+</span></span><span style="display:flex;"><span>x[<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">1</span>] <span style="color:#f92672">=</span> <span style="color:#ae81ff">420</span>
+</span></span><span style="display:flex;"><span>print(x)
+</span></span></code></pre></div><pre tabindex="0"><code>Output :
+array([[  1,   2,   3],
+       [  4, 420,   6],
+       [  9,   8,   5]])
+</code></pre><h3 id="array-reshape-operations">
+  Array Reshape Operations
+  <a class="anchor" href="#array-reshape-operations">#</a>
+</h3>
+<p>:memo: Flatten - Flattens the multi-dimensional array into a one-dimiensional array</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>x <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>array([
+</span></span><span style="display:flex;"><span>    [<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>],
+</span></span><span style="display:flex;"><span>    [<span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">6</span>],
+</span></span><span style="display:flex;"><span>    [<span style="color:#ae81ff">9</span>, <span style="color:#ae81ff">8</span>, <span style="color:#ae81ff">5</span>]
+</span></span><span style="display:flex;"><span>])
+</span></span><span style="display:flex;"><span>Z <span style="color:#f92672">=</span> x<span style="color:#f92672">.</span>flatten()
+</span></span><span style="display:flex;"><span>print(Z)
+</span></span></code></pre></div><pre tabindex="0"><code>Output :
+array([1, 2, 3, 4, 5, 6, 9, 8, 5])
+</code></pre><h3 id="sorting-an-array">
+  Sorting an array
+  <a class="anchor" href="#sorting-an-array">#</a>
+</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>a <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>array([<span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">6</span>, <span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">8</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">7</span>, <span style="color:#ae81ff">9</span>, <span style="color:#ae81ff">10</span>, <span style="color:#ae81ff">45</span>, <span style="color:#ae81ff">4</span>])
+</span></span><span style="display:flex;"><span>a <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>sort(a)
+</span></span><span style="display:flex;"><span>print(a)
+</span></span></code></pre></div><pre tabindex="0"><code>Output :
+array([ 1,  3,  3,  4,  6,  7,  8,  9, 10, 45])
+</code></pre><h3 id="reversing-an-array">
+  Reversing an array
+  <a class="anchor" href="#reversing-an-array">#</a>
+</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>x <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>array([
+</span></span><span style="display:flex;"><span>    [<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>],
+</span></span><span style="display:flex;"><span>    [<span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">6</span>],
+</span></span><span style="display:flex;"><span>    [<span style="color:#ae81ff">9</span>, <span style="color:#ae81ff">8</span>, <span style="color:#ae81ff">5</span>]
+</span></span><span style="display:flex;"><span>])
+</span></span><span style="display:flex;"><span>q <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>flip(x, axis <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>) <span style="color:#75715e"># Reversed along columns.</span>
+</span></span><span style="display:flex;"><span>print(q)
+</span></span></code></pre></div><pre tabindex="0"><code>Output :
+array([[3, 2, 1],
+       [6, 5, 4],
+       [5, 8, 9]])
+</code></pre><h3 id="concatenate-arrays">
+  Concatenate Arrays
+  <a class="anchor" href="#concatenate-arrays">#</a>
+</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>A <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>arange(<span style="color:#ae81ff">5</span>)
+</span></span><span style="display:flex;"><span>B <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>arange(<span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">9</span>, <span style="color:#ae81ff">1</span>)
+</span></span><span style="display:flex;"><span>C <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>concatenate((A, B))
+</span></span><span style="display:flex;"><span>print(C)
+</span></span></code></pre></div><pre tabindex="0"><code>Output :
+array([0, 1, 2, 3, 4, 4, 5, 6, 7, 8])
+</code></pre><h3 id="reshaping-an-array">
+  Reshaping an array
+  <a class="anchor" href="#reshaping-an-array">#</a>
+</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>A <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>arange(<span style="color:#ae81ff">6</span>)
+</span></span><span style="display:flex;"><span>print(A)
+</span></span><span style="display:flex;"><span>B <span style="color:#f92672">=</span> A<span style="color:#f92672">.</span>reshape(<span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">2</span>)
+</span></span><span style="display:flex;"><span>print(B)
+</span></span></code></pre></div><pre tabindex="0"><code>Output :
+[0 1 2 3 4 5]
+array([[0, 1],
+       [2, 3],
+       [4, 5]])
+</code></pre><h3 id="using-conditional-and-logical-operators-to-filter-values-in-arrays">
+  Using conditional and logical operators to filter values in arrays
+  <a class="anchor" href="#using-conditional-and-logical-operators-to-filter-values-in-arrays">#</a>
+</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>a <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>array([
+</span></span><span style="display:flex;"><span>    [<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">4</span>],
+</span></span><span style="display:flex;"><span>    [<span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">6</span>, <span style="color:#ae81ff">7</span>, <span style="color:#ae81ff">8</span>],
+</span></span><span style="display:flex;"><span>    [<span style="color:#ae81ff">9</span>, <span style="color:#ae81ff">10</span>, <span style="color:#ae81ff">11</span>, <span style="color:#ae81ff">12</span>]
+</span></span><span style="display:flex;"><span>])
+</span></span><span style="display:flex;"><span>print(a[a <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">5</span>]) <span style="color:#75715e"># Prints all values less than 5</span>
+</span></span></code></pre></div><pre tabindex="0"><code>Output :
+[1 2 3 4]
+</code></pre><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>cond1 <span style="color:#f92672">=</span> a <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">6</span>
+</span></span><span style="display:flex;"><span>print(a[cond1]) <span style="color:#75715e"># Prints all values greater than 6</span>
+</span></span></code></pre></div><pre tabindex="0"><code>Output :
+[ 7  8  9 10 11 12]
+</code></pre><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>c <span style="color:#f92672">=</span> a[(a <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">2</span>) <span style="color:#f92672">&amp;</span> (a <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">11</span>)]
+</span></span><span style="display:flex;"><span>print(c) <span style="color:#75715e"># Prints all values in between 2 and 11</span>
+</span></span></code></pre></div><pre tabindex="0"><code>Output :
+[ 3  4  5  6  7  8  9 10]
+</code></pre><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>d <span style="color:#f92672">=</span> (a <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">5</span>) <span style="color:#f92672">|</span> (a <span style="color:#f92672">==</span> <span style="color:#ae81ff">5</span>) <span style="color:#75715e"># Prints True or False wrt logical condition</span>
+</span></span><span style="display:flex;"><span>print(d)
+</span></span></code></pre></div><pre tabindex="0"><code>Output :
+[[False False False False]
+ [ True  True  True  True]
+ [ True  True  True  True]]
+</code></pre><h3 id="converting-1d-array-into-multi-dimensional-arrays">
+  Converting 1D array into Multi-Dimensional arrays
+  <a class="anchor" href="#converting-1d-array-into-multi-dimensional-arrays">#</a>
+</h3>
+<h4 id="1d-axis">
+  1D Axis
+  <a class="anchor" href="#1d-axis">#</a>
+</h4>
+<p>The np.newaxis() increases the axis of an array by one</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>a <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>array([<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">6</span>])
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># a.shape</span>
+</span></span><span style="display:flex;"><span>a2 <span style="color:#f92672">=</span> a[np<span style="color:#f92672">.</span>newaxis, :]
+</span></span><span style="display:flex;"><span>print(a2<span style="color:#f92672">.</span>shape)
+</span></span><span style="display:flex;"><span>print(a2)
+</span></span></code></pre></div><pre tabindex="0"><code>Output :
+(1, 6)
+[[1 2 3 4 5 6]]
+</code></pre><h4 id="npcopy">
+  np.copy()
+  <a class="anchor" href="#npcopy">#</a>
+</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>a <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>array([<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">6</span>])
+</span></span><span style="display:flex;"><span>b2 <span style="color:#f92672">=</span> a<span style="color:#f92672">.</span>copy()
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#34;b2 is &#34;</span>,b2)
+</span></span><span style="display:flex;"><span>a[<span style="color:#ae81ff">0</span>] <span style="color:#f92672">=</span> <span style="color:#ae81ff">420</span>
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#34;a is &#34;</span>,a)
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#34;b2 is &#34;</span>,b2)
+</span></span></code></pre></div><pre tabindex="0"><code>Output :
+b2 is  [1 2 3 4 5 6]
+a is  [420   2   3   4   5   6]
+b2 is  [1 2 3 4 5 6]
+</code></pre><h4 id="random-generator">
+  Random Generator
+  <a class="anchor" href="#random-generator">#</a>
+</h4>
+<p>All you need to do is pass in the number of elements or the a tuple of no. of rows and columns you want it to generate.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Python" data-lang="Python"><span style="display:flex;"><span>rand <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>random<span style="color:#f92672">.</span>default_rng()
+</span></span><span style="display:flex;"><span>print(rand<span style="color:#f92672">.</span>random((<span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">2</span>)))
+</span></span></code></pre></div><pre tabindex="0"><code>Output :
+[[0.9016336  0.36914537]
+ [0.24840371 0.36678628]
+ [0.95188125 0.89500768]
+ [0.18904333 0.39622381]]
+</code></pre><h4 id="unique-values--indices-of-unique-values">
+  Unique Values &amp; Indices of Unique Values
+  <a class="anchor" href="#unique-values--indices-of-unique-values">#</a>
+</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>a <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>array([<span style="color:#ae81ff">11</span>, <span style="color:#ae81ff">11</span>, <span style="color:#ae81ff">12</span>, <span style="color:#ae81ff">13</span>, <span style="color:#ae81ff">14</span>, <span style="color:#ae81ff">15</span>, <span style="color:#ae81ff">16</span>, <span style="color:#ae81ff">17</span>, <span style="color:#ae81ff">12</span>, <span style="color:#ae81ff">13</span>, <span style="color:#ae81ff">11</span>, <span style="color:#ae81ff">14</span>, <span style="color:#ae81ff">18</span>, <span style="color:#ae81ff">19</span>, <span style="color:#ae81ff">20</span>])
+</span></span><span style="display:flex;"><span>unique_values <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>unique(a)
+</span></span><span style="display:flex;"><span>print(unique_values)
+</span></span></code></pre></div><p>:atom_symbol:</p>
+<pre tabindex="0"><code>Output :
+[11 12 13 14 15 16 17 18 19 20]
+</code></pre><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>unique_values, indices_list <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>unique(a, return_counts <span style="color:#f92672">=</span> <span style="color:#66d9ef">True</span>)
+</span></span><span style="display:flex;"><span>print(indices_list)
+</span></span></code></pre></div><pre tabindex="0"><code>Output :
+[3 2 2 2 1 1 1 1 1 1]
+</code></pre><h2 id="arithmetic-operations">
+  Arithmetic Operations
+  <a class="anchor" href="#arithmetic-operations">#</a>
+</h2>
+<table>
+<thead>
+<tr>
+<th>Command</th>
+<th>Syntax</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Addition</td>
+<td>print(x + y)</td>
+</tr>
+<tr>
+<td>Subtraction</td>
+<td>print(x - y)</td>
+</tr>
+<tr>
+<td>Multiplication</td>
+<td>print(x * y)</td>
+</tr>
+<tr>
+<td>Division</td>
+<td>print(x / y)</td>
+</tr>
+<tr>
+<td>Square Root</td>
+<td>print(np.sqrt(x))</td>
+</tr>
+<tr>
+<td>Summation along rows/columns</td>
+<td>np.sum(x, axis=1) # axis=0 for column, 1 for row</td>
+</tr>
+<tr>
+<td>max() &amp; min()</td>
+<td>print(array.min()) / print(array.max())</td>
+</tr>
+<tr>
+<td>mean()</td>
+<td>print(np.mean(x, axis=0))</td>
+</tr>
+<tr>
+<td>unique items &amp; columns</td>
+<td>print(np.unique(x)) # Prints all the unique values</td>
+</tr>
+</tbody>
+</table>
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+
+
+
+
+</div>
+
+
+
+  <script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){if(window.getSelection().toString())return;e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script>
+
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside class="book-toc">
+      <div class="book-toc-content">
+        
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#array-attributes">Array Attributes</a>
+      <ul>
+        <li><a href="#shape-of-the-array">Shape of the array</a></li>
+        <li><a href="#dimension-of-array">Dimension of Array</a></li>
+        <li><a href="#size-of-the-array">Size of the array</a></li>
+        <li><a href="#knowing-object-type--data-type">Knowing Object Type &amp; Data Type</a></li>
+        <li><a href="#forcing-datatype">Forcing DataType</a></li>
+        <li><a href="#printing-elements">Printing Elements</a></li>
+        <li><a href="#array-slicing">Array Slicing</a></li>
+        <li><a href="#modifying-elements-using-index-position">Modifying elements using index position</a></li>
+        <li><a href="#array-reshape-operations">Array Reshape Operations</a></li>
+        <li><a href="#sorting-an-array">Sorting an array</a></li>
+        <li><a href="#reversing-an-array">Reversing an array</a></li>
+        <li><a href="#concatenate-arrays">Concatenate Arrays</a></li>
+        <li><a href="#reshaping-an-array">Reshaping an array</a></li>
+        <li><a href="#using-conditional-and-logical-operators-to-filter-values-in-arrays">Using conditional and logical operators to filter values in arrays</a></li>
+        <li><a href="#converting-1d-array-into-multi-dimensional-arrays">Converting 1D array into Multi-Dimensional arrays</a></li>
+      </ul>
+    </li>
+    <li><a href="#arithmetic-operations">Arithmetic Operations</a></li>
+  </ul>
+</nav>
+
+
+ 
+      </div>
+    </aside>
+    
+  </main>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

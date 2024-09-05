@@ -7,7 +7,7 @@ url: "/docs/web-dev/node"
 
 # Node JS
 
-[Download](https://nodejs.org/en/download/package-manager) -  
+[Download](https://nodejs.org/en/download/package-manager) -
 [Official Docs](https://nodejs.org/docs/latest/api/),
 [Learn](https://nodejs.org/en/learn/getting-started/introduction-to-nodejs) |
 

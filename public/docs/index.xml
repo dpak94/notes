@@ -43,6 +43,13 @@
       <description>JavaScript&#xD;#&#xD;Interactive JS CC | JS Playground |&#xA;Quick Links&#xD;#&#xD;CodePen.io for trying out new HTML, CSS &amp;amp; JS stuff. DevDocs MDN JS | Arrays | Strings | String Methods | Math &amp;amp; Operators | Operator Precedence | Functions | Objects | RegExp | RegExp CheatSheet | Chrome Dev Tools | Asynchronous JS | Events | Web Forms | Client-side Web APIs&#xA;W3 School Quick Links&#xD;#&#xD;DOM Reference | DOM Document | Arrays | Operators | Strings | Math | Date | Number | Global | Can I Use?</description>
     </item>
     <item>
+      <title>JS Snippets</title>
+      <link>dpak94.github.io/notes/docs/web-dev/js-snippets/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>dpak94.github.io/notes/docs/web-dev/js-snippets/</guid>
+      <description>JS Snippets&#xD;#&#xD;Click button&#xD;#&#xD;&amp;lt;button onClick={() =&amp;gt; { handleClickAgain(`Mario`); }} &amp;gt; Click Me Again &amp;lt;/button&amp;gt; Note: Call a func with args only after a button click &amp;amp; not automatically.</description>
+    </item>
+    <item>
       <title>Linux</title>
       <link>dpak94.github.io/notes/docs/general/linux/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -61,7 +68,7 @@
       <link>dpak94.github.io/notes/docs/db/mongodb/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>dpak94.github.io/notes/docs/db/mongodb/</guid>
-      <description>MongoDB&#xD;#&#xD;Installation Link : MongoDB MongoDB is a document database. It is open-source and cross platform. It stores data in a type of JSON format called BSON. A record in MongoDB is a document, which is a data structure composed of key value pairs similar to the structure of JSON objects. Records in a MongoDB database are called documents, and the field values may include numbers, strings, booleans, arrays, or even nested documents.</description>
+      <description>MongoDB&#xD;#&#xD;MongoDB Download MongoDB is a document database. It is open-source and cross platform. It stores data in a type of JSON format called BSON. A record in MongoDB is a document, which is a data structure composed of key value pairs similar to the structure of JSON objects. Records in a MongoDB database are called documents, and the field values may include numbers, strings, booleans, arrays, or even nested documents.</description>
     </item>
     <item>
       <title>MySQL</title>
@@ -75,7 +82,7 @@
       <link>dpak94.github.io/notes/docs/web-dev/node/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>dpak94.github.io/notes/docs/web-dev/node/</guid>
-      <description>Node JS&#xD;#&#xD;Download -&#xA;Official Docs, Learn |&#xA;A JavaScript Runtime built on Google&amp;rsquo;s OpenSource V8 Javascript Engine Node JS is an environment in which a program written in JS can be executed.&#xA;Pros for Node JS&#xA;Single threaded, based on event driven, non-blocking I/O model. Perfect for building superfast and scalable data-intensive apps. JavaScript for the entire stack resulting in faster and efficient development NPM : Huge library of open-source packages available for free.</description>
+      <description>Node JS&#xD;#&#xD;Download - Official Docs, Learn |&#xA;A JavaScript Runtime built on Google&amp;rsquo;s OpenSource V8 Javascript Engine Node JS is an environment in which a program written in JS can be executed.&#xA;Pros for Node JS&#xA;Single threaded, based on event driven, non-blocking I/O model. Perfect for building superfast and scalable data-intensive apps. JavaScript for the entire stack resulting in faster and efficient development NPM : Huge library of open-source packages available for free.</description>
     </item>
     <item>
       <title>Python</title>

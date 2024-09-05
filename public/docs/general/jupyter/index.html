@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+<head><script src="/notes/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=notes/livereload" data-no-instant defer></script>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Jupyter#Displaying HTML Content in Notebook#from IPython.display import HTML html_data = &#34;&#34;&#34; &lt;img src = &#39;http://python.org/images/python-logo.gif&#39;/&gt;&lt;br/&gt;&lt;button&gt;Click Me&lt;/button&gt; &#34;&#34;&#34; html = HTML(data = html_data) html # Displays the HTML object in Jupyter Notebook Displaying Local File Link in Notebook#from IPython.display import FileLink file_link = FileLink(path=&#39;./hello_jupyter.ipynb&#39;) # FileLink Object file_link # Prints the FileLink Objects Displaying Local Directory Files in Notebook#from IPython.display import FileLinks file_links = FileLinks(&#39;.">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
+<meta name="color-scheme" content="light dark"><meta property="og:url" content="//localhost:1313/notes/docs/general/jupyter/">
+  <meta property="og:site_name" content="Web Notes">
+  <meta property="og:title" content="Jupyter">
+  <meta property="og:description" content="Jupyter#Displaying HTML Content in Notebook#from IPython.display import HTML html_data = &#34;&#34;&#34; &lt;img src = &#39;http://python.org/images/python-logo.gif&#39;/&gt;&lt;br/&gt;&lt;button&gt;Click Me&lt;/button&gt; &#34;&#34;&#34; html = HTML(data = html_data) html # Displays the HTML object in Jupyter Notebook Displaying Local File Link in Notebook#from IPython.display import FileLink file_link = FileLink(path=&#39;./hello_jupyter.ipynb&#39;) # FileLink Object file_link # Prints the FileLink Objects Displaying Local Directory Files in Notebook#from IPython.display import FileLinks file_links = FileLinks(&#39;.">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="docs">
+<title>Jupyter | Web Notes</title>
+<link rel="manifest" href="/notes/manifest.json">
+<link rel="icon" href="/notes/favicon.png" >
+<link rel="canonical" href="//localhost:1313/notes/docs/general/jupyter/">
+<link rel="stylesheet" href="/notes/book.min.0683e139e16dbe15886b33e18accef3f4745606d01f63fbcc419247467fd8d23.css" integrity="sha256-BoPhOeFtvhWIazPhiszvP0dFYG0B9j&#43;8xBkkdGf9jSM=" crossorigin="anonymous">
+  <script defer src="/notes/fuse.min.js"></script>
+  <script defer src="/notes/en.search.min.db4fee774957137b82280ec3b8fd89ae0eb5eac9ec5b1992910c3e3ceacd902f.js" integrity="sha256-20/ud0lXE3uCKA7DuP2Jrg616snsWxmSkQw&#43;POrNkC8=" crossorigin="anonymous"></script>
+
+  
+
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+  
+</head>
+<body dir="ltr">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      <div class="book-menu-content">
+        
+  <nav>
+<h2 class="book-brand">
+  <a class="flex align-center" href="/notes/"><span>Web Notes</span>
+  </a>
+</h2>
+
+
+<div class="book-search hidden">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+<script>document.querySelector(".book-search").classList.remove("hidden")</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/notes/docs/web-dev/clean-code/" class="">Clean Code for JS</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/notes/docs/web-dev/css/" class="">CSS</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/notes/docs/ds/deep-learning/" class="">Deep Learning</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/notes/docs/general/git/" class="">Git</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/notes/docs/web-dev/html/" class="">HTML</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/notes/docs/web-dev/js/" class="">JavaScript</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/notes/docs/general/jupyter/" class="active">Jupyter</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/notes/docs/general/linux/" class="">Linux</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/notes/docs/ds/machine-learning/" class="">Machine Learning</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/notes/docs/general/misc/" class="">Misc</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/notes/docs/db/mongodb/" class="">Mongo DB</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/notes/docs/misc/mysql/" class="">MySQL</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/notes/docs/web-dev/node/" class="">NodeJS</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/notes/docs/ds/numpy/" class="">Numpy</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/notes/docs/db/pyspark/" class="">PySpark</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/notes/docs/ds/python/" class="">Python</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/notes/docs/web-dev/react/" class="">React</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/notes/docs/db/sql-python/" class="">SQL Python</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/notes/docs/web-dev/static/" class="">Static Sites</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+ 
+      </div>
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/notes/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>Jupyter</strong>
+
+  <label for="toc-control">
+    
+    <img src="/notes/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#displaying-html-content-in-notebook">Displaying HTML Content in Notebook</a></li>
+    <li><a href="#displaying-local-file-link-in-notebook">Displaying Local File Link in Notebook</a></li>
+    <li><a href="#displaying-local-directory-files-in-notebook">Displaying Local Directory Files in Notebook</a></li>
+    <li><a href="#playing-local-audio-file-in-notebook">Playing Local Audio File in Notebook</a></li>
+    <li><a href="#playing-youtube-video-in-notebook">Playing YouTube Video in Notebook</a></li>
+  </ul>
+</nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown book-article"><h1 id="jupyter">
+  Jupyter
+  <a class="anchor" href="#jupyter">#</a>
+</h1>
+<p><img src="https://miro.medium.com/v2/resize:fit:720/format:webp/1*wOHyKy6fl3ltcBMNpCvC6Q.png" alt="Jupyter" /></p>
+<h2 id="displaying-html-content-in-notebook">
+  Displaying HTML Content in Notebook
+  <a class="anchor" href="#displaying-html-content-in-notebook">#</a>
+</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">from</span> IPython.display <span style="color:#f92672">import</span> HTML
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>html_data <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;&#34;&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">&lt;img src = &#39;http://python.org/images/python-logo.gif&#39;/&gt;&lt;br/&gt;&lt;button&gt;Click Me&lt;/button&gt;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">&#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>html <span style="color:#f92672">=</span> HTML(data <span style="color:#f92672">=</span> html_data)
+</span></span><span style="display:flex;"><span>html <span style="color:#75715e"># Displays the HTML object in Jupyter Notebook</span>
+</span></span></code></pre></div><h2 id="displaying-local-file-link-in-notebook">
+  Displaying Local File Link in Notebook
+  <a class="anchor" href="#displaying-local-file-link-in-notebook">#</a>
+</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">from</span> IPython.display <span style="color:#f92672">import</span> FileLink
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>file_link <span style="color:#f92672">=</span> FileLink(path<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;./hello_jupyter.ipynb&#39;</span>) <span style="color:#75715e"># FileLink Object</span>
+</span></span><span style="display:flex;"><span>file_link <span style="color:#75715e"># Prints the FileLink Objects</span>
+</span></span></code></pre></div><h2 id="displaying-local-directory-files-in-notebook">
+  Displaying Local Directory Files in Notebook
+  <a class="anchor" href="#displaying-local-directory-files-in-notebook">#</a>
+</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">from</span> IPython.display <span style="color:#f92672">import</span> FileLinks
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>file_links <span style="color:#f92672">=</span> FileLinks(<span style="color:#e6db74">&#39;.&#39;</span>) <span style="color:#75715e"># FileLinks Object created</span>
+</span></span><span style="display:flex;"><span>display(file_links)
+</span></span></code></pre></div><h2 id="playing-local-audio-file-in-notebook">
+  Playing Local Audio File in Notebook
+  <a class="anchor" href="#playing-local-audio-file-in-notebook">#</a>
+</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">from</span> IPython.display <span style="color:#f92672">import</span> Audio
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Audio(data<span style="color:#f92672">=</span><span style="color:#66d9ef">None</span>, filename<span style="color:#f92672">=</span><span style="color:#66d9ef">None</span>, url<span style="color:#f92672">=</span><span style="color:#66d9ef">None</span>, embed<span style="color:#f92672">=</span><span style="color:#66d9ef">None</span>, rate<span style="color:#f92672">=</span><span style="color:#66d9ef">None</span>, autoplay<span style="color:#f92672">=</span><span style="color:#66d9ef">False</span>)
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># filename is the local audio filepath</span>
+</span></span><span style="display:flex;"><span>url <span style="color:#f92672">is</span> the audio stream link
+</span></span></code></pre></div><h2 id="playing-youtube-video-in-notebook">
+  Playing YouTube Video in Notebook
+  <a class="anchor" href="#playing-youtube-video-in-notebook">#</a>
+</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">from</span> IPython.display <span style="color:#f92672">import</span> YouTube <span style="color:#66d9ef">as</span> YT
+</span></span><span style="display:flex;"><span>yt_video <span style="color:#f92672">=</span> YT(<span style="color:#e6db74">&#39;gsjijkrngr&#39;</span>)
+</span></span><span style="display:flex;"><span>display(yt_video)
+</span></span></code></pre></div></article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+
+
+
+
+</div>
+
+
+
+  <script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){if(window.getSelection().toString())return;e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script>
+
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside class="book-toc">
+      <div class="book-toc-content">
+        
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#displaying-html-content-in-notebook">Displaying HTML Content in Notebook</a></li>
+    <li><a href="#displaying-local-file-link-in-notebook">Displaying Local File Link in Notebook</a></li>
+    <li><a href="#displaying-local-directory-files-in-notebook">Displaying Local Directory Files in Notebook</a></li>
+    <li><a href="#playing-local-audio-file-in-notebook">Playing Local Audio File in Notebook</a></li>
+    <li><a href="#playing-youtube-video-in-notebook">Playing YouTube Video in Notebook</a></li>
+  </ul>
+</nav>
+
+
+ 
+      </div>
+    </aside>
+    
+  </main>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

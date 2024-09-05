@@ -1,7 +1,7 @@
 ---
 type: "docs"
 title: Jupyter
-url: "/docs/general/jupyter/"
+url: "/docs/ds/jupyter/"
 draft: true
 ---
 

@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+<head><script src="/notes/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=notes/livereload" data-no-instant defer></script>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="PySpark#Spark is one of the latest technologies being used to quickly and easily handle Big Data. It is an open source project on Apache. It is 100 times faster than Hadoop MapReduce. Spark does not store anything on the RAM unless any action is applied on the data (Lazy Execution) Apache Hadoop was performing batch-processing only and laced real-time processing feature.Spark does Batch and Real time processing Spark can load data directly from disk, memory and other data storage technologies such as Amazon S3, HDFS, Cassandra etc.">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
+<meta name="color-scheme" content="light dark"><meta property="og:url" content="//localhost:1313/notes/docs/db/pyspark/">
+  <meta property="og:site_name" content="Web Notes">
+  <meta property="og:title" content="PySpark">
+  <meta property="og:description" content="PySpark#Spark is one of the latest technologies being used to quickly and easily handle Big Data. It is an open source project on Apache. It is 100 times faster than Hadoop MapReduce. Spark does not store anything on the RAM unless any action is applied on the data (Lazy Execution) Apache Hadoop was performing batch-processing only and laced real-time processing feature.Spark does Batch and Real time processing Spark can load data directly from disk, memory and other data storage technologies such as Amazon S3, HDFS, Cassandra etc.">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="docs">
+<title>PySpark | Web Notes</title>
+<link rel="manifest" href="/notes/manifest.json">
+<link rel="icon" href="/notes/favicon.png" >
+<link rel="canonical" href="//localhost:1313/notes/docs/db/pyspark/">
+<link rel="stylesheet" href="/notes/book.min.0683e139e16dbe15886b33e18accef3f4745606d01f63fbcc419247467fd8d23.css" integrity="sha256-BoPhOeFtvhWIazPhiszvP0dFYG0B9j&#43;8xBkkdGf9jSM=" crossorigin="anonymous">
+  <script defer src="/notes/fuse.min.js"></script>
+  <script defer src="/notes/en.search.min.db4fee774957137b82280ec3b8fd89ae0eb5eac9ec5b1992910c3e3ceacd902f.js" integrity="sha256-20/ud0lXE3uCKA7DuP2Jrg616snsWxmSkQw&#43;POrNkC8=" crossorigin="anonymous"></script>
+
+  
+
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+  
+</head>
+<body dir="ltr">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      <div class="book-menu-content">
+        
+  <nav>
+<h2 class="book-brand">
+  <a class="flex align-center" href="/notes/"><span>Web Notes</span>
+  </a>
+</h2>
+
+
+<div class="book-search hidden">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+<script>document.querySelector(".book-search").classList.remove("hidden")</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/notes/docs/web-dev/clean-code/" class="">Clean Code for JS</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/notes/docs/web-dev/css/" class="">CSS</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/notes/docs/ds/deep-learning/" class="">Deep Learning</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/notes/docs/general/git/" class="">Git</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/notes/docs/web-dev/html/" class="">HTML</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/notes/docs/web-dev/js/" class="">JavaScript</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/notes/docs/general/jupyter/" class="">Jupyter</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/notes/docs/general/linux/" class="">Linux</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/notes/docs/ds/machine-learning/" class="">Machine Learning</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/notes/docs/general/misc/" class="">Misc</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/notes/docs/db/mongodb/" class="">Mongo DB</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/notes/docs/misc/mysql/" class="">MySQL</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/notes/docs/web-dev/node/" class="">NodeJS</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/notes/docs/ds/numpy/" class="">Numpy</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/notes/docs/db/pyspark/" class="active">PySpark</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/notes/docs/ds/python/" class="">Python</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/notes/docs/web-dev/react/" class="">React</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/notes/docs/db/sql-python/" class="">SQL Python</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/notes/docs/web-dev/static/" class="">Static Sites</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+ 
+      </div>
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/notes/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>PySpark</strong>
+
+  <label for="toc-control">
+    
+    <img src="/notes/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#spark-vs-hadoop-computing-engines">Spark vs Hadoop Computing Engines</a></li>
+        <li><a href="#pandas-vs-pyspark">Pandas vs PySpark</a></li>
+      </ul>
+    </li>
+    <li><a href="#installation">Installation</a></li>
+  </ul>
+</nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown book-article"><h1 id="pyspark">
+  PySpark
+  <a class="anchor" href="#pyspark">#</a>
+</h1>
+<ul>
+<li>Spark is one of the latest technologies being used to quickly and easily handle Big Data.</li>
+<li>It is an open source project on <strong>Apache</strong>.</li>
+<li>It is 100 times faster than Hadoop MapReduce.</li>
+<li>Spark does not store anything on the RAM unless any action is applied on the data (<strong>Lazy Execution</strong>)</li>
+<li>Apache Hadoop was performing batch-processing only and laced real-time processing feature.Spark does Batch and Real time processing</li>
+<li>Spark can load data directly from disk, memory and other data storage technologies such as Amazon S3, HDFS, Cassandra etc.</li>
+</ul>
+<p><strong>Big Data Features</strong></p>
+<ul>
+<li>Volume - Size of the data</li>
+<li>Velocity - Speed at which data is gathered</li>
+<li>Variety - Different types of data</li>
+<li>Veracity - Trustworthiness of the data in terms of accuracy</li>
+<li>Value - Big Data can be turned into value</li>
+</ul>
+<p><strong>HDFS</strong> - Hadoop Distributed File System<br>
+<strong>YARN</strong> - Yet Another Resource Negotiater</p>
+<p><strong>RDDS - Resilient Distributed Dataset</strong></p>
+<ol>
+<li>Stores intermediate results in distributed memory instead of stable storage(disk)</li>
+<li>Lazy Evaluation - All trnasfomrations in PySpark are lazy, in that they do not compute their results right away.</li>
+<li>Fault Tolerance</li>
+<li>Data is safe to share across the proceses.</li>
+<li>Partioning is the fundamental unit of parallelism in Spark RDD. Each partition is one logical division of data which is mutable.</li>
+<li>Persistence - Users can state which RDD they will use and choose a storage strategy for them.</li>
+<li>Coarse-grained Operations - Applies to all the elements in datasets thriugh maps or filter or group by operations</li>
+</ol>
+<h3 id="spark-vs-hadoop-computing-engines">
+  Spark vs Hadoop Computing Engines
+  <a class="anchor" href="#spark-vs-hadoop-computing-engines">#</a>
+</h3>
+<!-- raw HTML omitted -->
+<h3 id="pandas-vs-pyspark">
+  Pandas vs PySpark
+  <a class="anchor" href="#pandas-vs-pyspark">#</a>
+</h3>
+<!-- raw HTML omitted -->
+<h2 id="installation">
+  Installation
+  <a class="anchor" href="#installation">#</a>
+</h2>
+<p><code>pip install pyspark</code></p>
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+
+
+
+
+</div>
+
+
+
+  <script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){if(window.getSelection().toString())return;e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script>
+
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside class="book-toc">
+      <div class="book-toc-content">
+        
+  
+<nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#spark-vs-hadoop-computing-engines">Spark vs Hadoop Computing Engines</a></li>
+        <li><a href="#pandas-vs-pyspark">Pandas vs PySpark</a></li>
+      </ul>
+    </li>
+    <li><a href="#installation">Installation</a></li>
+  </ul>
+</nav>
+
+
+ 
+      </div>
+    </aside>
+    
+  </main>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

@@ -7,10 +7,12 @@ url: "docs/db/mongodb/"
 
 # MongoDB
 
-- Installation Link : [MongoDB](https://www.mongodb.com/download-centerjmp=nav#community)
+- [MongoDB Download](https://www.mongodb.com/download-centerjmp=nav#community)
 - MongoDB is a document database. It is open-source and cross platform.
 - It stores data in a type of JSON format called **BSON**. A record in MongoDB is a document, which is a data structure composed of key value pairs similar to the structure of JSON objects.
 - Records in a MongoDB database are called documents, and the field values may include numbers, strings, booleans, arrays, or even nested documents.
+
+---
 
 ## Database Management Systems
 
@@ -36,20 +38,14 @@ A special software program that helps users create and maintain a database
 
 ## Basic Commands
 
-| Command                  | Action                                                                                                                      |
-| ------------------------ | --------------------------------------------------------------------------------------------------------------------------- |
-| `mongosh`                | Open a connection to your local MongoDB instance. All other commands will be run within this mongosh connection             |
-| `db.help()`              | Text output listing common methods on the db object.                                                                        |
-| `db.users.help()`        | Shows help for database methods.                                                                                            |
-| `db.<collection>.help()` | Show help on collection methods. The **collection** can be the name of an existing collection or a non-existing collection. |
-| `show dbs`               | Print a list of all databases on the server.                                                                                |
-| `use <db>`               | Switch current database to <db>. The mongo shell variable db is set to the current database.                                |
-| `show collections`       | Print a list of all collections for the current database                                                                    |
-| `show users`             | Print a list of all users for the current database                                                                          |
-| `show roles`             | Print a list of all roles, both user-defined and built-in, for the current database                                         |
-| `show profile`           | Print the five most recent operations that took 1 ms. or more on databases with profiling enabled                           |
-| `show databases`         | Print a list of all existing databases available to the current user.                                                       |
-| `exit`                   | Exit the mongosh session                                                                                                    |
+| Command                  | Action                                                                                                                      | Command            | Action                                                                                            |
+| ------------------------ | --------------------------------------------------------------------------------------------------------------------------- | ------------------ | ------------------------------------------------------------------------------------------------- |
+| `mongosh`                | Open a connection to your local MongoDB instance. All other commands will be run within this mongosh connection             | `use <db>`         | Switch current database to <db>. The mongo shell variable db is set to the current database.      |
+| `db.help()`              | Text output listing common methods on the db object.                                                                        | `show collections` | Print a list of all collections for the current database                                          |
+| `db.users.help()`        | Shows help for database methods.                                                                                            | `show users`       | Print a list of all users for the current database                                                |
+| `db.<collection>.help()` | Show help on collection methods. The **collection** can be the name of an existing collection or a non-existing collection. | `show roles`       | Print a list of all roles, both user-defined and built-in, for the current database               |
+| `show dbs`               | Print a list of all databases on the server.                                                                                | `show profile`     | Print the five most recent operations that took 1 ms. or more on databases with profiling enabled |
+| `show databases`         | Print a list of all existing databases available to the current user.                                                       | `exit`             | Exit the mongosh session                                                                          |
 
 ---
 
@@ -57,7 +53,7 @@ A special software program that helps users create and maintain a database
 
 **CRUD** - Create Replace Update Delete
 
-### Create Documents
+**Create Documents**
 
 | Command                                                                                            | Description                                                                                                                       |
 | -------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
@@ -73,7 +69,7 @@ A special software program that helps users create and maintain a database
 db.collectionName.insertOne({ _id: 4, att1: "attr1", att2: "attr2" });
 ```
 
-### Update, Delete and Replace Documents
+**Update, Delete and Replace Documents**
 
 | Command                                                                                                | Description                                                                                   |
 | ------------------------------------------------------------------------------------------------------ | --------------------------------------------------------------------------------------------- |
@@ -83,7 +79,7 @@ db.collectionName.insertOne({ _id: 4, att1: "attr1", att2: "attr2" });
 | `db.students.replaceOne({major : "BioScience"}, {major : "Gender Studies", gpa : 3.2, name : "Eric"})` | Replaces a documents values with others (major category from BioScience to Gender Studies)    |
 | `db.students.deleteOne({gpa : {$lte : 3.2}})`                                                          | Deleting only one record using the criteria (gpa <= 3.2)                                      |
 
-### Query Commands
+**Query Commands**
 
 | Syntax                                                                       | Description                                                                                                                           |
 | ---------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- |
@@ -103,7 +99,7 @@ db.collectionName.insertOne({ _id: 4, att1: "attr1", att2: "attr2" });
 | `db.students.find({grades: {$elemMatch: {\$gte: 90}}}, {_id:0})`             | Returns all records where the grades field has any of its elements grater than or equal to 90                                         |
 | `db.students.find({grades : {$size : 4}}, {_id:0})`                          | Returns records where the No. of elements in the grades field = 4                                                                     |
 
-### Upsert Documents
+**Upsert Documents**
 
 **Upsert** : Updates a document, but if the entry is not found, inserts it.
 
@@ -128,7 +124,7 @@ db.posts.updateOne(
 
 ## MongoDB Operators
 
-#### Comparison Operators
+**Comparison Operators**
 
 | Sign   | Description                      |
 | ------ | -------------------------------- |
@@ -140,7 +136,7 @@ db.posts.updateOne(
 | `$lte` | Less Than or Equal to            |
 | `$in`  | Value is matched within an array |
 
-#### Logical Operators
+**Logical Operators**
 
 | Sign   | Description                                        |
 | ------ | -------------------------------------------------- |
@@ -149,7 +145,7 @@ db.posts.updateOne(
 | `$nor` | Returns documents where both queries fail to match |
 | `$not` | Returns documents where the query does not match   |
 
-#### Evaluation Operators
+**Evaluation Operators**
 
 | Sign     | Description                                                        |
 | -------- | ------------------------------------------------------------------ |
@@ -157,7 +153,7 @@ db.posts.updateOne(
 | `$text`  | Performs a text search                                             |
 | `$where` | Uses a JavaScript expression to match documents                    |
 
-#### Update Operators
+**Update Operators**
 
 | Sign           | Description                              |
 | -------------- | ---------------------------------------- |
@@ -167,7 +163,7 @@ db.posts.updateOne(
 | `$set`         | Sets the value of the field              |
 | `$unset`       | Removes the field from the document      |
 
-#### Array Operators
+**Array Operators**
 
 | Sign        | Description                                             |
 | ----------- | ------------------------------------------------------- |
@@ -180,7 +176,7 @@ db.posts.updateOne(
 
 ## DataTypes In MongoDB
 
-```js
+```bson
 {
     string : "Text String",
     int : 420,
@@ -197,7 +193,7 @@ db.posts.updateOne(
 
 **Additional Datatypes**
 
-```js
+```bson
     Timestamp
     Binary data
     Regular expressions
@@ -215,7 +211,7 @@ db.posts.updateOne(
 | Object                     | 3      | "object"              |                            |
 | Array                      | 4      | "array"               |                            |
 | Binary data                | 5      | "binData"             |                            |
-| Undefined                  | 6      | "undefined"           | Deprecated.                |
+| _Undefined_                | 6      | "undefined"           | Deprecated.                |
 | ObjectId                   | 7      | "objectId"            |                            |
 | Boolean                    | 8      | "bool"                |                            |
 | Date                       | 9      | "date"                |                            |
