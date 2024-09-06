@@ -221,9 +221,9 @@ switch (day) {
 **Brief History of JS:**
 
 - Brendan Eich creates the first version of JavaScript in 10 days. Initially called **Mocha**
-- EcmaScript 1 released in 1997
+- _EcmaScript 1_ released in 1997
 - **ES5** released in 2015 with lots of great new features.
-- **ES6** brought biggest updates to the language. \*_ECMAScript_ \* changes to yearly releases.
+- **ES6** brought biggest updates to the language. _ECMAScript_ changes to yearly releases.
 - Modern JavaScript Engine is backwards compatible.
 
 ## Strict Mode
