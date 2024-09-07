@@ -1,10 +1,12 @@
 ---
 type: "docs"
-title: Clean Code for JS
+title: JS Norms & Rules
 draft: false
 ---
 
-# Clean Code Norms For JavaScript
+# JavaScript Norms, Rules, Guides Etc.
+
+## Clean Code Norms For JavaScript
 
 ```js
 // Example A : Bad Code
@@ -12,7 +14,6 @@ const x = function (z) {
   const w = "Hello";
   return w + z;
 };
-
 // Example B : Good Code
 const generateUserGreeting = function (name) {
   const greeting = "Hello";
@@ -28,9 +29,9 @@ Of the above two examples, code B is:
 
 ---
 
-## Naming Functions and Variables
+### Naming Functions and Variables
 
-### 1. A good name is descriptive
+**1. A good name is descriptive**
 
 Variables should always begin with a noun or an adjective (that is, a noun phrase) and functions with a verb. The only exception would be constants, which must be declared with all caps.
 
@@ -43,7 +44,7 @@ let userName = "Alex"; // Good variable name 👍👍👍
 const MILLISECONDS_PER_HOUR = 60 * 60 * 1000;
 ```
 
-### 2. Use consistent vocabulary
+**2. Use consistent vocabulary**
 
 Do not use threee different verbs for the same kind of task when assigning names to variables.
 
@@ -59,14 +60,13 @@ let array1; 👎
 function getPlayerScore();
 function getPlayerName();
 function getPlayerTag();
-
 // Bad
 function getUserScore();
 function fetchPlayerName();
 function retrievePlayerOneTag();
 ```
 
-### 3. Use searchable and easily understandable names
+**3. Use searchable and easily understandable names**
 
 Instead of
 
@@ -78,13 +78,12 @@ implement
 
 ```js
 const MILLISECONDS_PER_HOUR = 60 * 60 * 1000; // 3,600,000;
-
 setTimeout(stopTimer, MILLISECONDS_PER_HOUR);
 ```
 
 ---
 
-## Other rules for clean code
+### Other rules for clean code
 
 1. Don't comment where you're supposed to use Git.
 2. Don't comment _how_, comment _why_. The viewer reads the code to find _how_.
@@ -94,12 +93,16 @@ setTimeout(stopTimer, MILLISECONDS_PER_HOUR);
 6. Avoid abusive comments.
 7. Avoid extremely large function. Break them into smaller ones.
 8. Treat changes with caution.
-9. Avoid indiscriminate mixing of coding languages
+9. Avoid indiscriminate mixing of coding languages.
 10. Summarize the imported files, packages etc.
 
 ---
 
-## More Info
+## Styling
 
-- [AirBnB Style Guide for JavaScript Styling](https://github.com/airbnb/javascript)
+**Styling Guides** :
+[AirBnB Style Guide for JavaScript Styling](https://github.com/airbnb/javascript) |
+[TypeScript Styling Guide at Google](https://google.github.io/styleguide/tsguide.html) |
+[ESLint](https://eslint.org/docs/latest/use/getting-started) - [Uses](https://hackernoon.com/how-linting-and-eslint-improve-code-quality-fa83d2469efe)
+
 - [Beautiful JavaScript: Easily Create Chainable (Cascading) Methods for Expressiveness](https://web.archive.org/web/20190211152543/https://javascriptissexy.com/beautiful-javascript-easily-create-chainable-cascading-methods-for-expressiveness/)

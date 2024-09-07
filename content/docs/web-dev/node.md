@@ -13,7 +13,7 @@ url: "/docs/web-dev/node"
 
 ---
 
-- A JavaScript Runtime built on Google's **OpenSource V8 Javascript Engine**
+- A _JavaScript Runtime_ built on Google's OpenSource **V8 Javascript Engine**
 
 **Node JS** is an environment in which a program written in JS can be executed.
 
@@ -36,7 +36,7 @@ url: "/docs/web-dev/node"
 
 **Non-use cases**
 
-- Applications with heavy server-side processing (CPU intensive) like video compression, audio compression etc. **Ruby on Rails** or **PHP** or **Python** is good for these apps.
+- Applications with heavy server-side processing (CPU intensive) like video compression, audio compression etc. **Ruby on Rails** or **PHP** or **Python** are good for these apps.
 
 **Node Terminal**
 

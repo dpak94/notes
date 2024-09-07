@@ -16,13 +16,6 @@
       <description>My First Post on Book Theme Hugo</description>
     </item>
     <item>
-      <title>Clean Code for JS</title>
-      <link>//localhost:1313/notes/docs/web-dev/clean-code/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/notes/docs/web-dev/clean-code/</guid>
-      <description>Clean Code Norms For JavaScript&#xD;#&#xD;// Example A : Bad Code const x = function (z) { const w = &amp;#34;Hello&amp;#34;; return w + z; }; // Example B : Good Code const generateUserGreeting = function (name) { const greeting = &amp;#34;Hello&amp;#34;; return greeting + name; }; Of the above two examples, code B is:&#xA;Easy to read. Assigns names to functions and variables that convey their task/nature instead of single letters, resultin in less confusion.</description>
-    </item>
-    <item>
       <title>CSS</title>
       <link>//localhost:1313/notes/docs/web-dev/css/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -49,6 +42,13 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>//localhost:1313/notes/docs/web-dev/js/</guid>
       <description>JavaScript&#xD;#&#xD;Interactive JS CC | JS Playground |&#xA;Quick Links&#xD;#&#xD;CodePen.io for trying out new HTML, CSS &amp;amp; JS stuff. DevDocs MDN JS | Arrays | Strings | String Methods | Math &amp;amp; Operators | Operator Precedence | Functions | Objects | RegExp | RegExp CheatSheet | Chrome Dev Tools | Asynchronous JS | Events | Web Forms | Client-side Web APIs&#xA;W3 School Quick Links&#xD;#&#xD;DOM Reference | DOM Document | Arrays | Operators | Strings | Math | Date | Number | Global | Can I Use?</description>
+    </item>
+    <item>
+      <title>JS Norms &amp; Rules</title>
+      <link>//localhost:1313/notes/docs/web-dev/js-norms/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/notes/docs/web-dev/js-norms/</guid>
+      <description>JavaScript Norms, Rules, Guides Etc.&#xD;#&#xD;Clean Code Norms For JavaScript&#xD;#&#xD;// Example A : Bad Code const x = function (z) { const w = &amp;#34;Hello&amp;#34;; return w + z; }; // Example B : Good Code const generateUserGreeting = function (name) { const greeting = &amp;#34;Hello&amp;#34;; return greeting + name; }; Of the above two examples, code B is:&#xA;Easy to read. Assigns names to functions and variables that convey their task/nature instead of single letters, resultin in less confusion.</description>
     </item>
     <item>
       <title>JS Snippets</title>
@@ -119,6 +119,13 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>//localhost:1313/notes/docs/web-dev/static/</guid>
       <description>Static Site Generators&#xD;#&#xD;Hugo&#xD;#&#xD;Command Function hugo new site &amp;lt;siteName&amp;gt; Create new site using Hugo hugo server Start the hugo server hugo server -D Start the server with drafts loaded hugo new content &amp;lt;link/fileName&amp;gt; Add new page Jekyll&#xD;#&#xD;Command Function jekyll new siteName Create a site and generate relevant sitefiles bundle exec jekyll serve Start the server jekyll serve --livereload Live server jekyll build Builds the static site instead of running the server jekyll serve --draft Builds the site with draft content included Important Notes&#xD;#&#xD;Contains layouts to create templates of websites.</description>
+    </item>
+    <item>
+      <title>VS Code</title>
+      <link>//localhost:1313/notes/docs/general/vs-code/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/notes/docs/general/vs-code/</guid>
+      <description>&#xD;VS Code Extensions, Shortcuts Etc.&#xD;#&#xD;Extensions&#xD;#&#xD;Prettier - Install Guide ESLint - Guide </description>
     </item>
   </channel>
 </rss>
