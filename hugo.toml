@@ -11,3 +11,8 @@ BookSection = 'docs'
 BookRepo = 'https://github.com/alex-shpak/hugo-book'
 BookSearch = true
 BookComments = true
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true

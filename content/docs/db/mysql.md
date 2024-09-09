@@ -6,7 +6,7 @@ url: /docs/misc/mysql/
 
 # MySQL
 
-## Resources
+### Resources
 
 [PostgreSQL Official](https://www.postgresql.org/docs/) |
 [SQLite](https://devdocs.io/sqlite/)  
@@ -19,6 +19,10 @@ url: /docs/misc/mysql/
 [SQL PD](https://sqlpd.com) |
 [SQL Murder Mystery- SQLite](https://mystery.knightlab.com) |
 [Pagila](https://github.com/devrimgunduz/pagila) |
+
+---
+
+### Quick Links to Frequently Searched Topics
 
 ---
 
@@ -35,26 +39,16 @@ MySQL Installation Link : [MySQL](https://dev.mysql.com/downloads/installer/)
   3. Data Control Language
   4. Data Manipulation Language
 
-**Commenting in MySQL :**
-
-```sql
-# One-line comment
--  One-line comment
-/*Multi
-Line
-Comment*/
-```
-
 ---
 
-## Tables
+### Tables
 
 - A table is a database object that is made of rows and columns. It contains data.Table is created using CREATE TABLE command
 - A field is a column in a table that is supposed to provide specific info about all the records in the table
 - A record is a row in a table. It is also called horizontal entity while field is the vertical entity of the table
 - A NULL value is no value, it is neither a space nor a zero, it is nothing
 
-### Creating a Table
+#### Creating a Table
 
 ```SQL
 CREATE TABLE tableName (
@@ -346,36 +340,6 @@ CREATE TABLE student (
 ---
 
 ## Trivial Functions
-
-### MIN() & MAX() Functions
-
-```sql
-SELECT MIN(column)
-FROM tableName
-[WHERE];
-```
-
-```sql
-SELECT MAX(column)
-FROM tableName
-[WHERE];
-```
-
-### COUNT() Functions
-
-```sql
-SELECT COUNT(*)
-FROM products
-[WHERE];
-```
-
-### SUM() Function
-
-```sql
-SELECT SUM(column)
-FROM tableName
-[WHERE];
-```
 
 ### DELETE Function
 

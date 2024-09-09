@@ -91,7 +91,7 @@ The `<start>` attribute defines the number from which an ordered list should sta
 
 ### `<reversed>` Attribute
 
-The `<reversed>` attribute is a Boolean attribute when used on the <ol> element, allows a list to appear in reverse order. An ordered list of five items numbered 1 to 5 may be reversed and ordered from 5 to 1.
+The `<reversed>` attribute is a Boolean attribute when used on the `<ol>` element, allows a list to appear in reverse order. An ordered list of five items numbered 1 to 5 may be reversed and ordered from 5 to 1.
 
 ```html
 <ol reversed>

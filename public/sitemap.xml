@@ -2,49 +2,53 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>//localhost:1313/notes/posts/</loc>
+    <loc>dpak94.github.io/notes/posts/</loc>
     <lastmod>2024-08-28T23:17:33+05:30</lastmod>
   </url><url>
-    <loc>//localhost:1313/notes/posts/sample-post/</loc>
+    <loc>dpak94.github.io/notes/posts/sample-post/</loc>
     <lastmod>2024-08-28T23:17:33+05:30</lastmod>
   </url><url>
-    <loc>//localhost:1313/notes/</loc>
+    <loc>dpak94.github.io/notes/</loc>
     <lastmod>2024-08-28T23:17:33+05:30</lastmod>
   </url><url>
-    <loc>//localhost:1313/notes/categories/</loc>
+    <loc>dpak94.github.io/notes/categories/</loc>
   </url><url>
-    <loc>//localhost:1313/notes/docs/web-dev/clean-code/</loc>
+    <loc>dpak94.github.io/notes/docs/web-dev/css/</loc>
   </url><url>
-    <loc>//localhost:1313/notes/docs/web-dev/css/</loc>
+    <loc>dpak94.github.io/notes/docs/</loc>
   </url><url>
-    <loc>//localhost:1313/notes/docs/</loc>
+    <loc>dpak94.github.io/notes/docs/general/git/</loc>
   </url><url>
-    <loc>//localhost:1313/notes/docs/general/git/</loc>
+    <loc>dpak94.github.io/notes/docs/web-dev/html/</loc>
   </url><url>
-    <loc>//localhost:1313/notes/docs/web-dev/html/</loc>
+    <loc>dpak94.github.io/notes/docs/web-dev/js/</loc>
   </url><url>
-    <loc>//localhost:1313/notes/docs/web-dev/js/</loc>
+    <loc>dpak94.github.io/notes/docs/web-dev/js-norms/</loc>
   </url><url>
-    <loc>//localhost:1313/notes/docs/web-dev/js-snippets/</loc>
+    <loc>dpak94.github.io/notes/docs/web-dev/js-snippets/</loc>
   </url><url>
-    <loc>//localhost:1313/notes/docs/general/linux/</loc>
+    <loc>dpak94.github.io/notes/docs/general/linux/</loc>
   </url><url>
-    <loc>//localhost:1313/notes/docs/general/misc/</loc>
+    <loc>dpak94.github.io/notes/docs/general/misc/</loc>
   </url><url>
-    <loc>//localhost:1313/notes/docs/db/mongodb/</loc>
+    <loc>dpak94.github.io/notes/docs/db/mongodb/</loc>
   </url><url>
-    <loc>//localhost:1313/notes/docs/misc/mysql/</loc>
+    <loc>dpak94.github.io/notes/docs/misc/mysql/</loc>
   </url><url>
-    <loc>//localhost:1313/notes/docs/web-dev/node/</loc>
+    <loc>dpak94.github.io/notes/docs/web-dev/node/</loc>
   </url><url>
-    <loc>//localhost:1313/notes/docs/ds/python/</loc>
+    <loc>dpak94.github.io/notes/docs/ds/python/</loc>
   </url><url>
-    <loc>//localhost:1313/notes/docs/web-dev/react/</loc>
+    <loc>dpak94.github.io/notes/docs/web-dev/react/</loc>
   </url><url>
-    <loc>//localhost:1313/notes/docs/db/sql-python/</loc>
+    <loc>dpak94.github.io/notes/docs/db/sql-python/</loc>
   </url><url>
-    <loc>//localhost:1313/notes/docs/web-dev/static/</loc>
+    <loc>dpak94.github.io/notes/docs/web-dev/static/</loc>
   </url><url>
-    <loc>//localhost:1313/notes/tags/</loc>
+    <loc>dpak94.github.io/notes/tags/</loc>
+  </url><url>
+    <loc>dpak94.github.io/notes/docs/general/vs-code/</loc>
+  </url><url>
+    <loc>dpak94.github.io/notes/docs/general/xperimental/</loc>
   </url>
 </urlset>

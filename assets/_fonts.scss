@@ -1,5 +1,22 @@
 * {
-  font-family: sans-serif ;
-  font-size: 14px;
+  font-family: sans-serif;
+  font-size: 13px;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Verdana", "Garamond", serif;
+  font-weight: 600;
+}
+
+.intro-para {
+  font-weight: bolder;
+}
+
+blockquote {
+  font-weight: 100;
+}

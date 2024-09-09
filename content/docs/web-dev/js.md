@@ -218,7 +218,7 @@ switch (day) {
 
 ## JavaScript Releases
 
-**Brief History of JS:**
+<p class="intro-para">Brief History of JS</p>
 
 - Brendan Eich creates the first version of JavaScript in 10 days. Initially called **Mocha**
 - _EcmaScript 1_ released in 1997

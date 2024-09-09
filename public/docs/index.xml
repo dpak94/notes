@@ -2,115 +2,129 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Docs on Web Notes</title>
-    <link>//localhost:1313/notes/docs/</link>
+    <link>dpak94.github.io/notes/docs/</link>
     <description>Recent content in Docs on Web Notes</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <atom:link href="//localhost:1313/notes/docs/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Clean Code for JS</title>
-      <link>//localhost:1313/notes/docs/web-dev/clean-code/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/notes/docs/web-dev/clean-code/</guid>
-      <description>Clean Code Norms For JavaScript&#xD;#&#xD;// Example A : Bad Code const x = function (z) { const w = &amp;#34;Hello&amp;#34;; return w + z; }; // Example B : Good Code const generateUserGreeting = function (name) { const greeting = &amp;#34;Hello&amp;#34;; return greeting + name; }; Of the above two examples, code B is:&#xA;Easy to read. Assigns names to functions and variables that convey their task/nature instead of single letters, resultin in less confusion.</description>
-    </item>
+    <atom:link href="dpak94.github.io/notes/docs/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>CSS</title>
-      <link>//localhost:1313/notes/docs/web-dev/css/</link>
+      <link>dpak94.github.io/notes/docs/web-dev/css/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/notes/docs/web-dev/css/</guid>
+      <guid>dpak94.github.io/notes/docs/web-dev/css/</guid>
       <description>CSS Notes&#xD;#&#xD;Interactive CSS CC |&#xA;MDN Docs &amp;amp; Misc&#xD;#&#xD;CSS | DevDocs.io |&#xA;Building Block | Backgrounds and borders | Lists | Links | Images, media, forms | Web Fonts |&#xA;Layout - Flexbox, Grids, Floats, Multi-Column Layout, Positioning, Responsive Design |&#xA;FlexBox Resources: Interactive Flexbox | CSS Tricks&amp;rsquo; Flexbox Layout |&#xA;Basic Syntax&#xD;#&#xD;Selectors&#xD;#&#xD;Selectors simply refer to the HTML elements to which CSS rules apply - they are what is actually being selected for each rule.</description>
     </item>
     <item>
       <title>Git</title>
-      <link>//localhost:1313/notes/docs/general/git/</link>
+      <link>dpak94.github.io/notes/docs/general/git/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/notes/docs/general/git/</guid>
-      <description>Git&#xD;#&#xD;Git is the free and open source distributed version control system that&amp;rsquo;s responsible for everything GitHub related that happens locally on your computer.&#xA;Installation&#xD;#&#xD;Windows Mac All Platforms Configuring User Information&#xD;#&#xD;Configuring User Information to be used across all repositories&#xA;Command Function git config --global user.name “[firstname lastname]” Set a name that is identifiable for credit when review version history git config --global user.email “[valid-email]” Set an email address that will be associated with each history marker git config --global color.</description>
+      <guid>dpak94.github.io/notes/docs/general/git/</guid>
+      <description>Git&#xD;#&#xD;Git is the free and open source distributed version control system that&amp;rsquo;s responsible for everything GitHub related that happens locally on your computer.&#xA;GitHub Installation&#xA;Windows | Mac | All Platforms Configuring User Information&#xD;#&#xD;Command Function git config --global user.name “[firstname lastname]” Set a name that is identifiable for credit when review version history git config --global user.email “[valid-email]” Set an email address that will be associated with each history marker git config --global color.</description>
     </item>
     <item>
       <title>HTML</title>
-      <link>//localhost:1313/notes/docs/web-dev/html/</link>
+      <link>dpak94.github.io/notes/docs/web-dev/html/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/notes/docs/web-dev/html/</guid>
+      <guid>dpak94.github.io/notes/docs/web-dev/html/</guid>
       <description>HTML&#xD;#&#xD;HTML - Hyper Text Markup Language&#xA;Interactive HTML CC | DevDocs | Browser Default Styles |&#xA;MDN Docs Quick Links &amp;amp; Misc&#xD;#&#xD;Debugging | Advanced Text Formatting |&#xA;Multimedia | Images | Video &amp;amp; Audio | Vector Graphics | Embedding |&#xA;Tables | Elements | HTML References |&#xA;Forms | Symbols | Layout | Named Characters | HTML Colors |&#xA;Reserved Characters, Quotes &amp;amp; Other Escape Characters</description>
     </item>
     <item>
       <title>JavaScript</title>
-      <link>//localhost:1313/notes/docs/web-dev/js/</link>
+      <link>dpak94.github.io/notes/docs/web-dev/js/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/notes/docs/web-dev/js/</guid>
+      <guid>dpak94.github.io/notes/docs/web-dev/js/</guid>
       <description>JavaScript&#xD;#&#xD;Interactive JS CC | JS Playground |&#xA;Quick Links&#xD;#&#xD;CodePen.io for trying out new HTML, CSS &amp;amp; JS stuff. DevDocs MDN JS | Arrays | Strings | String Methods | Math &amp;amp; Operators | Operator Precedence | Functions | Objects | RegExp | RegExp CheatSheet | Chrome Dev Tools | Asynchronous JS | Events | Web Forms | Client-side Web APIs&#xA;W3 School Quick Links&#xD;#&#xD;DOM Reference | DOM Document | Arrays | Operators | Strings | Math | Date | Number | Global | Can I Use?</description>
     </item>
     <item>
-      <title>JS Snippets</title>
-      <link>//localhost:1313/notes/docs/web-dev/js-snippets/</link>
+      <title>JS Norms &amp; Rules</title>
+      <link>dpak94.github.io/notes/docs/web-dev/js-norms/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/notes/docs/web-dev/js-snippets/</guid>
+      <guid>dpak94.github.io/notes/docs/web-dev/js-norms/</guid>
+      <description>JavaScript Norms, Rules, Guides Etc.&#xD;#&#xD;Clean Code Norms For JavaScript&#xD;#&#xD;// Example A : Bad Code const x = function (z) { const w = &amp;#34;Hello&amp;#34;; return w + z; }; // Example B : Good Code const generateUserGreeting = function (name) { const greeting = &amp;#34;Hello&amp;#34;; return greeting + name; }; Of the above two examples, code B is:&#xA;Easy to read. Assigns names to functions and variables that convey their task/nature instead of single letters, resultin in less confusion.</description>
+    </item>
+    <item>
+      <title>JS Snippets</title>
+      <link>dpak94.github.io/notes/docs/web-dev/js-snippets/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>dpak94.github.io/notes/docs/web-dev/js-snippets/</guid>
       <description>JS Snippets&#xD;#&#xD;Click button&#xD;#&#xD;&amp;lt;button onClick={() =&amp;gt; { handleClickAgain(`Mario`); }} &amp;gt; Click Me Again &amp;lt;/button&amp;gt; Note: Call a func with args only after a button click &amp;amp; not automatically.</description>
     </item>
     <item>
       <title>Linux</title>
-      <link>//localhost:1313/notes/docs/general/linux/</link>
+      <link>dpak94.github.io/notes/docs/general/linux/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/notes/docs/general/linux/</guid>
-      <description>Linux&#xD;#&#xD;UNIX CC | Linux CC | TLDP | Glossary | Bash Shell |&#xA;Explain Shell - Type Linux Command for Documentation |&#xA;Bash Guide | Advanced Bash Scripting |&#xA;Package Management CC | Distrowatch |&#xA;Forum : LinuxQuestions.Org Forum | Nixers |&#xA;Tutorials : Jeremy Morgan |&#xA;Distro Corner&#xD;#&#xD;Arch Linux&#xD;#&#xD;Arch Wiki | FAQ | Pacman | Pacman Tips &amp;amp; Tricks |&#xA;Manjaro - Docs, Forum |</description>
+      <guid>dpak94.github.io/notes/docs/general/linux/</guid>
+      <description>Linux&#xD;#&#xD;Distro Corner&#xD;#&#xD;Debian - Latest Release - User Forum, Debian Packages | Documentation, APT User Guide Arch Linux - Download - Arch Wiki | FAQ | Pacman | Pacman Tips &amp;amp; Tricks Manjaro - Docs, Forum | Endeavour OS - Forum | Garuda Linux - Docs &amp;amp; Forum | Ubuntu - Ubuntu Desktop, Ubuntu Server | Documentation, Tutorials, Forums, Flavors | WSL | Linux Mint - Mint Download, Documentation, Forums, FAQ Fedora - Workstation, Documentation, Forum | Atomic Desktops - Forum | Server - Docs, DNF Package Manager | OpenSUSE - TumbleWeed, Leap | Docs, Startup Guide | Zypper Package Manager | Others Zorin OS Pop!</description>
     </item>
     <item>
       <title>Misc</title>
-      <link>//localhost:1313/notes/docs/general/misc/</link>
+      <link>dpak94.github.io/notes/docs/general/misc/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/notes/docs/general/misc/</guid>
+      <guid>dpak94.github.io/notes/docs/general/misc/</guid>
       <description>&#xD;Misc - All Things Miscellaneous&#xD;#&#xD;Documentation&#xD;#&#xD;Link Decsription Learn X in Y Community-driven site where you learn your favorite tool/lang in minutes! DevDocs Documentation for many tools &amp;amp; langs Misc&#xD;#&#xD;Link Description Libraries.io Open Source Packages, Frmaeworks Etc. VIM Adventures Game Learn VIM playing the VIM game HTML 2 JSX Convert HTML to JSX </description>
     </item>
     <item>
       <title>Mongo DB</title>
-      <link>//localhost:1313/notes/docs/db/mongodb/</link>
+      <link>dpak94.github.io/notes/docs/db/mongodb/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/notes/docs/db/mongodb/</guid>
+      <guid>dpak94.github.io/notes/docs/db/mongodb/</guid>
       <description>MongoDB&#xD;#&#xD;MongoDB Download MongoDB is a document database. It is open-source and cross platform. It stores data in a type of JSON format called BSON. A record in MongoDB is a document, which is a data structure composed of key value pairs similar to the structure of JSON objects. Records in a MongoDB database are called documents, and the field values may include numbers, strings, booleans, arrays, or even nested documents.</description>
     </item>
     <item>
       <title>MySQL</title>
-      <link>//localhost:1313/notes/docs/misc/mysql/</link>
+      <link>dpak94.github.io/notes/docs/misc/mysql/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/notes/docs/misc/mysql/</guid>
-      <description>MySQL&#xD;#&#xD;Resources&#xD;#&#xD;PostgreSQL Official | SQLite&#xA;Cheatsheet | All DB SQL Injection CC | SQL Zoo | SQL Practise | Data Lemur - SQL practise, interviews |&#xA;SQL Bolt | SQL PD | SQL Murder Mystery- SQLite | Pagila |&#xA;MySQL Installation Link : MySQL&#xA;Notes:&#xA;DBMS - Data Base Management System RDBMS - Relational Data Base Management System SQL - Structured Query Language SQL is basically 4 kinds of languages in one package: Data Query Language Data Definition Language Data Control Language Data Manipulation Language Commenting in MySQL :</description>
+      <guid>dpak94.github.io/notes/docs/misc/mysql/</guid>
+      <description>MySQL&#xD;#&#xD;Resources&#xD;#&#xD;PostgreSQL Official | SQLite&#xA;Cheatsheet | All DB SQL Injection CC | SQL Zoo | SQL Practise | Data Lemur - SQL practise, interviews |&#xA;SQL Bolt | SQL PD | SQL Murder Mystery- SQLite | Pagila |&#xA;Quick Links to Frequently Searched Topics&#xD;#&#xD;MySQL Installation Link : MySQL&#xA;Notes:&#xA;DBMS - Data Base Management System RDBMS - Relational Data Base Management System SQL - Structured Query Language SQL is basically 4 kinds of languages in one package: Data Query Language Data Definition Language Data Control Language Data Manipulation Language Tables&#xD;#&#xD;A table is a database object that is made of rows and columns.</description>
     </item>
     <item>
       <title>NodeJS</title>
-      <link>//localhost:1313/notes/docs/web-dev/node/</link>
+      <link>dpak94.github.io/notes/docs/web-dev/node/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/notes/docs/web-dev/node/</guid>
+      <guid>dpak94.github.io/notes/docs/web-dev/node/</guid>
       <description>Node JS&#xD;#&#xD;Download - Official Docs, Learn |&#xA;A JavaScript Runtime built on Google&amp;rsquo;s OpenSource V8 Javascript Engine Node JS is an environment in which a program written in JS can be executed.&#xA;Pros for Node JS&#xA;Single threaded, based on event driven, non-blocking I/O model. Perfect for building superfast and scalable data-intensive apps. JavaScript for the entire stack resulting in faster and efficient development NPM : Huge library of open-source packages available for free.</description>
     </item>
     <item>
       <title>Python</title>
-      <link>//localhost:1313/notes/docs/ds/python/</link>
+      <link>dpak94.github.io/notes/docs/ds/python/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/notes/docs/ds/python/</guid>
+      <guid>dpak94.github.io/notes/docs/ds/python/</guid>
       <description>Python Notes&#xD;#&#xD;Official Docs | RealPython | Setup | RegExp | Operator Precedence |&#xA;Programming Tips&#xD;#&#xD;Use &amp;rsquo;&amp;rsquo;&amp;rsquo; &amp;lsquo;&amp;rsquo;&amp;rsquo;, &amp;rsquo;&amp;rsquo; &amp;rsquo;&amp;rsquo; or &amp;rsquo; &amp;rsquo; to write comments in the script. Multiple Assignment in Python : Example : a, b, c, good = 5, True, &amp;lsquo;Stranger&amp;rsquo; The following keywords are reserved in Python : and assert break class continue def del elif in is lambda not or else except exec finally for from global if import while with pass print raise return try yield Python has one unary operator, Unary Minus Operator.</description>
     </item>
     <item>
       <title>React</title>
-      <link>//localhost:1313/notes/docs/web-dev/react/</link>
+      <link>dpak94.github.io/notes/docs/web-dev/react/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/notes/docs/web-dev/react/</guid>
+      <guid>dpak94.github.io/notes/docs/web-dev/react/</guid>
       <description>&#xD;React Notes&#xD;#&#xD;Official Docs | Reference | Learn |&#xA;Intro&#xD;#&#xD;React is a JavaScript Library used to create interactive websites. It is used to easily create Single Page Applications. </description>
     </item>
     <item>
       <title>SQL Python</title>
-      <link>//localhost:1313/notes/docs/db/sql-python/</link>
+      <link>dpak94.github.io/notes/docs/db/sql-python/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/notes/docs/db/sql-python/</guid>
+      <guid>dpak94.github.io/notes/docs/db/sql-python/</guid>
       <description>SQL in Python&#xD;#&#xD;Official Guide Use the command pip install mysql-connector-python to install MySQL Python. Import the module as import mysql.connector Creating a Database&#xD;#&#xD;import mysql.connector db = mysql.connector.connect( host=&amp;#34;localhost&amp;#34;, user=&amp;#34;root&amp;#34;, passwd=&amp;#34;0334&amp;#34; ) mycursor = db.cursor() mycursor.execute(&amp;#39;CREATE DATABASE sampleDB&amp;#39;) db.close() A database called sampleDB is created. Checking if a Database Exists&#xD;#&#xD;import mysql.connector db = mysql.connector.connect( host=&amp;#34;localhost&amp;#34;, user=&amp;#34;root&amp;#34;, passwd=&amp;#34;0334&amp;#34; ) mycursor = db.cursor() mycursor.execute(&amp;#39;SHOW DATABASES&amp;#39;) for x in mycursor: print(x) db.</description>
     </item>
     <item>
       <title>Static Sites</title>
-      <link>//localhost:1313/notes/docs/web-dev/static/</link>
+      <link>dpak94.github.io/notes/docs/web-dev/static/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/notes/docs/web-dev/static/</guid>
+      <guid>dpak94.github.io/notes/docs/web-dev/static/</guid>
       <description>Static Site Generators&#xD;#&#xD;Hugo&#xD;#&#xD;Command Function hugo new site &amp;lt;siteName&amp;gt; Create new site using Hugo hugo server Start the hugo server hugo server -D Start the server with drafts loaded hugo new content &amp;lt;link/fileName&amp;gt; Add new page Jekyll&#xD;#&#xD;Command Function jekyll new siteName Create a site and generate relevant sitefiles bundle exec jekyll serve Start the server jekyll serve --livereload Live server jekyll build Builds the static site instead of running the server jekyll serve --draft Builds the site with draft content included Important Notes&#xD;#&#xD;Contains layouts to create templates of websites.</description>
+    </item>
+    <item>
+      <title>VS Code</title>
+      <link>dpak94.github.io/notes/docs/general/vs-code/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>dpak94.github.io/notes/docs/general/vs-code/</guid>
+      <description>VS Code Extensions, Shortcuts Etc.&#xD;#&#xD;Extensions&#xD;#&#xD;Prettier - Install Guide ESLint - Guide Emmet VS Doc | Emmet CC |</description>
+    </item>
+    <item>
+      <title>Z (Experimental)</title>
+      <link>dpak94.github.io/notes/docs/general/xperimental/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>dpak94.github.io/notes/docs/general/xperimental/</guid>
+      <description></description>
     </item>
   </channel>
 </rss>

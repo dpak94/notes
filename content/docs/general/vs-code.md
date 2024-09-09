@@ -10,3 +10,8 @@ draft: false
 
 - [Prettier](https://github.com/prettier/prettier-vscode) - [Install Guide](https://prettier.io/docs/en/install.html)
 - [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint) - [Guide](https://eslint.org/docs/latest/use/getting-started)
+
+---
+
+[Emmet VS Doc](https://code.visualstudio.com/docs/editor/emmet) |
+[Emmet CC](https://docs.emmet.io/cheat-sheet/) |
